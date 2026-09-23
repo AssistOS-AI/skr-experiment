@@ -1,0 +1,345 @@
+{
+  "title": "Peter Rabbit work-only procedure review",
+  "date": "2026-09-23",
+  "model": "gpt-6-luna",
+  "humanReview": false,
+  "source": {
+    "manifestId": "pg14838",
+    "sha256": "2bf0e04297038fd97697dfac2b8a2db14f2b80c2012727f7ac0f28cf0b146544",
+    "bytes": 25952,
+    "sourceVersionId": "srcv_fdec0d5ec82e4b4fa37c6028c7145e46",
+    "readerProfile": "text-structure-v2 with project-gutenberg-start-end-v1",
+    "regionsTotal": 447,
+    "workRegions": 141,
+    "frontMatterRegions": 17,
+    "backMatterRegions": 289,
+    "boundaryOffsets": {
+      "start": 940,
+      "end": 7041
+    }
+  },
+  "projectId": "proj_8edf01f2642f4d8daea1be3980047706",
+  "snapshotId": "snap_da5688875b46419183aa8e5e89c19885",
+  "procedures": [
+    {
+      "id": "contradiction-audit",
+      "version": "1.0.0",
+      "findings": [],
+      "coverage": {
+        "processed": 141,
+        "partial": 0,
+        "intentionallyExcluded": 306
+      }
+    },
+    {
+      "id": "relevance-synthesis",
+      "version": "1.0.0",
+      "findings": [
+        {
+          "id": "finding_967dddd3b9852e9f30abfd6e4cc6",
+          "summary": "Procedural assessment: The passage directly states that there were “four little Rabbits” and names Flopsy, Mopsy, Cotton-tail, and Peter (source line 65, offsets 1203–1267; lines 68–71, offsets 1276–1334). Thus, for the question “How many rabbits were there?”, the supported answer is four. These passages cover the requested count; no contradictory count appears in the supplied evidence. The wider topic “Rabbit family and story events” is only partially covered by this count-focused assessment.",
+          "criterion": "Requested count element directly supported by the source; no conflicting count identified in the supplied passages.",
+          "evidenceIds": [
+            "passage_2ad133a14a20e6943647c165",
+            "passage_8bac1ecf61f343bd2def83d9",
+            "passage_f57b7c17819ef4703c2ab387",
+            "passage_ac0351d55f1696d7b6ab00ed",
+            "passage_c19a24192a90d618c98fd0d3",
+            "passage_1f1b350bade18b8e9295aae2"
+          ],
+          "counterevidenceIds": []
+        }
+      ],
+      "coverage": {
+        "processed": 141,
+        "partial": 0,
+        "intentionallyExcluded": 306
+      }
+    },
+    {
+      "id": "document-literary-rubric",
+      "version": "1.0.0",
+      "findings": [
+        {
+          "id": "finding_313c9ed404fe610554d80780ce26",
+          "summary": "Procedural assessment — Narrative coherence: The account has an observable setup and payoff: Mrs. Rabbit warns Peter not to enter Mr. McGregor’s garden because his father “was put in a pie” (lines 76–79; offsets 1426–1636), then Peter enters the garden (lines 98–99; offsets 2022–2127), is pursued and escapes (lines 114–115 and 212–214; offsets 2341–2417 and 5785–5941). The sequence from pursuit, lost shoes and jacket, hiding in the tool-shed, and eventual escape is presented in order (lines 125–168 and 170–175; offsets 2604–4362), and the ending returns Peter home, where his mother attends to him (lines 223–246; offsets 6074–6775). No contradictory event order was identified in the reviewed passages. This is a provisional observation, pending expert review.",
+          "criterion": "narrative-coherence",
+          "evidenceIds": [
+            "passage_1ed24bffbf6843ba1c363e7e",
+            "passage_ad76874315ba36a21787cdc4",
+            "passage_8d8fda6c6a8e1088238c5a15",
+            "passage_5d3b8eca8782350cb21850e2",
+            "passage_464aed7c80c13a6e15d3df7e",
+            "passage_a9e49cc4d9556451124aec18",
+            "passage_534ee76d7131ebe728adf7cc",
+            "passage_bf09f0bee7c0a3eb72b11d7a",
+            "passage_5b75ae8e0c12cb6ee59fd18b",
+            "passage_ea8f162ee0a2c6a7991a563a",
+            "passage_8231efe93493ad5c45ebffcb",
+            "passage_ceca0ecf0d620ca575e94c17",
+            "passage_99654f0832c30ddbdce51348",
+            "passage_17733a80bff60e0a61533f3c",
+            "passage_ba6972d698d4e9067d7bcb2a",
+            "passage_06b093bb7146a0d671619337",
+            "passage_76200511a5d6cafba9f327ee",
+            "passage_28c9bfaafd8027834a2b8f45",
+            "passage_9e74608bd65d51806a72aba6",
+            "passage_40f16f85ad62417b87ef2841",
+            "passage_2f848e6d2e4dc0ad4903e4ff",
+            "passage_a93468a1b3e8bc79df67d369",
+            "passage_d96c747ce220e411d6c28dc8",
+            "passage_a218cb42faa42373cec5cba9",
+            "passage_f7b67c9fa8910bff36c09b53",
+            "passage_6e956615f480e8f02d6b776f",
+            "passage_7ab5ab2683b10020c60e235d",
+            "passage_500fda29f1ba7c77e90eafea",
+            "passage_2b2d3699e6896fa4cc5d850b",
+            "passage_e2c2b4f177fe1c3ae789f149",
+            "passage_fb23782de4ca7d31d3ce2876",
+            "passage_7e2fd17b5ebdfd8ebf65f5d4",
+            "passage_6ae52bc3e6acf12ecd02a10d",
+            "passage_12e772b510b14243cc52ca83",
+            "passage_bb3e0ee5ab89a7fe4e25150a",
+            "passage_2a828e4b897999f7885a4dc4",
+            "passage_dc8597787b5f4aa25d4dcbb7",
+            "passage_fe00e52b2c7ce4b4e0b9f988",
+            "passage_ec18265e08d506ae46757170",
+            "passage_90a850147cf98a157763b1f8",
+            "passage_0c24bd570aa5a265b4f9417c",
+            "passage_3a0aadcd8533cc201fc4f58b",
+            "passage_057586615a57e3bf93ea4f6f",
+            "passage_aa6dc4c8dbca57b940ebb1e1",
+            "passage_13284c78b173385fc70d9b2e",
+            "passage_05fbcba6e4213f4d9ba1f3da",
+            "passage_17b6804655819c2fa2a6f6f3",
+            "passage_e9927c733a30dfd531ac4e11",
+            "passage_778053c630b2b582e9ef1d47",
+            "passage_39a4c4817895b7c2627da8ab",
+            "passage_c4d73dab8008981b08765892",
+            "passage_dd42443e35c3b889ff7fc4e2",
+            "passage_830c3467b4162f392244f5c2",
+            "passage_c8b8bcfdee97100065b43933",
+            "passage_54c40b6e3aa425ed0187a4f9",
+            "passage_d6ad3ddc55741d370157d7c7",
+            "passage_62d1bff2b774296964c7c679",
+            "passage_082637518c11dfae33bab285",
+            "passage_0880a4282e79f5ff48b0aaa2",
+            "passage_8cfefda18b73877cb2bb30b3",
+            "passage_6dc6d96278cc78884a45e7ed",
+            "passage_d5b4fdddeb0d2a3d62e80088",
+            "passage_d623449dd00805afe50964a4",
+            "passage_bffea65a17768f69296e4c41",
+            "passage_ece3e8eaa700641aa33cd027"
+          ],
+          "counterevidenceIds": []
+        },
+        {
+          "id": "finding_7c244f2e5c90f949d3ad0b77f232",
+          "summary": "Procedural assessment — Characterization: Peter is introduced as one of four rabbits (line 65 and lines 68–71; offsets 1203–1334). The narrator calls him “very naughty” as he goes into the garden (lines 98–99; offsets 2022–2127); his later actions include eating garden produce, fleeing McGregor, and becoming frightened and disoriented (lines 105–108, 125–142 and 170–175; offsets 2161–2307, 2604–3283 and 4094–4362). Mrs. Rabbit gives a warning and later cares for Peter, while the three named siblings gather blackberries and have bread and milk for supper (lines 76–89, 95–96 and 245–246; offsets 1426–1883, 1917–2020 and 6693–6775). These are textual actions and descriptions; motives beyond what the narrator states are not inferred. No counterexample directly overturning these descriptions was identified in the supplied passages. This is a provisional observation, pending expert review.",
+          "criterion": "characterization",
+          "evidenceIds": [
+            "passage_2ad133a14a20e6943647c165",
+            "passage_f57b7c17819ef4703c2ab387",
+            "passage_ac0351d55f1696d7b6ab00ed",
+            "passage_c19a24192a90d618c98fd0d3",
+            "passage_1f1b350bade18b8e9295aae2",
+            "passage_1ed24bffbf6843ba1c363e7e",
+            "passage_ad76874315ba36a21787cdc4",
+            "passage_5e8c3d07ce190cfde2a19ba5",
+            "passage_4ae4b3e22dbb785f9e57dd22",
+            "passage_8a09aa1fac919c7b56519a19",
+            "passage_bbd39cdf60989dd64be2a34e",
+            "passage_bcec62749a1ac497c28db75b",
+            "passage_b45a19f8082a5f780f974956",
+            "passage_464aed7c80c13a6e15d3df7e",
+            "passage_a9e49cc4d9556451124aec18",
+            "passage_b7270488f355a7836999119f",
+            "passage_856b64151b92b0987f3181f5",
+            "passage_b1c4eb689b2269eb28478339",
+            "passage_5b75ae8e0c12cb6ee59fd18b",
+            "passage_ea8f162ee0a2c6a7991a563a",
+            "passage_8231efe93493ad5c45ebffcb",
+            "passage_99654f0832c30ddbdce51348",
+            "passage_17733a80bff60e0a61533f3c",
+            "passage_d9d2b547c29bea4d517f6fb8",
+            "passage_f7b67c9fa8910bff36c09b53",
+            "passage_6e956615f480e8f02d6b776f",
+            "passage_7ab5ab2683b10020c60e235d",
+            "passage_bffea65a17768f69296e4c41",
+            "passage_ece3e8eaa700641aa33cd027"
+          ],
+          "counterevidenceIds": []
+        },
+        {
+          "id": "finding_ff33a6d95f663b25efb15a2f251a",
+          "summary": "Procedural assessment — Style: The narrative uses a fairy-tale opening, “Once upon a time” (line 65; offset 1203), and direct speech for Mrs. Rabbit’s warning (lines 76–79; offsets 1426–1636) and McGregor’s “Stop thief!” (line 119; offsets 2557–2570). Repeated movement and sound language includes “lippity--lippity” (lines 174–175; offsets 4262–4362) and the hoe’s “scr-r-ritch, scratch, scratch, scritch” (line 202; offsets 5310–5378). In these passages, direct speech, repetition, and sound imitation are observable techniques; this assessment makes no broader claim that they recur uniformly throughout the work. The broad pattern is qualified by the variety of other narrative passages and the visual placeholders “[Illustration]” (for example, lines 81 and 110; offsets 1638–1652 and 2309–2323). This is a provisional observation, pending expert review.",
+          "criterion": "style",
+          "evidenceIds": [
+            "passage_2ad133a14a20e6943647c165",
+            "passage_1ed24bffbf6843ba1c363e7e",
+            "passage_ad76874315ba36a21787cdc4",
+            "passage_8d8fda6c6a8e1088238c5a15",
+            "passage_5d3b8eca8782350cb21850e2",
+            "passage_ada3a329d0d4335af325d1e2",
+            "passage_7ab5ab2683b10020c60e235d",
+            "passage_500fda29f1ba7c77e90eafea",
+            "passage_057586615a57e3bf93ea4f6f",
+            "passage_6a2b19e367d805854752a465",
+            "passage_029c394fa17d81292076cd69"
+          ],
+          "counterevidenceIds": [
+            "passage_6a2b19e367d805854752a465",
+            "passage_029c394fa17d81292076cd69"
+          ]
+        },
+        {
+          "id": "finding_d983e45cd1ce2c56f72c5875c474",
+          "summary": "Procedural assessment — Thematic development: Across separated passages, the story contrasts a parental warning and remembered danger (lines 76–79; offsets 1426–1636) with Peter’s disobedience and resulting peril (lines 98–99 and 125–145; offsets 2022–2127 and 2604–3423). The consequences extend to Peter’s escape, return home, and being unwell, while his siblings have supper (lines 212–246; offsets 5785–6775). This supports a possible reading about warning, risk, and consequences; that theme is an interpretation rather than an explicitly named theme in the text. The siblings’ parallel safe outing and supper provide a contrast, though the supplied passages do not explicitly state that this contrast is the work’s theme. This is a provisional observation, pending expert review.",
+          "criterion": "thematic-development",
+          "evidenceIds": [
+            "passage_1ed24bffbf6843ba1c363e7e",
+            "passage_ad76874315ba36a21787cdc4",
+            "passage_8d8fda6c6a8e1088238c5a15",
+            "passage_5d3b8eca8782350cb21850e2",
+            "passage_bcec62749a1ac497c28db75b",
+            "passage_b45a19f8082a5f780f974956",
+            "passage_464aed7c80c13a6e15d3df7e",
+            "passage_a9e49cc4d9556451124aec18",
+            "passage_5b75ae8e0c12cb6ee59fd18b",
+            "passage_ea8f162ee0a2c6a7991a563a",
+            "passage_ba6972d698d4e9067d7bcb2a",
+            "passage_06b093bb7146a0d671619337",
+            "passage_dd42443e35c3b889ff7fc4e2",
+            "passage_830c3467b4162f392244f5c2",
+            "passage_c8b8bcfdee97100065b43933",
+            "passage_54c40b6e3aa425ed0187a4f9",
+            "passage_d6ad3ddc55741d370157d7c7",
+            "passage_62d1bff2b774296964c7c679",
+            "passage_6dc6d96278cc78884a45e7ed",
+            "passage_d5b4fdddeb0d2a3d62e80088",
+            "passage_d623449dd00805afe50964a4",
+            "passage_bffea65a17768f69296e4c41",
+            "passage_ece3e8eaa700641aa33cd027"
+          ],
+          "counterevidenceIds": []
+        }
+      ],
+      "coverage": {
+        "processed": 141,
+        "partial": 0,
+        "intentionallyExcluded": 306
+      }
+    }
+  ],
+  "validation": {
+    "auditStatus": "valid",
+    "auditErrors": [],
+    "reconstructedEvidenceRows": 84,
+    "openedEvidence": [
+      {
+        "sourceVersionId": "srcv_fdec0d5ec82e4b4fa37c6028c7145e46",
+        "regionId": "region_0920b8c25fadf7f9c6b9e10b",
+        "locator": {
+          "type": "text-line",
+          "line": 65,
+          "start": 1203,
+          "end": 1267
+        },
+        "quote": "Once upon a time there were four little Rabbits, and their names"
+      },
+      {
+        "sourceVersionId": "srcv_fdec0d5ec82e4b4fa37c6028c7145e46",
+        "regionId": "region_e5fe128193c36300d91ac5e0",
+        "locator": {
+          "type": "text-line",
+          "line": 66,
+          "start": 1268,
+          "end": 1274
+        },
+        "quote": "were--"
+      },
+      {
+        "sourceVersionId": "srcv_fdec0d5ec82e4b4fa37c6028c7145e46",
+        "regionId": "region_0476ca5d8420f24472b400bd",
+        "locator": {
+          "type": "text-line",
+          "line": 68,
+          "start": 1276,
+          "end": 1293
+        },
+        "quote": "          Flopsy,"
+      },
+      {
+        "sourceVersionId": "srcv_fdec0d5ec82e4b4fa37c6028c7145e46",
+        "regionId": "region_b6f8fb186ffc08324395a85d",
+        "locator": {
+          "type": "text-line",
+          "line": 69,
+          "start": 1294,
+          "end": 1307
+        },
+        "quote": "       Mopsy,"
+      },
+      {
+        "sourceVersionId": "srcv_fdec0d5ec82e4b4fa37c6028c7145e46",
+        "regionId": "region_86a200ae63d7590ae9e41184",
+        "locator": {
+          "type": "text-line",
+          "line": 70,
+          "start": 1308,
+          "end": 1323
+        },
+        "quote": "   Cotton-tail,"
+      },
+      {
+        "sourceVersionId": "srcv_fdec0d5ec82e4b4fa37c6028c7145e46",
+        "regionId": "region_5063b7baf712f8f1c5d6822d",
+        "locator": {
+          "type": "text-line",
+          "line": 71,
+          "start": 1324,
+          "end": 1334
+        },
+        "quote": "and Peter."
+      },
+      {
+        "sourceVersionId": "srcv_fdec0d5ec82e4b4fa37c6028c7145e46",
+        "regionId": "region_79c47e82a6712a8d00a92289",
+        "locator": {
+          "type": "text-line",
+          "line": 76,
+          "start": 1426,
+          "end": 1492
+        },
+        "quote": "'Now my dears,' said old Mrs. Rabbit one morning, 'you may go into"
+      },
+      {
+        "sourceVersionId": "srcv_fdec0d5ec82e4b4fa37c6028c7145e46",
+        "regionId": "region_838ac80580b0c4607976631b",
+        "locator": {
+          "type": "text-line",
+          "line": 77,
+          "start": 1493,
+          "end": 1562
+        },
+        "quote": "the fields or down the lane, but don't go into Mr. McGregor's garden:"
+      }
+    ],
+    "reviewReceipts": 5
+  },
+  "usage": {
+    "input_tokens": 219096,
+    "cached_input_tokens": 138496,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 3909,
+    "reasoning_output_tokens": 184
+  },
+  "limitations": [
+    "Model-generated procedure findings remain provisional and unresolved, not expert judgments.",
+    "The complete marked narrative work had processed coverage for all 141 work regions. The 306 front-matter/back-matter regions were intentionally excluded under explicit START/END marker policy and remain in the original source for reopening.",
+    "The contradiction procedure returned no findings; this does not establish absence of all contradictions beyond its bounded reviewed inputs."
+  ],
+  "acceptanceStatus": "superseded-diagnostic",
+  "supersededBy": "peter-rabbit-corrected-offset-procedures-2026-09-23.json",
+  "supersessionReason": "Its text-line locators used normalized LF offsets against original CRLF source positions, causing the work-boundary classifier to include the Gutenberg END marker and four back-matter regions while excluding one narrative-side illustration placeholder."
+}

@@ -1,0 +1,12 @@
+{
+  "fixture": "mutations-v1.json",
+  "fixtureId": "skr-store-mutations-v1",
+  "sha256": "612fbfb032a63dde355cfe352c557b8dd17f7260b8b50849839719b41c246eea",
+  "caseCount": 60,
+  "entryType": "cases",
+  "goldStatus": "not-specified",
+  "frozenAt": "2026-09-23T12:43:20.592Z",
+  "previousSha256": "612fbfb032a63dde355cfe352c557b8dd17f7260b8b50849839719b41c246eea",
+  "freezeVersion": 2,
+  "warning": "A frozen fixture hash establishes byte identity only; it does not establish expert-verified gold."
+}

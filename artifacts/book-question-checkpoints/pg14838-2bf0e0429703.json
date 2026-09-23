@@ -1,0 +1,187 @@
+{
+  "bookId": "pg14838",
+  "sha256": "2bf0e04297038fd97697dfac2b8a2db14f2b80c2012727f7ac0f28cf0b146544",
+  "rawStatus": "pending-validation",
+  "rawItems": [
+    {
+      "question": "Where did the four young rabbits live with their mother?",
+      "answer": "In a sand-bank underneath the root of a very big fir-tree.",
+      "category": "factual",
+      "evidenceQuotes": [
+        "They lived with their Mother in a sand-bank, underneath the root of a\r\nvery big fir-tree."
+      ]
+    },
+    {
+      "question": "Which siblings went down the lane to gather blackberries?",
+      "answer": "Flopsy, Mopsy, and Cottontail.",
+      "category": "identity-coreference",
+      "evidenceQuotes": [
+        "Flopsy, Mopsy, and Cottontail, who were good little bunnies, went\r\ndown the lane to gather blackberries:"
+      ]
+    },
+    {
+      "question": "What errand did Mrs. Rabbit go on after telling the little rabbits where they could go?",
+      "answer": "She went through the wood to the baker’s, where she bought brown bread and five currant buns.",
+      "category": "temporal-sequence",
+      "evidenceQuotes": [
+        "Then old Mrs. Rabbit took a basket and her umbrella, and went through\r\nthe wood to the baker's. She bought a loaf of brown bread and five\r\ncurrant buns."
+      ]
+    },
+    {
+      "question": "Who called Peter a thief, and what was Peter doing when he did so?",
+      "answer": "Mr. McGregor called “Stop thief!” while chasing Peter after finding him near the cucumber frame.",
+      "category": "attribution",
+      "evidenceQuotes": [
+        "But round the end of a cucumber frame, whom should he meet but Mr.\nMcGregor!",
+        "Mr. McGregor was on his hands and knees planting out young cabbages,\nbut he jumped up and ran after Peter, waving a rake and calling out,\n'Stop thief!'"
+      ]
+    },
+    {
+      "question": "Why did Peter lose his jacket?",
+      "answer": "Its large buttons caught in a gooseberry net while he was running away.",
+      "category": "causal",
+      "evidenceQuotes": [
+        "he had not unfortunately\r\nrun into a gooseberry net, and got caught by the large buttons on his\r\njacket.",
+        "Peter wriggled out just in time, leaving his jacket\r\nbehind him."
+      ]
+    },
+    {
+      "question": "How did the old mouse respond when Peter asked her the way to the gate?",
+      "answer": "She shook her head because she could not answer with a large pea in her mouth.",
+      "category": "relationship",
+      "evidenceQuotes": [
+        "Peter asked her the way to\r\nthe gate, but she had such a large pea in her mouth that she could not\r\nanswer. She only shook her head at him."
+      ]
+    },
+    {
+      "question": "What sequence of events led Peter from being trapped in the gooseberry net to hiding in the tool-shed?",
+      "answer": "He wriggled free of the net and left his jacket behind, then rushed into the tool-shed and jumped into a can.",
+      "category": "temporal-sequence",
+      "evidenceQuotes": [
+        "Peter wriggled out just in time, leaving his jacket\r\nbehind him.",
+        "And rushed into the tool-shed, and jumped into a can."
+      ]
+    },
+    {
+      "question": "What did Peter see at the pond, and why did he leave without speaking to the cat?",
+      "answer": "He saw a white cat staring at gold-fish and left because he had heard about cats from his cousin, little Benjamin Bunny.",
+      "category": "factual",
+      "evidenceQuotes": [
+        "A white cat was staring at some\r\ngold-fish, she sat very, very still, but now and then the tip of her\r\ntail twitched as if it were alive.",
+        "Peter thought it best to go away\r\nwithout speaking to her; he had heard about cats from his cousin,\r\nlittle Benjamin Bunny."
+      ]
+    },
+    {
+      "question": "How did Peter learn that the white cat might be dangerous?",
+      "answer": "He had heard about cats from his cousin, little Benjamin Bunny.",
+      "category": "relationship",
+      "evidenceQuotes": [
+        "he had heard about cats from his cousin,\r\nlittle Benjamin Bunny."
+      ]
+    },
+    {
+      "question": "How did the sparrows help Peter after he became caught in the net?",
+      "answer": "They flew to him and implored him to exert himself after hearing his sobs.",
+      "category": "causal",
+      "evidenceQuotes": [
+        "his sobs were\r\noverheard by some friendly sparrows, who flew to him in great\r\nexcitement, and implored him to exert himself."
+      ]
+    },
+    {
+      "question": "What two things did Mr. McGregor do with the clothes Peter lost?",
+      "answer": "He hung up the jacket and shoes for a scare-crow to frighten the blackbirds.",
+      "category": "factual",
+      "evidenceQuotes": [
+        "Mr. McGregor hung up the little jacket and the shoes for a scare-crow\r\nto frighten the blackbirds."
+      ]
+    },
+    {
+      "question": "What did Mrs. Rabbit give Peter that evening, and what instruction accompanied it?",
+      "answer": "She made him camomile tea and gave him a dose, with the instruction to take one table-spoonful at bed-time.",
+      "category": "factual",
+      "evidenceQuotes": [
+        "His mother put him to bed, and made some camomile tea; and she gave a\r\ndose of it to Peter!",
+        "'One table-spoonful to be taken at bed-time.'"
+      ]
+    },
+    {
+      "question": "What did Peter’s mother give him, and what did Flopsy, Mopsy, and Cotton-tail have for supper?",
+      "answer": "Peter’s mother gave him a dose of camomile tea. Flopsy, Mopsy, and Cotton-tail had bread and milk and blackberries for supper.",
+      "category": "contrast",
+      "evidenceQuotes": [
+        "His mother put him to bed, and made some camomile tea; and she gave a\r\ndose of it to Peter!",
+        "But Flopsy, Mopsy, and Cotton-tail had bread and milk and\r\nblackberries for supper."
+      ]
+    },
+    {
+      "question": "What did Peter see when he peeped over the wheelbarrow, and what did he do after getting down?",
+      "answer": "He saw Mr. McGregor hoeing onions, with his back turned towards Peter and the gate beyond him. Peter got down quietly and started running along a straight walk behind some black-currant bushes.",
+      "category": "causal",
+      "evidenceQuotes": [
+        "The first thing he saw was Mr. McGregor hoeing onions. His back was\r\nturned towards Peter, and beyond him was the gate!",
+        "Peter got down very quietly off the wheelbarrow; and started running\r\nas fast as he could go, along a straight walk behind some\r\nblack-currant bushes."
+      ]
+    },
+    {
+      "question": "How did Peter get from the wheelbarrow to safety outside the garden?",
+      "answer": "He quietly got down, ran along a straight walk behind black-currant bushes, and slipped underneath the gate.",
+      "category": "temporal-sequence",
+      "evidenceQuotes": [
+        "Peter got down very quietly off the wheelbarrow; and started running\r\nas fast as he could go, along a straight walk behind some\r\nblack-currant bushes.",
+        "He slipped underneath the gate, and was safe at last in the wood\r\noutside the garden."
+      ]
+    },
+    {
+      "question": "Whose accident does Mrs. Rabbit mention, and what does she say happened afterward?",
+      "answer": "She says their Father had an accident there and was put in a pie by Mrs. McGregor.",
+      "category": "identity-coreference",
+      "evidenceQuotes": [
+        "'Now my dears,' said old Mrs. Rabbit one morning, 'you may go into\nthe fields or down the lane, but don't go into Mr. McGregor's garden:\nyour Father had an accident there; he was put in a pie by Mrs.\nMcGregor.'"
+      ]
+    },
+    {
+      "question": "How did Peter’s escape from the garden compare with his arrival there?",
+      "answer": "He squeezed under the gate to enter and later slipped underneath it to leave.",
+      "category": "contrast",
+      "evidenceQuotes": [
+        "Peter, who was very naughty, ran straight away to Mr. McGregor's\r\ngarden, and squeezed under the gate!",
+        "He slipped underneath the gate, and was safe at last in the wood\r\noutside the garden."
+      ]
+    },
+    {
+      "question": "What events connect Peter’s sneeze to Mr. McGregor chasing him again?",
+      "answer": "Peter sneezed while Mr. McGregor was searching the tool-shed, and Mr. McGregor immediately went after him.",
+      "category": "causal",
+      "evidenceQuotes": [
+        "Presently Peter sneezed--'Kertyschoo!' Mr. McGregor was after him in\r\nno time."
+      ]
+    },
+    {
+      "question": "What does Peter’s earlier shoe loss and the mention of another lost outfit suggest about his history of getting into trouble?",
+      "answer": "It suggests this was not his first lost outfit: his mother says it was the second jacket and pair of shoes he had lost in a fortnight.",
+      "category": "interpretive",
+      "evidenceQuotes": [
+        "He lost one of his shoes among the cabbages, and the other shoe\r\namongst the potatoes.",
+        "It was the\r\nsecond little jacket and pair of shoes that Peter had lost in a\r\nfortnight!"
+      ]
+    },
+    {
+      "question": "How did the old mouse’s response to Peter’s request differ from the cat’s response to his presence?",
+      "answer": "The mouse shook her head when she could not answer Peter, while the cat sat very still as she watched the gold-fish; Peter chose to leave without speaking to the cat.",
+      "category": "multi-passage",
+      "evidenceQuotes": [
+        "Peter asked her the way to\r\nthe gate, but she had such a large pea in her mouth that she could not\r\nanswer. She only shook her head at him.",
+        "A white cat was staring at some\r\ngold-fish, she sat very, very still, but now and then the tip of her\r\ntail twitched as if it were alive. Peter thought it best to go away\r\nwithout speaking to her;"
+      ]
+    }
+  ],
+  "generationUsage": {
+    "input_tokens": 94529,
+    "cached_input_tokens": 71424,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 2188,
+    "reasoning_output_tokens": 1044
+  },
+  "generationWallMs": 69806,
+  "generationSessionId": "01a0ce0f-d7a5-73d3-9708-70db7e552059"
+}

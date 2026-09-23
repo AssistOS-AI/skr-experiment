@@ -1,0 +1,31 @@
+{
+  "name": "skr-experiment",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "start": "node src/server.mjs",
+    "demo": "SKR_RUNNER=reference node scripts/demo.mjs",
+    "test": "node --test",
+    "eval": "node scripts/evaluate.mjs",
+    "eval:controlled": "node scripts/evaluate.mjs",
+    "eval:mutations": "node scripts/evaluate-mutations.mjs",
+    "eval:books": "node scripts/evaluate-books.mjs",
+    "eval:procedures": "node scripts/evaluate-procedures.mjs",
+    "eval:freeze": "node scripts/freeze-evaluation-fixture.mjs",
+    "eval:live": "node scripts/run-live-comparison.mjs"
+  },
+  "dependencies": {
+    "@huggingface/transformers": "^4.3.0"
+  },
+  "allowScripts": {
+    "onnxruntime-node@1.30.0": true,
+    "protobufjs@7.6.6": true
+  },
+  "devDependencies": {
+    "playwright": "^1.63.0"
+  }
+}

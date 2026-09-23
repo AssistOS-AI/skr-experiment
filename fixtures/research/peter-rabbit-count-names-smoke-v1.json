@@ -1,0 +1,112 @@
+{
+  "id": "peter-rabbit-count-names-smoke-v1",
+  "status": "automatic-proposed-pending-human-review",
+  "frozen": false,
+  "questionCount": 1,
+  "source": {
+    "bookId": "pg14838",
+    "sourceVersionId": "srcv_9081ce2454a84802bb35106a95f58eaa",
+    "sourceUrl": "https://www.gutenberg.org/ebooks/14838",
+    "sha256": "2bf0e04297038fd97697dfac2b8a2db14f2b80c2012727f7ac0f28cf0b146544"
+  },
+  "questions": [
+    {
+      "id": "pg14838-count-and-names",
+      "sourceId": "pg14838",
+      "sourceVersionId": "srcv_9081ce2454a84802bb35106a95f58eaa",
+      "source": {
+        "sha256": "2bf0e04297038fd97697dfac2b8a2db14f2b80c2012727f7ac0f28cf0b146544"
+      },
+      "question": "How many little Rabbits were there, and what were their names?",
+      "expected": "There were four little Rabbits: Flopsy, Mopsy, Cotton-tail, and Peter.",
+      "category": "factual",
+      "gold": {
+        "answer": "There were four little Rabbits: Flopsy, Mopsy, Cotton-tail, and Peter.",
+        "evidence": [
+          {
+            "regionId": "region_0920b8c25fadf7f9c6b9e10b",
+            "startChar": 1267,
+            "endChar": 1331,
+            "quote": "Once upon a time there were four little Rabbits, and their names"
+          },
+          {
+            "regionId": "region_e5fe128193c36300d91ac5e0",
+            "startChar": 1333,
+            "endChar": 1339,
+            "quote": "were--"
+          },
+          {
+            "regionId": "region_0476ca5d8420f24472b400bd",
+            "startChar": 1353,
+            "endChar": 1360,
+            "quote": "Flopsy,"
+          },
+          {
+            "regionId": "region_b6f8fb186ffc08324395a85d",
+            "startChar": 1369,
+            "endChar": 1375,
+            "quote": "Mopsy,"
+          },
+          {
+            "regionId": "region_86a200ae63d7590ae9e41184",
+            "startChar": 1380,
+            "endChar": 1392,
+            "quote": "Cotton-tail,"
+          },
+          {
+            "regionId": "region_5063b7baf712f8f1c5d6822d",
+            "startChar": 1394,
+            "endChar": 1404,
+            "quote": "and Peter."
+          }
+        ],
+        "provenance": "proposed reference assembled from exact work-text spans; pending expert adjudication",
+        "adjudication": {
+          "status": "pending-human-review"
+        }
+      },
+      "evidence": [
+        {
+          "regionId": "region_0920b8c25fadf7f9c6b9e10b",
+          "startChar": 1267,
+          "endChar": 1331,
+          "quote": "Once upon a time there were four little Rabbits, and their names"
+        },
+        {
+          "regionId": "region_e5fe128193c36300d91ac5e0",
+          "startChar": 1333,
+          "endChar": 1339,
+          "quote": "were--"
+        },
+        {
+          "regionId": "region_0476ca5d8420f24472b400bd",
+          "startChar": 1353,
+          "endChar": 1360,
+          "quote": "Flopsy,"
+        },
+        {
+          "regionId": "region_b6f8fb186ffc08324395a85d",
+          "startChar": 1369,
+          "endChar": 1375,
+          "quote": "Mopsy,"
+        },
+        {
+          "regionId": "region_86a200ae63d7590ae9e41184",
+          "startChar": 1380,
+          "endChar": 1392,
+          "quote": "Cotton-tail,"
+        },
+        {
+          "regionId": "region_5063b7baf712f8f1c5d6822d",
+          "startChar": 1394,
+          "endChar": 1404,
+          "quote": "and Peter."
+        }
+      ],
+      "adjudication": {
+        "status": "pending-human-review",
+        "reviewer": null
+      }
+    }
+  ]
+}

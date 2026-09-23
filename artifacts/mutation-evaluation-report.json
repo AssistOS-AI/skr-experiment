@@ -1,0 +1,634 @@
+{
+  "id": "skr-store-mutation-evaluation-v1",
+  "status": "passed",
+  "fixtureId": "skr-store-mutations-v1",
+  "fixtureSha256": "16b99af1589f71c6f4fdbc399b44da9d3e45b8f23fb9ae88e3b54b2c9c7d7bb3",
+  "caseCount": 60,
+  "passed": 60,
+  "failed": 0,
+  "families": {
+    "source-update-staleness": {
+      "cases": 15,
+      "passed": 15,
+      "failed": 0
+    },
+    "procedure-version-activation": {
+      "cases": 15,
+      "passed": 15,
+      "failed": 0
+    },
+    "fork-isolation": {
+      "cases": 15,
+      "passed": 15,
+      "failed": 0
+    },
+    "rebase-invalidation": {
+      "cases": 15,
+      "passed": 15,
+      "failed": 0
+    }
+  },
+  "results": [
+    {
+      "id": "mutation-001",
+      "family": "source-update-staleness",
+      "passed": true,
+      "dependencyDepth": 1,
+      "sourceVersionBefore": "srcv_6278df05c60f4d62b506bfbc02b360b0",
+      "sourceVersionAfter": "srcv_5dfbbd113c2a480eba073b46bd0b96df",
+      "recordLifecycle": "stale",
+      "recomputedLifecycle": "current",
+      "unaffectedFinding": null
+    },
+    {
+      "id": "mutation-002",
+      "family": "procedure-version-activation",
+      "passed": true,
+      "activeVersion": "1.0.1",
+      "findingCount": 1,
+      "oldFindingLifecycle": "stale",
+      "recomputedLifecycle": "current"
+    },
+    {
+      "id": "mutation-003",
+      "family": "fork-isolation",
+      "passed": true,
+      "nestedDepth": 1,
+      "localOverride": false,
+      "parentSnapshot": "snap_2abdc1efe71c4a8dae581d0eee2291cd",
+      "siblingSnapshot": "snap_cff255fd015741c8863be555a8be9a15",
+      "casRejected": true
+    },
+    {
+      "id": "mutation-004",
+      "family": "rebase-invalidation",
+      "passed": true,
+      "oldFindingLifecycle": "stale",
+      "newParentSnapshotId": "snap_179b7b0cc9d744e6825c69b11af7c8b8",
+      "siblingRetainedOriginalPin": true,
+      "procedureUpdated": true,
+      "childDraftCollision": true
+    },
+    {
+      "id": "mutation-005",
+      "family": "source-update-staleness",
+      "passed": true,
+      "dependencyDepth": 2,
+      "sourceVersionBefore": "srcv_7b372d36d32c472a8c259febe81283ab",
+      "sourceVersionAfter": "srcv_aa9bdcc93dbb4022902f3b481ddd155c",
+      "recordLifecycle": "stale",
+      "recomputedLifecycle": "current",
+      "unaffectedFinding": "current"
+    },
+    {
+      "id": "mutation-006",
+      "family": "procedure-version-activation",
+      "passed": true,
+      "activeVersion": "1.0.1",
+      "findingCount": 2,
+      "oldFindingLifecycle": "stale",
+      "recomputedLifecycle": "current"
+    },
+    {
+      "id": "mutation-007",
+      "family": "fork-isolation",
+      "passed": true,
+      "nestedDepth": 2,
+      "localOverride": true,
+      "parentSnapshot": "snap_1821e10b0440400dbbf4a6afb8bd88e3",
+      "siblingSnapshot": "snap_c173a7224c0f4d2e87becb2cd6331a65",
+      "casRejected": false
+    },
+    {
+      "id": "mutation-008",
+      "family": "rebase-invalidation",
+      "passed": true,
+      "oldFindingLifecycle": "stale",
+      "newParentSnapshotId": "snap_6c365f5f50314fd79744f54dbca2e54e",
+      "siblingRetainedOriginalPin": true,
+      "procedureUpdated": true,
+      "childDraftCollision": false
+    },
+    {
+      "id": "mutation-009",
+      "family": "source-update-staleness",
+      "passed": true,
+      "dependencyDepth": 3,
+      "sourceVersionBefore": "srcv_8b4f1af5df7f4a269dbaed9f0ce4c7d5",
+      "sourceVersionAfter": "srcv_de514a8f45204999bc08b8d17c688b33",
+      "recordLifecycle": "stale",
+      "recomputedLifecycle": "current",
+      "unaffectedFinding": null
+    },
+    {
+      "id": "mutation-010",
+      "family": "procedure-version-activation",
+      "passed": true,
+      "activeVersion": "1.0.1",
+      "findingCount": 3,
+      "oldFindingLifecycle": "stale",
+      "recomputedLifecycle": "current"
+    },
+    {
+      "id": "mutation-011",
+      "family": "fork-isolation",
+      "passed": true,
+      "nestedDepth": 3,
+      "localOverride": false,
+      "parentSnapshot": "snap_17f898cc06ed4651876807688f8f911f",
+      "siblingSnapshot": "snap_ce35cf6e0fd54512a2fc3c46f8961309",
+      "casRejected": false
+    },
+    {
+      "id": "mutation-012",
+      "family": "rebase-invalidation",
+      "passed": true,
+      "oldFindingLifecycle": "stale",
+      "newParentSnapshotId": "snap_85d32a23f5f3421ea8dd0d3fdaa0c190",
+      "siblingRetainedOriginalPin": true,
+      "procedureUpdated": false,
+      "childDraftCollision": false
+    },
+    {
+      "id": "mutation-013",
+      "family": "source-update-staleness",
+      "passed": true,
+      "dependencyDepth": 4,
+      "sourceVersionBefore": "srcv_3180ae1a41d549fa8ec10928f1e0bc9a",
+      "sourceVersionAfter": "srcv_2a4d0a28d8ca4ed49b2c0b80949fca96",
+      "recordLifecycle": "stale",
+      "recomputedLifecycle": "current",
+      "unaffectedFinding": "current"
+    },
+    {
+      "id": "mutation-014",
+      "family": "procedure-version-activation",
+      "passed": true,
+      "activeVersion": "1.0.1",
+      "findingCount": 1,
+      "oldFindingLifecycle": "stale",
+      "recomputedLifecycle": "current"
+    },
+    {
+      "id": "mutation-015",
+      "family": "fork-isolation",
+      "passed": true,
+      "nestedDepth": 1,
+      "localOverride": true,
+      "parentSnapshot": "snap_1c112c3a40694b8ca3b7040ad29d7a46",
+      "siblingSnapshot": "snap_29cfdd9c08604b89aa053cb02f32954b",
+      "casRejected": false
+    },
+    {
+      "id": "mutation-016",
+      "family": "rebase-invalidation",
+      "passed": true,
+      "oldFindingLifecycle": "stale",
+      "newParentSnapshotId": "snap_cadfe3580f494b34bf683b90a1c59023",
+      "siblingRetainedOriginalPin": true,
+      "procedureUpdated": true,
+      "childDraftCollision": true
+    },
+    {
+      "id": "mutation-017",
+      "family": "source-update-staleness",
+      "passed": true,
+      "dependencyDepth": 1,
+      "sourceVersionBefore": "srcv_2e8af6da16dd4d3792721b93048ca1f5",
+      "sourceVersionAfter": "srcv_d2c2cf88ed7449178894217237adba77",
+      "recordLifecycle": "stale",
+      "recomputedLifecycle": "current",
+      "unaffectedFinding": null
+    },
+    {
+      "id": "mutation-018",
+      "family": "procedure-version-activation",
+      "passed": true,
+      "activeVersion": "1.0.1",
+      "findingCount": 2,
+      "oldFindingLifecycle": "stale",
+      "recomputedLifecycle": "current"
+    },
+    {
+      "id": "mutation-019",
+      "family": "fork-isolation",
+      "passed": true,
+      "nestedDepth": 2,
+      "localOverride": false,
+      "parentSnapshot": "snap_ab45540358a540f68227ecc25fcc8a7d",
+      "siblingSnapshot": "snap_0acc8803fab84ae7af3fcfd7b6bb324a",
+      "casRejected": true
+    },
+    {
+      "id": "mutation-020",
+      "family": "rebase-invalidation",
+      "passed": true,
+      "oldFindingLifecycle": "stale",
+      "newParentSnapshotId": "snap_70c7fdd80f8740e49f2497c9ba6ee2a2",
+      "siblingRetainedOriginalPin": true,
+      "procedureUpdated": false,
+      "childDraftCollision": false
+    },
+    {
+      "id": "mutation-021",
+      "family": "source-update-staleness",
+      "passed": true,
+      "dependencyDepth": 2,
+      "sourceVersionBefore": "srcv_50dcc1b1c15d4e648d3ab845facada45",
+      "sourceVersionAfter": "srcv_3ce0da829c4e4012874d7503fe74cf3b",
+      "recordLifecycle": "stale",
+      "recomputedLifecycle": "current",
+      "unaffectedFinding": "current"
+    },
+    {
+      "id": "mutation-022",
+      "family": "procedure-version-activation",
+      "passed": true,
+      "activeVersion": "1.0.1",
+      "findingCount": 3,
+      "oldFindingLifecycle": "stale",
+      "recomputedLifecycle": "current"
+    },
+    {
+      "id": "mutation-023",
+      "family": "fork-isolation",
+      "passed": true,
+      "nestedDepth": 3,
+      "localOverride": true,
+      "parentSnapshot": "snap_2e5157950c04479395fd6a42dcd9d15c",
+      "siblingSnapshot": "snap_ae8a3039bb2e484492734e9aa9cb787b",
+      "casRejected": false
+    },
+    {
+      "id": "mutation-024",
+      "family": "rebase-invalidation",
+      "passed": true,
+      "oldFindingLifecycle": "stale",
+      "newParentSnapshotId": "snap_957640b497c6416690d844cce10cc53a",
+      "siblingRetainedOriginalPin": true,
+      "procedureUpdated": true,
+      "childDraftCollision": false
+    },
+    {
+      "id": "mutation-025",
+      "family": "source-update-staleness",
+      "passed": true,
+      "dependencyDepth": 3,
+      "sourceVersionBefore": "srcv_facb3efecd044586a68520b2875aeb79",
+      "sourceVersionAfter": "srcv_d71f28c7f12646e287d775ed900ff33b",
+      "recordLifecycle": "stale",
+      "recomputedLifecycle": "current",
+      "unaffectedFinding": null
+    },
+    {
+      "id": "mutation-026",
+      "family": "procedure-version-activation",
+      "passed": true,
+      "activeVersion": "1.0.1",
+      "findingCount": 1,
+      "oldFindingLifecycle": "stale",
+      "recomputedLifecycle": "current"
+    },
+    {
+      "id": "mutation-027",
+      "family": "fork-isolation",
+      "passed": true,
+      "nestedDepth": 1,
+      "localOverride": false,
+      "parentSnapshot": "snap_354555a03a2f4c92949757f071e4b433",
+      "siblingSnapshot": "snap_032c00f983064f4bbc56c001c51620b2",
+      "casRejected": false
+    },
+    {
+      "id": "mutation-028",
+      "family": "rebase-invalidation",
+      "passed": true,
+      "oldFindingLifecycle": "stale",
+      "newParentSnapshotId": "snap_104ebf7205d048b08beeabc42884db4c",
+      "siblingRetainedOriginalPin": true,
+      "procedureUpdated": true,
+      "childDraftCollision": true
+    },
+    {
+      "id": "mutation-029",
+      "family": "source-update-staleness",
+      "passed": true,
+      "dependencyDepth": 4,
+      "sourceVersionBefore": "srcv_4b616bec9ef14d0ebfc9ed0f90edeee4",
+      "sourceVersionAfter": "srcv_e7f98bd9f9f34176bc618aec87e47a69",
+      "recordLifecycle": "stale",
+      "recomputedLifecycle": "current",
+      "unaffectedFinding": "current"
+    },
+    {
+      "id": "mutation-030",
+      "family": "procedure-version-activation",
+      "passed": true,
+      "activeVersion": "1.0.1",
+      "findingCount": 2,
+      "oldFindingLifecycle": "stale",
+      "recomputedLifecycle": "current"
+    },
+    {
+      "id": "mutation-031",
+      "family": "fork-isolation",
+      "passed": true,
+      "nestedDepth": 2,
+      "localOverride": true,
+      "parentSnapshot": "snap_2ba9d3839d004dc0a0c32b2b8c09b4c1",
+      "siblingSnapshot": "snap_4b6e562c58ad4ed889c017df63ac125e",
+      "casRejected": false
+    },
+    {
+      "id": "mutation-032",
+      "family": "rebase-invalidation",
+      "passed": true,
+      "oldFindingLifecycle": "stale",
+      "newParentSnapshotId": "snap_162ce01436124083a35576e1bb229285",
+      "siblingRetainedOriginalPin": true,
+      "procedureUpdated": true,
+      "childDraftCollision": false
+    },
+    {
+      "id": "mutation-033",
+      "family": "source-update-staleness",
+      "passed": true,
+      "dependencyDepth": 1,
+      "sourceVersionBefore": "srcv_8aa1a16e43354e74ac33d02f74e566d5",
+      "sourceVersionAfter": "srcv_46d283a23ee34be1b7d86614dc59b818",
+      "recordLifecycle": "stale",
+      "recomputedLifecycle": "current",
+      "unaffectedFinding": null
+    },
+    {
+      "id": "mutation-034",
+      "family": "procedure-version-activation",
+      "passed": true,
+      "activeVersion": "1.0.1",
+      "findingCount": 3,
+      "oldFindingLifecycle": "stale",
+      "recomputedLifecycle": "current"
+    },
+    {
+      "id": "mutation-035",
+      "family": "fork-isolation",
+      "passed": true,
+      "nestedDepth": 3,
+      "localOverride": false,
+      "parentSnapshot": "snap_b85c05ab58ab42939f69968ec72c012f",
+      "siblingSnapshot": "snap_cfd32cf2632242cd8c25dd7ceb22e4f4",
+      "casRejected": true
+    },
+    {
+      "id": "mutation-036",
+      "family": "rebase-invalidation",
+      "passed": true,
+      "oldFindingLifecycle": "stale",
+      "newParentSnapshotId": "snap_714a0bbb501a4ff69f6859e5c61ac926",
+      "siblingRetainedOriginalPin": true,
+      "procedureUpdated": false,
+      "childDraftCollision": false
+    },
+    {
+      "id": "mutation-037",
+      "family": "source-update-staleness",
+      "passed": true,
+      "dependencyDepth": 2,
+      "sourceVersionBefore": "srcv_c97d66db9ebd41df84c7a3db726bfa2e",
+      "sourceVersionAfter": "srcv_489e573aebd74fa9a648209177d76c71",
+      "recordLifecycle": "stale",
+      "recomputedLifecycle": "current",
+      "unaffectedFinding": "current"
+    },
+    {
+      "id": "mutation-038",
+      "family": "procedure-version-activation",
+      "passed": true,
+      "activeVersion": "1.0.1",
+      "findingCount": 1,
+      "oldFindingLifecycle": "stale",
+      "recomputedLifecycle": "current"
+    },
+    {
+      "id": "mutation-039",
+      "family": "fork-isolation",
+      "passed": true,
+      "nestedDepth": 1,
+      "localOverride": true,
+      "parentSnapshot": "snap_a1a2676d797847dcac1dada6bed5048a",
+      "siblingSnapshot": "snap_3165cf17855d447182952cb4ef93432c",
+      "casRejected": false
+    },
+    {
+      "id": "mutation-040",
+      "family": "rebase-invalidation",
+      "passed": true,
+      "oldFindingLifecycle": "stale",
+      "newParentSnapshotId": "snap_cb3226ca7e1e455bbfbd845b6ab0dcde",
+      "siblingRetainedOriginalPin": true,
+      "procedureUpdated": true,
+      "childDraftCollision": true
+    },
+    {
+      "id": "mutation-041",
+      "family": "source-update-staleness",
+      "passed": true,
+      "dependencyDepth": 3,
+      "sourceVersionBefore": "srcv_2238f757fdf84a22a73e19acbb9f1a55",
+      "sourceVersionAfter": "srcv_7c483a5cbdc249c5a88ac803baac7341",
+      "recordLifecycle": "stale",
+      "recomputedLifecycle": "current",
+      "unaffectedFinding": null
+    },
+    {
+      "id": "mutation-042",
+      "family": "procedure-version-activation",
+      "passed": true,
+      "activeVersion": "1.0.1",
+      "findingCount": 2,
+      "oldFindingLifecycle": "stale",
+      "recomputedLifecycle": "current"
+    },
+    {
+      "id": "mutation-043",
+      "family": "fork-isolation",
+      "passed": true,
+      "nestedDepth": 2,
+      "localOverride": false,
+      "parentSnapshot": "snap_b6bd6db45bc74683b52a8efbc225b016",
+      "siblingSnapshot": "snap_2a10e66fec8d4f329de666504f3cf102",
+      "casRejected": false
+    },
+    {
+      "id": "mutation-044",
+      "family": "rebase-invalidation",
+      "passed": true,
+      "oldFindingLifecycle": "stale",
+      "newParentSnapshotId": "snap_10adab0709714abeb4bcaf03aa763220",
+      "siblingRetainedOriginalPin": true,
+      "procedureUpdated": false,
+      "childDraftCollision": false
+    },
+    {
+      "id": "mutation-045",
+      "family": "source-update-staleness",
+      "passed": true,
+      "dependencyDepth": 4,
+      "sourceVersionBefore": "srcv_65642148c2764142a6a66a9a1812d0d2",
+      "sourceVersionAfter": "srcv_78488250f2d6454eb7af5e81de82c5f6",
+      "recordLifecycle": "stale",
+      "recomputedLifecycle": "current",
+      "unaffectedFinding": "current"
+    },
+    {
+      "id": "mutation-046",
+      "family": "procedure-version-activation",
+      "passed": true,
+      "activeVersion": "1.0.1",
+      "findingCount": 3,
+      "oldFindingLifecycle": "stale",
+      "recomputedLifecycle": "current"
+    },
+    {
+      "id": "mutation-047",
+      "family": "fork-isolation",
+      "passed": true,
+      "nestedDepth": 3,
+      "localOverride": true,
+      "parentSnapshot": "snap_20ab8618f8bc48888bbf5318c47b15ab",
+      "siblingSnapshot": "snap_47f54014d9cb476e990a707e7bc907ba",
+      "casRejected": false
+    },
+    {
+      "id": "mutation-048",
+      "family": "rebase-invalidation",
+      "passed": true,
+      "oldFindingLifecycle": "stale",
+      "newParentSnapshotId": "snap_774c509edb624545b0db49fbf3cf8357",
+      "siblingRetainedOriginalPin": true,
+      "procedureUpdated": true,
+      "childDraftCollision": false
+    },
+    {
+      "id": "mutation-049",
+      "family": "source-update-staleness",
+      "passed": true,
+      "dependencyDepth": 1,
+      "sourceVersionBefore": "srcv_8e8544e1654044298aa06ac707cd6916",
+      "sourceVersionAfter": "srcv_ec9a722fdc6b4ccbb3f8dc8fd4859c51",
+      "recordLifecycle": "stale",
+      "recomputedLifecycle": "current",
+      "unaffectedFinding": null
+    },
+    {
+      "id": "mutation-050",
+      "family": "procedure-version-activation",
+      "passed": true,
+      "activeVersion": "1.0.1",
+      "findingCount": 1,
+      "oldFindingLifecycle": "stale",
+      "recomputedLifecycle": "current"
+    },
+    {
+      "id": "mutation-051",
+      "family": "fork-isolation",
+      "passed": true,
+      "nestedDepth": 1,
+      "localOverride": false,
+      "parentSnapshot": "snap_053b42200e0c4ca8a9a5315b33ddaf3f",
+      "siblingSnapshot": "snap_17146c1717a94ea097dc19f1083212cf",
+      "casRejected": true
+    },
+    {
+      "id": "mutation-052",
+      "family": "rebase-invalidation",
+      "passed": true,
+      "oldFindingLifecycle": "stale",
+      "newParentSnapshotId": "snap_0dfe10175a6f4a60a30eadae0769a0cb",
+      "siblingRetainedOriginalPin": true,
+      "procedureUpdated": true,
+      "childDraftCollision": true
+    },
+    {
+      "id": "mutation-053",
+      "family": "source-update-staleness",
+      "passed": true,
+      "dependencyDepth": 2,
+      "sourceVersionBefore": "srcv_595f315ff928467fbade6d03bb58f4da",
+      "sourceVersionAfter": "srcv_cf7bd25221e14b91a77c689f3851e718",
+      "recordLifecycle": "stale",
+      "recomputedLifecycle": "current",
+      "unaffectedFinding": "current"
+    },
+    {
+      "id": "mutation-054",
+      "family": "procedure-version-activation",
+      "passed": true,
+      "activeVersion": "1.0.1",
+      "findingCount": 2,
+      "oldFindingLifecycle": "stale",
+      "recomputedLifecycle": "current"
+    },
+    {
+      "id": "mutation-055",
+      "family": "fork-isolation",
+      "passed": true,
+      "nestedDepth": 2,
+      "localOverride": true,
+      "parentSnapshot": "snap_974ff7fc317b4c1cb90d6471dc22f1f3",
+      "siblingSnapshot": "snap_cfc1db8badbc465c977fb57421b7a93e",
+      "casRejected": false
+    },
+    {
+      "id": "mutation-056",
+      "family": "rebase-invalidation",
+      "passed": true,
+      "oldFindingLifecycle": "stale",
+      "newParentSnapshotId": "snap_aec38d71e6e8473b891441d1d36247b4",
+      "siblingRetainedOriginalPin": true,
+      "procedureUpdated": true,
+      "childDraftCollision": false
+    },
+    {
+      "id": "mutation-057",
+      "family": "source-update-staleness",
+      "passed": true,
+      "dependencyDepth": 3,
+      "sourceVersionBefore": "srcv_1069e3ae48434a37959d025da4ab3014",
+      "sourceVersionAfter": "srcv_47b3c5b2d73d49a1b6f9a90cd8b4fc99",
+      "recordLifecycle": "stale",
+      "recomputedLifecycle": "current",
+      "unaffectedFinding": null
+    },
+    {
+      "id": "mutation-058",
+      "family": "procedure-version-activation",
+      "passed": true,
+      "activeVersion": "1.0.1",
+      "findingCount": 3,
+      "oldFindingLifecycle": "stale",
+      "recomputedLifecycle": "current"
+    },
+    {
+      "id": "mutation-059",
+      "family": "fork-isolation",
+      "passed": true,
+      "nestedDepth": 3,
+      "localOverride": false,
+      "parentSnapshot": "snap_2b5c17031af1460aa27b361270e0a23e",
+      "siblingSnapshot": "snap_45c1ab055480496db5da33edbc0d7605",
+      "casRejected": false
+    },
+    {
+      "id": "mutation-060",
+      "family": "rebase-invalidation",
+      "passed": true,
+      "oldFindingLifecycle": "stale",
+      "newParentSnapshotId": "snap_4526b5ca1db2464cba77bd0e26210484",
+      "siblingRetainedOriginalPin": true,
+      "procedureUpdated": false,
+      "childDraftCollision": false
+    }
+  ],
+  "interpretation": "Exercises persistence, stale invalidation, immutable procedure activation, fork isolation, and rebase state transitions. It does not score model quality or semantic accuracy."
+}

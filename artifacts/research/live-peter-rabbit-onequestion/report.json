@@ -1,0 +1,56 @@
+{
+  "experiment": "paired-live-six-baseline",
+  "model": "gpt-6-luna",
+  "mode": "equal-budget",
+  "budget": {
+    "totalPromptChars": 12000,
+    "totalInputTokens": 12000,
+    "maxToolCalls": 12,
+    "topK": 8,
+    "chunkChars": 1400,
+    "graphExtractionChars": 4500,
+    "graphExtractionTurns": 1,
+    "fullSourceMaxChars": 400000
+  },
+  "question": {
+    "text": "How many little rabbits lived with their mother, and what was their home?"
+  },
+  "snapshotId": "snap_896f86a125ee4d7f8509124dbd4c67fb",
+  "sourceScope": [
+    "srcv_9081ce2454a84802bb35106a95f58eaa"
+  ],
+  "adjudicationStatus": "automatic-source-proposal-pending-human-review; model-judged-pending-human-review",
+  "rows": [
+    {
+      "baseline": "hybrid-rag",
+      "error": "Error: Codex Luna exited 1: Error: No such file or directory (os error 2)\n\n    at #request (file:///home/salboaie/work/experiments/skr-experiment/src/runtime/session.mjs:70:166)",
+      "elapsedMs": 877.43494
+    },
+    {
+      "baseline": "agentic-rag",
+      "error": "Error: Codex Luna exited 1: Error: No such file or directory (os error 2)\n\n    at #request (file:///home/salboaie/work/experiments/skr-experiment/src/runtime/session.mjs:70:166)",
+      "elapsedMs": 67.70633799999996
+    },
+    {
+      "baseline": "graphrag",
+      "error": "Error: Codex Luna exited 1: Error: No such file or directory (os error 2)\n\n    at #request (file:///home/salboaie/work/experiments/skr-experiment/src/runtime/session.mjs:70:166)",
+      "elapsedMs": 60.58758899999998
+    },
+    {
+      "baseline": "full-source-agent",
+      "error": "Error: Baseline input budget exhausted before answer generation\n    at finalAnswer (file:///home/salboaie/work/experiments/skr-experiment/src/evaluation/baselines.mjs:179:58)\n    at runBaselineRequest (file:///home/salboaie/work/experiments/skr-experiment/src/evaluation/baselines.mjs:240:105)\n    at async runResearchComparison (file:///home/salboaie/work/experiments/skr-experiment/src/evaluation/baselines.mjs:258:22)\n    at async file:///home/salboaie/work/experiments/skr-experiment/[eval1]:5:47",
+      "elapsedMs": 3.292507000000114
+    },
+    {
+      "baseline": "skr-direct",
+      "error": "Error: Codex Luna exited 1: Error: No such file or directory (os error 2)\n\n    at #request (file:///home/salboaie/work/experiments/skr-experiment/src/runtime/session.mjs:70:166)",
+      "elapsedMs": 63.871505999999954
+    },
+    {
+      "baseline": "skr-full",
+      "error": "Error: Codex Luna exited 1: Error: No such file or directory (os error 2)\n\n    at #request (file:///home/salboaie/work/experiments/skr-experiment/src/runtime/session.mjs:70:166)",
+      "elapsedMs": 61.77665499999989
+    }
+  ],
+  "interpretation": "Paired live model-run artifact. Model judgments are separately labeled and do not claim expert adjudication. Token/tool limits are checked from observed session usage; a system that exceeds them is marked ineligible."
+}

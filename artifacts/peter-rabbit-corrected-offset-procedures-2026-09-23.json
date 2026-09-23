@@ -1,0 +1,677 @@
+{
+  "title": "Peter Rabbit corrected-offset whole-work procedure review",
+  "date": "2026-09-23",
+  "model": "gpt-6-luna",
+  "humanReview": false,
+  "source": {
+    "manifestId": "pg14838",
+    "sha256": "2bf0e04297038fd97697dfac2b8a2db14f2b80c2012727f7ac0f28cf0b146544",
+    "bytes": 25952,
+    "sourceVersionId": "srcv_0a32d9d193e449ba820c43b187b0a8e1",
+    "readerProfile": {
+      "id": "text-structure-v2",
+      "format": "txt",
+      "locatorOffsetUnit": "utf16-code-unit",
+      "locatorCoordinateBasis": "original-decoded-source",
+      "workBoundaryClassifier": "project-gutenberg-start-end-v1"
+    },
+    "workBoundaryClassifier": {
+      "type": "project-gutenberg-work-v2",
+      "offsetUnit": "utf16-code-unit",
+      "coordinateBasis": "original-decoded-source",
+      "startMarker": "*** START OF THE PROJECT GUTENBERG EBOOK THE TALE OF PETER RABBIT ***",
+      "endMarker": "*** END OF THE PROJECT GUTENBERG EBOOK THE TALE OF PETER RABBIT ***",
+      "workStartOffset": 940,
+      "workEndOffset": 7041,
+      "workRegionCount": 137
+    },
+    "regionsTotal": 447,
+    "workRegions": 137,
+    "frontMatterRegions": 16,
+    "backMatterRegions": 294,
+    "workRegionRange": {
+      "first": {
+        "line": 31,
+        "start": 948,
+        "quote": "[Illustration]"
+      },
+      "last": {
+        "line": 248,
+        "start": 7024,
+        "quote": "THE END"
+      }
+    },
+    "boundaryOffsets": {
+      "unit": "utf16-code-unit",
+      "basis": "original-decoded-source",
+      "start": 940,
+      "end": 7041
+    },
+    "countQuote": {
+      "line": 65,
+      "start": 1267,
+      "end": 1331,
+      "quote": "Once upon a time there were four little Rabbits, and their names",
+      "rawSliceVerified": true
+    }
+  },
+  "projectId": "proj_f50e32feaa6343bf9f1d71834857f883",
+  "snapshotId": "snap_d7602e51c2b8478d821fb247ae87cd7d",
+  "procedures": [
+    {
+      "id": "contradiction-audit",
+      "version": "1.0.0",
+      "findings": [],
+      "coverage": {
+        "intentionally-excluded": 310,
+        "processed": 137
+      }
+    },
+    {
+      "id": "relevance-synthesis",
+      "version": "1.0.0",
+      "findings": [
+        {
+          "id": "finding_6cfa859f891de75468793b0f7c26",
+          "summary": "Procedural assessment: The excerpt identifies Flopsy, Mopsy, Cotton-tail, and Peter as four siblings living with their mother beneath a fir-tree. Their mother warns them away from Mr. McGregor’s garden, where their father had an accident, then leaves. While the three siblings gather berries, Peter enters the garden, eats vegetables, is chased by Mr. McGregor, loses his shoes and jacket, hides, becomes lost, and eventually escapes to the wood and returns home. He is tired and unwell; his mother puts him to bed and gives him camomile tea, while his siblings have bread, milk, and blackberries for supper. Requested elements covered: family relationships and principal events in the supplied excerpt. Residuals: none for this topic within the excerpt; events beyond it are not established.",
+          "criterion": "Requested elements are family relationships and narrative events in the supplied excerpt; both are directly represented in cited passages.",
+          "evidenceIds": [
+            "passage_bba55d5485a3a3a2c4388340",
+            "passage_bb18ed0adc1752a9d4adea4e",
+            "passage_6ceb8cdd4784c7aebd08578e",
+            "passage_737664c09b204b0f54b97347",
+            "passage_47ed127ea51c4a994d6526df",
+            "passage_aa1b2165212ea02ccb8494a1",
+            "passage_94f846c17ff4ed319d55ae23",
+            "passage_c8274dc1d6a4af29b493cc81",
+            "passage_de55acf4f15325115a5e9160",
+            "passage_cc8ac68b6d7e82e59d2015da",
+            "passage_a8d4836ef78d28d220470043",
+            "passage_77377ac60209cff1a99b81e7",
+            "passage_73bdfe04a4f882f75d8e3972",
+            "passage_5c934ff40da2108d91d60dd1",
+            "passage_e0d621ab4aa9c8c1a48dda79",
+            "passage_ffe873c72a70ebaaa0045396",
+            "passage_3f2c245aeed8928313721908",
+            "passage_91d61e37160a13f98362ffe4",
+            "passage_b3252fbc3a6b18636f6fa4ea",
+            "passage_cb1a68e8aedaf52247987d71",
+            "passage_4718cd2db7ac8ddca885274b",
+            "passage_9ff6fafbcdee1802d72970b4",
+            "passage_cf84e90a8ea0cae949ed3bdb",
+            "passage_988b0010b87f4ddcae741484",
+            "passage_a3e2419477005243d2155b35",
+            "passage_5dfc202e0e4a9f9ef0ff45bc",
+            "passage_49368f079d35f9c5709a5085",
+            "passage_304dceb0a7884cc36224b68c",
+            "passage_4d7dbcdce4fb0934f85c5504",
+            "passage_bacb45d52d70b8058f9f0de8",
+            "passage_94fae829cf0d37f9ac3025a3",
+            "passage_412f02a96df2eaa1ad98021a",
+            "passage_5367e814abf7e00f7bbeb579",
+            "passage_966948fde619d2e970b42ac9",
+            "passage_47f297f8eceb6bcb9dc03cb1",
+            "passage_7412f28a211f19b2c50e81a1",
+            "passage_e1b67678eb776212767fbac1",
+            "passage_0661093b7cb1e6727dcd6e68",
+            "passage_cc2b8388b552b16800b8f412"
+          ],
+          "counterevidenceIds": [],
+          "dependencies": [
+            "passage_bba55d5485a3a3a2c4388340",
+            "passage_bb18ed0adc1752a9d4adea4e",
+            "passage_6ceb8cdd4784c7aebd08578e",
+            "passage_737664c09b204b0f54b97347",
+            "passage_47ed127ea51c4a994d6526df",
+            "passage_aa1b2165212ea02ccb8494a1",
+            "passage_94f846c17ff4ed319d55ae23",
+            "passage_c8274dc1d6a4af29b493cc81",
+            "passage_de55acf4f15325115a5e9160",
+            "passage_cc8ac68b6d7e82e59d2015da",
+            "passage_a8d4836ef78d28d220470043",
+            "passage_77377ac60209cff1a99b81e7",
+            "passage_73bdfe04a4f882f75d8e3972",
+            "passage_5c934ff40da2108d91d60dd1",
+            "passage_e0d621ab4aa9c8c1a48dda79",
+            "passage_ffe873c72a70ebaaa0045396",
+            "passage_3f2c245aeed8928313721908",
+            "passage_91d61e37160a13f98362ffe4",
+            "passage_b3252fbc3a6b18636f6fa4ea",
+            "passage_cb1a68e8aedaf52247987d71",
+            "passage_4718cd2db7ac8ddca885274b",
+            "passage_9ff6fafbcdee1802d72970b4",
+            "passage_cf84e90a8ea0cae949ed3bdb",
+            "passage_988b0010b87f4ddcae741484",
+            "passage_a3e2419477005243d2155b35",
+            "passage_5dfc202e0e4a9f9ef0ff45bc",
+            "passage_49368f079d35f9c5709a5085",
+            "passage_304dceb0a7884cc36224b68c",
+            "passage_4d7dbcdce4fb0934f85c5504",
+            "passage_bacb45d52d70b8058f9f0de8",
+            "passage_94fae829cf0d37f9ac3025a3",
+            "passage_412f02a96df2eaa1ad98021a",
+            "passage_5367e814abf7e00f7bbeb579",
+            "passage_966948fde619d2e970b42ac9",
+            "passage_47f297f8eceb6bcb9dc03cb1",
+            "passage_7412f28a211f19b2c50e81a1",
+            "passage_e1b67678eb776212767fbac1",
+            "passage_0661093b7cb1e6727dcd6e68",
+            "passage_cc2b8388b552b16800b8f412",
+            "srcv_0a32d9d193e449ba820c43b187b0a8e1"
+          ]
+        }
+      ],
+      "coverage": {
+        "intentionally-excluded": 310,
+        "processed": 137
+      }
+    },
+    {
+      "id": "document-literary-rubric",
+      "version": "1.0.0",
+      "findings": [
+        {
+          "id": "finding_aee3f46657796fa878cca8e7ccf0",
+          "summary": "Procedural assessment — Narrative coherence (provisional; pending expert review). The supplied work gives an intelligible sequence from the mother's warning, through Peter's garden entry and pursuit, to his escape and the evening aftermath. Setup and payoff are visible between the warning that the father “had an accident there” and Peter's own encounter in the garden, and between Peter's escape and the later notice of his lost clothes. Counterevidence/limit: Peter is described as “safe at last in the wood” before he runs home; these are successive locations, not a contradiction in the stated order. No counterexample that defeats the sequence appears in the supplied work. Coverage: reviewed all supplied passages through “THE END”.",
+          "criterion": "Narrative coherence: setup/payoff and event sequence considered across the complete supplied work.",
+          "evidenceIds": [
+            "passage_94f846c17ff4ed319d55ae23",
+            "passage_c8274dc1d6a4af29b493cc81",
+            "passage_de55acf4f15325115a5e9160",
+            "passage_5c934ff40da2108d91d60dd1",
+            "passage_e0d621ab4aa9c8c1a48dda79",
+            "passage_b3252fbc3a6b18636f6fa4ea",
+            "passage_4718cd2db7ac8ddca885274b",
+            "passage_cf84e90a8ea0cae949ed3bdb",
+            "passage_74553db220b9c657fd022702",
+            "passage_a3e2419477005243d2155b35",
+            "passage_bacb45d52d70b8058f9f0de8",
+            "passage_94fae829cf0d37f9ac3025a3",
+            "passage_412f02a96df2eaa1ad98021a",
+            "passage_75c5ff87eae54ba2ae681c5a",
+            "passage_7ad93e708f1f33c2f754d53d",
+            "passage_47f297f8eceb6bcb9dc03cb1",
+            "passage_787d8325fb5affd745772985"
+          ],
+          "counterevidenceIds": [
+            "passage_4718cd2db7ac8ddca885274b",
+            "passage_bacb45d52d70b8058f9f0de8",
+            "passage_75c5ff87eae54ba2ae681c5a"
+          ],
+          "dependencies": [
+            "passage_94f846c17ff4ed319d55ae23",
+            "passage_c8274dc1d6a4af29b493cc81",
+            "passage_de55acf4f15325115a5e9160",
+            "passage_5c934ff40da2108d91d60dd1",
+            "passage_e0d621ab4aa9c8c1a48dda79",
+            "passage_b3252fbc3a6b18636f6fa4ea",
+            "passage_4718cd2db7ac8ddca885274b",
+            "passage_cf84e90a8ea0cae949ed3bdb",
+            "passage_74553db220b9c657fd022702",
+            "passage_a3e2419477005243d2155b35",
+            "passage_bacb45d52d70b8058f9f0de8",
+            "passage_94fae829cf0d37f9ac3025a3",
+            "passage_412f02a96df2eaa1ad98021a",
+            "passage_75c5ff87eae54ba2ae681c5a",
+            "passage_7ad93e708f1f33c2f754d53d",
+            "passage_47f297f8eceb6bcb9dc03cb1",
+            "passage_787d8325fb5affd745772985",
+            "srcv_0a32d9d193e449ba820c43b187b0a8e1"
+          ]
+        },
+        {
+          "id": "finding_4d8ac25e9ceb9e6129ad957feb01",
+          "summary": "Procedural assessment — Characterization (provisional; pending expert review). The narrator calls Peter “very naughty”; his choice to enter the forbidden garden and repeated attempts to find a way out give that description behavioral support. His fear and confusion appear in the chase and his inability to find the gate. His mother is presented through her warning, departure, care for Peter, and concern over his missing clothes. The siblings are differentiated from Peter by going blackberry gathering and later sharing supper. Counterevidence/limit: Flopsy, Mopsy, and Cotton-tail receive limited characterization beyond their collective actions. The passages do not establish motives beyond what the narrator or characters state. Coverage: reviewed all supplied passages through “THE END”.",
+          "criterion": "Characterization: repeated behavior and distinctive actions, without unsupported motive attribution.",
+          "evidenceIds": [
+            "passage_5c934ff40da2108d91d60dd1",
+            "passage_e0d621ab4aa9c8c1a48dda79",
+            "passage_94f846c17ff4ed319d55ae23",
+            "passage_a8d4836ef78d28d220470043",
+            "passage_77377ac60209cff1a99b81e7",
+            "passage_73bdfe04a4f882f75d8e3972",
+            "passage_4718cd2db7ac8ddca885274b",
+            "passage_9ff6fafbcdee1802d72970b4",
+            "passage_5d7f79edf1af945262e4f9bb",
+            "passage_304dceb0a7884cc36224b68c",
+            "passage_5367e814abf7e00f7bbeb579",
+            "passage_966948fde619d2e970b42ac9",
+            "passage_ec837ccdf7a1ebec84dc4e25",
+            "passage_75c5ff87eae54ba2ae681c5a",
+            "passage_47f297f8eceb6bcb9dc03cb1",
+            "passage_7412f28a211f19b2c50e81a1",
+            "passage_0661093b7cb1e6727dcd6e68",
+            "passage_cc2b8388b552b16800b8f412"
+          ],
+          "counterevidenceIds": [
+            "passage_77377ac60209cff1a99b81e7",
+            "passage_0661093b7cb1e6727dcd6e68"
+          ],
+          "dependencies": [
+            "passage_5c934ff40da2108d91d60dd1",
+            "passage_e0d621ab4aa9c8c1a48dda79",
+            "passage_94f846c17ff4ed319d55ae23",
+            "passage_a8d4836ef78d28d220470043",
+            "passage_77377ac60209cff1a99b81e7",
+            "passage_73bdfe04a4f882f75d8e3972",
+            "passage_4718cd2db7ac8ddca885274b",
+            "passage_9ff6fafbcdee1802d72970b4",
+            "passage_5d7f79edf1af945262e4f9bb",
+            "passage_304dceb0a7884cc36224b68c",
+            "passage_5367e814abf7e00f7bbeb579",
+            "passage_966948fde619d2e970b42ac9",
+            "passage_ec837ccdf7a1ebec84dc4e25",
+            "passage_75c5ff87eae54ba2ae681c5a",
+            "passage_47f297f8eceb6bcb9dc03cb1",
+            "passage_7412f28a211f19b2c50e81a1",
+            "passage_0661093b7cb1e6727dcd6e68",
+            "passage_cc2b8388b552b16800b8f412",
+            "srcv_0a32d9d193e449ba820c43b187b0a8e1"
+          ]
+        },
+        {
+          "id": "finding_4bf8490c834a9ba39fa8e3dedb88",
+          "summary": "Procedural assessment — Style (provisional; pending expert review). The supplied passages use direct dialogue for the mother's warning and McGregor's cry, sound play in “scr-r-ritch, scratch, scratch, scritch” and “Kertyschoo!”, repeated motion language such as “lippity--lippity”, and exclamatory punctuation around Peter's discovery of McGregor and the gate. Counterevidence/limit: These are specific examples; the supplied text does not establish that any one device recurs throughout the work. Coverage: reviewed all supplied passages through “THE END”.",
+          "criterion": "Style: specific language and formal choices cited; claims about recurrence are limited.",
+          "evidenceIds": [
+            "passage_94f846c17ff4ed319d55ae23",
+            "passage_c8274dc1d6a4af29b493cc81",
+            "passage_8e3adef058675640e4e9958c",
+            "passage_001a6d8d186f197b55c1226a",
+            "passage_3da4f85e4e6a47d5b25c6d8e",
+            "passage_d696fb2c5dba1c5e0862e0c6",
+            "passage_4d7dbcdce4fb0934f85c5504",
+            "passage_94fae829cf0d37f9ac3025a3"
+          ],
+          "counterevidenceIds": [
+            "passage_94f846c17ff4ed319d55ae23",
+            "passage_001a6d8d186f197b55c1226a",
+            "passage_d696fb2c5dba1c5e0862e0c6"
+          ],
+          "dependencies": [
+            "passage_94f846c17ff4ed319d55ae23",
+            "passage_c8274dc1d6a4af29b493cc81",
+            "passage_8e3adef058675640e4e9958c",
+            "passage_001a6d8d186f197b55c1226a",
+            "passage_3da4f85e4e6a47d5b25c6d8e",
+            "passage_d696fb2c5dba1c5e0862e0c6",
+            "passage_4d7dbcdce4fb0934f85c5504",
+            "passage_94fae829cf0d37f9ac3025a3",
+            "srcv_0a32d9d193e449ba820c43b187b0a8e1"
+          ]
+        },
+        {
+          "id": "finding_a8809636c70b169d46c81a74defc",
+          "summary": "Procedural assessment — Thematic development (provisional; pending expert review). Across separated passages, the narrative sets the mother's warning and the siblings' outing beside Peter's disobedience and increasingly difficult escape. The conclusion returns to the difference between Peter's consequences—lost clothes, illness, and tea in bed—and the siblings' supper. This supports a provisional reading of a contrast between caution/compliance and risk/disobedience. Counterevidence/limit: The theme is interpretive rather than explicitly named, and the siblings are only briefly characterized; their good behavior and supper alone do not establish a broader moral claim. Coverage: reviewed all supplied passages through “THE END”.",
+          "criterion": "Thematic development: interpretation uses separated setup, contrast, and conclusion passages; it remains provisional because the moral reading is not explicit.",
+          "evidenceIds": [
+            "passage_c8274dc1d6a4af29b493cc81",
+            "passage_de55acf4f15325115a5e9160",
+            "passage_77377ac60209cff1a99b81e7",
+            "passage_73bdfe04a4f882f75d8e3972",
+            "passage_5c934ff40da2108d91d60dd1",
+            "passage_4718cd2db7ac8ddca885274b",
+            "passage_bacb45d52d70b8058f9f0de8",
+            "passage_75c5ff87eae54ba2ae681c5a",
+            "passage_47f297f8eceb6bcb9dc03cb1",
+            "passage_7412f28a211f19b2c50e81a1",
+            "passage_0661093b7cb1e6727dcd6e68",
+            "passage_cc2b8388b552b16800b8f412"
+          ],
+          "counterevidenceIds": [
+            "passage_77377ac60209cff1a99b81e7",
+            "passage_0661093b7cb1e6727dcd6e68"
+          ],
+          "dependencies": [
+            "passage_c8274dc1d6a4af29b493cc81",
+            "passage_de55acf4f15325115a5e9160",
+            "passage_77377ac60209cff1a99b81e7",
+            "passage_73bdfe04a4f882f75d8e3972",
+            "passage_5c934ff40da2108d91d60dd1",
+            "passage_4718cd2db7ac8ddca885274b",
+            "passage_bacb45d52d70b8058f9f0de8",
+            "passage_75c5ff87eae54ba2ae681c5a",
+            "passage_47f297f8eceb6bcb9dc03cb1",
+            "passage_7412f28a211f19b2c50e81a1",
+            "passage_0661093b7cb1e6727dcd6e68",
+            "passage_cc2b8388b552b16800b8f412",
+            "srcv_0a32d9d193e449ba820c43b187b0a8e1"
+          ]
+        }
+      ],
+      "coverage": {
+        "intentionally-excluded": 310,
+        "processed": 137
+      }
+    }
+  ],
+  "coverage": {
+    "procedureCoverageStates": {
+      "processed": 411,
+      "intentionallyExcluded": 930,
+      "partial": 0,
+      "deferred": 0,
+      "unreadable": 0
+    },
+    "perProcedure": [
+      {
+        "id": "contradiction-audit",
+        "intentionally-excluded": 310,
+        "processed": 137
+      },
+      {
+        "id": "relevance-synthesis",
+        "intentionally-excluded": 310,
+        "processed": 137
+      },
+      {
+        "id": "document-literary-rubric",
+        "intentionally-excluded": 310,
+        "processed": 137
+      }
+    ],
+    "regionsConsidered": 137,
+    "totalSourceRegions": 447,
+    "intentionallyExcludedPerProcedure": 310,
+    "incompleteRegions": 0,
+    "sourceRegistrationCoverageRowsOutsideProcedureMaterialization": 1
+  },
+  "usage": {
+    "sessionId": "01a0ce3d-5e6e-7aa3-adea-3def072037c1",
+    "requests": 3,
+    "totalUsage": {
+      "input_tokens": 422207,
+      "cached_input_tokens": 328192,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 8124,
+      "reasoning_output_tokens": 1254
+    },
+    "usageLedger": [
+      {
+        "requestId": "50b27878-2e9e-4fb4-8a3d-5dab31f97af9",
+        "usage": {
+          "input_tokens": 123188,
+          "cached_input_tokens": 80384,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 677,
+          "reasoning_output_tokens": 304
+        },
+        "cumulativeUsage": {
+          "input_tokens": 123188,
+          "cached_input_tokens": 80384,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 677,
+          "reasoning_output_tokens": 304
+        },
+        "wallMs": 22170
+      },
+      {
+        "requestId": "5cea04eb-8a1c-4699-be0c-04ded2d03e60",
+        "usage": {
+          "input_tokens": 125065,
+          "cached_input_tokens": 100864,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 2374,
+          "reasoning_output_tokens": 169
+        },
+        "cumulativeUsage": {
+          "input_tokens": 248253,
+          "cached_input_tokens": 181248,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 3051,
+          "reasoning_output_tokens": 473
+        },
+        "wallMs": 48373
+      },
+      {
+        "requestId": "ff597655-19a9-4d23-8a70-4ae58fe504f2",
+        "usage": {
+          "input_tokens": 173954,
+          "cached_input_tokens": 146944,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 5073,
+          "reasoning_output_tokens": 781
+        },
+        "cumulativeUsage": {
+          "input_tokens": 422207,
+          "cached_input_tokens": 328192,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 8124,
+          "reasoning_output_tokens": 1254
+        },
+        "wallMs": 96717
+      }
+    ]
+  },
+  "sampleEvidence": [
+    {
+      "id": "passage_bba55d5485a3a3a2c4388340",
+      "sourceVersionId": "srcv_0a32d9d193e449ba820c43b187b0a8e1",
+      "regionId": "region_d3690e72b4c4559061cdd200",
+      "quote": "Once upon a time there were four little Rabbits, and their names",
+      "locator": {
+        "type": "text-line",
+        "line": 65,
+        "start": 1267,
+        "end": 1331,
+        "offsetUnit": "utf16-code-unit"
+      },
+      "rawSliceVerified": true
+    },
+    {
+      "id": "passage_bb18ed0adc1752a9d4adea4e",
+      "sourceVersionId": "srcv_0a32d9d193e449ba820c43b187b0a8e1",
+      "regionId": "region_00157f9503c71ca8e843a9cf",
+      "quote": "          Flopsy,",
+      "locator": {
+        "type": "text-line",
+        "line": 68,
+        "start": 1343,
+        "end": 1360,
+        "offsetUnit": "utf16-code-unit"
+      },
+      "rawSliceVerified": true
+    },
+    {
+      "id": "passage_6ceb8cdd4784c7aebd08578e",
+      "sourceVersionId": "srcv_0a32d9d193e449ba820c43b187b0a8e1",
+      "regionId": "region_4fcc248df6f7a074ad96d053",
+      "quote": "       Mopsy,",
+      "locator": {
+        "type": "text-line",
+        "line": 69,
+        "start": 1362,
+        "end": 1375,
+        "offsetUnit": "utf16-code-unit"
+      },
+      "rawSliceVerified": true
+    },
+    {
+      "id": "passage_737664c09b204b0f54b97347",
+      "sourceVersionId": "srcv_0a32d9d193e449ba820c43b187b0a8e1",
+      "regionId": "region_90ed6d0652d38329b3bf83f0",
+      "quote": "   Cotton-tail,",
+      "locator": {
+        "type": "text-line",
+        "line": 70,
+        "start": 1377,
+        "end": 1392,
+        "offsetUnit": "utf16-code-unit"
+      },
+      "rawSliceVerified": true
+    },
+    {
+      "id": "passage_47ed127ea51c4a994d6526df",
+      "sourceVersionId": "srcv_0a32d9d193e449ba820c43b187b0a8e1",
+      "regionId": "region_760dc2d9819d606124ded6f3",
+      "quote": "and Peter.",
+      "locator": {
+        "type": "text-line",
+        "line": 71,
+        "start": 1394,
+        "end": 1404,
+        "offsetUnit": "utf16-code-unit"
+      },
+      "rawSliceVerified": true
+    },
+    {
+      "id": "passage_aa1b2165212ea02ccb8494a1",
+      "sourceVersionId": "srcv_0a32d9d193e449ba820c43b187b0a8e1",
+      "regionId": "region_d5d666e9c4588db8dd93ee65",
+      "quote": "They lived with their Mother in a sand-bank, underneath the root of a",
+      "locator": {
+        "type": "text-line",
+        "line": 73,
+        "start": 1408,
+        "end": 1477,
+        "offsetUnit": "utf16-code-unit"
+      },
+      "rawSliceVerified": true
+    },
+    {
+      "id": "passage_94f846c17ff4ed319d55ae23",
+      "sourceVersionId": "srcv_0a32d9d193e449ba820c43b187b0a8e1",
+      "regionId": "region_7c6949634f1f32455e1f87d5",
+      "quote": "'Now my dears,' said old Mrs. Rabbit one morning, 'you may go into",
+      "locator": {
+        "type": "text-line",
+        "line": 76,
+        "start": 1501,
+        "end": 1567,
+        "offsetUnit": "utf16-code-unit"
+      },
+      "rawSliceVerified": true
+    },
+    {
+      "id": "passage_c8274dc1d6a4af29b493cc81",
+      "sourceVersionId": "srcv_0a32d9d193e449ba820c43b187b0a8e1",
+      "regionId": "region_8b11ac1697af71e5f789ac8f",
+      "quote": "the fields or down the lane, but don't go into Mr. McGregor's garden:",
+      "locator": {
+        "type": "text-line",
+        "line": 77,
+        "start": 1569,
+        "end": 1638,
+        "offsetUnit": "utf16-code-unit"
+      },
+      "rawSliceVerified": true
+    },
+    {
+      "id": "passage_de55acf4f15325115a5e9160",
+      "sourceVersionId": "srcv_0a32d9d193e449ba820c43b187b0a8e1",
+      "regionId": "region_1d0f7d08e2d0c56aff9d6fd1",
+      "quote": "your Father had an accident there; he was put in a pie by Mrs.",
+      "locator": {
+        "type": "text-line",
+        "line": 78,
+        "start": 1640,
+        "end": 1702,
+        "offsetUnit": "utf16-code-unit"
+      },
+      "rawSliceVerified": true
+    },
+    {
+      "id": "passage_cc8ac68b6d7e82e59d2015da",
+      "sourceVersionId": "srcv_0a32d9d193e449ba820c43b187b0a8e1",
+      "regionId": "region_4606dda499834db3d79e8d88",
+      "quote": "McGregor.'",
+      "locator": {
+        "type": "text-line",
+        "line": 79,
+        "start": 1704,
+        "end": 1714,
+        "offsetUnit": "utf16-code-unit"
+      },
+      "rawSliceVerified": true
+    },
+    {
+      "id": "passage_a8d4836ef78d28d220470043",
+      "sourceVersionId": "srcv_0a32d9d193e449ba820c43b187b0a8e1",
+      "regionId": "region_560fa1ba872cfc9e26b1a831",
+      "quote": "'Now run along, and don't get into mischief. I am going out.'",
+      "locator": {
+        "type": "text-line",
+        "line": 85,
+        "start": 1754,
+        "end": 1815,
+        "offsetUnit": "utf16-code-unit"
+      },
+      "rawSliceVerified": true
+    },
+    {
+      "id": "passage_77377ac60209cff1a99b81e7",
+      "sourceVersionId": "srcv_0a32d9d193e449ba820c43b187b0a8e1",
+      "regionId": "region_882a7be748a7eb5ef7d53c34",
+      "quote": "Flopsy, Mopsy, and Cottontail, who were good little bunnies, went",
+      "locator": {
+        "type": "text-line",
+        "line": 95,
+        "start": 2011,
+        "end": 2076,
+        "offsetUnit": "utf16-code-unit"
+      },
+      "rawSliceVerified": true
+    },
+    {
+      "id": "passage_73bdfe04a4f882f75d8e3972",
+      "sourceVersionId": "srcv_0a32d9d193e449ba820c43b187b0a8e1",
+      "regionId": "region_288fae4c7499fcf1755c73a8",
+      "quote": "down the lane to gather blackberries:",
+      "locator": {
+        "type": "text-line",
+        "line": 96,
+        "start": 2078,
+        "end": 2115,
+        "offsetUnit": "utf16-code-unit"
+      },
+      "rawSliceVerified": true
+    },
+    {
+      "id": "passage_5c934ff40da2108d91d60dd1",
+      "sourceVersionId": "srcv_0a32d9d193e449ba820c43b187b0a8e1",
+      "regionId": "region_ac00026670e76ba171a3b92e",
+      "quote": "But Peter, who was very naughty, ran straight away to Mr. McGregor's",
+      "locator": {
+        "type": "text-line",
+        "line": 98,
+        "start": 2119,
+        "end": 2187,
+        "offsetUnit": "utf16-code-unit"
+      },
+      "rawSliceVerified": true
+    },
+    {
+      "id": "passage_e0d621ab4aa9c8c1a48dda79",
+      "sourceVersionId": "srcv_0a32d9d193e449ba820c43b187b0a8e1",
+      "regionId": "region_6dfcb05120399979a2770228",
+      "quote": "garden, and squeezed under the gate!",
+      "locator": {
+        "type": "text-line",
+        "line": 99,
+        "start": 2189,
+        "end": 2225,
+        "offsetUnit": "utf16-code-unit"
+      },
+      "rawSliceVerified": true
+    },
+    {
+      "id": "passage_ffe873c72a70ebaaa0045396",
+      "sourceVersionId": "srcv_0a32d9d193e449ba820c43b187b0a8e1",
+      "regionId": "region_e3d40eff99471cb311961e4f",
+      "quote": "First he ate some lettuces and some French beans; and then he ate",
+      "locator": {
+        "type": "text-line",
+        "line": 105,
+        "start": 2265,
+        "end": 2330,
+        "offsetUnit": "utf16-code-unit"
+      },
+      "rawSliceVerified": true
+    }
+  ],
+  "persisted": {
+    "recordCount": 5,
+    "coverageCount": 1342
+  },
+  "provenance": "Fresh bounded Luna session, all procedure results committed in one validated snapshot. The assessments are model-reviewed procedural observations, not human expert judgments."
+}

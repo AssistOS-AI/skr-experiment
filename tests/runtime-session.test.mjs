@@ -1,0 +1,21 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {mkdtemp,mkdir,writeFile,chmod,readFile,rm} from 'node:fs/promises';
+import {tmpdir,homedir} from 'node:os';
+import {join} from 'node:path';
+import {CodexLunaSession,LUNA_MODEL} from '../src/runtime/session.mjs';
+
+async function fixture(){const root=await mkdtemp(join(tmpdir(),'skr-session-')),workspaceDir=join(root,'workspace'),sessionDir=join(root,'session'),sourceHome=join(root,'source-home');await Promise.all([mkdir(workspaceDir),mkdir(sourceHome)]);await writeFile(join(sourceHome,'auth.json'),'{}');const script=join(root,'fake-codex.mjs'),counter=join(root,'calls.txt'),argvlog=join(root,'argv.jsonl');
+ await writeFile(script,`#!/usr/bin/env node\nimport fs from 'node:fs';\nconst args=process.argv.slice(2),counter=${JSON.stringify(counter)},argvlog=${JSON.stringify(argvlog)};let n=0;try{n=Number(fs.readFileSync(counter,'utf8'))}catch{}n++;fs.writeFileSync(counter,String(n));fs.appendFileSync(argvlog,JSON.stringify(args)+'\\n');const input=fs.readFileSync(0,'utf8');if(input.includes('slow'))await new Promise(r=>setTimeout(r,100));const out=args[args.indexOf('--output-last-message')+1];fs.writeFileSync(out,JSON.stringify({turn:n,input:input.slice(-80)}));if(n===1)console.log(JSON.stringify({type:'thread.started',thread_id:'thread-unit-123'}));console.log(JSON.stringify({type:'turn.completed',usage:{input_tokens:n*10,output_tokens:n===1?2:n+3,cached_input_tokens:n*2}}));\n`);await chmod(script,0o700);return{root,workspaceDir,sessionDir,sourceHome,script,counter,argvlog}}
+
+test('CodexLunaSession pins model, persists UUID, resumes across instances, and deltas cumulative usage',async()=>{
+ const f=await fixture();try{const one=new CodexLunaSession({workspaceDir:f.workspaceDir,isolation:{enabled:false,sessionDir:f.sessionDir,sourceHome:f.sourceHome,codexPath:f.script},onEvent(){throw new Error('callback failure is isolated')}});const a=await one.request({prompt:'first'});assert.equal(a.output.turn,1);assert.equal(a.sessionId,'thread-unit-123');assert.deepEqual(a.usage,{input_tokens:10,output_tokens:2,cached_input_tokens:2});const two=new CodexLunaSession({workspaceDir:f.workspaceDir,isolation:{enabled:false,sessionDir:f.sessionDir,sourceHome:f.sourceHome,codexPath:f.script}});const b=await two.request({prompt:'second'});assert.equal(b.sessionId,'thread-unit-123');assert.deepEqual(b.usage,{input_tokens:10,output_tokens:3,cached_input_tokens:2});assert.deepEqual(b.cumulativeUsage,{input_tokens:20,output_tokens:5,cached_input_tokens:4});const rows=(await readFile(f.argvlog,'utf8')).trim().split('\n').map(JSON.parse);assert.ok(rows.every(args=>args.includes('--model')&&args[args.indexOf('--model')+1]===LUNA_MODEL));assert.equal(rows[0].includes('resume'),false);assert.equal(rows[1][rows[1].indexOf('resume')+1],'thread-unit-123');const status=await two.status();assert.equal(status.requests,2);assert.equal(status.totalUsage.input_tokens,20);assert.equal(status.usageLedger.length,2)}finally{await rm(f.root,{recursive:true,force:true})}
+});
+
+test('CodexLunaSession rejects pre-abort before spawn and terminates timed-out CLI',async()=>{
+ const f=await fixture();try{const abort=new AbortController();abort.abort(new Error('cancel before start'));const first=new CodexLunaSession({workspaceDir:f.workspaceDir,isolation:{enabled:false,sessionDir:f.sessionDir,sourceHome:f.sourceHome,codexPath:f.script}});await assert.rejects(first.request({prompt:'never',signal:abort.signal}),/cancel before start/);await assert.rejects(new CodexLunaSession({workspaceDir:f.workspaceDir,timeoutMs:20,isolation:{enabled:false,sessionDir:f.sessionDir,sourceHome:f.sourceHome,codexPath:f.script}}).request({prompt:'slow'}),/timed out/)}finally{await rm(f.root,{recursive:true,force:true})}
+});
+
+test('partial isolation options remain secure by default unless explicitly disabled',async()=>{
+ const f=await fixture();try{assert.equal(new CodexLunaSession({workspaceDir:f.workspaceDir,isolation:{sessionDir:f.sessionDir}}).isolation.enabled,true);assert.equal(new CodexLunaSession({workspaceDir:f.workspaceDir,isolation:{enabled:false,sessionDir:f.sessionDir}}).isolation.enabled,false);}finally{await rm(f.root,{recursive:true,force:true})}
+});

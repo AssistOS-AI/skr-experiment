@@ -1,0 +1,3 @@
+# SKR Evaluation v1.0
+
+Use the frozen fixture split and task-family definitions supplied by the evaluation harness. Never expose gold answers in runner inputs. Report per-family answer quality, evidence quality, completeness, wall time and measured cost; represent unavailable model cost as missing rather than zero. Do not infer benchmark readiness from fixture counts. Identify each baseline by its implemented capability, and mark missing embedding, GraphRAG, commercial RAG or model backends unavailable rather than relabeling lexical search. Preserve run seed, snapshot, adapter status and errors.

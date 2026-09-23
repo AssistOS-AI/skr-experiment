@@ -1,0 +1,10 @@
+{
+  "fixture": "controlled-v2.json",
+  "fixtureId": "controlled-acceptance-v2",
+  "sha256": "3fd553ee74537b68180e0968600e059d90a7b444308f47d56f55fb6732e1ffe4",
+  "caseCount": 346,
+  "frozenAt": "2026-09-23T12:12:39.753Z",
+  "previousSha256": null,
+  "freezeVersion": 1,
+  "warning": "A frozen fixture hash establishes byte identity only; it does not establish expert-verified gold."
+}

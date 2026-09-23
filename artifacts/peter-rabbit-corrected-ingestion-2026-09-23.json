@@ -1,0 +1,462 @@
+{
+  "title": "Peter Rabbit corrected-offset full-source ingestion and deterministic QA",
+  "date": "2026-09-23",
+  "model": "gpt-6-luna",
+  "humanReview": false,
+  "source": {
+    "name": "pg-14838.txt",
+    "sourceVersionId": "srcv_0a32d9d193e449ba820c43b187b0a8e1",
+    "sha256": "2bf0e04297038fd97697dfac2b8a2db14f2b80c2012727f7ac0f28cf0b146544",
+    "readerProfile": {
+      "id": "text-structure-v2",
+      "format": "txt",
+      "locatorOffsetUnit": "utf16-code-unit",
+      "locatorCoordinateBasis": "original-decoded-source",
+      "workBoundaryClassifier": "project-gutenberg-start-end-v1"
+    },
+    "workBoundaries": {
+      "type": "project-gutenberg-work-v2",
+      "offsetUnit": "utf16-code-unit",
+      "coordinateBasis": "original-decoded-source",
+      "startMarker": "*** START OF THE PROJECT GUTENBERG EBOOK THE TALE OF PETER RABBIT ***",
+      "endMarker": "*** END OF THE PROJECT GUTENBERG EBOOK THE TALE OF PETER RABBIT ***",
+      "workStartOffset": 940,
+      "workEndOffset": 7041,
+      "workRegionCount": 137
+    },
+    "totalRegions": 447
+  },
+  "projectId": "proj_f50e32feaa6343bf9f1d71834857f883",
+  "snapshotBefore": "snap_d7602e51c2b8478d821fb247ae87cd7d",
+  "snapshotAfter": "snap_9c47b781a171484c97a2ad12b4419413",
+  "ingestion": {
+    "validation": {
+      "status": "model-reviewed",
+      "model": "gpt-6-luna",
+      "calls": 5,
+      "sessionId": "01a0ce49-b548-7ea3-b426-8a2a5ecbd005",
+      "reviewedAssertions": 10,
+      "deterministicAssertions": 0,
+      "contextFindings": 1,
+      "rejectedCandidates": 24,
+      "idempotentRecords": 0,
+      "incompleteCoverage": 0,
+      "semanticExtraction": true,
+      "humanReview": false
+    },
+    "coverage": {
+      "regions": 447,
+      "incompleteRegions": 0,
+      "contextBatches": 1,
+      "crossBatchAnalysis": "not-needed",
+      "crossBatchCandidatePairs": 0,
+      "crossBatchPairsExamined": 0,
+      "crossBatchPairsOmitted": 0
+    },
+    "coverageStates": {
+      "processed": 447
+    },
+    "context": {
+      "path": "/tmp/skr-peter-rabbit-corrected-ingestion-checkpoint/ingestion-checkpoint.json",
+      "fingerprint": "69445601ef23bcca6537a7ba3499697d22bbcc475526095931f1cc3d52d723aa",
+      "completedChunks": 2,
+      "pendingChunks": 0
+    },
+    "recordCounts": {
+      "total": 10,
+      "sourceAssertions": 9,
+      "contextualFindings": 1
+    },
+    "residuals": [],
+    "events": [
+      {
+        "type": "ingestion.assertions-reviewed"
+      },
+      {
+        "type": "ingestion.chunk-completed",
+        "sourceVersionId": "srcv_0a32d9d193e449ba820c43b187b0a8e1",
+        "chunkId": "chunk_1",
+        "regions": 338,
+        "assertions": 7
+      },
+      {
+        "type": "ingestion.assertions-reviewed"
+      },
+      {
+        "type": "ingestion.chunk-completed",
+        "sourceVersionId": "srcv_0a32d9d193e449ba820c43b187b0a8e1",
+        "chunkId": "chunk_2",
+        "regions": 109,
+        "assertions": 2
+      },
+      {
+        "type": "ingestion.context-batch",
+        "index": 1,
+        "batches": 1,
+        "findings": 1
+      }
+    ],
+    "assertions": [
+      {
+        "id": "assert_176e59595e446c856eee16b6314d",
+        "ske": "(has_title entity_0783f21752dc643363df01bd)",
+        "regionId": "region_1ca9f2236874ca9570042c89",
+        "locator": {
+          "type": "text-line",
+          "line": 11,
+          "start": 515,
+          "end": 546,
+          "offsetUnit": "utf16-code-unit"
+        },
+        "quote": "Title: The Tale of Peter Rabbit",
+        "qualifiers": {
+          "attribution": null,
+          "time": null,
+          "modality": "asserted",
+          "polarity": "positive",
+          "world": null
+        },
+        "validation": "model-reviewed",
+        "supportState": "supported",
+        "rawRegionSliceVerified": true,
+        "quoteWithinRegion": true
+      },
+      {
+        "id": "assert_5c8cec6520e7bc6953b7657b507a",
+        "ske": "(authored_by the_tale_of_peter_rabbit entity_ace3dbd438b3e94f7531d78d)",
+        "regionId": "region_407d1f335285b510ffa4f3ba",
+        "locator": {
+          "type": "text-line",
+          "line": 13,
+          "start": 550,
+          "end": 572,
+          "offsetUnit": "utf16-code-unit"
+        },
+        "quote": "Author: Beatrix Potter",
+        "qualifiers": {
+          "attribution": null,
+          "time": null,
+          "modality": "asserted",
+          "polarity": "positive",
+          "world": null
+        },
+        "validation": "model-reviewed",
+        "supportState": "supported",
+        "rawRegionSliceVerified": true,
+        "quoteWithinRegion": true
+      },
+      {
+        "id": "assert_dca62f6669f7657105b9c23dfd8e",
+        "ske": "(released_on entity_0783f21752dc643363df01bd entity_e7aaa0edf41bae69b68f8b32)",
+        "regionId": "region_c81707d06fd00b7f336240ff",
+        "locator": {
+          "type": "text-line",
+          "line": 17,
+          "start": 588,
+          "end": 633,
+          "offsetUnit": "utf16-code-unit"
+        },
+        "quote": "Release date: January 30, 2005",
+        "qualifiers": {
+          "attribution": null,
+          "time": "January 30, 2005",
+          "modality": "asserted",
+          "polarity": "positive",
+          "world": null
+        },
+        "validation": "model-reviewed",
+        "supportState": "supported",
+        "rawRegionSliceVerified": true,
+        "quoteWithinRegion": true
+      },
+      {
+        "id": "assert_ecf9cc8f0a87fbd851bf52ac8a89",
+        "ske": "(first_published_in entity_0783f21752dc643363df01bd 1902)",
+        "regionId": "region_b821c5b377803800df13ceca",
+        "locator": {
+          "type": "text-line",
+          "line": 50,
+          "start": 1083,
+          "end": 1103,
+          "offsetUnit": "utf16-code-unit"
+        },
+        "quote": "First published 1902",
+        "qualifiers": {
+          "attribution": null,
+          "time": "1902",
+          "modality": "asserted",
+          "polarity": "positive",
+          "world": null
+        },
+        "validation": "model-reviewed",
+        "supportState": "supported",
+        "rawRegionSliceVerified": true,
+        "quoteWithinRegion": true
+      },
+      {
+        "id": "assert_09b02843b4ad48a7143197afdfab",
+        "ske": "(was_planting entity_40a4ec9e039dc54486730cb8 entity_62c3ba87b5fa57564446d157)",
+        "regionId": "region_6c129a7d7aec39164dca4498",
+        "locator": {
+          "type": "text-line",
+          "line": 117,
+          "start": 2535,
+          "end": 2603,
+          "offsetUnit": "utf16-code-unit"
+        },
+        "quote": "Mr. McGregor was on his hands and knees planting out young cabbages,",
+        "qualifiers": {
+          "attribution": null,
+          "time": null,
+          "modality": "asserted",
+          "polarity": "positive",
+          "world": null
+        },
+        "validation": "model-reviewed",
+        "supportState": "supported",
+        "rawRegionSliceVerified": true,
+        "quoteWithinRegion": true
+      },
+      {
+        "id": "assert_5a6ca901469873e1fb74f72b301a",
+        "ske": "(sneezed entity_a78e72b42cdb36f9cb96e1c6)",
+        "regionId": "region_3bd11e5da64185d96bf796ad",
+        "locator": {
+          "type": "text-line",
+          "line": 159,
+          "start": 3940,
+          "end": 4008,
+          "offsetUnit": "utf16-code-unit"
+        },
+        "quote": "Presently Peter sneezed--'Kertyschoo!'",
+        "qualifiers": {
+          "attribution": null,
+          "time": "Presently",
+          "modality": "asserted",
+          "polarity": "positive",
+          "world": null
+        },
+        "validation": "model-reviewed",
+        "supportState": "supported",
+        "rawRegionSliceVerified": true,
+        "quoteWithinRegion": true
+      },
+      {
+        "id": "assert_708f24ea46536f90ac5ce5df9289",
+        "ske": "(jumped_out_of entity_9094f3fba4c7f2c22d0c2a77 window)",
+        "regionId": "region_715b7d5b0a15194b08e4a4e4",
+        "locator": {
+          "type": "text-line",
+          "line": 166,
+          "start": 4058,
+          "end": 4123,
+          "offsetUnit": "utf16-code-unit"
+        },
+        "quote": "And tried to put his foot upon Peter, who jumped out of a window,",
+        "qualifiers": {
+          "attribution": null,
+          "time": null,
+          "modality": "asserted",
+          "polarity": "positive",
+          "world": null
+        },
+        "validation": "model-reviewed",
+        "supportState": "supported",
+        "rawRegionSliceVerified": true,
+        "quoteWithinRegion": true
+      },
+      {
+        "id": "assert_aa102ba0f993e698a3a8654c0865",
+        "ske": "(is_nonprofit project_gutenberg_literary_archive_foundation)",
+        "regionId": "region_3d7e259f6dd73ee9669c72fe",
+        "locator": {
+          "type": "text-line",
+          "line": 534,
+          "start": 22381,
+          "end": 22446,
+          "offsetUnit": "utf16-code-unit"
+        },
+        "quote": "The Project Gutenberg Literary Archive Foundation is a non-profit",
+        "qualifiers": {
+          "attribution": null,
+          "time": null,
+          "modality": "asserted",
+          "polarity": "positive",
+          "world": null
+        },
+        "validation": "model-reviewed",
+        "supportState": "supported",
+        "rawRegionSliceVerified": true,
+        "quoteWithinRegion": true
+      },
+      {
+        "id": "assert_a1378feef0a73e9b14c4edc727c1",
+        "ske": "(includes_information_about this_website entity_6af2e635a2822fd564b61833)",
+        "regionId": "region_409bd280e42ab20678b5b3b9",
+        "locator": {
+          "type": "text-line",
+          "line": 598,
+          "start": 25588,
+          "end": 25646,
+          "offsetUnit": "utf16-code-unit"
+        },
+        "quote": "This website includes information about Project Gutenberg",
+        "qualifiers": {
+          "attribution": null,
+          "time": null,
+          "modality": "asserted",
+          "polarity": "positive",
+          "world": null
+        },
+        "validation": "model-reviewed",
+        "supportState": "supported",
+        "rawRegionSliceVerified": true,
+        "quoteWithinRegion": true
+      }
+    ],
+    "contextFindings": [
+      {
+        "id": "context_9fede1989eebc75c5e4c8462ec",
+        "relationship": "unresolved-identity",
+        "summary": "Both passages name Peter, but the assertions use different entity IDs for him. The source appears to refer to the same character; reconcile the IDs during inspection.",
+        "dependencies": [
+          "assert_5a6ca901469873e1fb74f72b301a",
+          "assert_708f24ea46536f90ac5ce5df9289"
+        ],
+        "sourceSnapshotId": "snap_d7602e51c2b8478d821fb247ae87cd7d",
+        "validation": "model-reviewed",
+        "supportState": "unresolved"
+      }
+    ],
+    "assertionRawSliceVerification": {
+      "verified": 9,
+      "total": 9,
+      "verification": "Each cited quote is contained in its persisted source region, and each region locator slices the original decoded source text exactly."
+    }
+  },
+  "qa": {
+    "goal": "(count rabbits 4)",
+    "answerPackage": {
+      "answer": "Unresolved: no question supplied",
+      "supportState": "unresolved",
+      "claims": [],
+      "residuals": [
+        {
+          "reason": "No supported count assertion was extracted; an exact structural goal cannot be satisfied from this snapshot."
+        }
+      ]
+    },
+    "validation": {
+      "status": "not-an-acceptance-result",
+      "note": "The prior direct engine call omitted the natural-language question and returned no claims/evidence; its empty-claim audit was vacuous. Use the live question baseline on the corrected snapshot for NL factual QA."
+    },
+    "evidence": []
+  },
+  "usage": {
+    "sessionId": "01a0ce49-b548-7ea3-b426-8a2a5ecbd005",
+    "model": "gpt-6-luna",
+    "requests": 5,
+    "totalUsage": {
+      "input_tokens": 321342,
+      "cached_input_tokens": 84224,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 12432,
+      "reasoning_output_tokens": 2752
+    },
+    "usageLedger": [
+      {
+        "requestId": "03dc3f9f-bffb-4259-b782-b4be223cc239",
+        "usage": {
+          "input_tokens": 72174,
+          "cached_input_tokens": 48640,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 3813,
+          "reasoning_output_tokens": 320
+        },
+        "cumulativeUsage": {
+          "input_tokens": 72174,
+          "cached_input_tokens": 48640,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 3813,
+          "reasoning_output_tokens": 320
+        },
+        "wallMs": 76699
+      },
+      {
+        "requestId": "a977cbf6-6202-422b-ab4e-81b87e66035e",
+        "usage": {
+          "input_tokens": 50892,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 6066,
+          "reasoning_output_tokens": 750
+        },
+        "cumulativeUsage": {
+          "input_tokens": 123066,
+          "cached_input_tokens": 48640,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 9879,
+          "reasoning_output_tokens": 1070
+        },
+        "wallMs": 113390
+      },
+      {
+        "requestId": "abc1746f-8668-4bcf-8ac9-d2095447c3e7",
+        "usage": {
+          "input_tokens": 63297,
+          "cached_input_tokens": 35584,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 1419,
+          "reasoning_output_tokens": 1107
+        },
+        "cumulativeUsage": {
+          "input_tokens": 186363,
+          "cached_input_tokens": 84224,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 11298,
+          "reasoning_output_tokens": 2177
+        },
+        "wallMs": 35383
+      },
+      {
+        "requestId": "d1bdbed4-fcae-42e7-9020-6ce1b3cf70ef",
+        "usage": {
+          "input_tokens": 66355,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 618,
+          "reasoning_output_tokens": 164
+        },
+        "cumulativeUsage": {
+          "input_tokens": 252718,
+          "cached_input_tokens": 84224,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 11916,
+          "reasoning_output_tokens": 2341
+        },
+        "wallMs": 17457
+      },
+      {
+        "requestId": "d358ce91-f285-4861-a08e-63b2786480fa",
+        "usage": {
+          "input_tokens": 68624,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 516,
+          "reasoning_output_tokens": 411
+        },
+        "cumulativeUsage": {
+          "input_tokens": 321342,
+          "cached_input_tokens": 84224,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 12432,
+          "reasoning_output_tokens": 2752
+        },
+        "wallMs": 17910
+      }
+    ]
+  },
+  "method": "Actual Codex Luna source extraction and separate assertion review; deterministic structural resolution and evidence audit. The QA result tests an explicit SKE goal, not NL interpretation.",
+  "acceptanceStatus": "source-ingestion-complete-explicit-count-qa-unresolved",
+  "note": "Complete corrected-offset Luna extraction and coverage are established. The existing extraction did not produce a supported rabbit-count assertion. The explicit structural query is therefore unresolved and is not counted as factual QA acceptance; the paired question run should evaluate natural-language retrieval/interpretation separately."
+}

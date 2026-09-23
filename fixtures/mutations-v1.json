@@ -1,0 +1,654 @@
+{
+  "id": "skr-store-mutations-v1",
+  "version": 1,
+  "seed": "skr-mutation-v1",
+  "count": 60,
+  "construction": "Deterministic, isolated ProjectStore transactions. Each case has a distinct project and operation key; parameters drive source dependency depth, unaffected findings, nested forks, CAS conflicts, parent procedure changes, and child draft collisions. No model judgment or answer accuracy is scored.",
+  "cases": [
+    {
+      "id": "mutation-001",
+      "family": "source-update-staleness",
+      "operationKey": "skr-mutation-v1-1",
+      "parameters": {
+        "dependencyDepth": 1,
+        "unaffectedFindings": false,
+        "secondSource": true
+      },
+      "expected": "old-source-chain-stale-unrelated-current-and-recomputed-current"
+    },
+    {
+      "id": "mutation-002",
+      "family": "procedure-version-activation",
+      "operationKey": "skr-mutation-v1-2",
+      "parameters": {
+        "findingCount": 1,
+        "unrelatedProcedure": false
+      },
+      "expected": "old-findings-stale-unrelated-current-and-recomputed-current"
+    },
+    {
+      "id": "mutation-003",
+      "family": "fork-isolation",
+      "operationKey": "skr-mutation-v1-3",
+      "parameters": {
+        "nestedDepth": 1,
+        "localOverride": false,
+        "casConflict": true
+      },
+      "expected": "nested-child-write-private-sibling-pinned-and-cas-rejected"
+    },
+    {
+      "id": "mutation-004",
+      "family": "rebase-invalidation",
+      "operationKey": "skr-mutation-v1-4",
+      "parameters": {
+        "updateProcedure": true,
+        "siblingRetainsOriginalPin": true,
+        "childDraftCollision": true
+      },
+      "expected": "rebased-child-sees-new-parent-and-stale-old-finding"
+    },
+    {
+      "id": "mutation-005",
+      "family": "source-update-staleness",
+      "operationKey": "skr-mutation-v1-5",
+      "parameters": {
+        "dependencyDepth": 2,
+        "unaffectedFindings": true,
+        "secondSource": false
+      },
+      "expected": "old-source-chain-stale-unrelated-current-and-recomputed-current"
+    },
+    {
+      "id": "mutation-006",
+      "family": "procedure-version-activation",
+      "operationKey": "skr-mutation-v1-6",
+      "parameters": {
+        "findingCount": 2,
+        "unrelatedProcedure": true
+      },
+      "expected": "old-findings-stale-unrelated-current-and-recomputed-current"
+    },
+    {
+      "id": "mutation-007",
+      "family": "fork-isolation",
+      "operationKey": "skr-mutation-v1-7",
+      "parameters": {
+        "nestedDepth": 2,
+        "localOverride": true,
+        "casConflict": false
+      },
+      "expected": "nested-child-write-private-sibling-pinned-and-cas-rejected"
+    },
+    {
+      "id": "mutation-008",
+      "family": "rebase-invalidation",
+      "operationKey": "skr-mutation-v1-8",
+      "parameters": {
+        "updateProcedure": true,
+        "siblingRetainsOriginalPin": true,
+        "childDraftCollision": false
+      },
+      "expected": "rebased-child-sees-new-parent-and-stale-old-finding"
+    },
+    {
+      "id": "mutation-009",
+      "family": "source-update-staleness",
+      "operationKey": "skr-mutation-v1-9",
+      "parameters": {
+        "dependencyDepth": 3,
+        "unaffectedFindings": false,
+        "secondSource": false
+      },
+      "expected": "old-source-chain-stale-unrelated-current-and-recomputed-current"
+    },
+    {
+      "id": "mutation-010",
+      "family": "procedure-version-activation",
+      "operationKey": "skr-mutation-v1-10",
+      "parameters": {
+        "findingCount": 3,
+        "unrelatedProcedure": false
+      },
+      "expected": "old-findings-stale-unrelated-current-and-recomputed-current"
+    },
+    {
+      "id": "mutation-011",
+      "family": "fork-isolation",
+      "operationKey": "skr-mutation-v1-11",
+      "parameters": {
+        "nestedDepth": 3,
+        "localOverride": false,
+        "casConflict": false
+      },
+      "expected": "nested-child-write-private-sibling-pinned-and-cas-rejected"
+    },
+    {
+      "id": "mutation-012",
+      "family": "rebase-invalidation",
+      "operationKey": "skr-mutation-v1-12",
+      "parameters": {
+        "updateProcedure": false,
+        "siblingRetainsOriginalPin": true,
+        "childDraftCollision": false
+      },
+      "expected": "rebased-child-sees-new-parent-and-stale-old-finding"
+    },
+    {
+      "id": "mutation-013",
+      "family": "source-update-staleness",
+      "operationKey": "skr-mutation-v1-13",
+      "parameters": {
+        "dependencyDepth": 4,
+        "unaffectedFindings": true,
+        "secondSource": true
+      },
+      "expected": "old-source-chain-stale-unrelated-current-and-recomputed-current"
+    },
+    {
+      "id": "mutation-014",
+      "family": "procedure-version-activation",
+      "operationKey": "skr-mutation-v1-14",
+      "parameters": {
+        "findingCount": 1,
+        "unrelatedProcedure": true
+      },
+      "expected": "old-findings-stale-unrelated-current-and-recomputed-current"
+    },
+    {
+      "id": "mutation-015",
+      "family": "fork-isolation",
+      "operationKey": "skr-mutation-v1-15",
+      "parameters": {
+        "nestedDepth": 1,
+        "localOverride": true,
+        "casConflict": false
+      },
+      "expected": "nested-child-write-private-sibling-pinned-and-cas-rejected"
+    },
+    {
+      "id": "mutation-016",
+      "family": "rebase-invalidation",
+      "operationKey": "skr-mutation-v1-16",
+      "parameters": {
+        "updateProcedure": true,
+        "siblingRetainsOriginalPin": true,
+        "childDraftCollision": true
+      },
+      "expected": "rebased-child-sees-new-parent-and-stale-old-finding"
+    },
+    {
+      "id": "mutation-017",
+      "family": "source-update-staleness",
+      "operationKey": "skr-mutation-v1-17",
+      "parameters": {
+        "dependencyDepth": 1,
+        "unaffectedFindings": false,
+        "secondSource": false
+      },
+      "expected": "old-source-chain-stale-unrelated-current-and-recomputed-current"
+    },
+    {
+      "id": "mutation-018",
+      "family": "procedure-version-activation",
+      "operationKey": "skr-mutation-v1-18",
+      "parameters": {
+        "findingCount": 2,
+        "unrelatedProcedure": false
+      },
+      "expected": "old-findings-stale-unrelated-current-and-recomputed-current"
+    },
+    {
+      "id": "mutation-019",
+      "family": "fork-isolation",
+      "operationKey": "skr-mutation-v1-19",
+      "parameters": {
+        "nestedDepth": 2,
+        "localOverride": false,
+        "casConflict": true
+      },
+      "expected": "nested-child-write-private-sibling-pinned-and-cas-rejected"
+    },
+    {
+      "id": "mutation-020",
+      "family": "rebase-invalidation",
+      "operationKey": "skr-mutation-v1-20",
+      "parameters": {
+        "updateProcedure": false,
+        "siblingRetainsOriginalPin": true,
+        "childDraftCollision": false
+      },
+      "expected": "rebased-child-sees-new-parent-and-stale-old-finding"
+    },
+    {
+      "id": "mutation-021",
+      "family": "source-update-staleness",
+      "operationKey": "skr-mutation-v1-21",
+      "parameters": {
+        "dependencyDepth": 2,
+        "unaffectedFindings": true,
+        "secondSource": false
+      },
+      "expected": "old-source-chain-stale-unrelated-current-and-recomputed-current"
+    },
+    {
+      "id": "mutation-022",
+      "family": "procedure-version-activation",
+      "operationKey": "skr-mutation-v1-22",
+      "parameters": {
+        "findingCount": 3,
+        "unrelatedProcedure": true
+      },
+      "expected": "old-findings-stale-unrelated-current-and-recomputed-current"
+    },
+    {
+      "id": "mutation-023",
+      "family": "fork-isolation",
+      "operationKey": "skr-mutation-v1-23",
+      "parameters": {
+        "nestedDepth": 3,
+        "localOverride": true,
+        "casConflict": false
+      },
+      "expected": "nested-child-write-private-sibling-pinned-and-cas-rejected"
+    },
+    {
+      "id": "mutation-024",
+      "family": "rebase-invalidation",
+      "operationKey": "skr-mutation-v1-24",
+      "parameters": {
+        "updateProcedure": true,
+        "siblingRetainsOriginalPin": true,
+        "childDraftCollision": false
+      },
+      "expected": "rebased-child-sees-new-parent-and-stale-old-finding"
+    },
+    {
+      "id": "mutation-025",
+      "family": "source-update-staleness",
+      "operationKey": "skr-mutation-v1-25",
+      "parameters": {
+        "dependencyDepth": 3,
+        "unaffectedFindings": false,
+        "secondSource": true
+      },
+      "expected": "old-source-chain-stale-unrelated-current-and-recomputed-current"
+    },
+    {
+      "id": "mutation-026",
+      "family": "procedure-version-activation",
+      "operationKey": "skr-mutation-v1-26",
+      "parameters": {
+        "findingCount": 1,
+        "unrelatedProcedure": false
+      },
+      "expected": "old-findings-stale-unrelated-current-and-recomputed-current"
+    },
+    {
+      "id": "mutation-027",
+      "family": "fork-isolation",
+      "operationKey": "skr-mutation-v1-27",
+      "parameters": {
+        "nestedDepth": 1,
+        "localOverride": false,
+        "casConflict": false
+      },
+      "expected": "nested-child-write-private-sibling-pinned-and-cas-rejected"
+    },
+    {
+      "id": "mutation-028",
+      "family": "rebase-invalidation",
+      "operationKey": "skr-mutation-v1-28",
+      "parameters": {
+        "updateProcedure": true,
+        "siblingRetainsOriginalPin": true,
+        "childDraftCollision": true
+      },
+      "expected": "rebased-child-sees-new-parent-and-stale-old-finding"
+    },
+    {
+      "id": "mutation-029",
+      "family": "source-update-staleness",
+      "operationKey": "skr-mutation-v1-29",
+      "parameters": {
+        "dependencyDepth": 4,
+        "unaffectedFindings": true,
+        "secondSource": false
+      },
+      "expected": "old-source-chain-stale-unrelated-current-and-recomputed-current"
+    },
+    {
+      "id": "mutation-030",
+      "family": "procedure-version-activation",
+      "operationKey": "skr-mutation-v1-30",
+      "parameters": {
+        "findingCount": 2,
+        "unrelatedProcedure": true
+      },
+      "expected": "old-findings-stale-unrelated-current-and-recomputed-current"
+    },
+    {
+      "id": "mutation-031",
+      "family": "fork-isolation",
+      "operationKey": "skr-mutation-v1-31",
+      "parameters": {
+        "nestedDepth": 2,
+        "localOverride": true,
+        "casConflict": false
+      },
+      "expected": "nested-child-write-private-sibling-pinned-and-cas-rejected"
+    },
+    {
+      "id": "mutation-032",
+      "family": "rebase-invalidation",
+      "operationKey": "skr-mutation-v1-32",
+      "parameters": {
+        "updateProcedure": true,
+        "siblingRetainsOriginalPin": true,
+        "childDraftCollision": false
+      },
+      "expected": "rebased-child-sees-new-parent-and-stale-old-finding"
+    },
+    {
+      "id": "mutation-033",
+      "family": "source-update-staleness",
+      "operationKey": "skr-mutation-v1-33",
+      "parameters": {
+        "dependencyDepth": 1,
+        "unaffectedFindings": false,
+        "secondSource": false
+      },
+      "expected": "old-source-chain-stale-unrelated-current-and-recomputed-current"
+    },
+    {
+      "id": "mutation-034",
+      "family": "procedure-version-activation",
+      "operationKey": "skr-mutation-v1-34",
+      "parameters": {
+        "findingCount": 3,
+        "unrelatedProcedure": false
+      },
+      "expected": "old-findings-stale-unrelated-current-and-recomputed-current"
+    },
+    {
+      "id": "mutation-035",
+      "family": "fork-isolation",
+      "operationKey": "skr-mutation-v1-35",
+      "parameters": {
+        "nestedDepth": 3,
+        "localOverride": false,
+        "casConflict": true
+      },
+      "expected": "nested-child-write-private-sibling-pinned-and-cas-rejected"
+    },
+    {
+      "id": "mutation-036",
+      "family": "rebase-invalidation",
+      "operationKey": "skr-mutation-v1-36",
+      "parameters": {
+        "updateProcedure": false,
+        "siblingRetainsOriginalPin": true,
+        "childDraftCollision": false
+      },
+      "expected": "rebased-child-sees-new-parent-and-stale-old-finding"
+    },
+    {
+      "id": "mutation-037",
+      "family": "source-update-staleness",
+      "operationKey": "skr-mutation-v1-37",
+      "parameters": {
+        "dependencyDepth": 2,
+        "unaffectedFindings": true,
+        "secondSource": true
+      },
+      "expected": "old-source-chain-stale-unrelated-current-and-recomputed-current"
+    },
+    {
+      "id": "mutation-038",
+      "family": "procedure-version-activation",
+      "operationKey": "skr-mutation-v1-38",
+      "parameters": {
+        "findingCount": 1,
+        "unrelatedProcedure": true
+      },
+      "expected": "old-findings-stale-unrelated-current-and-recomputed-current"
+    },
+    {
+      "id": "mutation-039",
+      "family": "fork-isolation",
+      "operationKey": "skr-mutation-v1-39",
+      "parameters": {
+        "nestedDepth": 1,
+        "localOverride": true,
+        "casConflict": false
+      },
+      "expected": "nested-child-write-private-sibling-pinned-and-cas-rejected"
+    },
+    {
+      "id": "mutation-040",
+      "family": "rebase-invalidation",
+      "operationKey": "skr-mutation-v1-40",
+      "parameters": {
+        "updateProcedure": true,
+        "siblingRetainsOriginalPin": true,
+        "childDraftCollision": true
+      },
+      "expected": "rebased-child-sees-new-parent-and-stale-old-finding"
+    },
+    {
+      "id": "mutation-041",
+      "family": "source-update-staleness",
+      "operationKey": "skr-mutation-v1-41",
+      "parameters": {
+        "dependencyDepth": 3,
+        "unaffectedFindings": false,
+        "secondSource": false
+      },
+      "expected": "old-source-chain-stale-unrelated-current-and-recomputed-current"
+    },
+    {
+      "id": "mutation-042",
+      "family": "procedure-version-activation",
+      "operationKey": "skr-mutation-v1-42",
+      "parameters": {
+        "findingCount": 2,
+        "unrelatedProcedure": false
+      },
+      "expected": "old-findings-stale-unrelated-current-and-recomputed-current"
+    },
+    {
+      "id": "mutation-043",
+      "family": "fork-isolation",
+      "operationKey": "skr-mutation-v1-43",
+      "parameters": {
+        "nestedDepth": 2,
+        "localOverride": false,
+        "casConflict": false
+      },
+      "expected": "nested-child-write-private-sibling-pinned-and-cas-rejected"
+    },
+    {
+      "id": "mutation-044",
+      "family": "rebase-invalidation",
+      "operationKey": "skr-mutation-v1-44",
+      "parameters": {
+        "updateProcedure": false,
+        "siblingRetainsOriginalPin": true,
+        "childDraftCollision": false
+      },
+      "expected": "rebased-child-sees-new-parent-and-stale-old-finding"
+    },
+    {
+      "id": "mutation-045",
+      "family": "source-update-staleness",
+      "operationKey": "skr-mutation-v1-45",
+      "parameters": {
+        "dependencyDepth": 4,
+        "unaffectedFindings": true,
+        "secondSource": false
+      },
+      "expected": "old-source-chain-stale-unrelated-current-and-recomputed-current"
+    },
+    {
+      "id": "mutation-046",
+      "family": "procedure-version-activation",
+      "operationKey": "skr-mutation-v1-46",
+      "parameters": {
+        "findingCount": 3,
+        "unrelatedProcedure": true
+      },
+      "expected": "old-findings-stale-unrelated-current-and-recomputed-current"
+    },
+    {
+      "id": "mutation-047",
+      "family": "fork-isolation",
+      "operationKey": "skr-mutation-v1-47",
+      "parameters": {
+        "nestedDepth": 3,
+        "localOverride": true,
+        "casConflict": false
+      },
+      "expected": "nested-child-write-private-sibling-pinned-and-cas-rejected"
+    },
+    {
+      "id": "mutation-048",
+      "family": "rebase-invalidation",
+      "operationKey": "skr-mutation-v1-48",
+      "parameters": {
+        "updateProcedure": true,
+        "siblingRetainsOriginalPin": true,
+        "childDraftCollision": false
+      },
+      "expected": "rebased-child-sees-new-parent-and-stale-old-finding"
+    },
+    {
+      "id": "mutation-049",
+      "family": "source-update-staleness",
+      "operationKey": "skr-mutation-v1-49",
+      "parameters": {
+        "dependencyDepth": 1,
+        "unaffectedFindings": false,
+        "secondSource": true
+      },
+      "expected": "old-source-chain-stale-unrelated-current-and-recomputed-current"
+    },
+    {
+      "id": "mutation-050",
+      "family": "procedure-version-activation",
+      "operationKey": "skr-mutation-v1-50",
+      "parameters": {
+        "findingCount": 1,
+        "unrelatedProcedure": false
+      },
+      "expected": "old-findings-stale-unrelated-current-and-recomputed-current"
+    },
+    {
+      "id": "mutation-051",
+      "family": "fork-isolation",
+      "operationKey": "skr-mutation-v1-51",
+      "parameters": {
+        "nestedDepth": 1,
+        "localOverride": false,
+        "casConflict": true
+      },
+      "expected": "nested-child-write-private-sibling-pinned-and-cas-rejected"
+    },
+    {
+      "id": "mutation-052",
+      "family": "rebase-invalidation",
+      "operationKey": "skr-mutation-v1-52",
+      "parameters": {
+        "updateProcedure": true,
+        "siblingRetainsOriginalPin": true,
+        "childDraftCollision": true
+      },
+      "expected": "rebased-child-sees-new-parent-and-stale-old-finding"
+    },
+    {
+      "id": "mutation-053",
+      "family": "source-update-staleness",
+      "operationKey": "skr-mutation-v1-53",
+      "parameters": {
+        "dependencyDepth": 2,
+        "unaffectedFindings": true,
+        "secondSource": false
+      },
+      "expected": "old-source-chain-stale-unrelated-current-and-recomputed-current"
+    },
+    {
+      "id": "mutation-054",
+      "family": "procedure-version-activation",
+      "operationKey": "skr-mutation-v1-54",
+      "parameters": {
+        "findingCount": 2,
+        "unrelatedProcedure": true
+      },
+      "expected": "old-findings-stale-unrelated-current-and-recomputed-current"
+    },
+    {
+      "id": "mutation-055",
+      "family": "fork-isolation",
+      "operationKey": "skr-mutation-v1-55",
+      "parameters": {
+        "nestedDepth": 2,
+        "localOverride": true,
+        "casConflict": false
+      },
+      "expected": "nested-child-write-private-sibling-pinned-and-cas-rejected"
+    },
+    {
+      "id": "mutation-056",
+      "family": "rebase-invalidation",
+      "operationKey": "skr-mutation-v1-56",
+      "parameters": {
+        "updateProcedure": true,
+        "siblingRetainsOriginalPin": true,
+        "childDraftCollision": false
+      },
+      "expected": "rebased-child-sees-new-parent-and-stale-old-finding"
+    },
+    {
+      "id": "mutation-057",
+      "family": "source-update-staleness",
+      "operationKey": "skr-mutation-v1-57",
+      "parameters": {
+        "dependencyDepth": 3,
+        "unaffectedFindings": false,
+        "secondSource": false
+      },
+      "expected": "old-source-chain-stale-unrelated-current-and-recomputed-current"
+    },
+    {
+      "id": "mutation-058",
+      "family": "procedure-version-activation",
+      "operationKey": "skr-mutation-v1-58",
+      "parameters": {
+        "findingCount": 3,
+        "unrelatedProcedure": false
+      },
+      "expected": "old-findings-stale-unrelated-current-and-recomputed-current"
+    },
+    {
+      "id": "mutation-059",
+      "family": "fork-isolation",
+      "operationKey": "skr-mutation-v1-59",
+      "parameters": {
+        "nestedDepth": 3,
+        "localOverride": false,
+        "casConflict": false
+      },
+      "expected": "nested-child-write-private-sibling-pinned-and-cas-rejected"
+    },
+    {
+      "id": "mutation-060",
+      "family": "rebase-invalidation",
+      "operationKey": "skr-mutation-v1-60",
+      "parameters": {
+        "updateProcedure": false,
+        "siblingRetainsOriginalPin": true,
+        "childDraftCollision": false
+      },
+      "expected": "rebased-child-sees-new-parent-and-stale-old-finding"
+    }
+  ]
+}

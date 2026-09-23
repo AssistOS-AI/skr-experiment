@@ -1,0 +1,2193 @@
+{
+  "experiment": "pinned-procedure-contract-conformance",
+  "caseCount": 60,
+  "passed": 60,
+  "failed": 0,
+  "status": "passed",
+  "metricsByFamily": {
+    "contradiction-audit-scope": {
+      "cases": 20,
+      "exactContractAccuracy": 1
+    },
+    "relevance-exact-role": {
+      "cases": 20,
+      "exactContractAccuracy": 1
+    },
+    "complete-work-anchored-rubric": {
+      "cases": 20,
+      "exactContractAccuracy": 1
+    }
+  },
+  "rows": [
+    {
+      "id": "procedure-opposition-01",
+      "family": "contradiction-audit-scope",
+      "passed": true,
+      "expected": {
+        "findingCount": 1,
+        "outputTypes": [
+          "potential_contradiction"
+        ],
+        "evidenceIdSets": [
+          [
+            "left_0",
+            "right_0"
+          ]
+        ]
+      },
+      "actual": {
+        "findingCount": 1,
+        "outputTypes": [
+          "potential_contradiction"
+        ],
+        "evidenceIds": [
+          "left_0",
+          "right_0"
+        ],
+        "recordsConsidered": 3,
+        "validation": {
+          "status": "heuristic-reference",
+          "expertJudgment": false,
+          "procedure": "contradiction-audit",
+          "version": "1.0.0"
+        }
+      }
+    },
+    {
+      "id": "procedure-opposition-02",
+      "family": "contradiction-audit-scope",
+      "passed": true,
+      "expected": {
+        "findingCount": 1,
+        "outputTypes": [
+          "scope_difference"
+        ],
+        "evidenceIdSets": [
+          [
+            "left_1",
+            "right_1"
+          ]
+        ]
+      },
+      "actual": {
+        "findingCount": 1,
+        "outputTypes": [
+          "scope_difference"
+        ],
+        "evidenceIds": [
+          "left_1",
+          "right_1"
+        ],
+        "recordsConsidered": 3,
+        "validation": {
+          "status": "heuristic-reference",
+          "expertJudgment": false,
+          "procedure": "contradiction-audit",
+          "version": "1.0.0"
+        }
+      }
+    },
+    {
+      "id": "procedure-opposition-03",
+      "family": "contradiction-audit-scope",
+      "passed": true,
+      "expected": {
+        "findingCount": 1,
+        "outputTypes": [
+          "scope_difference"
+        ],
+        "evidenceIdSets": [
+          [
+            "left_2",
+            "right_2"
+          ]
+        ]
+      },
+      "actual": {
+        "findingCount": 1,
+        "outputTypes": [
+          "scope_difference"
+        ],
+        "evidenceIds": [
+          "left_2",
+          "right_2"
+        ],
+        "recordsConsidered": 3,
+        "validation": {
+          "status": "heuristic-reference",
+          "expertJudgment": false,
+          "procedure": "contradiction-audit",
+          "version": "1.0.0"
+        }
+      }
+    },
+    {
+      "id": "procedure-opposition-04",
+      "family": "contradiction-audit-scope",
+      "passed": true,
+      "expected": {
+        "findingCount": 1,
+        "outputTypes": [
+          "scope_difference"
+        ],
+        "evidenceIdSets": [
+          [
+            "left_3",
+            "right_3"
+          ]
+        ]
+      },
+      "actual": {
+        "findingCount": 1,
+        "outputTypes": [
+          "scope_difference"
+        ],
+        "evidenceIds": [
+          "left_3",
+          "right_3"
+        ],
+        "recordsConsidered": 3,
+        "validation": {
+          "status": "heuristic-reference",
+          "expertJudgment": false,
+          "procedure": "contradiction-audit",
+          "version": "1.0.0"
+        }
+      }
+    },
+    {
+      "id": "procedure-opposition-05",
+      "family": "contradiction-audit-scope",
+      "passed": true,
+      "expected": {
+        "findingCount": 1,
+        "outputTypes": [
+          "potential_contradiction"
+        ],
+        "evidenceIdSets": [
+          [
+            "left_4",
+            "right_4"
+          ]
+        ]
+      },
+      "actual": {
+        "findingCount": 1,
+        "outputTypes": [
+          "potential_contradiction"
+        ],
+        "evidenceIds": [
+          "left_4",
+          "right_4"
+        ],
+        "recordsConsidered": 3,
+        "validation": {
+          "status": "heuristic-reference",
+          "expertJudgment": false,
+          "procedure": "contradiction-audit",
+          "version": "1.0.0"
+        }
+      }
+    },
+    {
+      "id": "procedure-opposition-06",
+      "family": "contradiction-audit-scope",
+      "passed": true,
+      "expected": {
+        "findingCount": 1,
+        "outputTypes": [
+          "scope_difference"
+        ],
+        "evidenceIdSets": [
+          [
+            "left_5",
+            "right_5"
+          ]
+        ]
+      },
+      "actual": {
+        "findingCount": 1,
+        "outputTypes": [
+          "scope_difference"
+        ],
+        "evidenceIds": [
+          "left_5",
+          "right_5"
+        ],
+        "recordsConsidered": 3,
+        "validation": {
+          "status": "heuristic-reference",
+          "expertJudgment": false,
+          "procedure": "contradiction-audit",
+          "version": "1.0.0"
+        }
+      }
+    },
+    {
+      "id": "procedure-opposition-07",
+      "family": "contradiction-audit-scope",
+      "passed": true,
+      "expected": {
+        "findingCount": 1,
+        "outputTypes": [
+          "scope_difference"
+        ],
+        "evidenceIdSets": [
+          [
+            "left_6",
+            "right_6"
+          ]
+        ]
+      },
+      "actual": {
+        "findingCount": 1,
+        "outputTypes": [
+          "scope_difference"
+        ],
+        "evidenceIds": [
+          "left_6",
+          "right_6"
+        ],
+        "recordsConsidered": 3,
+        "validation": {
+          "status": "heuristic-reference",
+          "expertJudgment": false,
+          "procedure": "contradiction-audit",
+          "version": "1.0.0"
+        }
+      }
+    },
+    {
+      "id": "procedure-opposition-08",
+      "family": "contradiction-audit-scope",
+      "passed": true,
+      "expected": {
+        "findingCount": 1,
+        "outputTypes": [
+          "scope_difference"
+        ],
+        "evidenceIdSets": [
+          [
+            "left_7",
+            "right_7"
+          ]
+        ]
+      },
+      "actual": {
+        "findingCount": 1,
+        "outputTypes": [
+          "scope_difference"
+        ],
+        "evidenceIds": [
+          "left_7",
+          "right_7"
+        ],
+        "recordsConsidered": 3,
+        "validation": {
+          "status": "heuristic-reference",
+          "expertJudgment": false,
+          "procedure": "contradiction-audit",
+          "version": "1.0.0"
+        }
+      }
+    },
+    {
+      "id": "procedure-opposition-09",
+      "family": "contradiction-audit-scope",
+      "passed": true,
+      "expected": {
+        "findingCount": 1,
+        "outputTypes": [
+          "potential_contradiction"
+        ],
+        "evidenceIdSets": [
+          [
+            "left_8",
+            "right_8"
+          ]
+        ]
+      },
+      "actual": {
+        "findingCount": 1,
+        "outputTypes": [
+          "potential_contradiction"
+        ],
+        "evidenceIds": [
+          "left_8",
+          "right_8"
+        ],
+        "recordsConsidered": 3,
+        "validation": {
+          "status": "heuristic-reference",
+          "expertJudgment": false,
+          "procedure": "contradiction-audit",
+          "version": "1.0.0"
+        }
+      }
+    },
+    {
+      "id": "procedure-opposition-10",
+      "family": "contradiction-audit-scope",
+      "passed": true,
+      "expected": {
+        "findingCount": 1,
+        "outputTypes": [
+          "scope_difference"
+        ],
+        "evidenceIdSets": [
+          [
+            "left_9",
+            "right_9"
+          ]
+        ]
+      },
+      "actual": {
+        "findingCount": 1,
+        "outputTypes": [
+          "scope_difference"
+        ],
+        "evidenceIds": [
+          "left_9",
+          "right_9"
+        ],
+        "recordsConsidered": 3,
+        "validation": {
+          "status": "heuristic-reference",
+          "expertJudgment": false,
+          "procedure": "contradiction-audit",
+          "version": "1.0.0"
+        }
+      }
+    },
+    {
+      "id": "procedure-opposition-11",
+      "family": "contradiction-audit-scope",
+      "passed": true,
+      "expected": {
+        "findingCount": 1,
+        "outputTypes": [
+          "scope_difference"
+        ],
+        "evidenceIdSets": [
+          [
+            "left_10",
+            "right_10"
+          ]
+        ]
+      },
+      "actual": {
+        "findingCount": 1,
+        "outputTypes": [
+          "scope_difference"
+        ],
+        "evidenceIds": [
+          "left_10",
+          "right_10"
+        ],
+        "recordsConsidered": 3,
+        "validation": {
+          "status": "heuristic-reference",
+          "expertJudgment": false,
+          "procedure": "contradiction-audit",
+          "version": "1.0.0"
+        }
+      }
+    },
+    {
+      "id": "procedure-opposition-12",
+      "family": "contradiction-audit-scope",
+      "passed": true,
+      "expected": {
+        "findingCount": 1,
+        "outputTypes": [
+          "scope_difference"
+        ],
+        "evidenceIdSets": [
+          [
+            "left_11",
+            "right_11"
+          ]
+        ]
+      },
+      "actual": {
+        "findingCount": 1,
+        "outputTypes": [
+          "scope_difference"
+        ],
+        "evidenceIds": [
+          "left_11",
+          "right_11"
+        ],
+        "recordsConsidered": 3,
+        "validation": {
+          "status": "heuristic-reference",
+          "expertJudgment": false,
+          "procedure": "contradiction-audit",
+          "version": "1.0.0"
+        }
+      }
+    },
+    {
+      "id": "procedure-opposition-13",
+      "family": "contradiction-audit-scope",
+      "passed": true,
+      "expected": {
+        "findingCount": 1,
+        "outputTypes": [
+          "potential_contradiction"
+        ],
+        "evidenceIdSets": [
+          [
+            "left_12",
+            "right_12"
+          ]
+        ]
+      },
+      "actual": {
+        "findingCount": 1,
+        "outputTypes": [
+          "potential_contradiction"
+        ],
+        "evidenceIds": [
+          "left_12",
+          "right_12"
+        ],
+        "recordsConsidered": 3,
+        "validation": {
+          "status": "heuristic-reference",
+          "expertJudgment": false,
+          "procedure": "contradiction-audit",
+          "version": "1.0.0"
+        }
+      }
+    },
+    {
+      "id": "procedure-opposition-14",
+      "family": "contradiction-audit-scope",
+      "passed": true,
+      "expected": {
+        "findingCount": 1,
+        "outputTypes": [
+          "scope_difference"
+        ],
+        "evidenceIdSets": [
+          [
+            "left_13",
+            "right_13"
+          ]
+        ]
+      },
+      "actual": {
+        "findingCount": 1,
+        "outputTypes": [
+          "scope_difference"
+        ],
+        "evidenceIds": [
+          "left_13",
+          "right_13"
+        ],
+        "recordsConsidered": 3,
+        "validation": {
+          "status": "heuristic-reference",
+          "expertJudgment": false,
+          "procedure": "contradiction-audit",
+          "version": "1.0.0"
+        }
+      }
+    },
+    {
+      "id": "procedure-opposition-15",
+      "family": "contradiction-audit-scope",
+      "passed": true,
+      "expected": {
+        "findingCount": 1,
+        "outputTypes": [
+          "scope_difference"
+        ],
+        "evidenceIdSets": [
+          [
+            "left_14",
+            "right_14"
+          ]
+        ]
+      },
+      "actual": {
+        "findingCount": 1,
+        "outputTypes": [
+          "scope_difference"
+        ],
+        "evidenceIds": [
+          "left_14",
+          "right_14"
+        ],
+        "recordsConsidered": 3,
+        "validation": {
+          "status": "heuristic-reference",
+          "expertJudgment": false,
+          "procedure": "contradiction-audit",
+          "version": "1.0.0"
+        }
+      }
+    },
+    {
+      "id": "procedure-opposition-16",
+      "family": "contradiction-audit-scope",
+      "passed": true,
+      "expected": {
+        "findingCount": 1,
+        "outputTypes": [
+          "scope_difference"
+        ],
+        "evidenceIdSets": [
+          [
+            "left_15",
+            "right_15"
+          ]
+        ]
+      },
+      "actual": {
+        "findingCount": 1,
+        "outputTypes": [
+          "scope_difference"
+        ],
+        "evidenceIds": [
+          "left_15",
+          "right_15"
+        ],
+        "recordsConsidered": 3,
+        "validation": {
+          "status": "heuristic-reference",
+          "expertJudgment": false,
+          "procedure": "contradiction-audit",
+          "version": "1.0.0"
+        }
+      }
+    },
+    {
+      "id": "procedure-opposition-17",
+      "family": "contradiction-audit-scope",
+      "passed": true,
+      "expected": {
+        "findingCount": 1,
+        "outputTypes": [
+          "potential_contradiction"
+        ],
+        "evidenceIdSets": [
+          [
+            "left_16",
+            "right_16"
+          ]
+        ]
+      },
+      "actual": {
+        "findingCount": 1,
+        "outputTypes": [
+          "potential_contradiction"
+        ],
+        "evidenceIds": [
+          "left_16",
+          "right_16"
+        ],
+        "recordsConsidered": 3,
+        "validation": {
+          "status": "heuristic-reference",
+          "expertJudgment": false,
+          "procedure": "contradiction-audit",
+          "version": "1.0.0"
+        }
+      }
+    },
+    {
+      "id": "procedure-opposition-18",
+      "family": "contradiction-audit-scope",
+      "passed": true,
+      "expected": {
+        "findingCount": 1,
+        "outputTypes": [
+          "scope_difference"
+        ],
+        "evidenceIdSets": [
+          [
+            "left_17",
+            "right_17"
+          ]
+        ]
+      },
+      "actual": {
+        "findingCount": 1,
+        "outputTypes": [
+          "scope_difference"
+        ],
+        "evidenceIds": [
+          "left_17",
+          "right_17"
+        ],
+        "recordsConsidered": 3,
+        "validation": {
+          "status": "heuristic-reference",
+          "expertJudgment": false,
+          "procedure": "contradiction-audit",
+          "version": "1.0.0"
+        }
+      }
+    },
+    {
+      "id": "procedure-opposition-19",
+      "family": "contradiction-audit-scope",
+      "passed": true,
+      "expected": {
+        "findingCount": 1,
+        "outputTypes": [
+          "scope_difference"
+        ],
+        "evidenceIdSets": [
+          [
+            "left_18",
+            "right_18"
+          ]
+        ]
+      },
+      "actual": {
+        "findingCount": 1,
+        "outputTypes": [
+          "scope_difference"
+        ],
+        "evidenceIds": [
+          "left_18",
+          "right_18"
+        ],
+        "recordsConsidered": 3,
+        "validation": {
+          "status": "heuristic-reference",
+          "expertJudgment": false,
+          "procedure": "contradiction-audit",
+          "version": "1.0.0"
+        }
+      }
+    },
+    {
+      "id": "procedure-opposition-20",
+      "family": "contradiction-audit-scope",
+      "passed": true,
+      "expected": {
+        "findingCount": 1,
+        "outputTypes": [
+          "scope_difference"
+        ],
+        "evidenceIdSets": [
+          [
+            "left_19",
+            "right_19"
+          ]
+        ]
+      },
+      "actual": {
+        "findingCount": 1,
+        "outputTypes": [
+          "scope_difference"
+        ],
+        "evidenceIds": [
+          "left_19",
+          "right_19"
+        ],
+        "recordsConsidered": 3,
+        "validation": {
+          "status": "heuristic-reference",
+          "expertJudgment": false,
+          "procedure": "contradiction-audit",
+          "version": "1.0.0"
+        }
+      }
+    },
+    {
+      "id": "procedure-relevance-01",
+      "family": "relevance-exact-role",
+      "passed": true,
+      "expected": {
+        "findingCount": 0,
+        "evidenceIds": [],
+        "goal": "(located_in key garden)"
+      },
+      "actual": {
+        "findingCount": 0,
+        "outputTypes": [],
+        "evidenceIds": [],
+        "recordsConsidered": 2,
+        "validation": {
+          "status": "heuristic-reference",
+          "expertJudgment": false,
+          "procedure": "relevance-synthesis",
+          "version": "1.0.0"
+        }
+      }
+    },
+    {
+      "id": "procedure-relevance-02",
+      "family": "relevance-exact-role",
+      "passed": true,
+      "expected": {
+        "findingCount": 1,
+        "evidenceIds": [
+          "relevant_1"
+        ],
+        "goal": "(owns alice key)"
+      },
+      "actual": {
+        "findingCount": 1,
+        "outputTypes": [
+          "exactly_relevant"
+        ],
+        "evidenceIds": [
+          "relevant_1"
+        ],
+        "recordsConsidered": 3,
+        "validation": {
+          "status": "heuristic-reference",
+          "expertJudgment": false,
+          "procedure": "relevance-synthesis",
+          "version": "1.0.0"
+        }
+      }
+    },
+    {
+      "id": "procedure-relevance-03",
+      "family": "relevance-exact-role",
+      "passed": true,
+      "expected": {
+        "findingCount": 1,
+        "evidenceIds": [
+          "relevant_2"
+        ],
+        "goal": "(helps alice rabbit)"
+      },
+      "actual": {
+        "findingCount": 1,
+        "outputTypes": [
+          "exactly_relevant"
+        ],
+        "evidenceIds": [
+          "relevant_2"
+        ],
+        "recordsConsidered": 3,
+        "validation": {
+          "status": "heuristic-reference",
+          "expertJudgment": false,
+          "procedure": "relevance-synthesis",
+          "version": "1.0.0"
+        }
+      }
+    },
+    {
+      "id": "procedure-relevance-04",
+      "family": "relevance-exact-role",
+      "passed": true,
+      "expected": {
+        "findingCount": 1,
+        "evidenceIds": [
+          "relevant_3"
+        ],
+        "goal": "(located_in key garden)"
+      },
+      "actual": {
+        "findingCount": 1,
+        "outputTypes": [
+          "exactly_relevant"
+        ],
+        "evidenceIds": [
+          "relevant_3"
+        ],
+        "recordsConsidered": 3,
+        "validation": {
+          "status": "heuristic-reference",
+          "expertJudgment": false,
+          "procedure": "relevance-synthesis",
+          "version": "1.0.0"
+        }
+      }
+    },
+    {
+      "id": "procedure-relevance-05",
+      "family": "relevance-exact-role",
+      "passed": true,
+      "expected": {
+        "findingCount": 0,
+        "evidenceIds": [],
+        "goal": "(owns alice key)"
+      },
+      "actual": {
+        "findingCount": 0,
+        "outputTypes": [],
+        "evidenceIds": [],
+        "recordsConsidered": 2,
+        "validation": {
+          "status": "heuristic-reference",
+          "expertJudgment": false,
+          "procedure": "relevance-synthesis",
+          "version": "1.0.0"
+        }
+      }
+    },
+    {
+      "id": "procedure-relevance-06",
+      "family": "relevance-exact-role",
+      "passed": true,
+      "expected": {
+        "findingCount": 1,
+        "evidenceIds": [
+          "relevant_5"
+        ],
+        "goal": "(helps alice rabbit)"
+      },
+      "actual": {
+        "findingCount": 1,
+        "outputTypes": [
+          "exactly_relevant"
+        ],
+        "evidenceIds": [
+          "relevant_5"
+        ],
+        "recordsConsidered": 3,
+        "validation": {
+          "status": "heuristic-reference",
+          "expertJudgment": false,
+          "procedure": "relevance-synthesis",
+          "version": "1.0.0"
+        }
+      }
+    },
+    {
+      "id": "procedure-relevance-07",
+      "family": "relevance-exact-role",
+      "passed": true,
+      "expected": {
+        "findingCount": 1,
+        "evidenceIds": [
+          "relevant_6"
+        ],
+        "goal": "(located_in key garden)"
+      },
+      "actual": {
+        "findingCount": 1,
+        "outputTypes": [
+          "exactly_relevant"
+        ],
+        "evidenceIds": [
+          "relevant_6"
+        ],
+        "recordsConsidered": 3,
+        "validation": {
+          "status": "heuristic-reference",
+          "expertJudgment": false,
+          "procedure": "relevance-synthesis",
+          "version": "1.0.0"
+        }
+      }
+    },
+    {
+      "id": "procedure-relevance-08",
+      "family": "relevance-exact-role",
+      "passed": true,
+      "expected": {
+        "findingCount": 1,
+        "evidenceIds": [
+          "relevant_7"
+        ],
+        "goal": "(owns alice key)"
+      },
+      "actual": {
+        "findingCount": 1,
+        "outputTypes": [
+          "exactly_relevant"
+        ],
+        "evidenceIds": [
+          "relevant_7"
+        ],
+        "recordsConsidered": 3,
+        "validation": {
+          "status": "heuristic-reference",
+          "expertJudgment": false,
+          "procedure": "relevance-synthesis",
+          "version": "1.0.0"
+        }
+      }
+    },
+    {
+      "id": "procedure-relevance-09",
+      "family": "relevance-exact-role",
+      "passed": true,
+      "expected": {
+        "findingCount": 0,
+        "evidenceIds": [],
+        "goal": "(helps alice rabbit)"
+      },
+      "actual": {
+        "findingCount": 0,
+        "outputTypes": [],
+        "evidenceIds": [],
+        "recordsConsidered": 2,
+        "validation": {
+          "status": "heuristic-reference",
+          "expertJudgment": false,
+          "procedure": "relevance-synthesis",
+          "version": "1.0.0"
+        }
+      }
+    },
+    {
+      "id": "procedure-relevance-10",
+      "family": "relevance-exact-role",
+      "passed": true,
+      "expected": {
+        "findingCount": 1,
+        "evidenceIds": [
+          "relevant_9"
+        ],
+        "goal": "(located_in key garden)"
+      },
+      "actual": {
+        "findingCount": 1,
+        "outputTypes": [
+          "exactly_relevant"
+        ],
+        "evidenceIds": [
+          "relevant_9"
+        ],
+        "recordsConsidered": 3,
+        "validation": {
+          "status": "heuristic-reference",
+          "expertJudgment": false,
+          "procedure": "relevance-synthesis",
+          "version": "1.0.0"
+        }
+      }
+    },
+    {
+      "id": "procedure-relevance-11",
+      "family": "relevance-exact-role",
+      "passed": true,
+      "expected": {
+        "findingCount": 1,
+        "evidenceIds": [
+          "relevant_10"
+        ],
+        "goal": "(owns alice key)"
+      },
+      "actual": {
+        "findingCount": 1,
+        "outputTypes": [
+          "exactly_relevant"
+        ],
+        "evidenceIds": [
+          "relevant_10"
+        ],
+        "recordsConsidered": 3,
+        "validation": {
+          "status": "heuristic-reference",
+          "expertJudgment": false,
+          "procedure": "relevance-synthesis",
+          "version": "1.0.0"
+        }
+      }
+    },
+    {
+      "id": "procedure-relevance-12",
+      "family": "relevance-exact-role",
+      "passed": true,
+      "expected": {
+        "findingCount": 1,
+        "evidenceIds": [
+          "relevant_11"
+        ],
+        "goal": "(helps alice rabbit)"
+      },
+      "actual": {
+        "findingCount": 1,
+        "outputTypes": [
+          "exactly_relevant"
+        ],
+        "evidenceIds": [
+          "relevant_11"
+        ],
+        "recordsConsidered": 3,
+        "validation": {
+          "status": "heuristic-reference",
+          "expertJudgment": false,
+          "procedure": "relevance-synthesis",
+          "version": "1.0.0"
+        }
+      }
+    },
+    {
+      "id": "procedure-relevance-13",
+      "family": "relevance-exact-role",
+      "passed": true,
+      "expected": {
+        "findingCount": 0,
+        "evidenceIds": [],
+        "goal": "(located_in key garden)"
+      },
+      "actual": {
+        "findingCount": 0,
+        "outputTypes": [],
+        "evidenceIds": [],
+        "recordsConsidered": 2,
+        "validation": {
+          "status": "heuristic-reference",
+          "expertJudgment": false,
+          "procedure": "relevance-synthesis",
+          "version": "1.0.0"
+        }
+      }
+    },
+    {
+      "id": "procedure-relevance-14",
+      "family": "relevance-exact-role",
+      "passed": true,
+      "expected": {
+        "findingCount": 1,
+        "evidenceIds": [
+          "relevant_13"
+        ],
+        "goal": "(owns alice key)"
+      },
+      "actual": {
+        "findingCount": 1,
+        "outputTypes": [
+          "exactly_relevant"
+        ],
+        "evidenceIds": [
+          "relevant_13"
+        ],
+        "recordsConsidered": 3,
+        "validation": {
+          "status": "heuristic-reference",
+          "expertJudgment": false,
+          "procedure": "relevance-synthesis",
+          "version": "1.0.0"
+        }
+      }
+    },
+    {
+      "id": "procedure-relevance-15",
+      "family": "relevance-exact-role",
+      "passed": true,
+      "expected": {
+        "findingCount": 1,
+        "evidenceIds": [
+          "relevant_14"
+        ],
+        "goal": "(helps alice rabbit)"
+      },
+      "actual": {
+        "findingCount": 1,
+        "outputTypes": [
+          "exactly_relevant"
+        ],
+        "evidenceIds": [
+          "relevant_14"
+        ],
+        "recordsConsidered": 3,
+        "validation": {
+          "status": "heuristic-reference",
+          "expertJudgment": false,
+          "procedure": "relevance-synthesis",
+          "version": "1.0.0"
+        }
+      }
+    },
+    {
+      "id": "procedure-relevance-16",
+      "family": "relevance-exact-role",
+      "passed": true,
+      "expected": {
+        "findingCount": 1,
+        "evidenceIds": [
+          "relevant_15"
+        ],
+        "goal": "(located_in key garden)"
+      },
+      "actual": {
+        "findingCount": 1,
+        "outputTypes": [
+          "exactly_relevant"
+        ],
+        "evidenceIds": [
+          "relevant_15"
+        ],
+        "recordsConsidered": 3,
+        "validation": {
+          "status": "heuristic-reference",
+          "expertJudgment": false,
+          "procedure": "relevance-synthesis",
+          "version": "1.0.0"
+        }
+      }
+    },
+    {
+      "id": "procedure-relevance-17",
+      "family": "relevance-exact-role",
+      "passed": true,
+      "expected": {
+        "findingCount": 0,
+        "evidenceIds": [],
+        "goal": "(owns alice key)"
+      },
+      "actual": {
+        "findingCount": 0,
+        "outputTypes": [],
+        "evidenceIds": [],
+        "recordsConsidered": 2,
+        "validation": {
+          "status": "heuristic-reference",
+          "expertJudgment": false,
+          "procedure": "relevance-synthesis",
+          "version": "1.0.0"
+        }
+      }
+    },
+    {
+      "id": "procedure-relevance-18",
+      "family": "relevance-exact-role",
+      "passed": true,
+      "expected": {
+        "findingCount": 1,
+        "evidenceIds": [
+          "relevant_17"
+        ],
+        "goal": "(helps alice rabbit)"
+      },
+      "actual": {
+        "findingCount": 1,
+        "outputTypes": [
+          "exactly_relevant"
+        ],
+        "evidenceIds": [
+          "relevant_17"
+        ],
+        "recordsConsidered": 3,
+        "validation": {
+          "status": "heuristic-reference",
+          "expertJudgment": false,
+          "procedure": "relevance-synthesis",
+          "version": "1.0.0"
+        }
+      }
+    },
+    {
+      "id": "procedure-relevance-19",
+      "family": "relevance-exact-role",
+      "passed": true,
+      "expected": {
+        "findingCount": 1,
+        "evidenceIds": [
+          "relevant_18"
+        ],
+        "goal": "(located_in key garden)"
+      },
+      "actual": {
+        "findingCount": 1,
+        "outputTypes": [
+          "exactly_relevant"
+        ],
+        "evidenceIds": [
+          "relevant_18"
+        ],
+        "recordsConsidered": 3,
+        "validation": {
+          "status": "heuristic-reference",
+          "expertJudgment": false,
+          "procedure": "relevance-synthesis",
+          "version": "1.0.0"
+        }
+      }
+    },
+    {
+      "id": "procedure-relevance-20",
+      "family": "relevance-exact-role",
+      "passed": true,
+      "expected": {
+        "findingCount": 1,
+        "evidenceIds": [
+          "relevant_19"
+        ],
+        "goal": "(owns alice key)"
+      },
+      "actual": {
+        "findingCount": 1,
+        "outputTypes": [
+          "exactly_relevant"
+        ],
+        "evidenceIds": [
+          "relevant_19"
+        ],
+        "recordsConsidered": 3,
+        "validation": {
+          "status": "heuristic-reference",
+          "expertJudgment": false,
+          "procedure": "relevance-synthesis",
+          "version": "1.0.0"
+        }
+      }
+    },
+    {
+      "id": "procedure-rubric-01",
+      "family": "complete-work-anchored-rubric",
+      "passed": true,
+      "expected": {
+        "findingCount": 2,
+        "evidenceIdCount": 2,
+        "criterionIds": [
+          "narrative-coherence",
+          "characterization"
+        ],
+        "coverageRecords": 1,
+        "expertJudgment": false
+      },
+      "actual": {
+        "findingCount": 2,
+        "outputTypes": [
+          "evidence_for_review",
+          "evidence_for_review"
+        ],
+        "evidenceIds": [
+          "passage_0_0",
+          "passage_0_0"
+        ],
+        "recordsConsidered": 1,
+        "validation": {
+          "status": "heuristic-reference",
+          "expertJudgment": false,
+          "procedure": "document-literary-rubric",
+          "version": "1.0.0"
+        }
+      }
+    },
+    {
+      "id": "procedure-rubric-02",
+      "family": "complete-work-anchored-rubric",
+      "passed": true,
+      "expected": {
+        "findingCount": 6,
+        "evidenceIdCount": 6,
+        "criterionIds": [
+          "narrative-coherence",
+          "characterization",
+          "style"
+        ],
+        "coverageRecords": 2,
+        "expertJudgment": false
+      },
+      "actual": {
+        "findingCount": 6,
+        "outputTypes": [
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review"
+        ],
+        "evidenceIds": [
+          "passage_1_0",
+          "passage_1_0",
+          "passage_1_0",
+          "passage_1_1",
+          "passage_1_1",
+          "passage_1_1"
+        ],
+        "recordsConsidered": 2,
+        "validation": {
+          "status": "heuristic-reference",
+          "expertJudgment": false,
+          "procedure": "document-literary-rubric",
+          "version": "1.0.0"
+        }
+      }
+    },
+    {
+      "id": "procedure-rubric-03",
+      "family": "complete-work-anchored-rubric",
+      "passed": true,
+      "expected": {
+        "findingCount": 12,
+        "evidenceIdCount": 12,
+        "criterionIds": [
+          "narrative-coherence",
+          "characterization",
+          "style",
+          "thematic-development"
+        ],
+        "coverageRecords": 3,
+        "expertJudgment": false
+      },
+      "actual": {
+        "findingCount": 12,
+        "outputTypes": [
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review"
+        ],
+        "evidenceIds": [
+          "passage_2_0",
+          "passage_2_0",
+          "passage_2_0",
+          "passage_2_0",
+          "passage_2_1",
+          "passage_2_1",
+          "passage_2_1",
+          "passage_2_1",
+          "passage_2_2",
+          "passage_2_2",
+          "passage_2_2",
+          "passage_2_2"
+        ],
+        "recordsConsidered": 3,
+        "validation": {
+          "status": "heuristic-reference",
+          "expertJudgment": false,
+          "procedure": "document-literary-rubric",
+          "version": "1.0.0"
+        }
+      }
+    },
+    {
+      "id": "procedure-rubric-04",
+      "family": "complete-work-anchored-rubric",
+      "passed": true,
+      "expected": {
+        "findingCount": 8,
+        "evidenceIdCount": 8,
+        "criterionIds": [
+          "narrative-coherence",
+          "characterization"
+        ],
+        "coverageRecords": 4,
+        "expertJudgment": false
+      },
+      "actual": {
+        "findingCount": 8,
+        "outputTypes": [
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review"
+        ],
+        "evidenceIds": [
+          "passage_3_0",
+          "passage_3_0",
+          "passage_3_1",
+          "passage_3_1",
+          "passage_3_2",
+          "passage_3_2",
+          "passage_3_3",
+          "passage_3_3"
+        ],
+        "recordsConsidered": 4,
+        "validation": {
+          "status": "heuristic-reference",
+          "expertJudgment": false,
+          "procedure": "document-literary-rubric",
+          "version": "1.0.0"
+        }
+      }
+    },
+    {
+      "id": "procedure-rubric-05",
+      "family": "complete-work-anchored-rubric",
+      "passed": true,
+      "expected": {
+        "findingCount": 15,
+        "evidenceIdCount": 15,
+        "criterionIds": [
+          "narrative-coherence",
+          "characterization",
+          "style"
+        ],
+        "coverageRecords": 5,
+        "expertJudgment": false
+      },
+      "actual": {
+        "findingCount": 15,
+        "outputTypes": [
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review"
+        ],
+        "evidenceIds": [
+          "passage_4_0",
+          "passage_4_0",
+          "passage_4_0",
+          "passage_4_1",
+          "passage_4_1",
+          "passage_4_1",
+          "passage_4_2",
+          "passage_4_2",
+          "passage_4_2",
+          "passage_4_3",
+          "passage_4_3",
+          "passage_4_3",
+          "passage_4_4",
+          "passage_4_4",
+          "passage_4_4"
+        ],
+        "recordsConsidered": 5,
+        "validation": {
+          "status": "heuristic-reference",
+          "expertJudgment": false,
+          "procedure": "document-literary-rubric",
+          "version": "1.0.0"
+        }
+      }
+    },
+    {
+      "id": "procedure-rubric-06",
+      "family": "complete-work-anchored-rubric",
+      "passed": true,
+      "expected": {
+        "findingCount": 4,
+        "evidenceIdCount": 4,
+        "criterionIds": [
+          "narrative-coherence",
+          "characterization",
+          "style",
+          "thematic-development"
+        ],
+        "coverageRecords": 1,
+        "expertJudgment": false
+      },
+      "actual": {
+        "findingCount": 4,
+        "outputTypes": [
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review"
+        ],
+        "evidenceIds": [
+          "passage_5_0",
+          "passage_5_0",
+          "passage_5_0",
+          "passage_5_0"
+        ],
+        "recordsConsidered": 1,
+        "validation": {
+          "status": "heuristic-reference",
+          "expertJudgment": false,
+          "procedure": "document-literary-rubric",
+          "version": "1.0.0"
+        }
+      }
+    },
+    {
+      "id": "procedure-rubric-07",
+      "family": "complete-work-anchored-rubric",
+      "passed": true,
+      "expected": {
+        "findingCount": 4,
+        "evidenceIdCount": 4,
+        "criterionIds": [
+          "narrative-coherence",
+          "characterization"
+        ],
+        "coverageRecords": 2,
+        "expertJudgment": false
+      },
+      "actual": {
+        "findingCount": 4,
+        "outputTypes": [
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review"
+        ],
+        "evidenceIds": [
+          "passage_6_0",
+          "passage_6_0",
+          "passage_6_1",
+          "passage_6_1"
+        ],
+        "recordsConsidered": 2,
+        "validation": {
+          "status": "heuristic-reference",
+          "expertJudgment": false,
+          "procedure": "document-literary-rubric",
+          "version": "1.0.0"
+        }
+      }
+    },
+    {
+      "id": "procedure-rubric-08",
+      "family": "complete-work-anchored-rubric",
+      "passed": true,
+      "expected": {
+        "findingCount": 9,
+        "evidenceIdCount": 9,
+        "criterionIds": [
+          "narrative-coherence",
+          "characterization",
+          "style"
+        ],
+        "coverageRecords": 3,
+        "expertJudgment": false
+      },
+      "actual": {
+        "findingCount": 9,
+        "outputTypes": [
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review"
+        ],
+        "evidenceIds": [
+          "passage_7_0",
+          "passage_7_0",
+          "passage_7_0",
+          "passage_7_1",
+          "passage_7_1",
+          "passage_7_1",
+          "passage_7_2",
+          "passage_7_2",
+          "passage_7_2"
+        ],
+        "recordsConsidered": 3,
+        "validation": {
+          "status": "heuristic-reference",
+          "expertJudgment": false,
+          "procedure": "document-literary-rubric",
+          "version": "1.0.0"
+        }
+      }
+    },
+    {
+      "id": "procedure-rubric-09",
+      "family": "complete-work-anchored-rubric",
+      "passed": true,
+      "expected": {
+        "findingCount": 16,
+        "evidenceIdCount": 16,
+        "criterionIds": [
+          "narrative-coherence",
+          "characterization",
+          "style",
+          "thematic-development"
+        ],
+        "coverageRecords": 4,
+        "expertJudgment": false
+      },
+      "actual": {
+        "findingCount": 16,
+        "outputTypes": [
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review"
+        ],
+        "evidenceIds": [
+          "passage_8_0",
+          "passage_8_0",
+          "passage_8_0",
+          "passage_8_0",
+          "passage_8_1",
+          "passage_8_1",
+          "passage_8_1",
+          "passage_8_1",
+          "passage_8_2",
+          "passage_8_2",
+          "passage_8_2",
+          "passage_8_2",
+          "passage_8_3",
+          "passage_8_3",
+          "passage_8_3",
+          "passage_8_3"
+        ],
+        "recordsConsidered": 4,
+        "validation": {
+          "status": "heuristic-reference",
+          "expertJudgment": false,
+          "procedure": "document-literary-rubric",
+          "version": "1.0.0"
+        }
+      }
+    },
+    {
+      "id": "procedure-rubric-10",
+      "family": "complete-work-anchored-rubric",
+      "passed": true,
+      "expected": {
+        "findingCount": 10,
+        "evidenceIdCount": 10,
+        "criterionIds": [
+          "narrative-coherence",
+          "characterization"
+        ],
+        "coverageRecords": 5,
+        "expertJudgment": false
+      },
+      "actual": {
+        "findingCount": 10,
+        "outputTypes": [
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review"
+        ],
+        "evidenceIds": [
+          "passage_9_0",
+          "passage_9_0",
+          "passage_9_1",
+          "passage_9_1",
+          "passage_9_2",
+          "passage_9_2",
+          "passage_9_3",
+          "passage_9_3",
+          "passage_9_4",
+          "passage_9_4"
+        ],
+        "recordsConsidered": 5,
+        "validation": {
+          "status": "heuristic-reference",
+          "expertJudgment": false,
+          "procedure": "document-literary-rubric",
+          "version": "1.0.0"
+        }
+      }
+    },
+    {
+      "id": "procedure-rubric-11",
+      "family": "complete-work-anchored-rubric",
+      "passed": true,
+      "expected": {
+        "findingCount": 3,
+        "evidenceIdCount": 3,
+        "criterionIds": [
+          "narrative-coherence",
+          "characterization",
+          "style"
+        ],
+        "coverageRecords": 1,
+        "expertJudgment": false
+      },
+      "actual": {
+        "findingCount": 3,
+        "outputTypes": [
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review"
+        ],
+        "evidenceIds": [
+          "passage_10_0",
+          "passage_10_0",
+          "passage_10_0"
+        ],
+        "recordsConsidered": 1,
+        "validation": {
+          "status": "heuristic-reference",
+          "expertJudgment": false,
+          "procedure": "document-literary-rubric",
+          "version": "1.0.0"
+        }
+      }
+    },
+    {
+      "id": "procedure-rubric-12",
+      "family": "complete-work-anchored-rubric",
+      "passed": true,
+      "expected": {
+        "findingCount": 8,
+        "evidenceIdCount": 8,
+        "criterionIds": [
+          "narrative-coherence",
+          "characterization",
+          "style",
+          "thematic-development"
+        ],
+        "coverageRecords": 2,
+        "expertJudgment": false
+      },
+      "actual": {
+        "findingCount": 8,
+        "outputTypes": [
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review"
+        ],
+        "evidenceIds": [
+          "passage_11_0",
+          "passage_11_0",
+          "passage_11_0",
+          "passage_11_0",
+          "passage_11_1",
+          "passage_11_1",
+          "passage_11_1",
+          "passage_11_1"
+        ],
+        "recordsConsidered": 2,
+        "validation": {
+          "status": "heuristic-reference",
+          "expertJudgment": false,
+          "procedure": "document-literary-rubric",
+          "version": "1.0.0"
+        }
+      }
+    },
+    {
+      "id": "procedure-rubric-13",
+      "family": "complete-work-anchored-rubric",
+      "passed": true,
+      "expected": {
+        "findingCount": 6,
+        "evidenceIdCount": 6,
+        "criterionIds": [
+          "narrative-coherence",
+          "characterization"
+        ],
+        "coverageRecords": 3,
+        "expertJudgment": false
+      },
+      "actual": {
+        "findingCount": 6,
+        "outputTypes": [
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review"
+        ],
+        "evidenceIds": [
+          "passage_12_0",
+          "passage_12_0",
+          "passage_12_1",
+          "passage_12_1",
+          "passage_12_2",
+          "passage_12_2"
+        ],
+        "recordsConsidered": 3,
+        "validation": {
+          "status": "heuristic-reference",
+          "expertJudgment": false,
+          "procedure": "document-literary-rubric",
+          "version": "1.0.0"
+        }
+      }
+    },
+    {
+      "id": "procedure-rubric-14",
+      "family": "complete-work-anchored-rubric",
+      "passed": true,
+      "expected": {
+        "findingCount": 12,
+        "evidenceIdCount": 12,
+        "criterionIds": [
+          "narrative-coherence",
+          "characterization",
+          "style"
+        ],
+        "coverageRecords": 4,
+        "expertJudgment": false
+      },
+      "actual": {
+        "findingCount": 12,
+        "outputTypes": [
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review"
+        ],
+        "evidenceIds": [
+          "passage_13_0",
+          "passage_13_0",
+          "passage_13_0",
+          "passage_13_1",
+          "passage_13_1",
+          "passage_13_1",
+          "passage_13_2",
+          "passage_13_2",
+          "passage_13_2",
+          "passage_13_3",
+          "passage_13_3",
+          "passage_13_3"
+        ],
+        "recordsConsidered": 4,
+        "validation": {
+          "status": "heuristic-reference",
+          "expertJudgment": false,
+          "procedure": "document-literary-rubric",
+          "version": "1.0.0"
+        }
+      }
+    },
+    {
+      "id": "procedure-rubric-15",
+      "family": "complete-work-anchored-rubric",
+      "passed": true,
+      "expected": {
+        "findingCount": 20,
+        "evidenceIdCount": 20,
+        "criterionIds": [
+          "narrative-coherence",
+          "characterization",
+          "style",
+          "thematic-development"
+        ],
+        "coverageRecords": 5,
+        "expertJudgment": false
+      },
+      "actual": {
+        "findingCount": 20,
+        "outputTypes": [
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review"
+        ],
+        "evidenceIds": [
+          "passage_14_0",
+          "passage_14_0",
+          "passage_14_0",
+          "passage_14_0",
+          "passage_14_1",
+          "passage_14_1",
+          "passage_14_1",
+          "passage_14_1",
+          "passage_14_2",
+          "passage_14_2",
+          "passage_14_2",
+          "passage_14_2",
+          "passage_14_3",
+          "passage_14_3",
+          "passage_14_3",
+          "passage_14_3",
+          "passage_14_4",
+          "passage_14_4",
+          "passage_14_4",
+          "passage_14_4"
+        ],
+        "recordsConsidered": 5,
+        "validation": {
+          "status": "heuristic-reference",
+          "expertJudgment": false,
+          "procedure": "document-literary-rubric",
+          "version": "1.0.0"
+        }
+      }
+    },
+    {
+      "id": "procedure-rubric-16",
+      "family": "complete-work-anchored-rubric",
+      "passed": true,
+      "expected": {
+        "findingCount": 2,
+        "evidenceIdCount": 2,
+        "criterionIds": [
+          "narrative-coherence",
+          "characterization"
+        ],
+        "coverageRecords": 1,
+        "expertJudgment": false
+      },
+      "actual": {
+        "findingCount": 2,
+        "outputTypes": [
+          "evidence_for_review",
+          "evidence_for_review"
+        ],
+        "evidenceIds": [
+          "passage_15_0",
+          "passage_15_0"
+        ],
+        "recordsConsidered": 1,
+        "validation": {
+          "status": "heuristic-reference",
+          "expertJudgment": false,
+          "procedure": "document-literary-rubric",
+          "version": "1.0.0"
+        }
+      }
+    },
+    {
+      "id": "procedure-rubric-17",
+      "family": "complete-work-anchored-rubric",
+      "passed": true,
+      "expected": {
+        "findingCount": 6,
+        "evidenceIdCount": 6,
+        "criterionIds": [
+          "narrative-coherence",
+          "characterization",
+          "style"
+        ],
+        "coverageRecords": 2,
+        "expertJudgment": false
+      },
+      "actual": {
+        "findingCount": 6,
+        "outputTypes": [
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review"
+        ],
+        "evidenceIds": [
+          "passage_16_0",
+          "passage_16_0",
+          "passage_16_0",
+          "passage_16_1",
+          "passage_16_1",
+          "passage_16_1"
+        ],
+        "recordsConsidered": 2,
+        "validation": {
+          "status": "heuristic-reference",
+          "expertJudgment": false,
+          "procedure": "document-literary-rubric",
+          "version": "1.0.0"
+        }
+      }
+    },
+    {
+      "id": "procedure-rubric-18",
+      "family": "complete-work-anchored-rubric",
+      "passed": true,
+      "expected": {
+        "findingCount": 12,
+        "evidenceIdCount": 12,
+        "criterionIds": [
+          "narrative-coherence",
+          "characterization",
+          "style",
+          "thematic-development"
+        ],
+        "coverageRecords": 3,
+        "expertJudgment": false
+      },
+      "actual": {
+        "findingCount": 12,
+        "outputTypes": [
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review"
+        ],
+        "evidenceIds": [
+          "passage_17_0",
+          "passage_17_0",
+          "passage_17_0",
+          "passage_17_0",
+          "passage_17_1",
+          "passage_17_1",
+          "passage_17_1",
+          "passage_17_1",
+          "passage_17_2",
+          "passage_17_2",
+          "passage_17_2",
+          "passage_17_2"
+        ],
+        "recordsConsidered": 3,
+        "validation": {
+          "status": "heuristic-reference",
+          "expertJudgment": false,
+          "procedure": "document-literary-rubric",
+          "version": "1.0.0"
+        }
+      }
+    },
+    {
+      "id": "procedure-rubric-19",
+      "family": "complete-work-anchored-rubric",
+      "passed": true,
+      "expected": {
+        "findingCount": 8,
+        "evidenceIdCount": 8,
+        "criterionIds": [
+          "narrative-coherence",
+          "characterization"
+        ],
+        "coverageRecords": 4,
+        "expertJudgment": false
+      },
+      "actual": {
+        "findingCount": 8,
+        "outputTypes": [
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review"
+        ],
+        "evidenceIds": [
+          "passage_18_0",
+          "passage_18_0",
+          "passage_18_1",
+          "passage_18_1",
+          "passage_18_2",
+          "passage_18_2",
+          "passage_18_3",
+          "passage_18_3"
+        ],
+        "recordsConsidered": 4,
+        "validation": {
+          "status": "heuristic-reference",
+          "expertJudgment": false,
+          "procedure": "document-literary-rubric",
+          "version": "1.0.0"
+        }
+      }
+    },
+    {
+      "id": "procedure-rubric-20",
+      "family": "complete-work-anchored-rubric",
+      "passed": true,
+      "expected": {
+        "findingCount": 15,
+        "evidenceIdCount": 15,
+        "criterionIds": [
+          "narrative-coherence",
+          "characterization",
+          "style"
+        ],
+        "coverageRecords": 5,
+        "expertJudgment": false
+      },
+      "actual": {
+        "findingCount": 15,
+        "outputTypes": [
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review",
+          "evidence_for_review"
+        ],
+        "evidenceIds": [
+          "passage_19_0",
+          "passage_19_0",
+          "passage_19_0",
+          "passage_19_1",
+          "passage_19_1",
+          "passage_19_1",
+          "passage_19_2",
+          "passage_19_2",
+          "passage_19_2",
+          "passage_19_3",
+          "passage_19_3",
+          "passage_19_3",
+          "passage_19_4",
+          "passage_19_4",
+          "passage_19_4"
+        ],
+        "recordsConsidered": 5,
+        "validation": {
+          "status": "heuristic-reference",
+          "expertJudgment": false,
+          "procedure": "document-literary-rubric",
+          "version": "1.0.0"
+        }
+      }
+    }
+  ],
+  "interpretation": "Deterministic contract conformance for structural procedure references only. Literary scores and semantic judgments are not produced by this suite; model-produced assessments remain provisional and require expert review.",
+  "fixtureId": "pinned-procedure-contracts-v1",
+  "fixtureCaseCount": 60,
+  "fixtureSha256": "926e6d82617396cbd71e6584533318e137efcb4ec62ca4ba1fcfeda3a832cdc9",
+  "freezeVersion": 1
+}

@@ -1,0 +1,3046 @@
+{
+  "id": "skr-public-books-qa-v1",
+  "frozen": false,
+  "construction": "Deterministic, spread-across-complete-source exact-locator questions. Gold is verbatim source text and is not expert-adjudicated; every case requires review before research reporting.",
+  "bookCount": 5,
+  "questionCount": 100,
+  "books": [
+    {
+      "id": "pg14838",
+      "title": "The Tale of Peter Rabbit",
+      "author": "Beatrix Potter",
+      "sourceUrl": "https://www.gutenberg.org/ebooks/14838",
+      "sha256": "2bf0e04297038fd97697dfac2b8a2db14f2b80c2012727f7ac0f28cf0b146544"
+    },
+    {
+      "id": "pg11757",
+      "title": "The Velveteen Rabbit",
+      "author": "Margery Williams Bianco",
+      "sourceUrl": "https://www.gutenberg.org/ebooks/11757",
+      "sha256": "01c84466faf26379e7b49f364d2452d14da26fcbc9378d751b5caf3cf2580bfb"
+    },
+    {
+      "id": "pg902",
+      "title": "The Happy Prince, and Other Tales",
+      "author": "Oscar Wilde",
+      "sourceUrl": "https://www.gutenberg.org/ebooks/902",
+      "sha256": "77ae1b3c7be77aea82b1f935e531e53f4df43db572cbc14af39d6cd0d5ba50da"
+    },
+    {
+      "id": "pg496",
+      "title": "The Little Lame Prince",
+      "author": "Dinah Maria Mulock Craik (published as Miss Mulock)",
+      "sourceUrl": "https://www.gutenberg.org/ebooks/496",
+      "sha256": "709c354dc6934a3a4509cdfae1bba47d4feb2597afe5c9c22c6fdb6013a561e3"
+    },
+    {
+      "id": "pg7256",
+      "title": "The Gift of the Magi",
+      "author": "O. Henry",
+      "sourceUrl": "https://www.gutenberg.org/ebooks/7256",
+      "sha256": "cdf8ad2aad68e48c58d6745a8a1ec418871176a6521fb458a8abc88f9a0649a3"
+    }
+  ],
+  "cases": [
+    {
+      "id": "pg14838-q01",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg14838",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/14838",
+        "sha256": "2bf0e04297038fd97697dfac2b8a2db14f2b80c2012727f7ac0f28cf0b146544",
+        "locator": {
+          "line": 77
+        },
+        "regionId": "line-77"
+      },
+      "question": "In The Tale of Peter Rabbit, find the complete sentence at the passage beginning “the fields or down the lane, but”.",
+      "gold": {
+        "answer": "the fields or down the lane, but don't go into Mr.",
+        "evidence": {
+          "regionId": "line-77",
+          "line": 77,
+          "quote": "the fields or down the lane, but don't go into Mr."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg14838-q02",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg14838",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/14838",
+        "sha256": "2bf0e04297038fd97697dfac2b8a2db14f2b80c2012727f7ac0f28cf0b146544",
+        "locator": {
+          "line": 78
+        },
+        "regionId": "line-78"
+      },
+      "question": "In The Tale of Peter Rabbit, find the complete sentence at the passage beginning “your Father had an accident there; he”.",
+      "gold": {
+        "answer": "your Father had an accident there; he was put in a pie by Mrs.",
+        "evidence": {
+          "regionId": "line-78",
+          "line": 78,
+          "quote": "your Father had an accident there; he was put in a pie by Mrs."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg14838-q03",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg14838",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/14838",
+        "sha256": "2bf0e04297038fd97697dfac2b8a2db14f2b80c2012727f7ac0f28cf0b146544",
+        "locator": {
+          "line": 85
+        },
+        "regionId": "line-85"
+      },
+      "question": "In The Tale of Peter Rabbit, find the complete sentence at the passage beginning “'Now run along, and don't get”.",
+      "gold": {
+        "answer": "'Now run along, and don't get into mischief.",
+        "evidence": {
+          "regionId": "line-85",
+          "line": 85,
+          "quote": "'Now run along, and don't get into mischief."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg14838-q04",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg14838",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/14838",
+        "sha256": "2bf0e04297038fd97697dfac2b8a2db14f2b80c2012727f7ac0f28cf0b146544",
+        "locator": {
+          "line": 98
+        },
+        "regionId": "line-98"
+      },
+      "question": "In The Tale of Peter Rabbit, find the complete sentence at the passage beginning “But Peter, who was very naughty, ran”.",
+      "gold": {
+        "answer": "But Peter, who was very naughty, ran straight away to Mr.",
+        "evidence": {
+          "regionId": "line-98",
+          "line": 98,
+          "quote": "But Peter, who was very naughty, ran straight away to Mr."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg14838-q05",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg14838",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/14838",
+        "sha256": "2bf0e04297038fd97697dfac2b8a2db14f2b80c2012727f7ac0f28cf0b146544",
+        "locator": {
+          "line": 108
+        },
+        "regionId": "line-108"
+      },
+      "question": "In The Tale of Peter Rabbit, find the complete sentence at the passage beginning “And then, feeling rather sick, he went”.",
+      "gold": {
+        "answer": "And then, feeling rather sick, he went to look for some parsley.",
+        "evidence": {
+          "regionId": "line-108",
+          "line": 108,
+          "quote": "And then, feeling rather sick, he went to look for some parsley."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg14838-q06",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg14838",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/14838",
+        "sha256": "2bf0e04297038fd97697dfac2b8a2db14f2b80c2012727f7ac0f28cf0b146544",
+        "locator": {
+          "line": 114
+        },
+        "regionId": "line-114"
+      },
+      "question": "In The Tale of Peter Rabbit, find the complete sentence at the passage beginning “But round the end of a cucumber”.",
+      "gold": {
+        "answer": "But round the end of a cucumber frame, whom should he meet but Mr.",
+        "evidence": {
+          "regionId": "line-114",
+          "line": 114,
+          "quote": "But round the end of a cucumber frame, whom should he meet but Mr."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg14838-q07",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg14838",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/14838",
+        "sha256": "2bf0e04297038fd97697dfac2b8a2db14f2b80c2012727f7ac0f28cf0b146544",
+        "locator": {
+          "line": 126
+        },
+        "regionId": "line-126"
+      },
+      "question": "In The Tale of Peter Rabbit, find the complete sentence at the passage beginning “for he had forgotten the way back”.",
+      "gold": {
+        "answer": "for he had forgotten the way back to the gate.",
+        "evidence": {
+          "regionId": "line-126",
+          "line": 126,
+          "quote": "for he had forgotten the way back to the gate."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg14838-q08",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg14838",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/14838",
+        "sha256": "2bf0e04297038fd97697dfac2b8a2db14f2b80c2012727f7ac0f28cf0b146544",
+        "locator": {
+          "line": 134
+        },
+        "regionId": "line-134"
+      },
+      "question": "In The Tale of Peter Rabbit, find the complete sentence at the passage beginning “It was a blue jacket with brass”.",
+      "gold": {
+        "answer": "It was a blue jacket with brass buttons, quite new.",
+        "evidence": {
+          "regionId": "line-134",
+          "line": 134,
+          "quote": "It was a blue jacket with brass buttons, quite new."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg14838-q09",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg14838",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/14838",
+        "sha256": "2bf0e04297038fd97697dfac2b8a2db14f2b80c2012727f7ac0f28cf0b146544",
+        "locator": {
+          "line": 142
+        },
+        "regionId": "line-142"
+      },
+      "question": "In The Tale of Peter Rabbit, find the complete sentence at the passage beginning “excitement, and implored him to”.",
+      "gold": {
+        "answer": "excitement, and implored him to exert himself.",
+        "evidence": {
+          "regionId": "line-142",
+          "line": 142,
+          "quote": "excitement, and implored him to exert himself."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg14838-q10",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg14838",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/14838",
+        "sha256": "2bf0e04297038fd97697dfac2b8a2db14f2b80c2012727f7ac0f28cf0b146544",
+        "locator": {
+          "line": 152
+        },
+        "regionId": "line-152"
+      },
+      "question": "In The Tale of Peter Rabbit, find the complete sentence at the passage beginning “And rushed into the tool-shed, and jumped”.",
+      "gold": {
+        "answer": "And rushed into the tool-shed, and jumped into a can.",
+        "evidence": {
+          "regionId": "line-152",
+          "line": 152,
+          "quote": "And rushed into the tool-shed, and jumped into a can."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg14838-q11",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg14838",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/14838",
+        "sha256": "2bf0e04297038fd97697dfac2b8a2db14f2b80c2012727f7ac0f28cf0b146544",
+        "locator": {
+          "line": 171
+        },
+        "regionId": "line-171"
+      },
+      "question": "In The Tale of Peter Rabbit, find the complete sentence at the passage beginning “fright, and he had not the least”.",
+      "gold": {
+        "answer": "fright, and he had not the least idea which way to go.",
+        "evidence": {
+          "regionId": "line-171",
+          "line": 171,
+          "quote": "fright, and he had not the least idea which way to go."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg14838-q12",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg14838",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/14838",
+        "sha256": "2bf0e04297038fd97697dfac2b8a2db14f2b80c2012727f7ac0f28cf0b146544",
+        "locator": {
+          "line": 182
+        },
+        "regionId": "line-182"
+      },
+      "question": "In The Tale of Peter Rabbit, find the complete sentence at the passage beginning “for a fat little rabbit to”.",
+      "gold": {
+        "answer": "for a fat little rabbit to squeeze underneath.",
+        "evidence": {
+          "regionId": "line-182",
+          "line": 182,
+          "quote": "for a fat little rabbit to squeeze underneath."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg14838-q13",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg14838",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/14838",
+        "sha256": "2bf0e04297038fd97697dfac2b8a2db14f2b80c2012727f7ac0f28cf0b146544",
+        "locator": {
+          "line": 185
+        },
+        "regionId": "line-185"
+      },
+      "question": "In The Tale of Peter Rabbit, find the complete sentence at the passage beginning “peas and beans to her family in”.",
+      "gold": {
+        "answer": "peas and beans to her family in the wood.",
+        "evidence": {
+          "regionId": "line-185",
+          "line": 185,
+          "quote": "peas and beans to her family in the wood."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg14838-q14",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg14838",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/14838",
+        "sha256": "2bf0e04297038fd97697dfac2b8a2db14f2b80c2012727f7ac0f28cf0b146544",
+        "locator": {
+          "line": 202
+        },
+        "regionId": "line-202"
+      },
+      "question": "In The Tale of Peter Rabbit, find the complete sentence at the passage beginning “he heard the noise of a hoe--scr-r-ritch,”.",
+      "gold": {
+        "answer": "he heard the noise of a hoe--scr-r-ritch, scratch, scratch, scritch.",
+        "evidence": {
+          "regionId": "line-202",
+          "line": 202,
+          "quote": "he heard the noise of a hoe--scr-r-ritch, scratch, scratch, scritch."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg14838-q15",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg14838",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/14838",
+        "sha256": "2bf0e04297038fd97697dfac2b8a2db14f2b80c2012727f7ac0f28cf0b146544",
+        "locator": {
+          "line": 204
+        },
+        "regionId": "line-204"
+      },
+      "question": "In The Tale of Peter Rabbit, find the complete sentence at the passage beginning “happened, he came out, and climbed upon”.",
+      "gold": {
+        "answer": "happened, he came out, and climbed upon a wheelbarrow and peeped over.",
+        "evidence": {
+          "regionId": "line-204",
+          "line": 204,
+          "quote": "happened, he came out, and climbed upon a wheelbarrow and peeped over."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg14838-q16",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg14838",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/14838",
+        "sha256": "2bf0e04297038fd97697dfac2b8a2db14f2b80c2012727f7ac0f28cf0b146544",
+        "locator": {
+          "line": 206
+        },
+        "regionId": "line-206"
+      },
+      "question": "In The Tale of Peter Rabbit, find the complete sentence at the passage beginning “turned towards Peter, and beyond him was”.",
+      "gold": {
+        "answer": "turned towards Peter, and beyond him was the gate!",
+        "evidence": {
+          "regionId": "line-206",
+          "line": 206,
+          "quote": "turned towards Peter, and beyond him was the gate!"
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg14838-q17",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg14838",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/14838",
+        "sha256": "2bf0e04297038fd97697dfac2b8a2db14f2b80c2012727f7ac0f28cf0b146544",
+        "locator": {
+          "line": 227
+        },
+        "regionId": "line-227"
+      },
+      "question": "In The Tale of Peter Rabbit, find the complete sentence at the passage beginning “floor of the rabbit-hole and shut”.",
+      "gold": {
+        "answer": "floor of the rabbit-hole and shut his eyes.",
+        "evidence": {
+          "regionId": "line-227",
+          "line": 227,
+          "quote": "floor of the rabbit-hole and shut his eyes."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg14838-q18",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg14838",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/14838",
+        "sha256": "2bf0e04297038fd97697dfac2b8a2db14f2b80c2012727f7ac0f28cf0b146544",
+        "locator": {
+          "line": 228
+        },
+        "regionId": "line-228"
+      },
+      "question": "In The Tale of Peter Rabbit, find the complete sentence at the passage beginning “cooking; she wondered what he had done”.",
+      "gold": {
+        "answer": "cooking; she wondered what he had done with his clothes.",
+        "evidence": {
+          "regionId": "line-228",
+          "line": 228,
+          "quote": "cooking; she wondered what he had done with his clothes."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg14838-q19",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg14838",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/14838",
+        "sha256": "2bf0e04297038fd97697dfac2b8a2db14f2b80c2012727f7ac0f28cf0b146544",
+        "locator": {
+          "line": 234
+        },
+        "regionId": "line-234"
+      },
+      "question": "In The Tale of Peter Rabbit, find the complete sentence at the passage beginning “I am sorry to say that Peter”.",
+      "gold": {
+        "answer": "I am sorry to say that Peter was not very well during the evening.",
+        "evidence": {
+          "regionId": "line-234",
+          "line": 234,
+          "quote": "I am sorry to say that Peter was not very well during the evening."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg14838-q20",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg14838",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/14838",
+        "sha256": "2bf0e04297038fd97697dfac2b8a2db14f2b80c2012727f7ac0f28cf0b146544",
+        "locator": {
+          "line": 239
+        },
+        "regionId": "line-239"
+      },
+      "question": "In The Tale of Peter Rabbit, find the complete sentence at the passage beginning “'One table-spoonful to be taken”.",
+      "gold": {
+        "answer": "'One table-spoonful to be taken at bed-time.'",
+        "evidence": {
+          "regionId": "line-239",
+          "line": 239,
+          "quote": "'One table-spoonful to be taken at bed-time.'"
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg11757-q01",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg11757",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/11757",
+        "sha256": "01c84466faf26379e7b49f364d2452d14da26fcbc9378d751b5caf3cf2580bfb",
+        "locator": {
+          "line": 91
+        },
+        "regionId": "line-91"
+      },
+      "question": "In The Velveteen Rabbit, find the complete sentence at the passage beginning “should never be mentioned in”.",
+      "gold": {
+        "answer": "should never be mentioned in modern circles.",
+        "evidence": {
+          "regionId": "line-91",
+          "line": 91,
+          "quote": "should never be mentioned in modern circles."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg11757-q02",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg11757",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/11757",
+        "sha256": "01c84466faf26379e7b49f364d2452d14da26fcbc9378d751b5caf3cf2580bfb",
+        "locator": {
+          "line": 110
+        },
+        "regionId": "line-110"
+      },
+      "question": "In The Velveteen Rabbit, find the complete sentence at the passage beginning “side near the nursery fender, before Nana”.",
+      "gold": {
+        "answer": "side near the nursery fender, before Nana came to tidy the room.",
+        "evidence": {
+          "regionId": "line-110",
+          "line": 110,
+          "quote": "side near the nursery fender, before Nana came to tidy the room."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg11757-q03",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg11757",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/11757",
+        "sha256": "01c84466faf26379e7b49f364d2452d14da26fcbc9378d751b5caf3cf2580bfb",
+        "locator": {
+          "line": 119
+        },
+        "regionId": "line-119"
+      },
+      "question": "In The Velveteen Rabbit, find the complete sentence at the passage beginning “\"Sometimes,\" said the Skin Horse, for he”.",
+      "gold": {
+        "answer": "\"Sometimes,\" said the Skin Horse, for he was always truthful.",
+        "evidence": {
+          "regionId": "line-119",
+          "line": 119,
+          "quote": "\"Sometimes,\" said the Skin Horse, for he was always truthful."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg11757-q04",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg11757",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/11757",
+        "sha256": "01c84466faf26379e7b49f364d2452d14da26fcbc9378d751b5caf3cf2580bfb",
+        "locator": {
+          "line": 134
+        },
+        "regionId": "line-134"
+      },
+      "question": "In The Velveteen Rabbit, find the complete sentence at the passage beginning “not said it, for he thought the”.",
+      "gold": {
+        "answer": "not said it, for he thought the Skin Horse might be sensitive.",
+        "evidence": {
+          "regionId": "line-134",
+          "line": 134,
+          "quote": "not said it, for he thought the Skin Horse might be sensitive."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg11757-q05",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg11757",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/11757",
+        "sha256": "01c84466faf26379e7b49f364d2452d14da26fcbc9378d751b5caf3cf2580bfb",
+        "locator": {
+          "line": 153
+        },
+        "regionId": "line-153"
+      },
+      "question": "In The Velveteen Rabbit, find the complete sentence at the passage beginning “playthings all hated it, especially the”.",
+      "gold": {
+        "answer": "playthings all hated it, especially the tin ones.",
+        "evidence": {
+          "regionId": "line-153",
+          "line": 153,
+          "quote": "playthings all hated it, especially the tin ones."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg11757-q06",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg11757",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/11757",
+        "sha256": "01c84466faf26379e7b49f364d2452d14da26fcbc9378d751b5caf3cf2580bfb",
+        "locator": {
+          "line": 184
+        },
+        "regionId": "line-184"
+      },
+      "question": "In The Velveteen Rabbit, find the complete sentence at the passage beginning “rubbed off his nose where the Boy”.",
+      "gold": {
+        "answer": "rubbed off his nose where the Boy had kissed him.",
+        "evidence": {
+          "regionId": "line-184",
+          "line": 184,
+          "quote": "rubbed off his nose where the Boy had kissed him."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg11757-q07",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg11757",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/11757",
+        "sha256": "01c84466faf26379e7b49f364d2452d14da26fcbc9378d751b5caf3cf2580bfb",
+        "locator": {
+          "line": 208
+        },
+        "regionId": "line-208"
+      },
+      "question": "In The Velveteen Rabbit, find the complete sentence at the passage beginning “the Skin Horse had said was true”.",
+      "gold": {
+        "answer": "the Skin Horse had said was true at last.",
+        "evidence": {
+          "regionId": "line-208",
+          "line": 208,
+          "quote": "the Skin Horse had said was true at last."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg11757-q08",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg11757",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/11757",
+        "sha256": "01c84466faf26379e7b49f364d2452d14da26fcbc9378d751b5caf3cf2580bfb",
+        "locator": {
+          "line": 223
+        },
+        "regionId": "line-223"
+      },
+      "question": "In The Velveteen Rabbit, find the complete sentence at the passage beginning “evenings the Boy liked to go there”.",
+      "gold": {
+        "answer": "evenings the Boy liked to go there after tea to play.",
+        "evidence": {
+          "regionId": "line-223",
+          "line": 223,
+          "quote": "evenings the Boy liked to go there after tea to play."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg11757-q09",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg11757",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/11757",
+        "sha256": "01c84466faf26379e7b49f364d2452d14da26fcbc9378d751b5caf3cf2580bfb",
+        "locator": {
+          "line": 260
+        },
+        "regionId": "line-260"
+      },
+      "question": "In The Velveteen Rabbit, find the complete sentence at the passage beginning “meant when the Boy threw him, but”.",
+      "gold": {
+        "answer": "meant when the Boy threw him, but of course he didn't want to say so.",
+        "evidence": {
+          "regionId": "line-260",
+          "line": 260,
+          "quote": "meant when the Boy threw him, but of course he didn't want to say so."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg11757-q10",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg11757",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/11757",
+        "sha256": "01c84466faf26379e7b49f364d2452d14da26fcbc9378d751b5caf3cf2580bfb",
+        "locator": {
+          "line": 290
+        },
+        "regionId": "line-290"
+      },
+      "question": "In The Velveteen Rabbit, find the complete sentence at the passage beginning “The strange rabbit stopped dancing, and came”.",
+      "gold": {
+        "answer": "The strange rabbit stopped dancing, and came quite close.",
+        "evidence": {
+          "regionId": "line-290",
+          "line": 290,
+          "quote": "The strange rabbit stopped dancing, and came quite close."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg11757-q11",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg11757",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/11757",
+        "sha256": "01c84466faf26379e7b49f364d2452d14da26fcbc9378d751b5caf3cf2580bfb",
+        "locator": {
+          "line": 328
+        },
+        "regionId": "line-328"
+      },
+      "question": "In The Velveteen Rabbit, find the complete sentence at the passage beginning “had made him Real, and when you”.",
+      "gold": {
+        "answer": "had made him Real, and when you are Real shabbiness doesn't matter.",
+        "evidence": {
+          "regionId": "line-328",
+          "line": 328,
+          "quote": "had made him Real, and when you are Real shabbiness doesn't matter."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg11757-q12",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg11757",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/11757",
+        "sha256": "01c84466faf26379e7b49f364d2452d14da26fcbc9378d751b5caf3cf2580bfb",
+        "locator": {
+          "line": 352
+        },
+        "regionId": "line-352"
+      },
+      "question": "In The Velveteen Rabbit, find the complete sentence at the passage beginning “It was a bright, sunny morning, and”.",
+      "gold": {
+        "answer": "It was a bright, sunny morning, and the windows stood wide open.",
+        "evidence": {
+          "regionId": "line-352",
+          "line": 352,
+          "quote": "It was a bright, sunny morning, and the windows stood wide open."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg11757-q13",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg11757",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/11757",
+        "sha256": "01c84466faf26379e7b49f364d2452d14da26fcbc9378d751b5caf3cf2580bfb",
+        "locator": {
+          "line": 381
+        },
+        "regionId": "line-381"
+      },
+      "question": "In The Velveteen Rabbit, find the complete sentence at the passage beginning “only the gardener was too busy just”.",
+      "gold": {
+        "answer": "only the gardener was too busy just then to attend to it.",
+        "evidence": {
+          "regionId": "line-381",
+          "line": 381,
+          "quote": "only the gardener was too busy just then to attend to it."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg11757-q14",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg11757",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/11757",
+        "sha256": "01c84466faf26379e7b49f364d2452d14da26fcbc9378d751b5caf3cf2580bfb",
+        "locator": {
+          "line": 400
+        },
+        "regionId": "line-400"
+      },
+      "question": "In The Velveteen Rabbit, find the complete sentence at the passage beginning “he had played with the Boy on”.",
+      "gold": {
+        "answer": "he had played with the Boy on bygone mornings.",
+        "evidence": {
+          "regionId": "line-400",
+          "line": 400,
+          "quote": "he had played with the Boy on bygone mornings."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg11757-q15",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg11757",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/11757",
+        "sha256": "01c84466faf26379e7b49f364d2452d14da26fcbc9378d751b5caf3cf2580bfb",
+        "locator": {
+          "line": 422
+        },
+        "regionId": "line-422"
+      },
+      "question": "In The Velveteen Rabbit, find the complete sentence at the passage beginning “hair, and her face was like the”.",
+      "gold": {
+        "answer": "hair, and her face was like the most perfect flower of all.",
+        "evidence": {
+          "regionId": "line-422",
+          "line": 422,
+          "quote": "hair, and her face was like the most perfect flower of all."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg11757-q16",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg11757",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/11757",
+        "sha256": "01c84466faf26379e7b49f364d2452d14da26fcbc9378d751b5caf3cf2580bfb",
+        "locator": {
+          "line": 431
+        },
+        "regionId": "line-431"
+      },
+      "question": "In The Velveteen Rabbit, find the complete sentence at the passage beginning “\"I am the nursery magic Fairy,\"”.",
+      "gold": {
+        "answer": "\"I am the nursery magic Fairy,\" she said.",
+        "evidence": {
+          "regionId": "line-431",
+          "line": 431,
+          "quote": "\"I am the nursery magic Fairy,\" she said."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg11757-q17",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg11757",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/11757",
+        "sha256": "01c84466faf26379e7b49f364d2452d14da26fcbc9378d751b5caf3cf2580bfb",
+        "locator": {
+          "line": 447
+        },
+        "regionId": "line-447"
+      },
+      "question": "In The Velveteen Rabbit, find the complete sentence at the passage beginning “beautiful, and the fronds of the bracken”.",
+      "gold": {
+        "answer": "beautiful, and the fronds of the bracken shone like frosted silver.",
+        "evidence": {
+          "regionId": "line-447",
+          "line": 447,
+          "quote": "beautiful, and the fronds of the bracken shone like frosted silver."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg11757-q18",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg11757",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/11757",
+        "sha256": "01c84466faf26379e7b49f364d2452d14da26fcbc9378d751b5caf3cf2580bfb",
+        "locator": {
+          "line": 456
+        },
+        "regionId": "line-456"
+      },
+      "question": "In The Velveteen Rabbit, find the complete sentence at the passage beginning “And she kissed the little Rabbit again”.",
+      "gold": {
+        "answer": "And she kissed the little Rabbit again and put him down on the grass.",
+        "evidence": {
+          "regionId": "line-456",
+          "line": 456,
+          "quote": "And she kissed the little Rabbit again and put him down on the grass."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg11757-q19",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg11757",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/11757",
+        "sha256": "01c84466faf26379e7b49f364d2452d14da26fcbc9378d751b5caf3cf2580bfb",
+        "locator": {
+          "line": 471
+        },
+        "regionId": "line-471"
+      },
+      "question": "In The Velveteen Rabbit, find the complete sentence at the passage beginning “themselves, and his whiskers were so long”.",
+      "gold": {
+        "answer": "themselves, and his whiskers were so long that they brushed the grass.",
+        "evidence": {
+          "regionId": "line-471",
+          "line": 471,
+          "quote": "themselves, and his whiskers were so long that they brushed the grass."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg11757-q20",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg11757",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/11757",
+        "sha256": "01c84466faf26379e7b49f364d2452d14da26fcbc9378d751b5caf3cf2580bfb",
+        "locator": {
+          "line": 487
+        },
+        "regionId": "line-487"
+      },
+      "question": "In The Velveteen Rabbit, find the complete sentence at the passage beginning “spotted, and the spots still”.",
+      "gold": {
+        "answer": "spotted, and the spots still showed through.",
+        "evidence": {
+          "regionId": "line-487",
+          "line": 487,
+          "quote": "spotted, and the spots still showed through."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg902-q01",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg902",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/902",
+        "sha256": "77ae1b3c7be77aea82b1f935e531e53f4df43db572cbc14af39d6cd0d5ba50da",
+        "locator": {
+          "line": 142
+        },
+        "regionId": "line-142"
+      },
+      "question": "In The Happy Prince, and Other Tales, find the complete sentence at the passage beginning “whenever the wind blew, the Reed made”.",
+      "gold": {
+        "answer": "whenever the wind blew, the Reed made the most graceful curtseys.",
+        "evidence": {
+          "regionId": "line-142",
+          "line": 142,
+          "quote": "whenever the wind blew, the Reed made the most graceful curtseys."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg902-q02",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg902",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/902",
+        "sha256": "77ae1b3c7be77aea82b1f935e531e53f4df43db572cbc14af39d6cd0d5ba50da",
+        "locator": {
+          "line": 215
+        },
+        "regionId": "line-215"
+      },
+      "question": "In The Happy Prince, and Other Tales, find the complete sentence at the passage beginning “and down the Nile, and talking to”.",
+      "gold": {
+        "answer": "and down the Nile, and talking to the large lotus-flowers.",
+        "evidence": {
+          "regionId": "line-215",
+          "line": 215,
+          "quote": "and down the Nile, and talking to the large lotus-flowers."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg902-q03",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg902",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/902",
+        "sha256": "77ae1b3c7be77aea82b1f935e531e53f4df43db572cbc14af39d6cd0d5ba50da",
+        "locator": {
+          "line": 279
+        },
+        "regionId": "line-279"
+      },
+      "question": "In The Happy Prince, and Other Tales, find the complete sentence at the passage beginning “When the moon rose he flew back”.",
+      "gold": {
+        "answer": "When the moon rose he flew back to the Happy Prince.",
+        "evidence": {
+          "regionId": "line-279",
+          "line": 279,
+          "quote": "When the moon rose he flew back to the Happy Prince."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg902-q04",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg902",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/902",
+        "sha256": "77ae1b3c7be77aea82b1f935e531e53f4df43db572cbc14af39d6cd0d5ba50da",
+        "locator": {
+          "line": 391
+        },
+        "regionId": "line-391"
+      },
+      "question": "In The Happy Prince, and Other Tales, find the complete sentence at the passage beginning “their beautiful houses, while the beggars were”.",
+      "gold": {
+        "answer": "their beautiful houses, while the beggars were sitting at the gates.",
+        "evidence": {
+          "regionId": "line-391",
+          "line": 391,
+          "quote": "their beautiful houses, while the beggars were sitting at the gates."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg902-q05",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg902",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/902",
+        "sha256": "77ae1b3c7be77aea82b1f935e531e53f4df43db572cbc14af39d6cd0d5ba50da",
+        "locator": {
+          "line": 465
+        },
+        "regionId": "line-465"
+      },
+      "question": "In The Happy Prince, and Other Tales, find the complete sentence at the passage beginning “When I last heard of them they”.",
+      "gold": {
+        "answer": "When I last heard of them they were quarrelling still.",
+        "evidence": {
+          "regionId": "line-465",
+          "line": 465,
+          "quote": "When I last heard of them they were quarrelling still."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg902-q06",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg902",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/902",
+        "sha256": "77ae1b3c7be77aea82b1f935e531e53f4df43db572cbc14af39d6cd0d5ba50da",
+        "locator": {
+          "line": 554
+        },
+        "regionId": "line-554"
+      },
+      "question": "In The Happy Prince, and Other Tales, find the complete sentence at the passage beginning ““Give me a red rose,” she cried,”.",
+      "gold": {
+        "answer": "“Give me a red rose,” she cried, “and I will sing you my sweetest song.”",
+        "evidence": {
+          "regionId": "line-554",
+          "line": 554,
+          "quote": "“Give me a red rose,” she cried, “and I will sing you my sweetest song.”"
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg902-q07",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg902",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/902",
+        "sha256": "77ae1b3c7be77aea82b1f935e531e53f4df43db572cbc14af39d6cd0d5ba50da",
+        "locator": {
+          "line": 655
+        },
+        "regionId": "line-655"
+      },
+      "question": "In The Happy Prince, and Other Tales, find the complete sentence at the passage beginning “deeper into her breast, and her life-blood”.",
+      "gold": {
+        "answer": "deeper into her breast, and her life-blood ebbed away from her.",
+        "evidence": {
+          "regionId": "line-655",
+          "line": 655,
+          "quote": "deeper into her breast, and her life-blood ebbed away from her."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg902-q08",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg902",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/902",
+        "sha256": "77ae1b3c7be77aea82b1f935e531e53f4df43db572cbc14af39d6cd0d5ba50da",
+        "locator": {
+          "line": 728
+        },
+        "regionId": "line-728"
+      },
+      "question": "In The Happy Prince, and Other Tales, find the complete sentence at the passage beginning “knows that jewels cost far more”.",
+      "gold": {
+        "answer": "knows that jewels cost far more than flowers.”",
+        "evidence": {
+          "regionId": "line-728",
+          "line": 728,
+          "quote": "knows that jewels cost far more than flowers.”"
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg902-q09",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg902",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/902",
+        "sha256": "77ae1b3c7be77aea82b1f935e531e53f4df43db572cbc14af39d6cd0d5ba50da",
+        "locator": {
+          "line": 822
+        },
+        "regionId": "line-822"
+      },
+      "question": "In The Happy Prince, and Other Tales, find the complete sentence at the passage beginning “to every garden, but to the Giant’s”.",
+      "gold": {
+        "answer": "to every garden, but to the Giant’s garden she gave none.",
+        "evidence": {
+          "regionId": "line-822",
+          "line": 822,
+          "quote": "to every garden, but to the Giant’s garden she gave none."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg902-q10",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg902",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/902",
+        "sha256": "77ae1b3c7be77aea82b1f935e531e53f4df43db572cbc14af39d6cd0d5ba50da",
+        "locator": {
+          "line": 894
+        },
+        "regionId": "line-894"
+      },
+      "question": "In The Happy Prince, and Other Tales, find the complete sentence at the passage beginning “children at their games, and admired”.",
+      "gold": {
+        "answer": "children at their games, and admired his garden.",
+        "evidence": {
+          "regionId": "line-894",
+          "line": 894,
+          "quote": "children at their games, and admired his garden."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg902-q11",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg902",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/902",
+        "sha256": "77ae1b3c7be77aea82b1f935e531e53f4df43db572cbc14af39d6cd0d5ba50da",
+        "locator": {
+          "line": 994
+        },
+        "regionId": "line-994"
+      },
+      "question": "In The Happy Prince, and Other Tales, find the complete sentence at the passage beginning “except for his kind heart, and his”.",
+      "gold": {
+        "answer": "except for his kind heart, and his funny round good-humoured face.",
+        "evidence": {
+          "regionId": "line-994",
+          "line": 994,
+          "quote": "except for his kind heart, and his funny round good-humoured face."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg902-q12",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg902",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/902",
+        "sha256": "77ae1b3c7be77aea82b1f935e531e53f4df43db572cbc14af39d6cd0d5ba50da",
+        "locator": {
+          "line": 1077
+        },
+        "regionId": "line-1077"
+      },
+      "question": "In The Happy Prince, and Other Tales, find the complete sentence at the passage beginning ““Then you are quite behind the age,””.",
+      "gold": {
+        "answer": "“Then you are quite behind the age,” said the Water-rat.",
+        "evidence": {
+          "regionId": "line-1077",
+          "line": 1077,
+          "quote": "“Then you are quite behind the age,” said the Water-rat."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg902-q13",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg902",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/902",
+        "sha256": "77ae1b3c7be77aea82b1f935e531e53f4df43db572cbc14af39d6cd0d5ba50da",
+        "locator": {
+          "line": 1176
+        },
+        "regionId": "line-1176"
+      },
+      "question": "In The Happy Prince, and Other Tales, find the complete sentence at the passage beginning “friendship, was quite free from selfishness of”.",
+      "gold": {
+        "answer": "friendship, was quite free from selfishness of any kind.’",
+        "evidence": {
+          "regionId": "line-1176",
+          "line": 1176,
+          "quote": "friendship, was quite free from selfishness of any kind.’"
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg902-q14",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg902",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/902",
+        "sha256": "77ae1b3c7be77aea82b1f935e531e53f4df43db572cbc14af39d6cd0d5ba50da",
+        "locator": {
+          "line": 1270
+        },
+        "regionId": "line-1270"
+      },
+      "question": "In The Happy Prince, and Other Tales, find the complete sentence at the passage beginning “Hans, sitting down, and wiping his forehead,”.",
+      "gold": {
+        "answer": "Hans, sitting down, and wiping his forehead, ‘a very great privilege.",
+        "evidence": {
+          "regionId": "line-1270",
+          "line": 1270,
+          "quote": "Hans, sitting down, and wiping his forehead, ‘a very great privilege."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg902-q15",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg902",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/902",
+        "sha256": "77ae1b3c7be77aea82b1f935e531e53f4df43db572cbc14af39d6cd0d5ba50da",
+        "locator": {
+          "line": 1417
+        },
+        "regionId": "line-1417"
+      },
+      "question": "In The Happy Prince, and Other Tales, find the complete sentence at the passage beginning ““I am rather afraid that I have”.",
+      "gold": {
+        "answer": "“I am rather afraid that I have annoyed him,” answered the Linnet.",
+        "evidence": {
+          "regionId": "line-1417",
+          "line": 1417,
+          "quote": "“I am rather afraid that I have annoyed him,” answered the Linnet."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg902-q16",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg902",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/902",
+        "sha256": "77ae1b3c7be77aea82b1f935e531e53f4df43db572cbc14af39d6cd0d5ba50da",
+        "locator": {
+          "line": 1485
+        },
+        "regionId": "line-1485"
+      },
+      "question": "In The Happy Prince, and Other Tales, find the complete sentence at the passage beginning “Pyrotechnist should be in attendance on the”.",
+      "gold": {
+        "answer": "Pyrotechnist should be in attendance on the day of her marriage.",
+        "evidence": {
+          "regionId": "line-1485",
+          "line": 1485,
+          "quote": "Pyrotechnist should be in attendance on the day of her marriage."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg902-q17",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg902",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/902",
+        "sha256": "77ae1b3c7be77aea82b1f935e531e53f4df43db572cbc14af39d6cd0d5ba50da",
+        "locator": {
+          "line": 1599
+        },
+        "regionId": "line-1599"
+      },
+      "question": "In The Happy Prince, and Other Tales, find the complete sentence at the passage beginning ““That is a very selfish reason,” said”.",
+      "gold": {
+        "answer": "“That is a very selfish reason,” said the Rocket angrily.",
+        "evidence": {
+          "regionId": "line-1599",
+          "line": 1599,
+          "quote": "“That is a very selfish reason,” said the Rocket angrily."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg902-q18",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg902",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/902",
+        "sha256": "77ae1b3c7be77aea82b1f935e531e53f4df43db572cbc14af39d6cd0d5ba50da",
+        "locator": {
+          "line": 1706
+        },
+        "regionId": "line-1706"
+      },
+      "question": "In The Happy Prince, and Other Tales, find the complete sentence at the passage beginning “Every one was a great success except”.",
+      "gold": {
+        "answer": "Every one was a great success except the Remarkable Rocket.",
+        "evidence": {
+          "regionId": "line-1706",
+          "line": 1706,
+          "quote": "Every one was a great success except the Remarkable Rocket."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg902-q19",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg902",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/902",
+        "sha256": "77ae1b3c7be77aea82b1f935e531e53f4df43db572cbc14af39d6cd0d5ba50da",
+        "locator": {
+          "line": 1785
+        },
+        "regionId": "line-1785"
+      },
+      "question": "In The Happy Prince, and Other Tales, find the complete sentence at the passage beginning “am going back to Court”.",
+      "gold": {
+        "answer": "am going back to Court almost immediately.",
+        "evidence": {
+          "regionId": "line-1785",
+          "line": 1785,
+          "quote": "am going back to Court almost immediately."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg902-q20",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg902",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/902",
+        "sha256": "77ae1b3c7be77aea82b1f935e531e53f4df43db572cbc14af39d6cd0d5ba50da",
+        "locator": {
+          "line": 1860
+        },
+        "regionId": "line-1860"
+      },
+      "question": "In The Happy Prince, and Other Tales, find the complete sentence at the passage beginning “to you”; but the Duck paid no”.",
+      "gold": {
+        "answer": "to you”; but the Duck paid no attention to him.",
+        "evidence": {
+          "regionId": "line-1860",
+          "line": 1860,
+          "quote": "to you”; but the Duck paid no attention to him."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg496-q01",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg496",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/496",
+        "sha256": "709c354dc6934a3a4509cdfae1bba47d4feb2597afe5c9c22c6fdb6013a561e3",
+        "locator": {
+          "line": 203
+        },
+        "regionId": "line-203"
+      },
+      "question": "In The Little Lame Prince, find the complete sentence at the passage beginning “The grand young lady nurse started,”.",
+      "gold": {
+        "answer": "The grand young lady nurse started, flushing angrily.",
+        "evidence": {
+          "regionId": "line-203",
+          "line": 203,
+          "quote": "The grand young lady nurse started, flushing angrily."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg496-q02",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg496",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/496",
+        "sha256": "709c354dc6934a3a4509cdfae1bba47d4feb2597afe5c9c22c6fdb6013a561e3",
+        "locator": {
+          "line": 443
+        },
+        "regionId": "line-443"
+      },
+      "question": "In The Little Lame Prince, find the complete sentence at the passage beginning “should befall me, I have appointed”.",
+      "gold": {
+        "answer": "should befall me, I have appointed you Regent.",
+        "evidence": {
+          "regionId": "line-443",
+          "line": 443,
+          "quote": "should befall me, I have appointed you Regent."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg496-q03",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg496",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/496",
+        "sha256": "709c354dc6934a3a4509cdfae1bba47d4feb2597afe5c9c22c6fdb6013a561e3",
+        "locator": {
+          "line": 692
+        },
+        "regionId": "line-692"
+      },
+      "question": "In The Little Lame Prince, find the complete sentence at the passage beginning “it, as before, laden with provisions and”.",
+      "gold": {
+        "answer": "it, as before, laden with provisions and many other things.",
+        "evidence": {
+          "regionId": "line-692",
+          "line": 692,
+          "quote": "it, as before, laden with provisions and many other things."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg496-q04",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg496",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/496",
+        "sha256": "709c354dc6934a3a4509cdfae1bba47d4feb2597afe5c9c22c6fdb6013a561e3",
+        "locator": {
+          "line": 978
+        },
+        "regionId": "line-978"
+      },
+      "question": "In The Little Lame Prince, find the complete sentence at the passage beginning “remember her, and want her as he”.",
+      "gold": {
+        "answer": "remember her, and want her as he had never wanted anything before.",
+        "evidence": {
+          "regionId": "line-978",
+          "line": 978,
+          "quote": "remember her, and want her as he had never wanted anything before."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg496-q05",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg496",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/496",
+        "sha256": "709c354dc6934a3a4509cdfae1bba47d4feb2597afe5c9c22c6fdb6013a561e3",
+        "locator": {
+          "line": 1222
+        },
+        "regionId": "line-1222"
+      },
+      "question": "In The Little Lame Prince, find the complete sentence at the passage beginning “His dear old godmother, he thought, and”.",
+      "gold": {
+        "answer": "His dear old godmother, he thought, and turned eagerly round.",
+        "evidence": {
+          "regionId": "line-1222",
+          "line": 1222,
+          "quote": "His dear old godmother, he thought, and turned eagerly round."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg496-q06",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg496",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/496",
+        "sha256": "709c354dc6934a3a4509cdfae1bba47d4feb2597afe5c9c22c6fdb6013a561e3",
+        "locator": {
+          "line": 1418
+        },
+        "regionId": "line-1418"
+      },
+      "question": "In The Little Lame Prince, find the complete sentence at the passage beginning “his nurse, though only in the next”.",
+      "gold": {
+        "answer": "his nurse, though only in the next room, perceived no difference.",
+        "evidence": {
+          "regionId": "line-1418",
+          "line": 1418,
+          "quote": "his nurse, though only in the next room, perceived no difference."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg496-q07",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg496",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/496",
+        "sha256": "709c354dc6934a3a4509cdfae1bba47d4feb2597afe5c9c22c6fdb6013a561e3",
+        "locator": {
+          "line": 1669
+        },
+        "regionId": "line-1669"
+      },
+      "question": "In The Little Lame Prince, find the complete sentence at the passage beginning “his bath or his drinking-cup--clap his hands”.",
+      "gold": {
+        "answer": "his bath or his drinking-cup--clap his hands with delight.",
+        "evidence": {
+          "regionId": "line-1669",
+          "line": 1669,
+          "quote": "his bath or his drinking-cup--clap his hands with delight."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg496-q08",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg496",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/496",
+        "sha256": "709c354dc6934a3a4509cdfae1bba47d4feb2597afe5c9c22c6fdb6013a561e3",
+        "locator": {
+          "line": 1873
+        },
+        "regionId": "line-1873"
+      },
+      "question": "In The Little Lame Prince, find the complete sentence at the passage beginning “was a child I thought there was”.",
+      "gold": {
+        "answer": "was a child I thought there was nothing so sweet; and I think so still.",
+        "evidence": {
+          "regionId": "line-1873",
+          "line": 1873,
+          "quote": "was a child I thought there was nothing so sweet; and I think so still."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg496-q09",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg496",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/496",
+        "sha256": "709c354dc6934a3a4509cdfae1bba47d4feb2597afe5c9c22c6fdb6013a561e3",
+        "locator": {
+          "line": 2100
+        },
+        "regionId": "line-2100"
+      },
+      "question": "In The Little Lame Prince, find the complete sentence at the passage beginning “good-will, as if quite tired”.",
+      "gold": {
+        "answer": "good-will, as if quite tired of idleness.",
+        "evidence": {
+          "regionId": "line-2100",
+          "line": 2100,
+          "quote": "good-will, as if quite tired of idleness."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg496-q10",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg496",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/496",
+        "sha256": "709c354dc6934a3a4509cdfae1bba47d4feb2597afe5c9c22c6fdb6013a561e3",
+        "locator": {
+          "line": 2322
+        },
+        "regionId": "line-2322"
+      },
+      "question": "In The Little Lame Prince, find the complete sentence at the passage beginning ““He is dead,” said the Magpie, with”.",
+      "gold": {
+        "answer": "“He is dead,” said the Magpie, with a croak.",
+        "evidence": {
+          "regionId": "line-2322",
+          "line": 2322,
+          "quote": "“He is dead,” said the Magpie, with a croak."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg496-q11",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg496",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/496",
+        "sha256": "709c354dc6934a3a4509cdfae1bba47d4feb2597afe5c9c22c6fdb6013a561e3",
+        "locator": {
+          "line": 2553
+        },
+        "regionId": "line-2553"
+      },
+      "question": "In The Little Lame Prince, find the complete sentence at the passage beginning “house in a tree when they had”.",
+      "gold": {
+        "answer": "house in a tree when they had had sufficient of their own company.",
+        "evidence": {
+          "regionId": "line-2553",
+          "line": 2553,
+          "quote": "house in a tree when they had had sufficient of their own company."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg496-q12",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg496",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/496",
+        "sha256": "709c354dc6934a3a4509cdfae1bba47d4feb2597afe5c9c22c6fdb6013a561e3",
+        "locator": {
+          "line": 2767
+        },
+        "regionId": "line-2767"
+      },
+      "question": "In The Little Lame Prince, find the complete sentence at the passage beginning “the little old woman with them--he knew”.",
+      "gold": {
+        "answer": "the little old woman with them--he knew not where.",
+        "evidence": {
+          "regionId": "line-2767",
+          "line": 2767,
+          "quote": "the little old woman with them--he knew not where."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg496-q13",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg496",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/496",
+        "sha256": "709c354dc6934a3a4509cdfae1bba47d4feb2597afe5c9c22c6fdb6013a561e3",
+        "locator": {
+          "line": 2977
+        },
+        "regionId": "line-2977"
+      },
+      "question": "In The Little Lame Prince, find the complete sentence at the passage beginning “found fault with him shouted louder”.",
+      "gold": {
+        "answer": "found fault with him shouted louder than anybody.",
+        "evidence": {
+          "regionId": "line-2977",
+          "line": 2977,
+          "quote": "found fault with him shouted louder than anybody."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg496-q14",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg496",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/496",
+        "sha256": "709c354dc6934a3a4509cdfae1bba47d4feb2597afe5c9c22c6fdb6013a561e3",
+        "locator": {
+          "line": 3248
+        },
+        "regionId": "line-3248"
+      },
+      "question": "In The Little Lame Prince, find the complete sentence at the passage beginning “his garments had been magnificent, but he”.",
+      "gold": {
+        "answer": "his garments had been magnificent, but he had torn them all to tatters.",
+        "evidence": {
+          "regionId": "line-3248",
+          "line": 3248,
+          "quote": "his garments had been magnificent, but he had torn them all to tatters."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg496-q15",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg496",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/496",
+        "sha256": "709c354dc6934a3a4509cdfae1bba47d4feb2597afe5c9c22c6fdb6013a561e3",
+        "locator": {
+          "line": 3440
+        },
+        "regionId": "line-3440"
+      },
+      "question": "In The Little Lame Prince, find the complete sentence at the passage beginning “when she comes, shall chastise you”.",
+      "gold": {
+        "answer": "when she comes, shall chastise you for it.”",
+        "evidence": {
+          "regionId": "line-3440",
+          "line": 3440,
+          "quote": "when she comes, shall chastise you for it.”"
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg496-q16",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg496",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/496",
+        "sha256": "709c354dc6934a3a4509cdfae1bba47d4feb2597afe5c9c22c6fdb6013a561e3",
+        "locator": {
+          "line": 3681
+        },
+        "regionId": "line-3681"
+      },
+      "question": "In The Little Lame Prince, find the complete sentence at the passage beginning “But how was she surprised to find”.",
+      "gold": {
+        "answer": "But how was she surprised to find it gone!",
+        "evidence": {
+          "regionId": "line-3681",
+          "line": 3681,
+          "quote": "But how was she surprised to find it gone!"
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg496-q17",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg496",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/496",
+        "sha256": "709c354dc6934a3a4509cdfae1bba47d4feb2597afe5c9c22c6fdb6013a561e3",
+        "locator": {
+          "line": 3973
+        },
+        "regionId": "line-3973"
+      },
+      "question": "In The Little Lame Prince, find the complete sentence at the passage beginning ““I am the fairy Candide,” said she,”.",
+      "gold": {
+        "answer": "“I am the fairy Candide,” said she, with a smiling and gracious air.",
+        "evidence": {
+          "regionId": "line-3973",
+          "line": 3973,
+          "quote": "“I am the fairy Candide,” said she, with a smiling and gracious air."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg496-q18",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg496",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/496",
+        "sha256": "709c354dc6934a3a4509cdfae1bba47d4feb2597afe5c9c22c6fdb6013a561e3",
+        "locator": {
+          "line": 4199
+        },
+        "regionId": "line-4199"
+      },
+      "question": "In The Little Lame Prince, find the complete sentence at the passage beginning “thin, ragged, half-naked, covered with wounds”.",
+      "gold": {
+        "answer": "thin, ragged, half-naked, covered with wounds and sores.",
+        "evidence": {
+          "regionId": "line-4199",
+          "line": 4199,
+          "quote": "thin, ragged, half-naked, covered with wounds and sores."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg496-q19",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg496",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/496",
+        "sha256": "709c354dc6934a3a4509cdfae1bba47d4feb2597afe5c9c22c6fdb6013a561e3",
+        "locator": {
+          "line": 4452
+        },
+        "regionId": "line-4452"
+      },
+      "question": "In The Little Lame Prince, find the complete sentence at the passage beginning “are very polite and very good-tempered, in”.",
+      "gold": {
+        "answer": "are very polite and very good-tempered, in spite of your nose.”",
+        "evidence": {
+          "regionId": "line-4452",
+          "line": 4452,
+          "quote": "are very polite and very good-tempered, in spite of your nose.”"
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg496-q20",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg496",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/496",
+        "sha256": "709c354dc6934a3a4509cdfae1bba47d4feb2597afe5c9c22c6fdb6013a561e3",
+        "locator": {
+          "line": 4712
+        },
+        "regionId": "line-4712"
+      },
+      "question": "In The Little Lame Prince, find the complete sentence at the passage beginning “cellar, jerking the lid up and down”.",
+      "gold": {
+        "answer": "cellar, jerking the lid up and down on her way, to pass away the time.",
+        "evidence": {
+          "regionId": "line-4712",
+          "line": 4712,
+          "quote": "cellar, jerking the lid up and down on her way, to pass away the time."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg7256-q01",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg7256",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/7256",
+        "sha256": "cdf8ad2aad68e48c58d6745a8a1ec418871176a6521fb458a8abc88f9a0649a3",
+        "locator": {
+          "line": 52
+        },
+        "regionId": "line-52"
+      },
+      "question": "In The Gift of the Magi, find the complete sentence at the passage beginning “that word on the lookout for the”.",
+      "gold": {
+        "answer": "that word on the lookout for the mendicancy squad.",
+        "evidence": {
+          "regionId": "line-52",
+          "line": 52,
+          "quote": "that word on the lookout for the mendicancy squad."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg7256-q02",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg7256",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/7256",
+        "sha256": "cdf8ad2aad68e48c58d6745a8a1ec418871176a6521fb458a8abc88f9a0649a3",
+        "locator": {
+          "line": 56
+        },
+        "regionId": "line-56"
+      },
+      "question": "In The Gift of the Magi, find the complete sentence at the passage beginning “Also appertaining thereunto was a card bearing”.",
+      "gold": {
+        "answer": "Also appertaining thereunto was a card bearing the name “Mr.",
+        "evidence": {
+          "regionId": "line-56",
+          "line": 56,
+          "quote": "Also appertaining thereunto was a card bearing the name “Mr."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg7256-q03",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg7256",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/7256",
+        "sha256": "cdf8ad2aad68e48c58d6745a8a1ec418871176a6521fb458a8abc88f9a0649a3",
+        "locator": {
+          "line": 67
+        },
+        "regionId": "line-67"
+      },
+      "question": "In The Gift of the Magi, find the complete sentence at the passage beginning “Della finished her cry and attended to”.",
+      "gold": {
+        "answer": "Della finished her cry and attended to her cheeks with the powder rag.",
+        "evidence": {
+          "regionId": "line-67",
+          "line": 67,
+          "quote": "Della finished her cry and attended to her cheeks with the powder rag."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg7256-q04",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg7256",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/7256",
+        "sha256": "cdf8ad2aad68e48c58d6745a8a1ec418871176a6521fb458a8abc88f9a0649a3",
+        "locator": {
+          "line": 74
+        },
+        "regionId": "line-74"
+      },
+      "question": "In The Gift of the Magi, find the complete sentence at the passage beginning “happy hour she had spent planning for”.",
+      "gold": {
+        "answer": "happy hour she had spent planning for something nice for him.",
+        "evidence": {
+          "regionId": "line-74",
+          "line": 74,
+          "quote": "happy hour she had spent planning for something nice for him."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg7256-q05",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg7256",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/7256",
+        "sha256": "cdf8ad2aad68e48c58d6745a8a1ec418871176a6521fb458a8abc88f9a0649a3",
+        "locator": {
+          "line": 78
+        },
+        "regionId": "line-78"
+      },
+      "question": "In The Gift of the Magi, find the complete sentence at the passage beginning “There was a pier glass between the”.",
+      "gold": {
+        "answer": "There was a pier glass between the windows of the room.",
+        "evidence": {
+          "regionId": "line-78",
+          "line": 78,
+          "quote": "There was a pier glass between the windows of the room."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg7256-q06",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg7256",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/7256",
+        "sha256": "cdf8ad2aad68e48c58d6745a8a1ec418871176a6521fb458a8abc88f9a0649a3",
+        "locator": {
+          "line": 105
+        },
+        "regionId": "line-105"
+      },
+      "question": "In The Gift of the Magi, find the complete sentence at the passage beginning “On went her old brown jacket; on”.",
+      "gold": {
+        "answer": "On went her old brown jacket; on went her old brown hat.",
+        "evidence": {
+          "regionId": "line-105",
+          "line": 105,
+          "quote": "On went her old brown jacket; on went her old brown hat."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg7256-q07",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg7256",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/7256",
+        "sha256": "cdf8ad2aad68e48c58d6745a8a1ec418871176a6521fb458a8abc88f9a0649a3",
+        "locator": {
+          "line": 111
+        },
+        "regionId": "line-111"
+      },
+      "question": "In The Gift of the Magi, find the complete sentence at the passage beginning “Madame, large, too white, chilly, hardly looked”.",
+      "gold": {
+        "answer": "Madame, large, too white, chilly, hardly looked the “Sofronie.”",
+        "evidence": {
+          "regionId": "line-111",
+          "line": 111,
+          "quote": "Madame, large, too white, chilly, hardly looked the “Sofronie.”"
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg7256-q08",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg7256",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/7256",
+        "sha256": "cdf8ad2aad68e48c58d6745a8a1ec418871176a6521fb458a8abc88f9a0649a3",
+        "locator": {
+          "line": 124
+        },
+        "regionId": "line-124"
+      },
+      "question": "In The Gift of the Magi, find the complete sentence at the passage beginning “Oh, and the next two hours tripped”.",
+      "gold": {
+        "answer": "Oh, and the next two hours tripped by on rosy wings.",
+        "evidence": {
+          "regionId": "line-124",
+          "line": 124,
+          "quote": "Oh, and the next two hours tripped by on rosy wings."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg7256-q09",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg7256",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/7256",
+        "sha256": "cdf8ad2aad68e48c58d6745a8a1ec418871176a6521fb458a8abc88f9a0649a3",
+        "locator": {
+          "line": 131
+        },
+        "regionId": "line-131"
+      },
+      "question": "In The Gift of the Magi, find the complete sentence at the passage beginning “meretricious ornamentation—as all good things”.",
+      "gold": {
+        "answer": "meretricious ornamentation—as all good things should do.",
+        "evidence": {
+          "regionId": "line-131",
+          "line": 131,
+          "quote": "meretricious ornamentation—as all good things should do."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg7256-q10",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg7256",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/7256",
+        "sha256": "cdf8ad2aad68e48c58d6745a8a1ec418871176a6521fb458a8abc88f9a0649a3",
+        "locator": {
+          "line": 143
+        },
+        "regionId": "line-143"
+      },
+      "question": "In The Gift of the Magi, find the complete sentence at the passage beginning “is always a tremendous task, dear friends—a”.",
+      "gold": {
+        "answer": "is always a tremendous task, dear friends—a mammoth task.",
+        "evidence": {
+          "regionId": "line-143",
+          "line": 143,
+          "quote": "is always a tremendous task, dear friends—a mammoth task."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg7256-q11",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg7256",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/7256",
+        "sha256": "cdf8ad2aad68e48c58d6745a8a1ec418871176a6521fb458a8abc88f9a0649a3",
+        "locator": {
+          "line": 147
+        },
+        "regionId": "line-147"
+      },
+      "question": "In The Gift of the Magi, find the complete sentence at the passage beginning “her reflection in the mirror long, carefully,”.",
+      "gold": {
+        "answer": "her reflection in the mirror long, carefully, and critically.",
+        "evidence": {
+          "regionId": "line-147",
+          "line": 147,
+          "quote": "her reflection in the mirror long, carefully, and critically."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg7256-q12",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg7256",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/7256",
+        "sha256": "cdf8ad2aad68e48c58d6745a8a1ec418871176a6521fb458a8abc88f9a0649a3",
+        "locator": {
+          "line": 158
+        },
+        "regionId": "line-158"
+      },
+      "question": "In The Gift of the Magi, find the complete sentence at the passage beginning “the corner of the table near the”.",
+      "gold": {
+        "answer": "the corner of the table near the door that he always entered.",
+        "evidence": {
+          "regionId": "line-158",
+          "line": 158,
+          "quote": "the corner of the table near the door that he always entered."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg7256-q13",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg7256",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/7256",
+        "sha256": "cdf8ad2aad68e48c58d6745a8a1ec418871176a6521fb458a8abc88f9a0649a3",
+        "locator": {
+          "line": 166
+        },
+        "regionId": "line-166"
+      },
+      "question": "In The Gift of the Magi, find the complete sentence at the passage beginning “He needed a new overcoat and he”.",
+      "gold": {
+        "answer": "He needed a new overcoat and he was without gloves.",
+        "evidence": {
+          "regionId": "line-166",
+          "line": 166,
+          "quote": "He needed a new overcoat and he was without gloves."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg7256-q14",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg7256",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/7256",
+        "sha256": "cdf8ad2aad68e48c58d6745a8a1ec418871176a6521fb458a8abc88f9a0649a3",
+        "locator": {
+          "line": 175
+        },
+        "regionId": "line-175"
+      },
+      "question": "In The Gift of the Magi, find the complete sentence at the passage beginning “Della wriggled off the table and went”.",
+      "gold": {
+        "answer": "Della wriggled off the table and went for him.",
+        "evidence": {
+          "regionId": "line-175",
+          "line": 175,
+          "quote": "Della wriggled off the table and went for him."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg7256-q15",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg7256",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/7256",
+        "sha256": "cdf8ad2aad68e48c58d6745a8a1ec418871176a6521fb458a8abc88f9a0649a3",
+        "locator": {
+          "line": 197
+        },
+        "regionId": "line-197"
+      },
+      "question": "In The Gift of the Magi, find the complete sentence at the passage beginning “serious sweetness, “but nobody could ever count”.",
+      "gold": {
+        "answer": "serious sweetness, “but nobody could ever count my love for you.",
+        "evidence": {
+          "regionId": "line-197",
+          "line": 197,
+          "quote": "serious sweetness, “but nobody could ever count my love for you."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg7256-q16",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg7256",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/7256",
+        "sha256": "cdf8ad2aad68e48c58d6745a8a1ec418871176a6521fb458a8abc88f9a0649a3",
+        "locator": {
+          "line": 210
+        },
+        "regionId": "line-210"
+      },
+      "question": "In The Gift of the Magi, find the complete sentence at the passage beginning ““Don’t make any mistake, Dell,” he said,”.",
+      "gold": {
+        "answer": "“Don’t make any mistake, Dell,” he said, “about me.",
+        "evidence": {
+          "regionId": "line-210",
+          "line": 210,
+          "quote": "“Don’t make any mistake, Dell,” he said, “about me."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg7256-q17",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg7256",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/7256",
+        "sha256": "cdf8ad2aad68e48c58d6745a8a1ec418871176a6521fb458a8abc88f9a0649a3",
+        "locator": {
+          "line": 215
+        },
+        "regionId": "line-215"
+      },
+      "question": "In The Gift of the Magi, find the complete sentence at the passage beginning “White fingers and nimble tore at the”.",
+      "gold": {
+        "answer": "White fingers and nimble tore at the string and paper.",
+        "evidence": {
+          "regionId": "line-215",
+          "line": 215,
+          "quote": "White fingers and nimble tore at the string and paper."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg7256-q18",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg7256",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/7256",
+        "sha256": "cdf8ad2aad68e48c58d6745a8a1ec418871176a6521fb458a8abc88f9a0649a3",
+        "locator": {
+          "line": 231
+        },
+        "regionId": "line-231"
+      },
+      "question": "In The Gift of the Magi, find the complete sentence at the passage beginning “And then Della leaped up like a”.",
+      "gold": {
+        "answer": "And then Della leaped up like a little singed cat and cried, “Oh, oh!”",
+        "evidence": {
+          "regionId": "line-231",
+          "line": 231,
+          "quote": "And then Della leaped up like a little singed cat and cried, “Oh, oh!”"
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg7256-q19",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg7256",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/7256",
+        "sha256": "cdf8ad2aad68e48c58d6745a8a1ec418871176a6521fb458a8abc88f9a0649a3",
+        "locator": {
+          "line": 238
+        },
+        "regionId": "line-238"
+      },
+      "question": "In The Gift of the Magi, find the complete sentence at the passage beginning “to look at the time a hundred”.",
+      "gold": {
+        "answer": "to look at the time a hundred times a day now.",
+        "evidence": {
+          "regionId": "line-238",
+          "line": 238,
+          "quote": "to look at the time a hundred times a day now."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    },
+    {
+      "id": "pg7256-q20",
+      "family": "public-book-located-quotation",
+      "source": {
+        "bookId": "pg7256",
+        "sourceUrl": "https://www.gutenberg.org/ebooks/7256",
+        "sha256": "cdf8ad2aad68e48c58d6745a8a1ec418871176a6521fb458a8abc88f9a0649a3",
+        "locator": {
+          "line": 251
+        },
+        "regionId": "line-251"
+      },
+      "question": "In The Gift of the Magi, find the complete sentence at the passage beginning “possibly bearing the privilege of exchange in”.",
+      "gold": {
+        "answer": "possibly bearing the privilege of exchange in case of duplication.",
+        "evidence": {
+          "regionId": "line-251",
+          "line": 251,
+          "quote": "possibly bearing the privilege of exchange in case of duplication."
+        },
+        "provenance": "automatic exact-sentence extraction from checksum-pinned complete source",
+        "adjudication": {
+          "status": "pending-human-review",
+          "reviewer": null,
+          "reviewedAt": null,
+          "notes": null
+        }
+      },
+      "reviewStatus": "automatic-proposal-only"
+    }
+  ]
+}

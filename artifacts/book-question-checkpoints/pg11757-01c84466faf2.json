@@ -1,0 +1,815 @@
+{
+  "bookId": "pg11757",
+  "sha256": "01c84466faf26379e7b49f364d2452d14da26fcbc9378d751b5caf3cf2580bfb",
+  "questions": [
+    {
+      "id": "pg11757-q01",
+      "sourceId": "pg11757",
+      "sourceVersionId": "pg11757-01c84466faf26379",
+      "question": "What details made the Rabbit look charming in the Boy’s Christmas stocking?",
+      "expected": "He was fat and bunchy, had a spotted brown-and-white coat, thread whiskers, pink-sateen-lined ears, and a sprig of holly between his paws.",
+      "category": "factual",
+      "evidence": [
+        {
+          "regionId": "pg11757-work",
+          "startChar": 1292,
+          "endChar": 1448,
+          "quote": "He was fat and bunchy, as a rabbit should be; his coat was\r\nspotted brown and white, he had real thread whiskers, and his ears\r\nwere lined with pink sateen.",
+          "whitespaceNormalized": true
+        },
+        {
+          "regionId": "pg11757-work",
+          "startChar": 1525,
+          "endChar": 1590,
+          "quote": "with a sprig of holly between his\r\npaws, the effect was charming.",
+          "whitespaceNormalized": true
+        }
+      ],
+      "adjudication": {
+        "status": "pending-human-review",
+        "model": "gpt-6-luna",
+        "sessionId": "01a0ce04-d9ef-7231-aaef-f8171c44a33b",
+        "reviewedAt": null,
+        "reviewer": null,
+        "decision": null,
+        "notes": null
+      },
+      "generation": {
+        "model": "gpt-6-luna",
+        "usage": {
+          "input_tokens": 63175,
+          "cached_input_tokens": 37376,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 3243,
+          "reasoning_output_tokens": 501
+        },
+        "wallMs": 77439,
+        "repairTurns": 1
+      }
+    },
+    {
+      "id": "pg11757-q02",
+      "sourceId": "pg11757",
+      "sourceVersionId": "pg11757-01c84466faf26379",
+      "question": "Who was the only nursery plaything initially kind to the Rabbit?",
+      "expected": "The Skin Horse.",
+      "category": "factual",
+      "evidence": [
+        {
+          "regionId": "pg11757-work",
+          "startChar": 3159,
+          "endChar": 3222,
+          "quote": "the only person who\r\nwas kind to him at all was the Skin Horse.",
+          "whitespaceNormalized": true
+        }
+      ],
+      "adjudication": {
+        "status": "pending-human-review",
+        "model": "gpt-6-luna",
+        "sessionId": "01a0ce04-d9ef-7231-aaef-f8171c44a33b",
+        "reviewedAt": null,
+        "reviewer": null,
+        "decision": null,
+        "notes": null
+      },
+      "generation": {
+        "model": "gpt-6-luna",
+        "usage": {
+          "input_tokens": 63175,
+          "cached_input_tokens": 37376,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 3243,
+          "reasoning_output_tokens": 501
+        },
+        "wallMs": 77439,
+        "repairTurns": 1
+      }
+    },
+    {
+      "id": "pg11757-q03",
+      "sourceId": "pg11757",
+      "sourceVersionId": "pg11757-01c84466faf26379",
+      "question": "Why did the Rabbit think real rabbits were made of sawdust?",
+      "expected": "He did not know real rabbits existed and thought they were all stuffed with sawdust like himself.",
+      "category": "factual",
+      "evidence": [
+        {
+          "regionId": "pg11757-work",
+          "startChar": 2670,
+          "endChar": 2772,
+          "quote": "he didn't know that\r\nreal rabbits existed; he thought they were all stuffed with sawdust\r\nlike himself",
+          "whitespaceNormalized": false
+        }
+      ],
+      "adjudication": {
+        "status": "pending-human-review",
+        "model": "gpt-6-luna",
+        "sessionId": "01a0ce04-d9ef-7231-aaef-f8171c44a33b",
+        "reviewedAt": null,
+        "reviewer": null,
+        "decision": null,
+        "notes": null
+      },
+      "generation": {
+        "model": "gpt-6-luna",
+        "usage": {
+          "input_tokens": 63175,
+          "cached_input_tokens": 37376,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 3243,
+          "reasoning_output_tokens": 501
+        },
+        "wallMs": 77439,
+        "repairTurns": 1
+      }
+    },
+    {
+      "id": "pg11757-q04",
+      "sourceId": "pg11757",
+      "sourceVersionId": "pg11757-01c84466faf26379",
+      "question": "According to the Skin Horse, what makes a toy Real?",
+      "expected": "A child’s long-lasting love, beyond simply playing with it, makes it Real.",
+      "category": "interpretive",
+      "evidence": [
+        {
+          "regionId": "pg11757-work",
+          "startChar": 4164,
+          "endChar": 4277,
+          "quote": "When a child loves you for a long, long time, not just\r\nto play with, but REALLY loves you, then you become Real.",
+          "whitespaceNormalized": false
+        }
+      ],
+      "adjudication": {
+        "status": "pending-human-review",
+        "model": "gpt-6-luna",
+        "sessionId": "01a0ce04-d9ef-7231-aaef-f8171c44a33b",
+        "reviewedAt": null,
+        "reviewer": null,
+        "decision": null,
+        "notes": null
+      },
+      "generation": {
+        "model": "gpt-6-luna",
+        "usage": {
+          "input_tokens": 63175,
+          "cached_input_tokens": 37376,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 3243,
+          "reasoning_output_tokens": 501
+        },
+        "wallMs": 77439,
+        "repairTurns": 1
+      }
+    },
+    {
+      "id": "pg11757-q05",
+      "sourceId": "pg11757",
+      "sourceVersionId": "pg11757-01c84466faf26379",
+      "question": "Who made the Skin Horse Real, and how long ago was it?",
+      "expected": "The Boy’s Uncle made him Real a great many years ago.",
+      "category": "factual",
+      "evidence": [
+        {
+          "regionId": "pg11757-work",
+          "startChar": 5223,
+          "endChar": 5297,
+          "quote": "\"The Boy's Uncle made me Real,\" he said. \"That was a great many years\r\nago",
+          "whitespaceNormalized": false
+        }
+      ],
+      "adjudication": {
+        "status": "pending-human-review",
+        "model": "gpt-6-luna",
+        "sessionId": "01a0ce04-d9ef-7231-aaef-f8171c44a33b",
+        "reviewedAt": null,
+        "reviewer": null,
+        "decision": null,
+        "notes": null
+      },
+      "generation": {
+        "model": "gpt-6-luna",
+        "usage": {
+          "input_tokens": 63175,
+          "cached_input_tokens": 37376,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 3243,
+          "reasoning_output_tokens": 501
+        },
+        "wallMs": 77439,
+        "repairTurns": 1
+      }
+    },
+    {
+      "id": "pg11757-q06",
+      "sourceId": "pg11757",
+      "sourceVersionId": "pg11757-01c84466faf26379",
+      "question": "What happened first: Nana gave the Rabbit to the Boy for bedtime, or the Boy declared him Real?",
+      "expected": "Nana gave him to the Boy for bedtime first; the Boy declared him Real later, after the Rabbit had gone with him through springtime in the garden.",
+      "category": "temporal-sequence",
+      "evidence": [
+        {
+          "regionId": "pg11757-work",
+          "startChar": 6412,
+          "endChar": 6480,
+          "quote": "\"Here,\" she said, \"take your old Bunny! He'll do to sleep with you!\"",
+          "whitespaceNormalized": false
+        },
+        {
+          "regionId": "pg11757-work",
+          "startChar": 8614,
+          "endChar": 8694,
+          "quote": "\"Give me my Bunny!\" he said. \"You mustn't say that. He isn't a toy.\r\nHe's REAL!\"",
+          "whitespaceNormalized": true
+        }
+      ],
+      "adjudication": {
+        "status": "pending-human-review",
+        "model": "gpt-6-luna",
+        "sessionId": "01a0ce04-d9ef-7231-aaef-f8171c44a33b",
+        "reviewedAt": null,
+        "reviewer": null,
+        "decision": null,
+        "notes": null
+      },
+      "generation": {
+        "model": "gpt-6-luna",
+        "usage": {
+          "input_tokens": 63175,
+          "cached_input_tokens": 37376,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 3243,
+          "reasoning_output_tokens": 501
+        },
+        "wallMs": 77439,
+        "repairTurns": 1
+      }
+    },
+    {
+      "id": "pg11757-q07",
+      "sourceId": "pg11757",
+      "sourceVersionId": "pg11757-01c84466faf26379",
+      "question": "Why did Nana have to search the lawn for the Rabbit?",
+      "expected": "The Boy couldn’t sleep without him, so Nana came to look for him with a candle.",
+      "category": "causal",
+      "evidence": [
+        {
+          "regionId": "pg11757-work",
+          "startChar": 8132,
+          "endChar": 8240,
+          "quote": "Nana had to come and look for him with\r\nthe candle because the Boy couldn't go to sleep unless he was there.",
+          "whitespaceNormalized": false
+        }
+      ],
+      "adjudication": {
+        "status": "pending-human-review",
+        "model": "gpt-6-luna",
+        "sessionId": "01a0ce04-d9ef-7231-aaef-f8171c44a33b",
+        "reviewedAt": null,
+        "reviewer": null,
+        "decision": null,
+        "notes": null
+      },
+      "generation": {
+        "model": "gpt-6-luna",
+        "usage": {
+          "input_tokens": 63175,
+          "cached_input_tokens": 37376,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 3243,
+          "reasoning_output_tokens": 501
+        },
+        "wallMs": 77439,
+        "repairTurns": 1
+      }
+    },
+    {
+      "id": "pg11757-q08",
+      "sourceId": "pg11757",
+      "sourceVersionId": "pg11757-01c84466faf26379",
+      "question": "Who said the Rabbit was a mass of scarlet-fever germs, and what did he say should happen to it?",
+      "expected": "The doctor said it was a mass of germs and ordered it burned at once.",
+      "category": "attribution",
+      "evidence": [
+        {
+          "regionId": "pg11757-work",
+          "startChar": 16108,
+          "endChar": 16192,
+          "quote": "\"That?\" said the doctor. \"Why, it's a mass of scarlet fever\r\ngerms!-Burn it at once.",
+          "whitespaceNormalized": false
+        }
+      ],
+      "adjudication": {
+        "status": "pending-human-review",
+        "model": "gpt-6-luna",
+        "sessionId": "01a0ce04-d9ef-7231-aaef-f8171c44a33b",
+        "reviewedAt": null,
+        "reviewer": null,
+        "decision": null,
+        "notes": null
+      },
+      "generation": {
+        "model": "gpt-6-luna",
+        "usage": {
+          "input_tokens": 63175,
+          "cached_input_tokens": 37376,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 3243,
+          "reasoning_output_tokens": 501
+        },
+        "wallMs": 77439,
+        "repairTurns": 1
+      }
+    },
+    {
+      "id": "pg11757-q09",
+      "sourceId": "pg11757",
+      "sourceVersionId": "pg11757-01c84466faf26379",
+      "question": "How did the Boy’s response to the Rabbit differ from Nana’s when Nana called him a toy?",
+      "expected": "Nana called him a toy, while the Boy insisted he was not a toy and was Real.",
+      "category": "contrast",
+      "evidence": [
+        {
+          "regionId": "pg11757-work",
+          "startChar": 8481,
+          "endChar": 8556,
+          "quote": "\"You must have your old Bunny!\" she said. \"Fancy all that fuss for a\r\ntoy!\"",
+          "whitespaceNormalized": true
+        },
+        {
+          "regionId": "pg11757-work",
+          "startChar": 8643,
+          "endChar": 8694,
+          "quote": "\"You mustn't say that. He isn't a toy.\r\nHe's REAL!\"",
+          "whitespaceNormalized": true
+        }
+      ],
+      "adjudication": {
+        "status": "pending-human-review",
+        "model": "gpt-6-luna",
+        "sessionId": "01a0ce04-d9ef-7231-aaef-f8171c44a33b",
+        "reviewedAt": null,
+        "reviewer": null,
+        "decision": null,
+        "notes": null
+      },
+      "generation": {
+        "model": "gpt-6-luna",
+        "usage": {
+          "input_tokens": 63175,
+          "cached_input_tokens": 37376,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 3243,
+          "reasoning_output_tokens": 501
+        },
+        "wallMs": 77439,
+        "repairTurns": 1
+      }
+    },
+    {
+      "id": "pg11757-q10",
+      "sourceId": "pg11757",
+      "sourceVersionId": "pg11757-01c84466faf26379",
+      "question": "Why did the wild rabbits decide the Velveteen Rabbit was not a rabbit like them?",
+      "expected": "They noticed he had no hind legs and said that he did not smell right.",
+      "category": "causal",
+      "evidence": [
+        {
+          "regionId": "pg11757-work",
+          "startChar": 11638,
+          "endChar": 11683,
+          "quote": "\"He hasn't got any hind legs!\" he called out.",
+          "whitespaceNormalized": false
+        },
+        {
+          "regionId": "pg11757-work",
+          "startChar": 12477,
+          "endChar": 12560,
+          "quote": "\"He doesn't smell right!\" he exclaimed. \"He isn't a rabbit at all! He\r\nisn't real!\"",
+          "whitespaceNormalized": true
+        }
+      ],
+      "adjudication": {
+        "status": "pending-human-review",
+        "model": "gpt-6-luna",
+        "sessionId": "01a0ce04-d9ef-7231-aaef-f8171c44a33b",
+        "reviewedAt": null,
+        "reviewer": null,
+        "decision": null,
+        "notes": null
+      },
+      "generation": {
+        "model": "gpt-6-luna",
+        "usage": {
+          "input_tokens": 63175,
+          "cached_input_tokens": 37376,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 3243,
+          "reasoning_output_tokens": 501
+        },
+        "wallMs": 77439,
+        "repairTurns": 1
+      }
+    },
+    {
+      "id": "pg11757-q11",
+      "sourceId": "pg11757",
+      "sourceVersionId": "pg11757-01c84466faf26379",
+      "question": "What did the Rabbit mean when he told the wild rabbits, “I can jump higher than anything”?",
+      "expected": "He meant that he could jump when the Boy threw him, though he did not want to admit that.",
+      "category": "interpretive",
+      "evidence": [
+        {
+          "regionId": "pg11757-work",
+          "startChar": 11074,
+          "endChar": 11215,
+          "quote": "\"I can!\" said the little Rabbit. \"I can jump higher than anything!\" He\r\nmeant when the Boy threw him, but of course he didn't want to say so.",
+          "whitespaceNormalized": true
+        }
+      ],
+      "adjudication": {
+        "status": "pending-human-review",
+        "model": "gpt-6-luna",
+        "sessionId": "01a0ce04-d9ef-7231-aaef-f8171c44a33b",
+        "reviewedAt": null,
+        "reviewer": null,
+        "decision": null,
+        "notes": null
+      },
+      "generation": {
+        "model": "gpt-6-luna",
+        "usage": {
+          "input_tokens": 63175,
+          "cached_input_tokens": 37376,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 3243,
+          "reasoning_output_tokens": 501
+        },
+        "wallMs": 77439,
+        "repairTurns": 1
+      }
+    },
+    {
+      "id": "pg11757-q12",
+      "sourceId": "pg11757",
+      "sourceVersionId": "pg11757-01c84466faf26379",
+      "question": "What happened after the Rabbit’s tear fell to the ground while he was behind the fowl-house?",
+      "expected": "A flower grew where the tear fell.",
+      "category": "temporal-sequence",
+      "evidence": [
+        {
+          "regionId": "pg11757-work",
+          "startChar": 18359,
+          "endChar": 18456,
+          "quote": "And then a strange thing happened. For where the tear had fallen a\r\nflower grew out of the ground",
+          "whitespaceNormalized": false
+        }
+      ],
+      "adjudication": {
+        "status": "pending-human-review",
+        "model": "gpt-6-luna",
+        "sessionId": "01a0ce04-d9ef-7231-aaef-f8171c44a33b",
+        "reviewedAt": null,
+        "reviewer": null,
+        "decision": null,
+        "notes": null
+      },
+      "generation": {
+        "model": "gpt-6-luna",
+        "usage": {
+          "input_tokens": 63175,
+          "cached_input_tokens": 37376,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 3243,
+          "reasoning_output_tokens": 501
+        },
+        "wallMs": 77439,
+        "repairTurns": 1
+      }
+    },
+    {
+      "id": "pg11757-q13",
+      "sourceId": "pg11757",
+      "sourceVersionId": "pg11757-01c84466faf26379",
+      "question": "What caused the Fairy to come for the Rabbit, according to her explanation?",
+      "expected": "She takes playthings that children have loved once they are old and worn out and no longer needed.",
+      "category": "causal",
+      "evidence": [
+        {
+          "regionId": "pg11757-work",
+          "startChar": 19370,
+          "endChar": 19576,
+          "quote": "\"I take care of all the\r\nplaythings that the children have loved. When they are old and worn\r\nout and the children don't need them any more, then I come and take\r\nthem away with me and turn them into Real.\"",
+          "whitespaceNormalized": true
+        }
+      ],
+      "adjudication": {
+        "status": "pending-human-review",
+        "model": "gpt-6-luna",
+        "sessionId": "01a0ce04-d9ef-7231-aaef-f8171c44a33b",
+        "reviewedAt": null,
+        "reviewer": null,
+        "decision": null,
+        "notes": null
+      },
+      "generation": {
+        "model": "gpt-6-luna",
+        "usage": {
+          "input_tokens": 63175,
+          "cached_input_tokens": 37376,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 3243,
+          "reasoning_output_tokens": 501
+        },
+        "wallMs": 77439,
+        "repairTurns": 1
+      }
+    },
+    {
+      "id": "pg11757-q14",
+      "sourceId": "pg11757",
+      "sourceVersionId": "pg11757-01c84466faf26379",
+      "question": "What was the relationship between the Fairy and the Rabbit’s earlier experience of being Real to the Boy?",
+      "expected": "She explained that the Boy’s love had already made him Real to the Boy, and she would now make him Real to everyone.",
+      "category": "relationship",
+      "evidence": [
+        {
+          "regionId": "pg11757-work",
+          "startChar": 19632,
+          "endChar": 19736,
+          "quote": "\"You were Real to the Boy,\" the Fairy said, \"because he loved you. Now\r\nyou shall be Real to every one.\"",
+          "whitespaceNormalized": true
+        }
+      ],
+      "adjudication": {
+        "status": "pending-human-review",
+        "model": "gpt-6-luna",
+        "sessionId": "01a0ce04-d9ef-7231-aaef-f8171c44a33b",
+        "reviewedAt": null,
+        "reviewer": null,
+        "decision": null,
+        "notes": null
+      },
+      "generation": {
+        "model": "gpt-6-luna",
+        "usage": {
+          "input_tokens": 63175,
+          "cached_input_tokens": 37376,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 3243,
+          "reasoning_output_tokens": 501
+        },
+        "wallMs": 77439,
+        "repairTurns": 1
+      }
+    },
+    {
+      "id": "pg11757-q15",
+      "sourceId": "pg11757",
+      "sourceVersionId": "pg11757-01c84466faf26379",
+      "question": "How did the Fairy explain the difference between being Real to the Boy and being Real to everyone?",
+      "expected": "The Boy’s love had made the Rabbit Real to him; the Fairy said the Rabbit would now be Real to everyone.",
+      "category": "multi-passage",
+      "evidence": [
+        {
+          "regionId": "pg11757-work",
+          "startChar": 19632,
+          "endChar": 19736,
+          "quote": "\"You were Real to the Boy,\" the Fairy said, \"because he loved you. Now\r\nyou shall be Real to every one.\"",
+          "whitespaceNormalized": false
+        }
+      ],
+      "adjudication": {
+        "status": "pending-human-review",
+        "model": "gpt-6-luna",
+        "sessionId": "01a0ce04-d9ef-7231-aaef-f8171c44a33b",
+        "reviewedAt": null,
+        "reviewer": null,
+        "decision": null,
+        "notes": null
+      },
+      "generation": {
+        "model": "gpt-6-luna",
+        "usage": {
+          "input_tokens": 63175,
+          "cached_input_tokens": 37376,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 3243,
+          "reasoning_output_tokens": 501
+        },
+        "wallMs": 77439,
+        "repairTurns": 1
+      }
+    },
+    {
+      "id": "pg11757-q16",
+      "sourceId": "pg11757",
+      "sourceVersionId": "pg11757-01c84466faf26379",
+      "question": "What did the Rabbit notice about the wild rabbits’ bodies that he could not do himself at first?",
+      "expected": "They changed shape as they moved and could hop and stand on their hind legs; he had no separate hind legs and could not dance.",
+      "category": "contrast",
+      "evidence": [
+        {
+          "regionId": "pg11757-work",
+          "startChar": 10158,
+          "endChar": 10278,
+          "quote": "one minute they\r\nwere long and thin and the next minute fat and bunchy, instead of\r\nalways staying the same like he did.",
+          "whitespaceNormalized": true
+        },
+        {
+          "regionId": "pg11757-work",
+          "startChar": 11279,
+          "endChar": 11422,
+          "quote": "That was a dreadful question, for the Velveteen Rabbit had no hind\r\nlegs at all! The back of him was made all in one piece, like a\r\npincushion.",
+          "whitespaceNormalized": true
+        }
+      ],
+      "adjudication": {
+        "status": "pending-human-review",
+        "model": "gpt-6-luna",
+        "sessionId": "01a0ce04-d9ef-7231-aaef-f8171c44a33b",
+        "reviewedAt": null,
+        "reviewer": null,
+        "decision": null,
+        "notes": null
+      },
+      "generation": {
+        "model": "gpt-6-luna",
+        "usage": {
+          "input_tokens": 63175,
+          "cached_input_tokens": 37376,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 3243,
+          "reasoning_output_tokens": 501
+        },
+        "wallMs": 77439,
+        "repairTurns": 1
+      }
+    },
+    {
+      "id": "pg11757-q17",
+      "sourceId": "pg11757",
+      "sourceVersionId": "pg11757-01c84466faf26379",
+      "question": "Why did the Rabbit stay hidden and still while the Boy was ill?",
+      "expected": "He feared someone would take him away and knew the Boy needed him.",
+      "category": "causal",
+      "evidence": [
+        {
+          "regionId": "pg11757-work",
+          "startChar": 14275,
+          "endChar": 14486,
+          "quote": "the little Velveteen Rabbit lay there, hidden\r\nfrom sight under the bedclothes, and he never stirred, for he was\r\nafraid that if they found him some one might take him away, and he\r\nknew that the Boy needed him.",
+          "whitespaceNormalized": true
+        }
+      ],
+      "adjudication": {
+        "status": "pending-human-review",
+        "model": "gpt-6-luna",
+        "sessionId": "01a0ce04-d9ef-7231-aaef-f8171c44a33b",
+        "reviewedAt": null,
+        "reviewer": null,
+        "decision": null,
+        "notes": null
+      },
+      "generation": {
+        "model": "gpt-6-luna",
+        "usage": {
+          "input_tokens": 63175,
+          "cached_input_tokens": 37376,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 3243,
+          "reasoning_output_tokens": 501
+        },
+        "wallMs": 77439,
+        "repairTurns": 1
+      }
+    },
+    {
+      "id": "pg11757-q18",
+      "sourceId": "pg11757",
+      "sourceVersionId": "pg11757-01c84466faf26379",
+      "question": "What did the Boy think when he saw the oddly marked rabbit in the wood the following spring, and what did he not realize?",
+      "expected": "He thought it looked like his old Bunny, but he did not know it really was his own Bunny.",
+      "category": "multi-passage",
+      "evidence": [
+        {
+          "regionId": "pg11757-work",
+          "startChar": 22130,
+          "endChar": 22209,
+          "quote": "\"Why, he looks just like my old Bunny that was lost when I had scarlet\r\nfever!\"",
+          "whitespaceNormalized": true
+        },
+        {
+          "regionId": "pg11757-work",
+          "startChar": 22213,
+          "endChar": 22333,
+          "quote": "But he never knew that it really was his own Bunny, come back to look\r\nat the child who had first helped him to be Real.",
+          "whitespaceNormalized": true
+        }
+      ],
+      "adjudication": {
+        "status": "pending-human-review",
+        "model": "gpt-6-luna",
+        "sessionId": "01a0ce04-d9ef-7231-aaef-f8171c44a33b",
+        "reviewedAt": null,
+        "reviewer": null,
+        "decision": null,
+        "notes": null
+      },
+      "generation": {
+        "model": "gpt-6-luna",
+        "usage": {
+          "input_tokens": 63175,
+          "cached_input_tokens": 37376,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 3243,
+          "reasoning_output_tokens": 501
+        },
+        "wallMs": 77439,
+        "repairTurns": 1
+      }
+    },
+    {
+      "id": "pg11757-q19",
+      "sourceId": "pg11757",
+      "sourceVersionId": "pg11757-01c84466faf26379",
+      "question": "What did the Fairy tell the wild rabbits to do for the new playfellow she brought them?",
+      "expected": "She told them to be kind to him and teach him what he needed to know in Rabbit-land.",
+      "category": "attribution",
+      "evidence": [
+        {
+          "regionId": "pg11757-work",
+          "startChar": 20211,
+          "endChar": 20344,
+          "quote": "\"I've brought you a new playfellow,\" the Fairy said. \"You must be very\r\nkind to him and teach him all he needs to know in Rabbit-land",
+          "whitespaceNormalized": false
+        }
+      ],
+      "adjudication": {
+        "status": "pending-human-review",
+        "model": "gpt-6-luna",
+        "sessionId": "01a0ce04-d9ef-7231-aaef-f8171c44a33b",
+        "reviewedAt": null,
+        "reviewer": null,
+        "decision": null,
+        "notes": null
+      },
+      "generation": {
+        "model": "gpt-6-luna",
+        "usage": {
+          "input_tokens": 63175,
+          "cached_input_tokens": 37376,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 3243,
+          "reasoning_output_tokens": 501
+        },
+        "wallMs": 77439,
+        "repairTurns": 1
+      }
+    },
+    {
+      "id": "pg11757-q20",
+      "sourceId": "pg11757",
+      "sourceVersionId": "pg11757-01c84466faf26379",
+      "question": "In the Fairy’s words, who was the “new playfellow” she brought to the wild rabbits?",
+      "expected": "The little Rabbit.",
+      "category": "identity-coreference",
+      "evidence": [
+        {
+          "regionId": "pg11757-work",
+          "startChar": 20211,
+          "endChar": 20263,
+          "quote": "\"I've brought you a new playfellow,\" the Fairy said.",
+          "whitespaceNormalized": false
+        },
+        {
+          "regionId": "pg11757-work",
+          "startChar": 20403,
+          "endChar": 20472,
+          "quote": "And she kissed the little Rabbit again and put him down on the grass.",
+          "whitespaceNormalized": false
+        }
+      ],
+      "adjudication": {
+        "status": "pending-human-review",
+        "model": "gpt-6-luna",
+        "sessionId": "01a0ce04-d9ef-7231-aaef-f8171c44a33b",
+        "reviewedAt": null,
+        "reviewer": null,
+        "decision": null,
+        "notes": null
+      },
+      "generation": {
+        "model": "gpt-6-luna",
+        "usage": {
+          "input_tokens": 63175,
+          "cached_input_tokens": 37376,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 3243,
+          "reasoning_output_tokens": 501
+        },
+        "wallMs": 77439,
+        "repairTurns": 1
+      }
+    }
+  ]
+}

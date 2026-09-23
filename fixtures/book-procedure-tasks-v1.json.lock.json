@@ -1,0 +1,12 @@
+{
+  "fixture": "book-procedure-tasks-v1.json",
+  "fixtureId": "public-book-procedure-tasks-v1",
+  "sha256": "cdb699662570c2bc3cdf1133588946c6adead46fa57aada73928ddcb57362588",
+  "caseCount": 60,
+  "entryType": "cases",
+  "goldStatus": "frozen-task-specifications-pending-execution-and-human-adjudication",
+  "frozenAt": "2026-09-23T12:35:19.237Z",
+  "previousSha256": null,
+  "freezeVersion": 1,
+  "warning": "A frozen fixture hash establishes byte identity only; it does not establish expert-verified gold."
+}

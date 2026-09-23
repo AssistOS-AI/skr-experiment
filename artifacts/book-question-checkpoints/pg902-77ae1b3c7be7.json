@@ -1,0 +1,184 @@
+{
+  "bookId": "pg902",
+  "sha256": "77ae1b3c7be77aea82b1f935e531e53f4df43db572cbc14af39d6cd0d5ba50da",
+  "rawStatus": "pending-verification",
+  "rawItems": [
+    {
+      "question": "What three materials or features make the Happy Prince’s statue shine?",
+      "answer": "Thin leaves of fine gold cover him; he has two bright sapphires for eyes and a large red ruby on his sword-hilt.",
+      "category": "factual",
+      "evidenceQuotes": [
+        "He was gilded all over with thin leaves of fine gold, for eyes he had two bright sapphires, and a large red ruby glowed on his sword-hilt."
+      ]
+    },
+    {
+      "question": "Why had the Swallow stayed behind after his friends left for Egypt?",
+      "answer": "He was in love with a Reed.",
+      "category": "factual",
+      "evidenceQuotes": [
+        "His friends had gone away to Egypt six weeks before, but he had stayed behind, for he was in love with the most beautiful Reed."
+      ]
+    },
+    {
+      "question": "What did the Happy Prince ask the Swallow to take to the seamstress’s house, and what need was it meant to address?",
+      "answer": "The ruby from his sword-hilt, to help the seamstress’s feverish, thirsty son.",
+      "category": "causal",
+      "evidenceQuotes": [
+        "He has a fever, and is asking for oranges. His mother has nothing to give him but river water, so he is crying. Swallow, Swallow, little Swallow, will you not bring her the ruby out of my sword-hilt?"
+      ]
+    },
+    {
+      "question": "What does the Swallow do after delivering the ruby, and how does the boy respond?",
+      "answer": "He fans the boy’s forehead with his wings; the boy says he feels cool and falls asleep.",
+      "category": "temporal-sequence",
+      "evidenceQuotes": [
+        "Then he flew gently round the bed, fanning the boy’s forehead with his wings. “How cool I feel,” said the boy, “I must be getting better”; and he sank into a delicious slumber."
+      ]
+    },
+    {
+      "question": "Who mistakes the sapphire left in his room for a gift from an admirer, and what does he plan to do with it?",
+      "answer": "The young student mistakes it for a gift from a great admirer and plans to finish his play.",
+      "category": "identity-coreference",
+      "evidenceQuotes": [
+        "The young man had his head buried in his hands, so he did not hear the flutter of the bird’s wings, and when he looked up he found the beautiful sapphire lying on the withered violets.",
+        "“I am beginning to be appreciated,” he cried; “this is from some great admirer. Now I can finish my play,”"
+      ]
+    },
+    {
+      "question": "Why does the Happy Prince ask the Swallow to give away his gold?",
+      "answer": "After seeing the suffering of poor people in the city, he tells the Swallow to give the gold to them, believing the living think gold can make them happy.",
+      "category": "causal",
+      "evidenceQuotes": [
+        "So the Swallow flew over the great city, and saw the rich making merry in their beautiful houses, while the beggars were sitting at the gates.",
+        "“I am covered with fine gold,” said the Prince, “you must take it off, leaf by leaf, and give it to my poor; the living always think that gold can make them happy.”"
+      ]
+    },
+    {
+      "question": "What happens to the leaden heart after the statue is melted, and where is the dead Swallow?",
+      "answer": "The heart will not melt and is thrown onto a dust-heap, where the dead Swallow is also lying.",
+      "category": "temporal-sequence",
+      "evidenceQuotes": [
+        "“This broken lead heart will not melt in the furnace. We must throw it away.” So they threw it on a dust-heap where the dead Swallow was also lying."
+      ]
+    },
+    {
+      "question": "How does the Nightingale interpret the Student’s distress over the missing rose, and how do the Lizard and Butterfly react to it?",
+      "answer": "She sees him as a true lover suffering for love; the Lizard and Butterfly call his sorrow ridiculous.",
+      "category": "contrast",
+      "evidenceQuotes": [
+        "“Here at last is a true lover,” said the Nightingale.",
+        "“For a red rose?” they cried; “how very ridiculous!”"
+      ]
+    },
+    {
+      "question": "What must the Nightingale do to make the red rose, and what is the cost?",
+      "answer": "She must sing all night with her breast against a thorn, letting her life-blood flow into the Rose-tree; the thorn pierces her heart.",
+      "category": "causal",
+      "evidenceQuotes": [
+        "“If you want a red rose,” said the Tree, “you must build it out of music\r\nby moonlight, and stain it with your own heart’s-blood.  You must sing to\r\nme with your breast against a thorn.  All night long you must sing to me,\r\nand the thorn must pierce your heart, and your life-blood must flow into\r\nmy veins, and become mine.”"
+      ]
+    },
+    {
+      "question": "What reason does the Professor’s daughter give for refusing the Student’s rose?",
+      "answer": "She says it will not go with her dress, and that the Chamberlain’s nephew sent her jewels that cost more than flowers.",
+      "category": "factual",
+      "evidenceQuotes": [
+        "“I am afraid it will not go with my dress,” she answered; “and, besides, the Chamberlain’s nephew has sent me some real jewels, and everybody knows that jewels cost far more than flowers.”"
+      ]
+    },
+    {
+      "question": "How does the Giant’s treatment of the garden change after he sees the little boy unable to reach the branches?",
+      "answer": "He decides to put the boy in the tree, knock down the wall, and make the garden the children’s playground.",
+      "category": "temporal-sequence",
+      "evidenceQuotes": [
+        "And the Giant’s heart melted as he looked out. “How selfish I have been!” he said; “now I know why the Spring would not come here. I will put that poor little boy on the top of the tree, and then I will knock down the wall, and my garden shall be the children’s playground for ever and ever.”"
+      ]
+    },
+    {
+      "question": "What change in the garden follows the little boy’s kiss of the Giant?",
+      "answer": "The tree blossoms, birds sing on it, and the other children return with Spring.",
+      "category": "causal",
+      "evidenceQuotes": [
+        "And the tree broke at once into blossom, and the birds came and sang on it, and the little boy stretched out his two arms and flung them round the Giant’s neck, and kissed him.",
+        "And the other children, when they saw that the Giant was not wicked any longer, came running back, and with them came the Spring."
+      ]
+    },
+    {
+      "question": "What does the little boy say the nail prints on his hands and feet are?",
+      "answer": "He calls them “the wounds of Love.”",
+      "category": "factual",
+      "evidenceQuotes": [
+        "For on the palms of the child’s hands were the prints of two nails, and the prints of two nails were on the little feet.",
+        "“Nay!” answered the child; “but these are the wounds of Love.”"
+      ]
+    },
+    {
+      "question": "Who tells the story of Hans and the Miller, and to whom is it told?",
+      "answer": "The Green Linnet tells it to the Water-rat, with the Duck also listening to the exchange.",
+      "category": "attribution",
+      "evidenceQuotes": [
+        "“Let me tell you a story on the subject,” said the Linnet.",
+        "“It is applicable to you,” answered the Linnet; and he flew down, and alighting upon the bank, he told the story of The Devoted Friend."
+      ]
+    },
+    {
+      "question": "What does the Miller say about friendship, and what does the passage say he gives Hans in return?",
+      "answer": "He says real friends should share everything, but the passage says he never gave Hans anything in return.",
+      "category": "contrast",
+      "evidenceQuotes": [
+        "“‘Real friends should have everything in common,’ the Miller used to say,\r\nand little Hans nodded and smiled, and felt very proud of having a friend\r\nwith such noble ideas.",
+        "the rich\r\nMiller never gave little Hans anything in return"
+      ]
+    },
+    {
+      "question": "What does the Miller ask Hans to do on the stormy night, and what reason does he give for asking?",
+      "answer": "He asks Hans to go for the Doctor because his son has fallen off a ladder and is hurt; the Miller says the Doctor lives far away and the night is bad.",
+      "category": "temporal-sequence",
+      "evidenceQuotes": [
+        "“‘Dear little Hans,’ cried the Miller, ‘I am in great trouble.  My little\r\nboy has fallen off a ladder and hurt himself, and I am going for the\r\nDoctor.  But he lives so far away, and it is such a bad night, that it\r\nhas just occurred to me that it would be much better if you went instead\r\nof me."
+      ]
+    },
+    {
+      "question": "Why does the Rocket think the wedding has been arranged to suit him?",
+      "answer": "He thinks it is fortunate that the Prince’s wedding falls on the same day he is to be let off, and imagines that the timing could not have worked out better for him.",
+      "category": "interpretive",
+      "evidenceQuotes": [
+        "“How fortunate it is for the King’s son,” he remarked, “that he is to be\r\nmarried on the very day on which I am to be let off.  Really, if it had\r\nbeen arranged beforehand, it could not have turned out better for him;\r\nbut, Princes are always lucky.”"
+      ]
+    },
+    {
+      "question": "What stops the Rocket from launching during the wedding fireworks, and what becomes of him the following day?",
+      "answer": "His gunpowder is wet from his tears, so he cannot go off; workmen later throw him into a ditch.",
+      "category": "causal",
+      "evidenceQuotes": [
+        "Every one was a great success except the Remarkable Rocket. He was so damp with crying that he could not go off at all. The best thing in him was the gunpowder, and that was so wet with tears that it was of no use.",
+        "Then one of them caught sight of him. “Hallo!” he cried, “what a bad rocket!” and he threw him over the wall into the ditch."
+      ]
+    },
+    {
+      "question": "What does the King say fireworks are like, and what does he say about them?",
+      "answer": "He compares them to the Aurora Borealis, says they are more natural, and says he prefers them to stars.",
+      "category": "contrast",
+      "evidenceQuotes": [
+        "“They are like the Aurora Borealis,” said the King, who always answered\r\nquestions that were addressed to other people, “only much more natural.\r\nI prefer them to stars myself, as you always know when they are going to\r\nappear, and they are as delightful as my own flute-playing.  You must\r\ncertainly see them.”"
+      ]
+    },
+    {
+      "question": "What does the little boy’s gesture reveal about his relationship with the Giant?",
+      "answer": "The boy shows affection for the Giant by embracing and kissing him.",
+      "category": "relationship",
+      "evidenceQuotes": [
+        "the little boy stretched out his two arms and flung them round the Giant’s\r\nneck, and kissed him."
+      ]
+    }
+  ],
+  "rawUsage": {
+    "input_tokens": 204602,
+    "cached_input_tokens": 121088,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 5035,
+    "reasoning_output_tokens": 1384
+  },
+  "rawWallMs": 111224,
+  "sessionId": "01a0ce06-0b16-7a81-99a3-51fd02183b89"
+}

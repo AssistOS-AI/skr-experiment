@@ -1,0 +1,5160 @@
+{
+  "id": "public-book-procedure-tasks-v1",
+  "status": "frozen-task-specifications-pending-execution-and-human-adjudication",
+  "frozen": true,
+  "bookCount": 5,
+  "taskCount": 60,
+  "construction": "Five checksum-pinned complete public-domain books × three canonical pinned procedures × four distinct parameter profiles. Source anchors are exact original-text locations; no semantic result or expert score is fabricated.",
+  "books": [
+    {
+      "bookId": "pg14838",
+      "title": "The Tale of Peter Rabbit",
+      "author": "Beatrix Potter",
+      "sourceVersionId": "pg14838-2bf0e04297038fd9",
+      "sourceUrl": "https://www.gutenberg.org/ebooks/14838",
+      "digest": "2bf0e04297038fd97697dfac2b8a2db14f2b80c2012727f7ac0f28cf0b146544",
+      "path": "corpora/books/pg-14838.txt",
+      "completeWork": {
+        "startChar": 942,
+        "endChar": 7041,
+        "coordinateBasis": "original decoded UTF-8 text string, character offsets"
+      }
+    },
+    {
+      "bookId": "pg11757",
+      "title": "The Velveteen Rabbit",
+      "author": "Margery Williams Bianco",
+      "sourceVersionId": "pg11757-01c84466faf26379",
+      "sourceUrl": "https://www.gutenberg.org/ebooks/11757",
+      "digest": "01c84466faf26379e7b49f364d2452d14da26fcbc9378d751b5caf3cf2580bfb",
+      "path": "corpora/books/pg-11757.txt",
+      "completeWork": {
+        "startChar": 970,
+        "endChar": 23315,
+        "coordinateBasis": "original decoded UTF-8 text string, character offsets"
+      }
+    },
+    {
+      "bookId": "pg902",
+      "title": "The Happy Prince, and Other Tales",
+      "author": "Oscar Wilde",
+      "sourceVersionId": "pg902-77ae1b3c7be77aea",
+      "sourceUrl": "https://www.gutenberg.org/ebooks/902",
+      "digest": "77ae1b3c7be77aea82b1f935e531e53f4df43db572cbc14af39d6cd0d5ba50da",
+      "path": "corpora/books/pg-902.txt",
+      "completeWork": {
+        "startChar": 909,
+        "endChar": 91242,
+        "coordinateBasis": "original decoded UTF-8 text string, character offsets"
+      }
+    },
+    {
+      "bookId": "pg496",
+      "title": "The Little Lame Prince",
+      "author": "Dinah Maria Mulock Craik (published as Miss Mulock)",
+      "sourceVersionId": "pg496-709c354dc6934a3a",
+      "sourceUrl": "https://www.gutenberg.org/ebooks/496",
+      "digest": "709c354dc6934a3a4509cdfae1bba47d4feb2597afe5c9c22c6fdb6013a561e3",
+      "path": "corpora/books/pg-496.txt",
+      "completeWork": {
+        "startChar": 906,
+        "endChar": 254468,
+        "coordinateBasis": "original decoded UTF-8 text string, character offsets"
+      }
+    },
+    {
+      "bookId": "pg7256",
+      "title": "The Gift of the Magi",
+      "author": "O. Henry",
+      "sourceVersionId": "pg7256-cdf8ad2aad68e48c",
+      "sourceUrl": "https://www.gutenberg.org/ebooks/7256",
+      "digest": "cdf8ad2aad68e48c58d6745a8a1ec418871176a6521fb458a8abc88f9a0649a3",
+      "path": "corpora/books/pg-7256.txt",
+      "completeWork": {
+        "startChar": 891,
+        "endChar": 12340,
+        "coordinateBasis": "original decoded UTF-8 text string, character offsets"
+      }
+    }
+  ],
+  "procedures": [
+    {
+      "id": "contradiction-audit",
+      "version": "1.0.0",
+      "purpose": "Audit opposed assertions while distinguishing a contradiction within one complete epistemic scope from a revision, changed world, or attributed disagreement.",
+      "applicableInputs": [
+        "complete-work source passages",
+        "scoped assertions"
+      ],
+      "parameters": {
+        "scopeKeys": [
+          "attribution",
+          "time",
+          "modality",
+          "world"
+        ],
+        "polarityKey": "polarity",
+        "includeRevisionPairs": true
+      },
+      "orderedSteps": [
+        "group structurally identical claims without reversing roles",
+        "compare polarity",
+        "compare attribution,time,modality,world independently",
+        "classify equal-scope opposition as potential contradiction",
+        "retain differing-scope opposition as a revision or perspective pair"
+      ],
+      "evidenceObligations": [
+        "cite both sides",
+        "preserve every scope field",
+        "never merge possible with observed or attributed speech with narrator fact"
+      ],
+      "outputSchema": "procedure-finding[]",
+      "materializationPolicy": "explicit-only",
+      "watchScope": [
+        "assertions",
+        "source-scope"
+      ],
+      "type": "contradiction"
+    },
+    {
+      "id": "relevance-synthesis",
+      "version": "1.0.0",
+      "purpose": "Answer a pinned question or topic by selecting relevant evidence across the complete authorized source, tracking requested answer elements and avoiding redundant passages.",
+      "applicableInputs": [
+        "question or topic",
+        "optional predicate-first SKE goal",
+        "complete-work source passages",
+        "scoped assertions"
+      ],
+      "parameters": {
+        "question": "string",
+        "topic": "string",
+        "goal": "SKE call",
+        "minimumCoverage": 0,
+        "maximumRedundancy": 0.25,
+        "redundancyPolicy": "deduplicate-with-citations"
+      },
+      "orderedSteps": [
+        "interpret question/topic conservatively",
+        "identify requested subquestions or answer elements",
+        "select direct and necessary contextual evidence",
+        "deduplicate repeated evidence while retaining all source locations",
+        "report coverage, gaps and unresolved elements"
+      ],
+      "evidenceObligations": [
+        "cite every answer element",
+        "measure requested-element coverage",
+        "include residuals for unsupported elements",
+        "preserve contradicting evidence"
+      ],
+      "outputSchema": "procedure-finding[]",
+      "materializationPolicy": "explicit-only",
+      "watchScope": [
+        "assertions",
+        "question",
+        "topic",
+        "source-scope"
+      ],
+      "type": "relevance"
+    },
+    {
+      "id": "document-literary-rubric",
+      "version": "1.0.0",
+      "purpose": "Produce explicitly provisional, passage-grounded literary observations across a complete work using supplied criteria, positive and negative anchors, and counterevidence.",
+      "applicableInputs": [
+        "complete-work source passages",
+        "optional scoped assertions",
+        "criteria"
+      ],
+      "parameters": {
+        "criteria": [
+          {
+            "id": "narrative-coherence",
+            "name": "Narrative coherence",
+            "description": "How events and transitions form an intelligible narrative.",
+            "positiveAnchors": [
+              "explicit setup and payoff",
+              "consistent event sequence"
+            ],
+            "negativeAnchors": [
+              "unresolved discontinuity",
+              "contradictory event order"
+            ]
+          },
+          {
+            "id": "characterization",
+            "name": "Characterization",
+            "description": "How actions, speech and change establish characters.",
+            "positiveAnchors": [
+              "repeated behavior or explicit change",
+              "distinctive speech/action"
+            ],
+            "negativeAnchors": [
+              "unsupported motive attribution",
+              "contradictory characterization"
+            ]
+          },
+          {
+            "id": "style",
+            "name": "Style",
+            "description": "Observable language, imagery, voice and formal choices.",
+            "positiveAnchors": [
+              "recurrent image or diction",
+              "specific sentence-level technique"
+            ],
+            "negativeAnchors": [
+              "claim based only on generic praise",
+              "counterexample to claimed pattern"
+            ]
+          },
+          {
+            "id": "thematic-development",
+            "name": "Thematic development",
+            "description": "How a theme is introduced, varied and developed across the work.",
+            "positiveAnchors": [
+              "multiple separated passages show development",
+              "explicit thematic contrast"
+            ],
+            "negativeAnchors": [
+              "single-passage generalization",
+              "counterexample undermines pattern"
+            ]
+          }
+        ],
+        "confidenceScale": [
+          0,
+          1
+        ],
+        "requireCounterevidence": true
+      },
+      "orderedSteps": [
+        "consider the entire selected work, not only opening passages",
+        "apply every supplied criterion and quote named textual anchors",
+        "separate observation from interpretation",
+        "record counterevidence or state where searched coverage is incomplete",
+        "mark judgments provisional and unresolved pending expert review"
+      ],
+      "evidenceObligations": [
+        "cite passage-level positive anchors",
+        "cite counterexamples separately",
+        "report complete-work coverage and uncovered regions",
+        "never label model interpretation as expert or human judgment"
+      ],
+      "outputSchema": "procedure-finding[]",
+      "materializationPolicy": "explicit-only",
+      "watchScope": [
+        "source-content",
+        "assertions",
+        "rubric"
+      ],
+      "type": "rubric"
+    }
+  ],
+  "cases": [
+    {
+      "id": "pg14838-contradiction-audit-profile-1",
+      "family": "full-book-procedure-contradiction-audit",
+      "sourceId": "pg14838",
+      "sourceVersionId": "pg14838-2bf0e04297038fd9",
+      "sourceDigest": "2bf0e04297038fd97697dfac2b8a2db14f2b80c2012727f7ac0f28cf0b146544",
+      "sourcePath": "corpora/books/pg-14838.txt",
+      "completeWork": {
+        "startChar": 942,
+        "endChar": 7041,
+        "coordinateBasis": "original decoded UTF-8 text string, character offsets"
+      },
+      "anchors": [
+        {
+          "start": 1177,
+          "end": 1234,
+          "quote": "But Peter, who was very naughty, ran straight away to Mr.",
+          "startChar": 2119,
+          "endChar": 2176,
+          "regionId": null
+        },
+        {
+          "start": 2747,
+          "end": 2820,
+          "quote": "been a beautiful thing to hide in, if it had not had so much water in it.",
+          "startChar": 3689,
+          "endChar": 3762,
+          "regionId": null
+        },
+        {
+          "start": 3973,
+          "end": 4005,
+          "quote": "She only shook her head at him.",
+          "startChar": 4915,
+          "endChar": 4947,
+          "regionId": null
+        },
+        {
+          "start": 5514,
+          "end": 5557,
+          "quote": "floor of the rabbit-hole and shut his eyes.",
+          "startChar": 6456,
+          "endChar": 6499,
+          "regionId": null
+        }
+      ],
+      "procedureId": "contradiction-audit",
+      "procedureVersion": "1.0.0",
+      "parameters": {
+        "scopeKeys": [
+          "attribution",
+          "time",
+          "modality",
+          "world"
+        ],
+        "polarityKey": "polarity",
+        "includeRevisionPairs": true,
+        "profile": {
+          "id": "same-world-time",
+          "scopeKeys": [
+            "world",
+            "time"
+          ],
+          "instruction": "Check for opposite claims about the same event in the same represented world and time; preserve separate passage citations."
+        }
+      },
+      "question": "Check for opposite claims about the same event in the same represented world and time; preserve separate passage citations. Analyze the complete work “The Tale of Peter Rabbit” and report potential opposition, revision, attributed disagreement, and modality distinctions only with cited passages.",
+      "proposedFinding": {
+        "status": "not-generated",
+        "records": []
+      },
+      "goldJudgment": {
+        "status": "pending-human-review",
+        "findings": null,
+        "criterionScores": null,
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "evidenceRequirement": "Every model-proposed finding must cite exact sourceVersionId/regionId passage evidence with reopened quotation and locator. A correct quote alone does not prove interpretation."
+    },
+    {
+      "id": "pg14838-relevance-synthesis-profile-1",
+      "family": "full-book-procedure-relevance-synthesis",
+      "sourceId": "pg14838",
+      "sourceVersionId": "pg14838-2bf0e04297038fd9",
+      "sourceDigest": "2bf0e04297038fd97697dfac2b8a2db14f2b80c2012727f7ac0f28cf0b146544",
+      "sourcePath": "corpora/books/pg-14838.txt",
+      "completeWork": {
+        "startChar": 942,
+        "endChar": 7041,
+        "coordinateBasis": "original decoded UTF-8 text string, character offsets"
+      },
+      "anchors": [
+        {
+          "start": 1177,
+          "end": 1234,
+          "quote": "But Peter, who was very naughty, ran straight away to Mr.",
+          "startChar": 2119,
+          "endChar": 2176,
+          "regionId": null
+        },
+        {
+          "start": 2747,
+          "end": 2820,
+          "quote": "been a beautiful thing to hide in, if it had not had so much water in it.",
+          "startChar": 3689,
+          "endChar": 3762,
+          "regionId": null
+        },
+        {
+          "start": 3973,
+          "end": 4005,
+          "quote": "She only shook her head at him.",
+          "startChar": 4915,
+          "endChar": 4947,
+          "regionId": null
+        },
+        {
+          "start": 5514,
+          "end": 5557,
+          "quote": "floor of the rabbit-hole and shut his eyes.",
+          "startChar": 6456,
+          "endChar": 6499,
+          "regionId": null
+        }
+      ],
+      "procedureId": "relevance-synthesis",
+      "procedureVersion": "1.0.0",
+      "parameters": {
+        "question": "How does Peter Rabbit enter and move through Mr. McGregor’s garden?",
+        "topic": "How does Peter Rabbit enter and move through Mr. McGregor’s garden?",
+        "minimumCoverage": 0.8,
+        "maximumRedundancy": 0.25,
+        "redundancyPolicy": "deduplicate-with-citations"
+      },
+      "question": "How does Peter Rabbit enter and move through Mr. McGregor’s garden?",
+      "proposedFinding": {
+        "status": "not-generated",
+        "records": []
+      },
+      "goldJudgment": {
+        "status": "pending-human-review",
+        "findings": null,
+        "criterionScores": null,
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "evidenceRequirement": "Every model-proposed finding must cite exact sourceVersionId/regionId passage evidence with reopened quotation and locator. A correct quote alone does not prove interpretation."
+    },
+    {
+      "id": "pg14838-document-literary-rubric-profile-1",
+      "family": "full-book-procedure-document-literary-rubric",
+      "sourceId": "pg14838",
+      "sourceVersionId": "pg14838-2bf0e04297038fd9",
+      "sourceDigest": "2bf0e04297038fd97697dfac2b8a2db14f2b80c2012727f7ac0f28cf0b146544",
+      "sourcePath": "corpora/books/pg-14838.txt",
+      "completeWork": {
+        "startChar": 942,
+        "endChar": 7041,
+        "coordinateBasis": "original decoded UTF-8 text string, character offsets"
+      },
+      "anchors": [
+        {
+          "start": 1177,
+          "end": 1234,
+          "quote": "But Peter, who was very naughty, ran straight away to Mr.",
+          "startChar": 2119,
+          "endChar": 2176,
+          "regionId": null
+        },
+        {
+          "start": 2747,
+          "end": 2820,
+          "quote": "been a beautiful thing to hide in, if it had not had so much water in it.",
+          "startChar": 3689,
+          "endChar": 3762,
+          "regionId": null
+        },
+        {
+          "start": 3973,
+          "end": 4005,
+          "quote": "She only shook her head at him.",
+          "startChar": 4915,
+          "endChar": 4947,
+          "regionId": null
+        },
+        {
+          "start": 5514,
+          "end": 5557,
+          "quote": "floor of the rabbit-hole and shut his eyes.",
+          "startChar": 6456,
+          "endChar": 6499,
+          "regionId": null
+        }
+      ],
+      "procedureId": "document-literary-rubric",
+      "procedureVersion": "1.0.0",
+      "parameters": {
+        "criteria": [
+          {
+            "id": "narrative-coherence",
+            "name": "Narrative coherence",
+            "description": "How events and transitions form an intelligible narrative.",
+            "positiveAnchors": [
+              "explicit setup and payoff",
+              "consistent event sequence"
+            ],
+            "negativeAnchors": [
+              "unresolved discontinuity",
+              "contradictory event order"
+            ]
+          },
+          {
+            "id": "characterization",
+            "name": "Characterization",
+            "description": "How actions, speech and change establish characters.",
+            "positiveAnchors": [
+              "repeated behavior or explicit change",
+              "distinctive speech/action"
+            ],
+            "negativeAnchors": [
+              "unsupported motive attribution",
+              "contradictory characterization"
+            ]
+          }
+        ],
+        "confidenceScale": [
+          0,
+          1
+        ],
+        "requireCounterevidence": true
+      },
+      "question": "Apply the supplied criteria across the complete work “The Tale of Peter Rabbit”. Separate observable textual evidence from interpretation, retain counterevidence, and mark every judgment provisional pending expert review.",
+      "proposedFinding": {
+        "status": "not-generated",
+        "records": []
+      },
+      "goldJudgment": {
+        "status": "pending-human-review",
+        "findings": null,
+        "criterionScores": null,
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "evidenceRequirement": "Every model-proposed finding must cite exact sourceVersionId/regionId passage evidence with reopened quotation and locator. A correct quote alone does not prove interpretation."
+    },
+    {
+      "id": "pg14838-contradiction-audit-profile-2",
+      "family": "full-book-procedure-contradiction-audit",
+      "sourceId": "pg14838",
+      "sourceVersionId": "pg14838-2bf0e04297038fd9",
+      "sourceDigest": "2bf0e04297038fd97697dfac2b8a2db14f2b80c2012727f7ac0f28cf0b146544",
+      "sourcePath": "corpora/books/pg-14838.txt",
+      "completeWork": {
+        "startChar": 942,
+        "endChar": 7041,
+        "coordinateBasis": "original decoded UTF-8 text string, character offsets"
+      },
+      "anchors": [
+        {
+          "start": 1177,
+          "end": 1234,
+          "quote": "But Peter, who was very naughty, ran straight away to Mr.",
+          "startChar": 2119,
+          "endChar": 2176,
+          "regionId": null
+        },
+        {
+          "start": 2747,
+          "end": 2820,
+          "quote": "been a beautiful thing to hide in, if it had not had so much water in it.",
+          "startChar": 3689,
+          "endChar": 3762,
+          "regionId": null
+        },
+        {
+          "start": 3973,
+          "end": 4005,
+          "quote": "She only shook her head at him.",
+          "startChar": 4915,
+          "endChar": 4947,
+          "regionId": null
+        },
+        {
+          "start": 5514,
+          "end": 5557,
+          "quote": "floor of the rabbit-hole and shut his eyes.",
+          "startChar": 6456,
+          "endChar": 6499,
+          "regionId": null
+        }
+      ],
+      "procedureId": "contradiction-audit",
+      "procedureVersion": "1.0.0",
+      "parameters": {
+        "scopeKeys": [
+          "attribution",
+          "time",
+          "modality",
+          "world"
+        ],
+        "polarityKey": "polarity",
+        "includeRevisionPairs": true,
+        "profile": {
+          "id": "time-revision",
+          "scopeKeys": [
+            "time"
+          ],
+          "instruction": "Distinguish an earlier statement from a later change or correction; do not collapse temporal revision into a same-time contradiction."
+        }
+      },
+      "question": "Distinguish an earlier statement from a later change or correction; do not collapse temporal revision into a same-time contradiction. Analyze the complete work “The Tale of Peter Rabbit” and report potential opposition, revision, attributed disagreement, and modality distinctions only with cited passages.",
+      "proposedFinding": {
+        "status": "not-generated",
+        "records": []
+      },
+      "goldJudgment": {
+        "status": "pending-human-review",
+        "findings": null,
+        "criterionScores": null,
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "evidenceRequirement": "Every model-proposed finding must cite exact sourceVersionId/regionId passage evidence with reopened quotation and locator. A correct quote alone does not prove interpretation."
+    },
+    {
+      "id": "pg14838-relevance-synthesis-profile-2",
+      "family": "full-book-procedure-relevance-synthesis",
+      "sourceId": "pg14838",
+      "sourceVersionId": "pg14838-2bf0e04297038fd9",
+      "sourceDigest": "2bf0e04297038fd97697dfac2b8a2db14f2b80c2012727f7ac0f28cf0b146544",
+      "sourcePath": "corpora/books/pg-14838.txt",
+      "completeWork": {
+        "startChar": 942,
+        "endChar": 7041,
+        "coordinateBasis": "original decoded UTF-8 text string, character offsets"
+      },
+      "anchors": [
+        {
+          "start": 1177,
+          "end": 1234,
+          "quote": "But Peter, who was very naughty, ran straight away to Mr.",
+          "startChar": 2119,
+          "endChar": 2176,
+          "regionId": null
+        },
+        {
+          "start": 2747,
+          "end": 2820,
+          "quote": "been a beautiful thing to hide in, if it had not had so much water in it.",
+          "startChar": 3689,
+          "endChar": 3762,
+          "regionId": null
+        },
+        {
+          "start": 3973,
+          "end": 4005,
+          "quote": "She only shook her head at him.",
+          "startChar": 4915,
+          "endChar": 4947,
+          "regionId": null
+        },
+        {
+          "start": 5514,
+          "end": 5557,
+          "quote": "floor of the rabbit-hole and shut his eyes.",
+          "startChar": 6456,
+          "endChar": 6499,
+          "regionId": null
+        }
+      ],
+      "procedureId": "relevance-synthesis",
+      "procedureVersion": "1.0.0",
+      "parameters": {
+        "question": "What events lead Peter Rabbit from the garden to safety?",
+        "topic": "What events lead Peter Rabbit from the garden to safety?",
+        "minimumCoverage": 0.8,
+        "maximumRedundancy": 0.25,
+        "redundancyPolicy": "deduplicate-with-citations"
+      },
+      "question": "What events lead Peter Rabbit from the garden to safety?",
+      "proposedFinding": {
+        "status": "not-generated",
+        "records": []
+      },
+      "goldJudgment": {
+        "status": "pending-human-review",
+        "findings": null,
+        "criterionScores": null,
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "evidenceRequirement": "Every model-proposed finding must cite exact sourceVersionId/regionId passage evidence with reopened quotation and locator. A correct quote alone does not prove interpretation."
+    },
+    {
+      "id": "pg14838-document-literary-rubric-profile-2",
+      "family": "full-book-procedure-document-literary-rubric",
+      "sourceId": "pg14838",
+      "sourceVersionId": "pg14838-2bf0e04297038fd9",
+      "sourceDigest": "2bf0e04297038fd97697dfac2b8a2db14f2b80c2012727f7ac0f28cf0b146544",
+      "sourcePath": "corpora/books/pg-14838.txt",
+      "completeWork": {
+        "startChar": 942,
+        "endChar": 7041,
+        "coordinateBasis": "original decoded UTF-8 text string, character offsets"
+      },
+      "anchors": [
+        {
+          "start": 1177,
+          "end": 1234,
+          "quote": "But Peter, who was very naughty, ran straight away to Mr.",
+          "startChar": 2119,
+          "endChar": 2176,
+          "regionId": null
+        },
+        {
+          "start": 2747,
+          "end": 2820,
+          "quote": "been a beautiful thing to hide in, if it had not had so much water in it.",
+          "startChar": 3689,
+          "endChar": 3762,
+          "regionId": null
+        },
+        {
+          "start": 3973,
+          "end": 4005,
+          "quote": "She only shook her head at him.",
+          "startChar": 4915,
+          "endChar": 4947,
+          "regionId": null
+        },
+        {
+          "start": 5514,
+          "end": 5557,
+          "quote": "floor of the rabbit-hole and shut his eyes.",
+          "startChar": 6456,
+          "endChar": 6499,
+          "regionId": null
+        }
+      ],
+      "procedureId": "document-literary-rubric",
+      "procedureVersion": "1.0.0",
+      "parameters": {
+        "criteria": [
+          {
+            "id": "style",
+            "name": "Style",
+            "description": "Observable language, imagery, voice and formal choices.",
+            "positiveAnchors": [
+              "recurrent image or diction",
+              "specific sentence-level technique"
+            ],
+            "negativeAnchors": [
+              "claim based only on generic praise",
+              "counterexample to claimed pattern"
+            ]
+          },
+          {
+            "id": "thematic-development",
+            "name": "Thematic development",
+            "description": "How a theme is introduced, varied and developed across the work.",
+            "positiveAnchors": [
+              "multiple separated passages show development",
+              "explicit thematic contrast"
+            ],
+            "negativeAnchors": [
+              "single-passage generalization",
+              "counterexample undermines pattern"
+            ]
+          }
+        ],
+        "confidenceScale": [
+          0,
+          1
+        ],
+        "requireCounterevidence": true
+      },
+      "question": "Apply the supplied criteria across the complete work “The Tale of Peter Rabbit”. Separate observable textual evidence from interpretation, retain counterevidence, and mark every judgment provisional pending expert review.",
+      "proposedFinding": {
+        "status": "not-generated",
+        "records": []
+      },
+      "goldJudgment": {
+        "status": "pending-human-review",
+        "findings": null,
+        "criterionScores": null,
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "evidenceRequirement": "Every model-proposed finding must cite exact sourceVersionId/regionId passage evidence with reopened quotation and locator. A correct quote alone does not prove interpretation."
+    },
+    {
+      "id": "pg14838-contradiction-audit-profile-3",
+      "family": "full-book-procedure-contradiction-audit",
+      "sourceId": "pg14838",
+      "sourceVersionId": "pg14838-2bf0e04297038fd9",
+      "sourceDigest": "2bf0e04297038fd97697dfac2b8a2db14f2b80c2012727f7ac0f28cf0b146544",
+      "sourcePath": "corpora/books/pg-14838.txt",
+      "completeWork": {
+        "startChar": 942,
+        "endChar": 7041,
+        "coordinateBasis": "original decoded UTF-8 text string, character offsets"
+      },
+      "anchors": [
+        {
+          "start": 1177,
+          "end": 1234,
+          "quote": "But Peter, who was very naughty, ran straight away to Mr.",
+          "startChar": 2119,
+          "endChar": 2176,
+          "regionId": null
+        },
+        {
+          "start": 2747,
+          "end": 2820,
+          "quote": "been a beautiful thing to hide in, if it had not had so much water in it.",
+          "startChar": 3689,
+          "endChar": 3762,
+          "regionId": null
+        },
+        {
+          "start": 3973,
+          "end": 4005,
+          "quote": "She only shook her head at him.",
+          "startChar": 4915,
+          "endChar": 4947,
+          "regionId": null
+        },
+        {
+          "start": 5514,
+          "end": 5557,
+          "quote": "floor of the rabbit-hole and shut his eyes.",
+          "startChar": 6456,
+          "endChar": 6499,
+          "regionId": null
+        }
+      ],
+      "procedureId": "contradiction-audit",
+      "procedureVersion": "1.0.0",
+      "parameters": {
+        "scopeKeys": [
+          "attribution",
+          "time",
+          "modality",
+          "world"
+        ],
+        "polarityKey": "polarity",
+        "includeRevisionPairs": true,
+        "profile": {
+          "id": "attributed-speech",
+          "scopeKeys": [
+            "attribution"
+          ],
+          "instruction": "Keep narrator statements separate from what a character believes, reports, denies, or imagines."
+        }
+      },
+      "question": "Keep narrator statements separate from what a character believes, reports, denies, or imagines. Analyze the complete work “The Tale of Peter Rabbit” and report potential opposition, revision, attributed disagreement, and modality distinctions only with cited passages.",
+      "proposedFinding": {
+        "status": "not-generated",
+        "records": []
+      },
+      "goldJudgment": {
+        "status": "pending-human-review",
+        "findings": null,
+        "criterionScores": null,
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "evidenceRequirement": "Every model-proposed finding must cite exact sourceVersionId/regionId passage evidence with reopened quotation and locator. A correct quote alone does not prove interpretation."
+    },
+    {
+      "id": "pg14838-relevance-synthesis-profile-3",
+      "family": "full-book-procedure-relevance-synthesis",
+      "sourceId": "pg14838",
+      "sourceVersionId": "pg14838-2bf0e04297038fd9",
+      "sourceDigest": "2bf0e04297038fd97697dfac2b8a2db14f2b80c2012727f7ac0f28cf0b146544",
+      "sourcePath": "corpora/books/pg-14838.txt",
+      "completeWork": {
+        "startChar": 942,
+        "endChar": 7041,
+        "coordinateBasis": "original decoded UTF-8 text string, character offsets"
+      },
+      "anchors": [
+        {
+          "start": 1177,
+          "end": 1234,
+          "quote": "But Peter, who was very naughty, ran straight away to Mr.",
+          "startChar": 2119,
+          "endChar": 2176,
+          "regionId": null
+        },
+        {
+          "start": 2747,
+          "end": 2820,
+          "quote": "been a beautiful thing to hide in, if it had not had so much water in it.",
+          "startChar": 3689,
+          "endChar": 3762,
+          "regionId": null
+        },
+        {
+          "start": 3973,
+          "end": 4005,
+          "quote": "She only shook her head at him.",
+          "startChar": 4915,
+          "endChar": 4947,
+          "regionId": null
+        },
+        {
+          "start": 5514,
+          "end": 5557,
+          "quote": "floor of the rabbit-hole and shut his eyes.",
+          "startChar": 6456,
+          "endChar": 6499,
+          "regionId": null
+        }
+      ],
+      "procedureId": "relevance-synthesis",
+      "procedureVersion": "1.0.0",
+      "parameters": {
+        "question": "How do Peter’s choices affect his encounters in the garden?",
+        "topic": "How do Peter’s choices affect his encounters in the garden?",
+        "minimumCoverage": 0.8,
+        "maximumRedundancy": 0.25,
+        "redundancyPolicy": "deduplicate-with-citations"
+      },
+      "question": "How do Peter’s choices affect his encounters in the garden?",
+      "proposedFinding": {
+        "status": "not-generated",
+        "records": []
+      },
+      "goldJudgment": {
+        "status": "pending-human-review",
+        "findings": null,
+        "criterionScores": null,
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "evidenceRequirement": "Every model-proposed finding must cite exact sourceVersionId/regionId passage evidence with reopened quotation and locator. A correct quote alone does not prove interpretation."
+    },
+    {
+      "id": "pg14838-document-literary-rubric-profile-3",
+      "family": "full-book-procedure-document-literary-rubric",
+      "sourceId": "pg14838",
+      "sourceVersionId": "pg14838-2bf0e04297038fd9",
+      "sourceDigest": "2bf0e04297038fd97697dfac2b8a2db14f2b80c2012727f7ac0f28cf0b146544",
+      "sourcePath": "corpora/books/pg-14838.txt",
+      "completeWork": {
+        "startChar": 942,
+        "endChar": 7041,
+        "coordinateBasis": "original decoded UTF-8 text string, character offsets"
+      },
+      "anchors": [
+        {
+          "start": 1177,
+          "end": 1234,
+          "quote": "But Peter, who was very naughty, ran straight away to Mr.",
+          "startChar": 2119,
+          "endChar": 2176,
+          "regionId": null
+        },
+        {
+          "start": 2747,
+          "end": 2820,
+          "quote": "been a beautiful thing to hide in, if it had not had so much water in it.",
+          "startChar": 3689,
+          "endChar": 3762,
+          "regionId": null
+        },
+        {
+          "start": 3973,
+          "end": 4005,
+          "quote": "She only shook her head at him.",
+          "startChar": 4915,
+          "endChar": 4947,
+          "regionId": null
+        },
+        {
+          "start": 5514,
+          "end": 5557,
+          "quote": "floor of the rabbit-hole and shut his eyes.",
+          "startChar": 6456,
+          "endChar": 6499,
+          "regionId": null
+        }
+      ],
+      "procedureId": "document-literary-rubric",
+      "procedureVersion": "1.0.0",
+      "parameters": {
+        "criteria": [
+          {
+            "id": "narrative-coherence",
+            "name": "Narrative coherence",
+            "description": "How events and transitions form an intelligible narrative.",
+            "positiveAnchors": [
+              "explicit setup and payoff",
+              "consistent event sequence"
+            ],
+            "negativeAnchors": [
+              "unresolved discontinuity",
+              "contradictory event order"
+            ]
+          },
+          {
+            "id": "thematic-development",
+            "name": "Thematic development",
+            "description": "How a theme is introduced, varied and developed across the work.",
+            "positiveAnchors": [
+              "multiple separated passages show development",
+              "explicit thematic contrast"
+            ],
+            "negativeAnchors": [
+              "single-passage generalization",
+              "counterexample undermines pattern"
+            ]
+          }
+        ],
+        "confidenceScale": [
+          0,
+          1
+        ],
+        "requireCounterevidence": true
+      },
+      "question": "Apply the supplied criteria across the complete work “The Tale of Peter Rabbit”. Separate observable textual evidence from interpretation, retain counterevidence, and mark every judgment provisional pending expert review.",
+      "proposedFinding": {
+        "status": "not-generated",
+        "records": []
+      },
+      "goldJudgment": {
+        "status": "pending-human-review",
+        "findings": null,
+        "criterionScores": null,
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "evidenceRequirement": "Every model-proposed finding must cite exact sourceVersionId/regionId passage evidence with reopened quotation and locator. A correct quote alone does not prove interpretation."
+    },
+    {
+      "id": "pg14838-contradiction-audit-profile-4",
+      "family": "full-book-procedure-contradiction-audit",
+      "sourceId": "pg14838",
+      "sourceVersionId": "pg14838-2bf0e04297038fd9",
+      "sourceDigest": "2bf0e04297038fd97697dfac2b8a2db14f2b80c2012727f7ac0f28cf0b146544",
+      "sourcePath": "corpora/books/pg-14838.txt",
+      "completeWork": {
+        "startChar": 942,
+        "endChar": 7041,
+        "coordinateBasis": "original decoded UTF-8 text string, character offsets"
+      },
+      "anchors": [
+        {
+          "start": 1177,
+          "end": 1234,
+          "quote": "But Peter, who was very naughty, ran straight away to Mr.",
+          "startChar": 2119,
+          "endChar": 2176,
+          "regionId": null
+        },
+        {
+          "start": 2747,
+          "end": 2820,
+          "quote": "been a beautiful thing to hide in, if it had not had so much water in it.",
+          "startChar": 3689,
+          "endChar": 3762,
+          "regionId": null
+        },
+        {
+          "start": 3973,
+          "end": 4005,
+          "quote": "She only shook her head at him.",
+          "startChar": 4915,
+          "endChar": 4947,
+          "regionId": null
+        },
+        {
+          "start": 5514,
+          "end": 5557,
+          "quote": "floor of the rabbit-hole and shut his eyes.",
+          "startChar": 6456,
+          "endChar": 6499,
+          "regionId": null
+        }
+      ],
+      "procedureId": "contradiction-audit",
+      "procedureVersion": "1.0.0",
+      "parameters": {
+        "scopeKeys": [
+          "attribution",
+          "time",
+          "modality",
+          "world"
+        ],
+        "polarityKey": "polarity",
+        "includeRevisionPairs": true,
+        "profile": {
+          "id": "possibility-vs-observation",
+          "scopeKeys": [
+            "modality"
+          ],
+          "instruction": "Do not treat a possibility, plan, wish, fear, or reported belief as an observed event; compare only claims with aligned modality."
+        }
+      },
+      "question": "Do not treat a possibility, plan, wish, fear, or reported belief as an observed event; compare only claims with aligned modality. Analyze the complete work “The Tale of Peter Rabbit” and report potential opposition, revision, attributed disagreement, and modality distinctions only with cited passages.",
+      "proposedFinding": {
+        "status": "not-generated",
+        "records": []
+      },
+      "goldJudgment": {
+        "status": "pending-human-review",
+        "findings": null,
+        "criterionScores": null,
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "evidenceRequirement": "Every model-proposed finding must cite exact sourceVersionId/regionId passage evidence with reopened quotation and locator. A correct quote alone does not prove interpretation."
+    },
+    {
+      "id": "pg14838-relevance-synthesis-profile-4",
+      "family": "full-book-procedure-relevance-synthesis",
+      "sourceId": "pg14838",
+      "sourceVersionId": "pg14838-2bf0e04297038fd9",
+      "sourceDigest": "2bf0e04297038fd97697dfac2b8a2db14f2b80c2012727f7ac0f28cf0b146544",
+      "sourcePath": "corpora/books/pg-14838.txt",
+      "completeWork": {
+        "startChar": 942,
+        "endChar": 7041,
+        "coordinateBasis": "original decoded UTF-8 text string, character offsets"
+      },
+      "anchors": [
+        {
+          "start": 1177,
+          "end": 1234,
+          "quote": "But Peter, who was very naughty, ran straight away to Mr.",
+          "startChar": 2119,
+          "endChar": 2176,
+          "regionId": null
+        },
+        {
+          "start": 2747,
+          "end": 2820,
+          "quote": "been a beautiful thing to hide in, if it had not had so much water in it.",
+          "startChar": 3689,
+          "endChar": 3762,
+          "regionId": null
+        },
+        {
+          "start": 3973,
+          "end": 4005,
+          "quote": "She only shook her head at him.",
+          "startChar": 4915,
+          "endChar": 4947,
+          "regionId": null
+        },
+        {
+          "start": 5514,
+          "end": 5557,
+          "quote": "floor of the rabbit-hole and shut his eyes.",
+          "startChar": 6456,
+          "endChar": 6499,
+          "regionId": null
+        }
+      ],
+      "procedureId": "relevance-synthesis",
+      "procedureVersion": "1.0.0",
+      "parameters": {
+        "question": "Which passages distinguish Peter’s actions from those of his sisters?",
+        "topic": "Which passages distinguish Peter’s actions from those of his sisters?",
+        "minimumCoverage": 0.8,
+        "maximumRedundancy": 0.25,
+        "redundancyPolicy": "deduplicate-with-citations"
+      },
+      "question": "Which passages distinguish Peter’s actions from those of his sisters?",
+      "proposedFinding": {
+        "status": "not-generated",
+        "records": []
+      },
+      "goldJudgment": {
+        "status": "pending-human-review",
+        "findings": null,
+        "criterionScores": null,
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "evidenceRequirement": "Every model-proposed finding must cite exact sourceVersionId/regionId passage evidence with reopened quotation and locator. A correct quote alone does not prove interpretation."
+    },
+    {
+      "id": "pg14838-document-literary-rubric-profile-4",
+      "family": "full-book-procedure-document-literary-rubric",
+      "sourceId": "pg14838",
+      "sourceVersionId": "pg14838-2bf0e04297038fd9",
+      "sourceDigest": "2bf0e04297038fd97697dfac2b8a2db14f2b80c2012727f7ac0f28cf0b146544",
+      "sourcePath": "corpora/books/pg-14838.txt",
+      "completeWork": {
+        "startChar": 942,
+        "endChar": 7041,
+        "coordinateBasis": "original decoded UTF-8 text string, character offsets"
+      },
+      "anchors": [
+        {
+          "start": 1177,
+          "end": 1234,
+          "quote": "But Peter, who was very naughty, ran straight away to Mr.",
+          "startChar": 2119,
+          "endChar": 2176,
+          "regionId": null
+        },
+        {
+          "start": 2747,
+          "end": 2820,
+          "quote": "been a beautiful thing to hide in, if it had not had so much water in it.",
+          "startChar": 3689,
+          "endChar": 3762,
+          "regionId": null
+        },
+        {
+          "start": 3973,
+          "end": 4005,
+          "quote": "She only shook her head at him.",
+          "startChar": 4915,
+          "endChar": 4947,
+          "regionId": null
+        },
+        {
+          "start": 5514,
+          "end": 5557,
+          "quote": "floor of the rabbit-hole and shut his eyes.",
+          "startChar": 6456,
+          "endChar": 6499,
+          "regionId": null
+        }
+      ],
+      "procedureId": "document-literary-rubric",
+      "procedureVersion": "1.0.0",
+      "parameters": {
+        "criteria": [
+          {
+            "id": "characterization",
+            "name": "Characterization",
+            "description": "How actions, speech and change establish characters.",
+            "positiveAnchors": [
+              "repeated behavior or explicit change",
+              "distinctive speech/action"
+            ],
+            "negativeAnchors": [
+              "unsupported motive attribution",
+              "contradictory characterization"
+            ]
+          },
+          {
+            "id": "style",
+            "name": "Style",
+            "description": "Observable language, imagery, voice and formal choices.",
+            "positiveAnchors": [
+              "recurrent image or diction",
+              "specific sentence-level technique"
+            ],
+            "negativeAnchors": [
+              "claim based only on generic praise",
+              "counterexample to claimed pattern"
+            ]
+          }
+        ],
+        "confidenceScale": [
+          0,
+          1
+        ],
+        "requireCounterevidence": true
+      },
+      "question": "Apply the supplied criteria across the complete work “The Tale of Peter Rabbit”. Separate observable textual evidence from interpretation, retain counterevidence, and mark every judgment provisional pending expert review.",
+      "proposedFinding": {
+        "status": "not-generated",
+        "records": []
+      },
+      "goldJudgment": {
+        "status": "pending-human-review",
+        "findings": null,
+        "criterionScores": null,
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "evidenceRequirement": "Every model-proposed finding must cite exact sourceVersionId/regionId passage evidence with reopened quotation and locator. A correct quote alone does not prove interpretation."
+    },
+    {
+      "id": "pg11757-contradiction-audit-profile-1",
+      "family": "full-book-procedure-contradiction-audit",
+      "sourceId": "pg11757",
+      "sourceVersionId": "pg11757-01c84466faf26379",
+      "sourceDigest": "01c84466faf26379e7b49f364d2452d14da26fcbc9378d751b5caf3cf2580bfb",
+      "sourcePath": "corpora/books/pg-11757.txt",
+      "completeWork": {
+        "startChar": 970,
+        "endChar": 23315,
+        "coordinateBasis": "original decoded UTF-8 text string, character offsets"
+      },
+      "anchors": [
+        {
+          "start": 4386,
+          "end": 4426,
+          "quote": "you are Real you don't mind being hurt.\"",
+          "startChar": 5356,
+          "endChar": 5396,
+          "regionId": null
+        },
+        {
+          "start": 10240,
+          "end": 10276,
+          "quote": "always staying the same like he did.",
+          "startChar": 11210,
+          "endChar": 11246,
+          "regionId": null
+        },
+        {
+          "start": 15368,
+          "end": 15428,
+          "quote": "little Rabbit lay tangled up among the bedclothes, thinking.",
+          "startChar": 16338,
+          "endChar": 16398,
+          "regionId": null
+        },
+        {
+          "start": 20209,
+          "end": 20261,
+          "quote": "\"I've brought you a new playfellow,\" the Fairy said.",
+          "startChar": 21179,
+          "endChar": 21231,
+          "regionId": null
+        }
+      ],
+      "procedureId": "contradiction-audit",
+      "procedureVersion": "1.0.0",
+      "parameters": {
+        "scopeKeys": [
+          "attribution",
+          "time",
+          "modality",
+          "world"
+        ],
+        "polarityKey": "polarity",
+        "includeRevisionPairs": true,
+        "profile": {
+          "id": "same-world-time",
+          "scopeKeys": [
+            "world",
+            "time"
+          ],
+          "instruction": "Check for opposite claims about the same event in the same represented world and time; preserve separate passage citations."
+        }
+      },
+      "question": "Check for opposite claims about the same event in the same represented world and time; preserve separate passage citations. Analyze the complete work “The Velveteen Rabbit” and report potential opposition, revision, attributed disagreement, and modality distinctions only with cited passages.",
+      "proposedFinding": {
+        "status": "not-generated",
+        "records": []
+      },
+      "goldJudgment": {
+        "status": "pending-human-review",
+        "findings": null,
+        "criterionScores": null,
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "evidenceRequirement": "Every model-proposed finding must cite exact sourceVersionId/regionId passage evidence with reopened quotation and locator. A correct quote alone does not prove interpretation."
+    },
+    {
+      "id": "pg11757-relevance-synthesis-profile-1",
+      "family": "full-book-procedure-relevance-synthesis",
+      "sourceId": "pg11757",
+      "sourceVersionId": "pg11757-01c84466faf26379",
+      "sourceDigest": "01c84466faf26379e7b49f364d2452d14da26fcbc9378d751b5caf3cf2580bfb",
+      "sourcePath": "corpora/books/pg-11757.txt",
+      "completeWork": {
+        "startChar": 970,
+        "endChar": 23315,
+        "coordinateBasis": "original decoded UTF-8 text string, character offsets"
+      },
+      "anchors": [
+        {
+          "start": 4386,
+          "end": 4426,
+          "quote": "you are Real you don't mind being hurt.\"",
+          "startChar": 5356,
+          "endChar": 5396,
+          "regionId": null
+        },
+        {
+          "start": 10240,
+          "end": 10276,
+          "quote": "always staying the same like he did.",
+          "startChar": 11210,
+          "endChar": 11246,
+          "regionId": null
+        },
+        {
+          "start": 15368,
+          "end": 15428,
+          "quote": "little Rabbit lay tangled up among the bedclothes, thinking.",
+          "startChar": 16338,
+          "endChar": 16398,
+          "regionId": null
+        },
+        {
+          "start": 20209,
+          "end": 20261,
+          "quote": "\"I've brought you a new playfellow,\" the Fairy said.",
+          "startChar": 21179,
+          "endChar": 21231,
+          "regionId": null
+        }
+      ],
+      "procedureId": "relevance-synthesis",
+      "procedureVersion": "1.0.0",
+      "parameters": {
+        "question": "How does the toy rabbit’s relationship with the boy change?",
+        "topic": "How does the toy rabbit’s relationship with the boy change?",
+        "minimumCoverage": 0.8,
+        "maximumRedundancy": 0.25,
+        "redundancyPolicy": "deduplicate-with-citations"
+      },
+      "question": "How does the toy rabbit’s relationship with the boy change?",
+      "proposedFinding": {
+        "status": "not-generated",
+        "records": []
+      },
+      "goldJudgment": {
+        "status": "pending-human-review",
+        "findings": null,
+        "criterionScores": null,
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "evidenceRequirement": "Every model-proposed finding must cite exact sourceVersionId/regionId passage evidence with reopened quotation and locator. A correct quote alone does not prove interpretation."
+    },
+    {
+      "id": "pg11757-document-literary-rubric-profile-1",
+      "family": "full-book-procedure-document-literary-rubric",
+      "sourceId": "pg11757",
+      "sourceVersionId": "pg11757-01c84466faf26379",
+      "sourceDigest": "01c84466faf26379e7b49f364d2452d14da26fcbc9378d751b5caf3cf2580bfb",
+      "sourcePath": "corpora/books/pg-11757.txt",
+      "completeWork": {
+        "startChar": 970,
+        "endChar": 23315,
+        "coordinateBasis": "original decoded UTF-8 text string, character offsets"
+      },
+      "anchors": [
+        {
+          "start": 4386,
+          "end": 4426,
+          "quote": "you are Real you don't mind being hurt.\"",
+          "startChar": 5356,
+          "endChar": 5396,
+          "regionId": null
+        },
+        {
+          "start": 10240,
+          "end": 10276,
+          "quote": "always staying the same like he did.",
+          "startChar": 11210,
+          "endChar": 11246,
+          "regionId": null
+        },
+        {
+          "start": 15368,
+          "end": 15428,
+          "quote": "little Rabbit lay tangled up among the bedclothes, thinking.",
+          "startChar": 16338,
+          "endChar": 16398,
+          "regionId": null
+        },
+        {
+          "start": 20209,
+          "end": 20261,
+          "quote": "\"I've brought you a new playfellow,\" the Fairy said.",
+          "startChar": 21179,
+          "endChar": 21231,
+          "regionId": null
+        }
+      ],
+      "procedureId": "document-literary-rubric",
+      "procedureVersion": "1.0.0",
+      "parameters": {
+        "criteria": [
+          {
+            "id": "narrative-coherence",
+            "name": "Narrative coherence",
+            "description": "How events and transitions form an intelligible narrative.",
+            "positiveAnchors": [
+              "explicit setup and payoff",
+              "consistent event sequence"
+            ],
+            "negativeAnchors": [
+              "unresolved discontinuity",
+              "contradictory event order"
+            ]
+          },
+          {
+            "id": "characterization",
+            "name": "Characterization",
+            "description": "How actions, speech and change establish characters.",
+            "positiveAnchors": [
+              "repeated behavior or explicit change",
+              "distinctive speech/action"
+            ],
+            "negativeAnchors": [
+              "unsupported motive attribution",
+              "contradictory characterization"
+            ]
+          }
+        ],
+        "confidenceScale": [
+          0,
+          1
+        ],
+        "requireCounterevidence": true
+      },
+      "question": "Apply the supplied criteria across the complete work “The Velveteen Rabbit”. Separate observable textual evidence from interpretation, retain counterevidence, and mark every judgment provisional pending expert review.",
+      "proposedFinding": {
+        "status": "not-generated",
+        "records": []
+      },
+      "goldJudgment": {
+        "status": "pending-human-review",
+        "findings": null,
+        "criterionScores": null,
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "evidenceRequirement": "Every model-proposed finding must cite exact sourceVersionId/regionId passage evidence with reopened quotation and locator. A correct quote alone does not prove interpretation."
+    },
+    {
+      "id": "pg11757-contradiction-audit-profile-2",
+      "family": "full-book-procedure-contradiction-audit",
+      "sourceId": "pg11757",
+      "sourceVersionId": "pg11757-01c84466faf26379",
+      "sourceDigest": "01c84466faf26379e7b49f364d2452d14da26fcbc9378d751b5caf3cf2580bfb",
+      "sourcePath": "corpora/books/pg-11757.txt",
+      "completeWork": {
+        "startChar": 970,
+        "endChar": 23315,
+        "coordinateBasis": "original decoded UTF-8 text string, character offsets"
+      },
+      "anchors": [
+        {
+          "start": 4386,
+          "end": 4426,
+          "quote": "you are Real you don't mind being hurt.\"",
+          "startChar": 5356,
+          "endChar": 5396,
+          "regionId": null
+        },
+        {
+          "start": 10240,
+          "end": 10276,
+          "quote": "always staying the same like he did.",
+          "startChar": 11210,
+          "endChar": 11246,
+          "regionId": null
+        },
+        {
+          "start": 15368,
+          "end": 15428,
+          "quote": "little Rabbit lay tangled up among the bedclothes, thinking.",
+          "startChar": 16338,
+          "endChar": 16398,
+          "regionId": null
+        },
+        {
+          "start": 20209,
+          "end": 20261,
+          "quote": "\"I've brought you a new playfellow,\" the Fairy said.",
+          "startChar": 21179,
+          "endChar": 21231,
+          "regionId": null
+        }
+      ],
+      "procedureId": "contradiction-audit",
+      "procedureVersion": "1.0.0",
+      "parameters": {
+        "scopeKeys": [
+          "attribution",
+          "time",
+          "modality",
+          "world"
+        ],
+        "polarityKey": "polarity",
+        "includeRevisionPairs": true,
+        "profile": {
+          "id": "time-revision",
+          "scopeKeys": [
+            "time"
+          ],
+          "instruction": "Distinguish an earlier statement from a later change or correction; do not collapse temporal revision into a same-time contradiction."
+        }
+      },
+      "question": "Distinguish an earlier statement from a later change or correction; do not collapse temporal revision into a same-time contradiction. Analyze the complete work “The Velveteen Rabbit” and report potential opposition, revision, attributed disagreement, and modality distinctions only with cited passages.",
+      "proposedFinding": {
+        "status": "not-generated",
+        "records": []
+      },
+      "goldJudgment": {
+        "status": "pending-human-review",
+        "findings": null,
+        "criterionScores": null,
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "evidenceRequirement": "Every model-proposed finding must cite exact sourceVersionId/regionId passage evidence with reopened quotation and locator. A correct quote alone does not prove interpretation."
+    },
+    {
+      "id": "pg11757-relevance-synthesis-profile-2",
+      "family": "full-book-procedure-relevance-synthesis",
+      "sourceId": "pg11757",
+      "sourceVersionId": "pg11757-01c84466faf26379",
+      "sourceDigest": "01c84466faf26379e7b49f364d2452d14da26fcbc9378d751b5caf3cf2580bfb",
+      "sourcePath": "corpora/books/pg-11757.txt",
+      "completeWork": {
+        "startChar": 970,
+        "endChar": 23315,
+        "coordinateBasis": "original decoded UTF-8 text string, character offsets"
+      },
+      "anchors": [
+        {
+          "start": 4386,
+          "end": 4426,
+          "quote": "you are Real you don't mind being hurt.\"",
+          "startChar": 5356,
+          "endChar": 5396,
+          "regionId": null
+        },
+        {
+          "start": 10240,
+          "end": 10276,
+          "quote": "always staying the same like he did.",
+          "startChar": 11210,
+          "endChar": 11246,
+          "regionId": null
+        },
+        {
+          "start": 15368,
+          "end": 15428,
+          "quote": "little Rabbit lay tangled up among the bedclothes, thinking.",
+          "startChar": 16338,
+          "endChar": 16398,
+          "regionId": null
+        },
+        {
+          "start": 20209,
+          "end": 20261,
+          "quote": "\"I've brought you a new playfellow,\" the Fairy said.",
+          "startChar": 21179,
+          "endChar": 21231,
+          "regionId": null
+        }
+      ],
+      "procedureId": "relevance-synthesis",
+      "procedureVersion": "1.0.0",
+      "parameters": {
+        "question": "What events are presented as signs of becoming real?",
+        "topic": "What events are presented as signs of becoming real?",
+        "minimumCoverage": 0.8,
+        "maximumRedundancy": 0.25,
+        "redundancyPolicy": "deduplicate-with-citations"
+      },
+      "question": "What events are presented as signs of becoming real?",
+      "proposedFinding": {
+        "status": "not-generated",
+        "records": []
+      },
+      "goldJudgment": {
+        "status": "pending-human-review",
+        "findings": null,
+        "criterionScores": null,
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "evidenceRequirement": "Every model-proposed finding must cite exact sourceVersionId/regionId passage evidence with reopened quotation and locator. A correct quote alone does not prove interpretation."
+    },
+    {
+      "id": "pg11757-document-literary-rubric-profile-2",
+      "family": "full-book-procedure-document-literary-rubric",
+      "sourceId": "pg11757",
+      "sourceVersionId": "pg11757-01c84466faf26379",
+      "sourceDigest": "01c84466faf26379e7b49f364d2452d14da26fcbc9378d751b5caf3cf2580bfb",
+      "sourcePath": "corpora/books/pg-11757.txt",
+      "completeWork": {
+        "startChar": 970,
+        "endChar": 23315,
+        "coordinateBasis": "original decoded UTF-8 text string, character offsets"
+      },
+      "anchors": [
+        {
+          "start": 4386,
+          "end": 4426,
+          "quote": "you are Real you don't mind being hurt.\"",
+          "startChar": 5356,
+          "endChar": 5396,
+          "regionId": null
+        },
+        {
+          "start": 10240,
+          "end": 10276,
+          "quote": "always staying the same like he did.",
+          "startChar": 11210,
+          "endChar": 11246,
+          "regionId": null
+        },
+        {
+          "start": 15368,
+          "end": 15428,
+          "quote": "little Rabbit lay tangled up among the bedclothes, thinking.",
+          "startChar": 16338,
+          "endChar": 16398,
+          "regionId": null
+        },
+        {
+          "start": 20209,
+          "end": 20261,
+          "quote": "\"I've brought you a new playfellow,\" the Fairy said.",
+          "startChar": 21179,
+          "endChar": 21231,
+          "regionId": null
+        }
+      ],
+      "procedureId": "document-literary-rubric",
+      "procedureVersion": "1.0.0",
+      "parameters": {
+        "criteria": [
+          {
+            "id": "style",
+            "name": "Style",
+            "description": "Observable language, imagery, voice and formal choices.",
+            "positiveAnchors": [
+              "recurrent image or diction",
+              "specific sentence-level technique"
+            ],
+            "negativeAnchors": [
+              "claim based only on generic praise",
+              "counterexample to claimed pattern"
+            ]
+          },
+          {
+            "id": "thematic-development",
+            "name": "Thematic development",
+            "description": "How a theme is introduced, varied and developed across the work.",
+            "positiveAnchors": [
+              "multiple separated passages show development",
+              "explicit thematic contrast"
+            ],
+            "negativeAnchors": [
+              "single-passage generalization",
+              "counterexample undermines pattern"
+            ]
+          }
+        ],
+        "confidenceScale": [
+          0,
+          1
+        ],
+        "requireCounterevidence": true
+      },
+      "question": "Apply the supplied criteria across the complete work “The Velveteen Rabbit”. Separate observable textual evidence from interpretation, retain counterevidence, and mark every judgment provisional pending expert review.",
+      "proposedFinding": {
+        "status": "not-generated",
+        "records": []
+      },
+      "goldJudgment": {
+        "status": "pending-human-review",
+        "findings": null,
+        "criterionScores": null,
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "evidenceRequirement": "Every model-proposed finding must cite exact sourceVersionId/regionId passage evidence with reopened quotation and locator. A correct quote alone does not prove interpretation."
+    },
+    {
+      "id": "pg11757-contradiction-audit-profile-3",
+      "family": "full-book-procedure-contradiction-audit",
+      "sourceId": "pg11757",
+      "sourceVersionId": "pg11757-01c84466faf26379",
+      "sourceDigest": "01c84466faf26379e7b49f364d2452d14da26fcbc9378d751b5caf3cf2580bfb",
+      "sourcePath": "corpora/books/pg-11757.txt",
+      "completeWork": {
+        "startChar": 970,
+        "endChar": 23315,
+        "coordinateBasis": "original decoded UTF-8 text string, character offsets"
+      },
+      "anchors": [
+        {
+          "start": 4386,
+          "end": 4426,
+          "quote": "you are Real you don't mind being hurt.\"",
+          "startChar": 5356,
+          "endChar": 5396,
+          "regionId": null
+        },
+        {
+          "start": 10240,
+          "end": 10276,
+          "quote": "always staying the same like he did.",
+          "startChar": 11210,
+          "endChar": 11246,
+          "regionId": null
+        },
+        {
+          "start": 15368,
+          "end": 15428,
+          "quote": "little Rabbit lay tangled up among the bedclothes, thinking.",
+          "startChar": 16338,
+          "endChar": 16398,
+          "regionId": null
+        },
+        {
+          "start": 20209,
+          "end": 20261,
+          "quote": "\"I've brought you a new playfellow,\" the Fairy said.",
+          "startChar": 21179,
+          "endChar": 21231,
+          "regionId": null
+        }
+      ],
+      "procedureId": "contradiction-audit",
+      "procedureVersion": "1.0.0",
+      "parameters": {
+        "scopeKeys": [
+          "attribution",
+          "time",
+          "modality",
+          "world"
+        ],
+        "polarityKey": "polarity",
+        "includeRevisionPairs": true,
+        "profile": {
+          "id": "attributed-speech",
+          "scopeKeys": [
+            "attribution"
+          ],
+          "instruction": "Keep narrator statements separate from what a character believes, reports, denies, or imagines."
+        }
+      },
+      "question": "Keep narrator statements separate from what a character believes, reports, denies, or imagines. Analyze the complete work “The Velveteen Rabbit” and report potential opposition, revision, attributed disagreement, and modality distinctions only with cited passages.",
+      "proposedFinding": {
+        "status": "not-generated",
+        "records": []
+      },
+      "goldJudgment": {
+        "status": "pending-human-review",
+        "findings": null,
+        "criterionScores": null,
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "evidenceRequirement": "Every model-proposed finding must cite exact sourceVersionId/regionId passage evidence with reopened quotation and locator. A correct quote alone does not prove interpretation."
+    },
+    {
+      "id": "pg11757-relevance-synthesis-profile-3",
+      "family": "full-book-procedure-relevance-synthesis",
+      "sourceId": "pg11757",
+      "sourceVersionId": "pg11757-01c84466faf26379",
+      "sourceDigest": "01c84466faf26379e7b49f364d2452d14da26fcbc9378d751b5caf3cf2580bfb",
+      "sourcePath": "corpora/books/pg-11757.txt",
+      "completeWork": {
+        "startChar": 970,
+        "endChar": 23315,
+        "coordinateBasis": "original decoded UTF-8 text string, character offsets"
+      },
+      "anchors": [
+        {
+          "start": 4386,
+          "end": 4426,
+          "quote": "you are Real you don't mind being hurt.\"",
+          "startChar": 5356,
+          "endChar": 5396,
+          "regionId": null
+        },
+        {
+          "start": 10240,
+          "end": 10276,
+          "quote": "always staying the same like he did.",
+          "startChar": 11210,
+          "endChar": 11246,
+          "regionId": null
+        },
+        {
+          "start": 15368,
+          "end": 15428,
+          "quote": "little Rabbit lay tangled up among the bedclothes, thinking.",
+          "startChar": 16338,
+          "endChar": 16398,
+          "regionId": null
+        },
+        {
+          "start": 20209,
+          "end": 20261,
+          "quote": "\"I've brought you a new playfellow,\" the Fairy said.",
+          "startChar": 21179,
+          "endChar": 21231,
+          "regionId": null
+        }
+      ],
+      "procedureId": "relevance-synthesis",
+      "procedureVersion": "1.0.0",
+      "parameters": {
+        "question": "How do the nursery toys discuss what it means to be real?",
+        "topic": "How do the nursery toys discuss what it means to be real?",
+        "minimumCoverage": 0.8,
+        "maximumRedundancy": 0.25,
+        "redundancyPolicy": "deduplicate-with-citations"
+      },
+      "question": "How do the nursery toys discuss what it means to be real?",
+      "proposedFinding": {
+        "status": "not-generated",
+        "records": []
+      },
+      "goldJudgment": {
+        "status": "pending-human-review",
+        "findings": null,
+        "criterionScores": null,
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "evidenceRequirement": "Every model-proposed finding must cite exact sourceVersionId/regionId passage evidence with reopened quotation and locator. A correct quote alone does not prove interpretation."
+    },
+    {
+      "id": "pg11757-document-literary-rubric-profile-3",
+      "family": "full-book-procedure-document-literary-rubric",
+      "sourceId": "pg11757",
+      "sourceVersionId": "pg11757-01c84466faf26379",
+      "sourceDigest": "01c84466faf26379e7b49f364d2452d14da26fcbc9378d751b5caf3cf2580bfb",
+      "sourcePath": "corpora/books/pg-11757.txt",
+      "completeWork": {
+        "startChar": 970,
+        "endChar": 23315,
+        "coordinateBasis": "original decoded UTF-8 text string, character offsets"
+      },
+      "anchors": [
+        {
+          "start": 4386,
+          "end": 4426,
+          "quote": "you are Real you don't mind being hurt.\"",
+          "startChar": 5356,
+          "endChar": 5396,
+          "regionId": null
+        },
+        {
+          "start": 10240,
+          "end": 10276,
+          "quote": "always staying the same like he did.",
+          "startChar": 11210,
+          "endChar": 11246,
+          "regionId": null
+        },
+        {
+          "start": 15368,
+          "end": 15428,
+          "quote": "little Rabbit lay tangled up among the bedclothes, thinking.",
+          "startChar": 16338,
+          "endChar": 16398,
+          "regionId": null
+        },
+        {
+          "start": 20209,
+          "end": 20261,
+          "quote": "\"I've brought you a new playfellow,\" the Fairy said.",
+          "startChar": 21179,
+          "endChar": 21231,
+          "regionId": null
+        }
+      ],
+      "procedureId": "document-literary-rubric",
+      "procedureVersion": "1.0.0",
+      "parameters": {
+        "criteria": [
+          {
+            "id": "narrative-coherence",
+            "name": "Narrative coherence",
+            "description": "How events and transitions form an intelligible narrative.",
+            "positiveAnchors": [
+              "explicit setup and payoff",
+              "consistent event sequence"
+            ],
+            "negativeAnchors": [
+              "unresolved discontinuity",
+              "contradictory event order"
+            ]
+          },
+          {
+            "id": "thematic-development",
+            "name": "Thematic development",
+            "description": "How a theme is introduced, varied and developed across the work.",
+            "positiveAnchors": [
+              "multiple separated passages show development",
+              "explicit thematic contrast"
+            ],
+            "negativeAnchors": [
+              "single-passage generalization",
+              "counterexample undermines pattern"
+            ]
+          }
+        ],
+        "confidenceScale": [
+          0,
+          1
+        ],
+        "requireCounterevidence": true
+      },
+      "question": "Apply the supplied criteria across the complete work “The Velveteen Rabbit”. Separate observable textual evidence from interpretation, retain counterevidence, and mark every judgment provisional pending expert review.",
+      "proposedFinding": {
+        "status": "not-generated",
+        "records": []
+      },
+      "goldJudgment": {
+        "status": "pending-human-review",
+        "findings": null,
+        "criterionScores": null,
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "evidenceRequirement": "Every model-proposed finding must cite exact sourceVersionId/regionId passage evidence with reopened quotation and locator. A correct quote alone does not prove interpretation."
+    },
+    {
+      "id": "pg11757-contradiction-audit-profile-4",
+      "family": "full-book-procedure-contradiction-audit",
+      "sourceId": "pg11757",
+      "sourceVersionId": "pg11757-01c84466faf26379",
+      "sourceDigest": "01c84466faf26379e7b49f364d2452d14da26fcbc9378d751b5caf3cf2580bfb",
+      "sourcePath": "corpora/books/pg-11757.txt",
+      "completeWork": {
+        "startChar": 970,
+        "endChar": 23315,
+        "coordinateBasis": "original decoded UTF-8 text string, character offsets"
+      },
+      "anchors": [
+        {
+          "start": 4386,
+          "end": 4426,
+          "quote": "you are Real you don't mind being hurt.\"",
+          "startChar": 5356,
+          "endChar": 5396,
+          "regionId": null
+        },
+        {
+          "start": 10240,
+          "end": 10276,
+          "quote": "always staying the same like he did.",
+          "startChar": 11210,
+          "endChar": 11246,
+          "regionId": null
+        },
+        {
+          "start": 15368,
+          "end": 15428,
+          "quote": "little Rabbit lay tangled up among the bedclothes, thinking.",
+          "startChar": 16338,
+          "endChar": 16398,
+          "regionId": null
+        },
+        {
+          "start": 20209,
+          "end": 20261,
+          "quote": "\"I've brought you a new playfellow,\" the Fairy said.",
+          "startChar": 21179,
+          "endChar": 21231,
+          "regionId": null
+        }
+      ],
+      "procedureId": "contradiction-audit",
+      "procedureVersion": "1.0.0",
+      "parameters": {
+        "scopeKeys": [
+          "attribution",
+          "time",
+          "modality",
+          "world"
+        ],
+        "polarityKey": "polarity",
+        "includeRevisionPairs": true,
+        "profile": {
+          "id": "possibility-vs-observation",
+          "scopeKeys": [
+            "modality"
+          ],
+          "instruction": "Do not treat a possibility, plan, wish, fear, or reported belief as an observed event; compare only claims with aligned modality."
+        }
+      },
+      "question": "Do not treat a possibility, plan, wish, fear, or reported belief as an observed event; compare only claims with aligned modality. Analyze the complete work “The Velveteen Rabbit” and report potential opposition, revision, attributed disagreement, and modality distinctions only with cited passages.",
+      "proposedFinding": {
+        "status": "not-generated",
+        "records": []
+      },
+      "goldJudgment": {
+        "status": "pending-human-review",
+        "findings": null,
+        "criterionScores": null,
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "evidenceRequirement": "Every model-proposed finding must cite exact sourceVersionId/regionId passage evidence with reopened quotation and locator. A correct quote alone does not prove interpretation."
+    },
+    {
+      "id": "pg11757-relevance-synthesis-profile-4",
+      "family": "full-book-procedure-relevance-synthesis",
+      "sourceId": "pg11757",
+      "sourceVersionId": "pg11757-01c84466faf26379",
+      "sourceDigest": "01c84466faf26379e7b49f364d2452d14da26fcbc9378d751b5caf3cf2580bfb",
+      "sourcePath": "corpora/books/pg-11757.txt",
+      "completeWork": {
+        "startChar": 970,
+        "endChar": 23315,
+        "coordinateBasis": "original decoded UTF-8 text string, character offsets"
+      },
+      "anchors": [
+        {
+          "start": 4386,
+          "end": 4426,
+          "quote": "you are Real you don't mind being hurt.\"",
+          "startChar": 5356,
+          "endChar": 5396,
+          "regionId": null
+        },
+        {
+          "start": 10240,
+          "end": 10276,
+          "quote": "always staying the same like he did.",
+          "startChar": 11210,
+          "endChar": 11246,
+          "regionId": null
+        },
+        {
+          "start": 15368,
+          "end": 15428,
+          "quote": "little Rabbit lay tangled up among the bedclothes, thinking.",
+          "startChar": 16338,
+          "endChar": 16398,
+          "regionId": null
+        },
+        {
+          "start": 20209,
+          "end": 20261,
+          "quote": "\"I've brought you a new playfellow,\" the Fairy said.",
+          "startChar": 21179,
+          "endChar": 21231,
+          "regionId": null
+        }
+      ],
+      "procedureId": "relevance-synthesis",
+      "procedureVersion": "1.0.0",
+      "parameters": {
+        "question": "Which events connect the rabbit’s loss to his later transformation?",
+        "topic": "Which events connect the rabbit’s loss to his later transformation?",
+        "minimumCoverage": 0.8,
+        "maximumRedundancy": 0.25,
+        "redundancyPolicy": "deduplicate-with-citations"
+      },
+      "question": "Which events connect the rabbit’s loss to his later transformation?",
+      "proposedFinding": {
+        "status": "not-generated",
+        "records": []
+      },
+      "goldJudgment": {
+        "status": "pending-human-review",
+        "findings": null,
+        "criterionScores": null,
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "evidenceRequirement": "Every model-proposed finding must cite exact sourceVersionId/regionId passage evidence with reopened quotation and locator. A correct quote alone does not prove interpretation."
+    },
+    {
+      "id": "pg11757-document-literary-rubric-profile-4",
+      "family": "full-book-procedure-document-literary-rubric",
+      "sourceId": "pg11757",
+      "sourceVersionId": "pg11757-01c84466faf26379",
+      "sourceDigest": "01c84466faf26379e7b49f364d2452d14da26fcbc9378d751b5caf3cf2580bfb",
+      "sourcePath": "corpora/books/pg-11757.txt",
+      "completeWork": {
+        "startChar": 970,
+        "endChar": 23315,
+        "coordinateBasis": "original decoded UTF-8 text string, character offsets"
+      },
+      "anchors": [
+        {
+          "start": 4386,
+          "end": 4426,
+          "quote": "you are Real you don't mind being hurt.\"",
+          "startChar": 5356,
+          "endChar": 5396,
+          "regionId": null
+        },
+        {
+          "start": 10240,
+          "end": 10276,
+          "quote": "always staying the same like he did.",
+          "startChar": 11210,
+          "endChar": 11246,
+          "regionId": null
+        },
+        {
+          "start": 15368,
+          "end": 15428,
+          "quote": "little Rabbit lay tangled up among the bedclothes, thinking.",
+          "startChar": 16338,
+          "endChar": 16398,
+          "regionId": null
+        },
+        {
+          "start": 20209,
+          "end": 20261,
+          "quote": "\"I've brought you a new playfellow,\" the Fairy said.",
+          "startChar": 21179,
+          "endChar": 21231,
+          "regionId": null
+        }
+      ],
+      "procedureId": "document-literary-rubric",
+      "procedureVersion": "1.0.0",
+      "parameters": {
+        "criteria": [
+          {
+            "id": "characterization",
+            "name": "Characterization",
+            "description": "How actions, speech and change establish characters.",
+            "positiveAnchors": [
+              "repeated behavior or explicit change",
+              "distinctive speech/action"
+            ],
+            "negativeAnchors": [
+              "unsupported motive attribution",
+              "contradictory characterization"
+            ]
+          },
+          {
+            "id": "style",
+            "name": "Style",
+            "description": "Observable language, imagery, voice and formal choices.",
+            "positiveAnchors": [
+              "recurrent image or diction",
+              "specific sentence-level technique"
+            ],
+            "negativeAnchors": [
+              "claim based only on generic praise",
+              "counterexample to claimed pattern"
+            ]
+          }
+        ],
+        "confidenceScale": [
+          0,
+          1
+        ],
+        "requireCounterevidence": true
+      },
+      "question": "Apply the supplied criteria across the complete work “The Velveteen Rabbit”. Separate observable textual evidence from interpretation, retain counterevidence, and mark every judgment provisional pending expert review.",
+      "proposedFinding": {
+        "status": "not-generated",
+        "records": []
+      },
+      "goldJudgment": {
+        "status": "pending-human-review",
+        "findings": null,
+        "criterionScores": null,
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "evidenceRequirement": "Every model-proposed finding must cite exact sourceVersionId/regionId passage evidence with reopened quotation and locator. A correct quote alone does not prove interpretation."
+    },
+    {
+      "id": "pg902-contradiction-audit-profile-1",
+      "family": "full-book-procedure-contradiction-audit",
+      "sourceId": "pg902",
+      "sourceVersionId": "pg902-77ae1b3c7be77aea",
+      "sourceDigest": "77ae1b3c7be77aea82b1f935e531e53f4df43db572cbc14af39d6cd0d5ba50da",
+      "sourcePath": "corpora/books/pg-902.txt",
+      "completeWork": {
+        "startChar": 909,
+        "endChar": 91242,
+        "coordinateBasis": "original decoded UTF-8 text string, character offsets"
+      },
+      "anchors": [
+        {
+          "start": 10945,
+          "end": 10994,
+          "quote": "“I am waited for in Egypt,” answered the Swallow.",
+          "startChar": 11854,
+          "endChar": 11903,
+          "regionId": null
+        },
+        {
+          "start": 31342,
+          "end": 31413,
+          "quote": "I am sure it has a long Latin name”; and he leaned down and plucked it.",
+          "startChar": 32251,
+          "endChar": 32322,
+          "regionId": null
+        },
+        {
+          "start": 54285,
+          "end": 54342,
+          "quote": "friendship, was quite free from selfishness of any kind.’",
+          "startChar": 55194,
+          "endChar": 55251,
+          "regionId": null
+        },
+        {
+          "start": 79665,
+          "end": 79726,
+          "quote": "Every one was a great success except the Remarkable Rocket.",
+          "startChar": 80574,
+          "endChar": 80635,
+          "regionId": null
+        }
+      ],
+      "procedureId": "contradiction-audit",
+      "procedureVersion": "1.0.0",
+      "parameters": {
+        "scopeKeys": [
+          "attribution",
+          "time",
+          "modality",
+          "world"
+        ],
+        "polarityKey": "polarity",
+        "includeRevisionPairs": true,
+        "profile": {
+          "id": "same-world-time",
+          "scopeKeys": [
+            "world",
+            "time"
+          ],
+          "instruction": "Check for opposite claims about the same event in the same represented world and time; preserve separate passage citations."
+        }
+      },
+      "question": "Check for opposite claims about the same event in the same represented world and time; preserve separate passage citations. Analyze the complete work “The Happy Prince, and Other Tales” and report potential opposition, revision, attributed disagreement, and modality distinctions only with cited passages.",
+      "proposedFinding": {
+        "status": "not-generated",
+        "records": []
+      },
+      "goldJudgment": {
+        "status": "pending-human-review",
+        "findings": null,
+        "criterionScores": null,
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "evidenceRequirement": "Every model-proposed finding must cite exact sourceVersionId/regionId passage evidence with reopened quotation and locator. A correct quote alone does not prove interpretation."
+    },
+    {
+      "id": "pg902-relevance-synthesis-profile-1",
+      "family": "full-book-procedure-relevance-synthesis",
+      "sourceId": "pg902",
+      "sourceVersionId": "pg902-77ae1b3c7be77aea",
+      "sourceDigest": "77ae1b3c7be77aea82b1f935e531e53f4df43db572cbc14af39d6cd0d5ba50da",
+      "sourcePath": "corpora/books/pg-902.txt",
+      "completeWork": {
+        "startChar": 909,
+        "endChar": 91242,
+        "coordinateBasis": "original decoded UTF-8 text string, character offsets"
+      },
+      "anchors": [
+        {
+          "start": 10945,
+          "end": 10994,
+          "quote": "“I am waited for in Egypt,” answered the Swallow.",
+          "startChar": 11854,
+          "endChar": 11903,
+          "regionId": null
+        },
+        {
+          "start": 31342,
+          "end": 31413,
+          "quote": "I am sure it has a long Latin name”; and he leaned down and plucked it.",
+          "startChar": 32251,
+          "endChar": 32322,
+          "regionId": null
+        },
+        {
+          "start": 54285,
+          "end": 54342,
+          "quote": "friendship, was quite free from selfishness of any kind.’",
+          "startChar": 55194,
+          "endChar": 55251,
+          "regionId": null
+        },
+        {
+          "start": 79665,
+          "end": 79726,
+          "quote": "Every one was a great success except the Remarkable Rocket.",
+          "startChar": 80574,
+          "endChar": 80635,
+          "regionId": null
+        }
+      ],
+      "procedureId": "relevance-synthesis",
+      "procedureVersion": "1.0.0",
+      "parameters": {
+        "question": "How do the Prince and the Swallow respond to people in need?",
+        "topic": "How do the Prince and the Swallow respond to people in need?",
+        "minimumCoverage": 0.8,
+        "maximumRedundancy": 0.25,
+        "redundancyPolicy": "deduplicate-with-citations"
+      },
+      "question": "How do the Prince and the Swallow respond to people in need?",
+      "proposedFinding": {
+        "status": "not-generated",
+        "records": []
+      },
+      "goldJudgment": {
+        "status": "pending-human-review",
+        "findings": null,
+        "criterionScores": null,
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "evidenceRequirement": "Every model-proposed finding must cite exact sourceVersionId/regionId passage evidence with reopened quotation and locator. A correct quote alone does not prove interpretation."
+    },
+    {
+      "id": "pg902-document-literary-rubric-profile-1",
+      "family": "full-book-procedure-document-literary-rubric",
+      "sourceId": "pg902",
+      "sourceVersionId": "pg902-77ae1b3c7be77aea",
+      "sourceDigest": "77ae1b3c7be77aea82b1f935e531e53f4df43db572cbc14af39d6cd0d5ba50da",
+      "sourcePath": "corpora/books/pg-902.txt",
+      "completeWork": {
+        "startChar": 909,
+        "endChar": 91242,
+        "coordinateBasis": "original decoded UTF-8 text string, character offsets"
+      },
+      "anchors": [
+        {
+          "start": 10945,
+          "end": 10994,
+          "quote": "“I am waited for in Egypt,” answered the Swallow.",
+          "startChar": 11854,
+          "endChar": 11903,
+          "regionId": null
+        },
+        {
+          "start": 31342,
+          "end": 31413,
+          "quote": "I am sure it has a long Latin name”; and he leaned down and plucked it.",
+          "startChar": 32251,
+          "endChar": 32322,
+          "regionId": null
+        },
+        {
+          "start": 54285,
+          "end": 54342,
+          "quote": "friendship, was quite free from selfishness of any kind.’",
+          "startChar": 55194,
+          "endChar": 55251,
+          "regionId": null
+        },
+        {
+          "start": 79665,
+          "end": 79726,
+          "quote": "Every one was a great success except the Remarkable Rocket.",
+          "startChar": 80574,
+          "endChar": 80635,
+          "regionId": null
+        }
+      ],
+      "procedureId": "document-literary-rubric",
+      "procedureVersion": "1.0.0",
+      "parameters": {
+        "criteria": [
+          {
+            "id": "narrative-coherence",
+            "name": "Narrative coherence",
+            "description": "How events and transitions form an intelligible narrative.",
+            "positiveAnchors": [
+              "explicit setup and payoff",
+              "consistent event sequence"
+            ],
+            "negativeAnchors": [
+              "unresolved discontinuity",
+              "contradictory event order"
+            ]
+          },
+          {
+            "id": "characterization",
+            "name": "Characterization",
+            "description": "How actions, speech and change establish characters.",
+            "positiveAnchors": [
+              "repeated behavior or explicit change",
+              "distinctive speech/action"
+            ],
+            "negativeAnchors": [
+              "unsupported motive attribution",
+              "contradictory characterization"
+            ]
+          }
+        ],
+        "confidenceScale": [
+          0,
+          1
+        ],
+        "requireCounterevidence": true
+      },
+      "question": "Apply the supplied criteria across the complete work “The Happy Prince, and Other Tales”. Separate observable textual evidence from interpretation, retain counterevidence, and mark every judgment provisional pending expert review.",
+      "proposedFinding": {
+        "status": "not-generated",
+        "records": []
+      },
+      "goldJudgment": {
+        "status": "pending-human-review",
+        "findings": null,
+        "criterionScores": null,
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "evidenceRequirement": "Every model-proposed finding must cite exact sourceVersionId/regionId passage evidence with reopened quotation and locator. A correct quote alone does not prove interpretation."
+    },
+    {
+      "id": "pg902-contradiction-audit-profile-2",
+      "family": "full-book-procedure-contradiction-audit",
+      "sourceId": "pg902",
+      "sourceVersionId": "pg902-77ae1b3c7be77aea",
+      "sourceDigest": "77ae1b3c7be77aea82b1f935e531e53f4df43db572cbc14af39d6cd0d5ba50da",
+      "sourcePath": "corpora/books/pg-902.txt",
+      "completeWork": {
+        "startChar": 909,
+        "endChar": 91242,
+        "coordinateBasis": "original decoded UTF-8 text string, character offsets"
+      },
+      "anchors": [
+        {
+          "start": 10945,
+          "end": 10994,
+          "quote": "“I am waited for in Egypt,” answered the Swallow.",
+          "startChar": 11854,
+          "endChar": 11903,
+          "regionId": null
+        },
+        {
+          "start": 31342,
+          "end": 31413,
+          "quote": "I am sure it has a long Latin name”; and he leaned down and plucked it.",
+          "startChar": 32251,
+          "endChar": 32322,
+          "regionId": null
+        },
+        {
+          "start": 54285,
+          "end": 54342,
+          "quote": "friendship, was quite free from selfishness of any kind.’",
+          "startChar": 55194,
+          "endChar": 55251,
+          "regionId": null
+        },
+        {
+          "start": 79665,
+          "end": 79726,
+          "quote": "Every one was a great success except the Remarkable Rocket.",
+          "startChar": 80574,
+          "endChar": 80635,
+          "regionId": null
+        }
+      ],
+      "procedureId": "contradiction-audit",
+      "procedureVersion": "1.0.0",
+      "parameters": {
+        "scopeKeys": [
+          "attribution",
+          "time",
+          "modality",
+          "world"
+        ],
+        "polarityKey": "polarity",
+        "includeRevisionPairs": true,
+        "profile": {
+          "id": "time-revision",
+          "scopeKeys": [
+            "time"
+          ],
+          "instruction": "Distinguish an earlier statement from a later change or correction; do not collapse temporal revision into a same-time contradiction."
+        }
+      },
+      "question": "Distinguish an earlier statement from a later change or correction; do not collapse temporal revision into a same-time contradiction. Analyze the complete work “The Happy Prince, and Other Tales” and report potential opposition, revision, attributed disagreement, and modality distinctions only with cited passages.",
+      "proposedFinding": {
+        "status": "not-generated",
+        "records": []
+      },
+      "goldJudgment": {
+        "status": "pending-human-review",
+        "findings": null,
+        "criterionScores": null,
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "evidenceRequirement": "Every model-proposed finding must cite exact sourceVersionId/regionId passage evidence with reopened quotation and locator. A correct quote alone does not prove interpretation."
+    },
+    {
+      "id": "pg902-relevance-synthesis-profile-2",
+      "family": "full-book-procedure-relevance-synthesis",
+      "sourceId": "pg902",
+      "sourceVersionId": "pg902-77ae1b3c7be77aea",
+      "sourceDigest": "77ae1b3c7be77aea82b1f935e531e53f4df43db572cbc14af39d6cd0d5ba50da",
+      "sourcePath": "corpora/books/pg-902.txt",
+      "completeWork": {
+        "startChar": 909,
+        "endChar": 91242,
+        "coordinateBasis": "original decoded UTF-8 text string, character offsets"
+      },
+      "anchors": [
+        {
+          "start": 10945,
+          "end": 10994,
+          "quote": "“I am waited for in Egypt,” answered the Swallow.",
+          "startChar": 11854,
+          "endChar": 11903,
+          "regionId": null
+        },
+        {
+          "start": 31342,
+          "end": 31413,
+          "quote": "I am sure it has a long Latin name”; and he leaned down and plucked it.",
+          "startChar": 32251,
+          "endChar": 32322,
+          "regionId": null
+        },
+        {
+          "start": 54285,
+          "end": 54342,
+          "quote": "friendship, was quite free from selfishness of any kind.’",
+          "startChar": 55194,
+          "endChar": 55251,
+          "regionId": null
+        },
+        {
+          "start": 79665,
+          "end": 79726,
+          "quote": "Every one was a great success except the Remarkable Rocket.",
+          "startChar": 80574,
+          "endChar": 80635,
+          "regionId": null
+        }
+      ],
+      "procedureId": "relevance-synthesis",
+      "procedureVersion": "1.0.0",
+      "parameters": {
+        "question": "What changes in the Swallow’s actions across the tale?",
+        "topic": "What changes in the Swallow’s actions across the tale?",
+        "minimumCoverage": 0.8,
+        "maximumRedundancy": 0.25,
+        "redundancyPolicy": "deduplicate-with-citations"
+      },
+      "question": "What changes in the Swallow’s actions across the tale?",
+      "proposedFinding": {
+        "status": "not-generated",
+        "records": []
+      },
+      "goldJudgment": {
+        "status": "pending-human-review",
+        "findings": null,
+        "criterionScores": null,
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "evidenceRequirement": "Every model-proposed finding must cite exact sourceVersionId/regionId passage evidence with reopened quotation and locator. A correct quote alone does not prove interpretation."
+    },
+    {
+      "id": "pg902-document-literary-rubric-profile-2",
+      "family": "full-book-procedure-document-literary-rubric",
+      "sourceId": "pg902",
+      "sourceVersionId": "pg902-77ae1b3c7be77aea",
+      "sourceDigest": "77ae1b3c7be77aea82b1f935e531e53f4df43db572cbc14af39d6cd0d5ba50da",
+      "sourcePath": "corpora/books/pg-902.txt",
+      "completeWork": {
+        "startChar": 909,
+        "endChar": 91242,
+        "coordinateBasis": "original decoded UTF-8 text string, character offsets"
+      },
+      "anchors": [
+        {
+          "start": 10945,
+          "end": 10994,
+          "quote": "“I am waited for in Egypt,” answered the Swallow.",
+          "startChar": 11854,
+          "endChar": 11903,
+          "regionId": null
+        },
+        {
+          "start": 31342,
+          "end": 31413,
+          "quote": "I am sure it has a long Latin name”; and he leaned down and plucked it.",
+          "startChar": 32251,
+          "endChar": 32322,
+          "regionId": null
+        },
+        {
+          "start": 54285,
+          "end": 54342,
+          "quote": "friendship, was quite free from selfishness of any kind.’",
+          "startChar": 55194,
+          "endChar": 55251,
+          "regionId": null
+        },
+        {
+          "start": 79665,
+          "end": 79726,
+          "quote": "Every one was a great success except the Remarkable Rocket.",
+          "startChar": 80574,
+          "endChar": 80635,
+          "regionId": null
+        }
+      ],
+      "procedureId": "document-literary-rubric",
+      "procedureVersion": "1.0.0",
+      "parameters": {
+        "criteria": [
+          {
+            "id": "style",
+            "name": "Style",
+            "description": "Observable language, imagery, voice and formal choices.",
+            "positiveAnchors": [
+              "recurrent image or diction",
+              "specific sentence-level technique"
+            ],
+            "negativeAnchors": [
+              "claim based only on generic praise",
+              "counterexample to claimed pattern"
+            ]
+          },
+          {
+            "id": "thematic-development",
+            "name": "Thematic development",
+            "description": "How a theme is introduced, varied and developed across the work.",
+            "positiveAnchors": [
+              "multiple separated passages show development",
+              "explicit thematic contrast"
+            ],
+            "negativeAnchors": [
+              "single-passage generalization",
+              "counterexample undermines pattern"
+            ]
+          }
+        ],
+        "confidenceScale": [
+          0,
+          1
+        ],
+        "requireCounterevidence": true
+      },
+      "question": "Apply the supplied criteria across the complete work “The Happy Prince, and Other Tales”. Separate observable textual evidence from interpretation, retain counterevidence, and mark every judgment provisional pending expert review.",
+      "proposedFinding": {
+        "status": "not-generated",
+        "records": []
+      },
+      "goldJudgment": {
+        "status": "pending-human-review",
+        "findings": null,
+        "criterionScores": null,
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "evidenceRequirement": "Every model-proposed finding must cite exact sourceVersionId/regionId passage evidence with reopened quotation and locator. A correct quote alone does not prove interpretation."
+    },
+    {
+      "id": "pg902-contradiction-audit-profile-3",
+      "family": "full-book-procedure-contradiction-audit",
+      "sourceId": "pg902",
+      "sourceVersionId": "pg902-77ae1b3c7be77aea",
+      "sourceDigest": "77ae1b3c7be77aea82b1f935e531e53f4df43db572cbc14af39d6cd0d5ba50da",
+      "sourcePath": "corpora/books/pg-902.txt",
+      "completeWork": {
+        "startChar": 909,
+        "endChar": 91242,
+        "coordinateBasis": "original decoded UTF-8 text string, character offsets"
+      },
+      "anchors": [
+        {
+          "start": 10945,
+          "end": 10994,
+          "quote": "“I am waited for in Egypt,” answered the Swallow.",
+          "startChar": 11854,
+          "endChar": 11903,
+          "regionId": null
+        },
+        {
+          "start": 31342,
+          "end": 31413,
+          "quote": "I am sure it has a long Latin name”; and he leaned down and plucked it.",
+          "startChar": 32251,
+          "endChar": 32322,
+          "regionId": null
+        },
+        {
+          "start": 54285,
+          "end": 54342,
+          "quote": "friendship, was quite free from selfishness of any kind.’",
+          "startChar": 55194,
+          "endChar": 55251,
+          "regionId": null
+        },
+        {
+          "start": 79665,
+          "end": 79726,
+          "quote": "Every one was a great success except the Remarkable Rocket.",
+          "startChar": 80574,
+          "endChar": 80635,
+          "regionId": null
+        }
+      ],
+      "procedureId": "contradiction-audit",
+      "procedureVersion": "1.0.0",
+      "parameters": {
+        "scopeKeys": [
+          "attribution",
+          "time",
+          "modality",
+          "world"
+        ],
+        "polarityKey": "polarity",
+        "includeRevisionPairs": true,
+        "profile": {
+          "id": "attributed-speech",
+          "scopeKeys": [
+            "attribution"
+          ],
+          "instruction": "Keep narrator statements separate from what a character believes, reports, denies, or imagines."
+        }
+      },
+      "question": "Keep narrator statements separate from what a character believes, reports, denies, or imagines. Analyze the complete work “The Happy Prince, and Other Tales” and report potential opposition, revision, attributed disagreement, and modality distinctions only with cited passages.",
+      "proposedFinding": {
+        "status": "not-generated",
+        "records": []
+      },
+      "goldJudgment": {
+        "status": "pending-human-review",
+        "findings": null,
+        "criterionScores": null,
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "evidenceRequirement": "Every model-proposed finding must cite exact sourceVersionId/regionId passage evidence with reopened quotation and locator. A correct quote alone does not prove interpretation."
+    },
+    {
+      "id": "pg902-relevance-synthesis-profile-3",
+      "family": "full-book-procedure-relevance-synthesis",
+      "sourceId": "pg902",
+      "sourceVersionId": "pg902-77ae1b3c7be77aea",
+      "sourceDigest": "77ae1b3c7be77aea82b1f935e531e53f4df43db572cbc14af39d6cd0d5ba50da",
+      "sourcePath": "corpora/books/pg-902.txt",
+      "completeWork": {
+        "startChar": 909,
+        "endChar": 91242,
+        "coordinateBasis": "original decoded UTF-8 text string, character offsets"
+      },
+      "anchors": [
+        {
+          "start": 10945,
+          "end": 10994,
+          "quote": "“I am waited for in Egypt,” answered the Swallow.",
+          "startChar": 11854,
+          "endChar": 11903,
+          "regionId": null
+        },
+        {
+          "start": 31342,
+          "end": 31413,
+          "quote": "I am sure it has a long Latin name”; and he leaned down and plucked it.",
+          "startChar": 32251,
+          "endChar": 32322,
+          "regionId": null
+        },
+        {
+          "start": 54285,
+          "end": 54342,
+          "quote": "friendship, was quite free from selfishness of any kind.’",
+          "startChar": 55194,
+          "endChar": 55251,
+          "regionId": null
+        },
+        {
+          "start": 79665,
+          "end": 79726,
+          "quote": "Every one was a great success except the Remarkable Rocket.",
+          "startChar": 80574,
+          "endChar": 80635,
+          "regionId": null
+        }
+      ],
+      "procedureId": "relevance-synthesis",
+      "procedureVersion": "1.0.0",
+      "parameters": {
+        "question": "How do the selected tales contrast outward beauty with kindness?",
+        "topic": "How do the selected tales contrast outward beauty with kindness?",
+        "minimumCoverage": 0.8,
+        "maximumRedundancy": 0.25,
+        "redundancyPolicy": "deduplicate-with-citations"
+      },
+      "question": "How do the selected tales contrast outward beauty with kindness?",
+      "proposedFinding": {
+        "status": "not-generated",
+        "records": []
+      },
+      "goldJudgment": {
+        "status": "pending-human-review",
+        "findings": null,
+        "criterionScores": null,
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "evidenceRequirement": "Every model-proposed finding must cite exact sourceVersionId/regionId passage evidence with reopened quotation and locator. A correct quote alone does not prove interpretation."
+    },
+    {
+      "id": "pg902-document-literary-rubric-profile-3",
+      "family": "full-book-procedure-document-literary-rubric",
+      "sourceId": "pg902",
+      "sourceVersionId": "pg902-77ae1b3c7be77aea",
+      "sourceDigest": "77ae1b3c7be77aea82b1f935e531e53f4df43db572cbc14af39d6cd0d5ba50da",
+      "sourcePath": "corpora/books/pg-902.txt",
+      "completeWork": {
+        "startChar": 909,
+        "endChar": 91242,
+        "coordinateBasis": "original decoded UTF-8 text string, character offsets"
+      },
+      "anchors": [
+        {
+          "start": 10945,
+          "end": 10994,
+          "quote": "“I am waited for in Egypt,” answered the Swallow.",
+          "startChar": 11854,
+          "endChar": 11903,
+          "regionId": null
+        },
+        {
+          "start": 31342,
+          "end": 31413,
+          "quote": "I am sure it has a long Latin name”; and he leaned down and plucked it.",
+          "startChar": 32251,
+          "endChar": 32322,
+          "regionId": null
+        },
+        {
+          "start": 54285,
+          "end": 54342,
+          "quote": "friendship, was quite free from selfishness of any kind.’",
+          "startChar": 55194,
+          "endChar": 55251,
+          "regionId": null
+        },
+        {
+          "start": 79665,
+          "end": 79726,
+          "quote": "Every one was a great success except the Remarkable Rocket.",
+          "startChar": 80574,
+          "endChar": 80635,
+          "regionId": null
+        }
+      ],
+      "procedureId": "document-literary-rubric",
+      "procedureVersion": "1.0.0",
+      "parameters": {
+        "criteria": [
+          {
+            "id": "narrative-coherence",
+            "name": "Narrative coherence",
+            "description": "How events and transitions form an intelligible narrative.",
+            "positiveAnchors": [
+              "explicit setup and payoff",
+              "consistent event sequence"
+            ],
+            "negativeAnchors": [
+              "unresolved discontinuity",
+              "contradictory event order"
+            ]
+          },
+          {
+            "id": "thematic-development",
+            "name": "Thematic development",
+            "description": "How a theme is introduced, varied and developed across the work.",
+            "positiveAnchors": [
+              "multiple separated passages show development",
+              "explicit thematic contrast"
+            ],
+            "negativeAnchors": [
+              "single-passage generalization",
+              "counterexample undermines pattern"
+            ]
+          }
+        ],
+        "confidenceScale": [
+          0,
+          1
+        ],
+        "requireCounterevidence": true
+      },
+      "question": "Apply the supplied criteria across the complete work “The Happy Prince, and Other Tales”. Separate observable textual evidence from interpretation, retain counterevidence, and mark every judgment provisional pending expert review.",
+      "proposedFinding": {
+        "status": "not-generated",
+        "records": []
+      },
+      "goldJudgment": {
+        "status": "pending-human-review",
+        "findings": null,
+        "criterionScores": null,
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "evidenceRequirement": "Every model-proposed finding must cite exact sourceVersionId/regionId passage evidence with reopened quotation and locator. A correct quote alone does not prove interpretation."
+    },
+    {
+      "id": "pg902-contradiction-audit-profile-4",
+      "family": "full-book-procedure-contradiction-audit",
+      "sourceId": "pg902",
+      "sourceVersionId": "pg902-77ae1b3c7be77aea",
+      "sourceDigest": "77ae1b3c7be77aea82b1f935e531e53f4df43db572cbc14af39d6cd0d5ba50da",
+      "sourcePath": "corpora/books/pg-902.txt",
+      "completeWork": {
+        "startChar": 909,
+        "endChar": 91242,
+        "coordinateBasis": "original decoded UTF-8 text string, character offsets"
+      },
+      "anchors": [
+        {
+          "start": 10945,
+          "end": 10994,
+          "quote": "“I am waited for in Egypt,” answered the Swallow.",
+          "startChar": 11854,
+          "endChar": 11903,
+          "regionId": null
+        },
+        {
+          "start": 31342,
+          "end": 31413,
+          "quote": "I am sure it has a long Latin name”; and he leaned down and plucked it.",
+          "startChar": 32251,
+          "endChar": 32322,
+          "regionId": null
+        },
+        {
+          "start": 54285,
+          "end": 54342,
+          "quote": "friendship, was quite free from selfishness of any kind.’",
+          "startChar": 55194,
+          "endChar": 55251,
+          "regionId": null
+        },
+        {
+          "start": 79665,
+          "end": 79726,
+          "quote": "Every one was a great success except the Remarkable Rocket.",
+          "startChar": 80574,
+          "endChar": 80635,
+          "regionId": null
+        }
+      ],
+      "procedureId": "contradiction-audit",
+      "procedureVersion": "1.0.0",
+      "parameters": {
+        "scopeKeys": [
+          "attribution",
+          "time",
+          "modality",
+          "world"
+        ],
+        "polarityKey": "polarity",
+        "includeRevisionPairs": true,
+        "profile": {
+          "id": "possibility-vs-observation",
+          "scopeKeys": [
+            "modality"
+          ],
+          "instruction": "Do not treat a possibility, plan, wish, fear, or reported belief as an observed event; compare only claims with aligned modality."
+        }
+      },
+      "question": "Do not treat a possibility, plan, wish, fear, or reported belief as an observed event; compare only claims with aligned modality. Analyze the complete work “The Happy Prince, and Other Tales” and report potential opposition, revision, attributed disagreement, and modality distinctions only with cited passages.",
+      "proposedFinding": {
+        "status": "not-generated",
+        "records": []
+      },
+      "goldJudgment": {
+        "status": "pending-human-review",
+        "findings": null,
+        "criterionScores": null,
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "evidenceRequirement": "Every model-proposed finding must cite exact sourceVersionId/regionId passage evidence with reopened quotation and locator. A correct quote alone does not prove interpretation."
+    },
+    {
+      "id": "pg902-relevance-synthesis-profile-4",
+      "family": "full-book-procedure-relevance-synthesis",
+      "sourceId": "pg902",
+      "sourceVersionId": "pg902-77ae1b3c7be77aea",
+      "sourceDigest": "77ae1b3c7be77aea82b1f935e531e53f4df43db572cbc14af39d6cd0d5ba50da",
+      "sourcePath": "corpora/books/pg-902.txt",
+      "completeWork": {
+        "startChar": 909,
+        "endChar": 91242,
+        "coordinateBasis": "original decoded UTF-8 text string, character offsets"
+      },
+      "anchors": [
+        {
+          "start": 10945,
+          "end": 10994,
+          "quote": "“I am waited for in Egypt,” answered the Swallow.",
+          "startChar": 11854,
+          "endChar": 11903,
+          "regionId": null
+        },
+        {
+          "start": 31342,
+          "end": 31413,
+          "quote": "I am sure it has a long Latin name”; and he leaned down and plucked it.",
+          "startChar": 32251,
+          "endChar": 32322,
+          "regionId": null
+        },
+        {
+          "start": 54285,
+          "end": 54342,
+          "quote": "friendship, was quite free from selfishness of any kind.’",
+          "startChar": 55194,
+          "endChar": 55251,
+          "regionId": null
+        },
+        {
+          "start": 79665,
+          "end": 79726,
+          "quote": "Every one was a great success except the Remarkable Rocket.",
+          "startChar": 80574,
+          "endChar": 80635,
+          "regionId": null
+        }
+      ],
+      "procedureId": "relevance-synthesis",
+      "procedureVersion": "1.0.0",
+      "parameters": {
+        "question": "Which events connect sacrifice with the endings of the stories?",
+        "topic": "Which events connect sacrifice with the endings of the stories?",
+        "minimumCoverage": 0.8,
+        "maximumRedundancy": 0.25,
+        "redundancyPolicy": "deduplicate-with-citations"
+      },
+      "question": "Which events connect sacrifice with the endings of the stories?",
+      "proposedFinding": {
+        "status": "not-generated",
+        "records": []
+      },
+      "goldJudgment": {
+        "status": "pending-human-review",
+        "findings": null,
+        "criterionScores": null,
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "evidenceRequirement": "Every model-proposed finding must cite exact sourceVersionId/regionId passage evidence with reopened quotation and locator. A correct quote alone does not prove interpretation."
+    },
+    {
+      "id": "pg902-document-literary-rubric-profile-4",
+      "family": "full-book-procedure-document-literary-rubric",
+      "sourceId": "pg902",
+      "sourceVersionId": "pg902-77ae1b3c7be77aea",
+      "sourceDigest": "77ae1b3c7be77aea82b1f935e531e53f4df43db572cbc14af39d6cd0d5ba50da",
+      "sourcePath": "corpora/books/pg-902.txt",
+      "completeWork": {
+        "startChar": 909,
+        "endChar": 91242,
+        "coordinateBasis": "original decoded UTF-8 text string, character offsets"
+      },
+      "anchors": [
+        {
+          "start": 10945,
+          "end": 10994,
+          "quote": "“I am waited for in Egypt,” answered the Swallow.",
+          "startChar": 11854,
+          "endChar": 11903,
+          "regionId": null
+        },
+        {
+          "start": 31342,
+          "end": 31413,
+          "quote": "I am sure it has a long Latin name”; and he leaned down and plucked it.",
+          "startChar": 32251,
+          "endChar": 32322,
+          "regionId": null
+        },
+        {
+          "start": 54285,
+          "end": 54342,
+          "quote": "friendship, was quite free from selfishness of any kind.’",
+          "startChar": 55194,
+          "endChar": 55251,
+          "regionId": null
+        },
+        {
+          "start": 79665,
+          "end": 79726,
+          "quote": "Every one was a great success except the Remarkable Rocket.",
+          "startChar": 80574,
+          "endChar": 80635,
+          "regionId": null
+        }
+      ],
+      "procedureId": "document-literary-rubric",
+      "procedureVersion": "1.0.0",
+      "parameters": {
+        "criteria": [
+          {
+            "id": "characterization",
+            "name": "Characterization",
+            "description": "How actions, speech and change establish characters.",
+            "positiveAnchors": [
+              "repeated behavior or explicit change",
+              "distinctive speech/action"
+            ],
+            "negativeAnchors": [
+              "unsupported motive attribution",
+              "contradictory characterization"
+            ]
+          },
+          {
+            "id": "style",
+            "name": "Style",
+            "description": "Observable language, imagery, voice and formal choices.",
+            "positiveAnchors": [
+              "recurrent image or diction",
+              "specific sentence-level technique"
+            ],
+            "negativeAnchors": [
+              "claim based only on generic praise",
+              "counterexample to claimed pattern"
+            ]
+          }
+        ],
+        "confidenceScale": [
+          0,
+          1
+        ],
+        "requireCounterevidence": true
+      },
+      "question": "Apply the supplied criteria across the complete work “The Happy Prince, and Other Tales”. Separate observable textual evidence from interpretation, retain counterevidence, and mark every judgment provisional pending expert review.",
+      "proposedFinding": {
+        "status": "not-generated",
+        "records": []
+      },
+      "goldJudgment": {
+        "status": "pending-human-review",
+        "findings": null,
+        "criterionScores": null,
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "evidenceRequirement": "Every model-proposed finding must cite exact sourceVersionId/regionId passage evidence with reopened quotation and locator. A correct quote alone does not prove interpretation."
+    },
+    {
+      "id": "pg496-contradiction-audit-profile-1",
+      "family": "full-book-procedure-contradiction-audit",
+      "sourceId": "pg496",
+      "sourceVersionId": "pg496-709c354dc6934a3a",
+      "sourceDigest": "709c354dc6934a3a4509cdfae1bba47d4feb2597afe5c9c22c6fdb6013a561e3",
+      "sourcePath": "corpora/books/pg-496.txt",
+      "completeWork": {
+        "startChar": 906,
+        "endChar": 254468,
+        "coordinateBasis": "original decoded UTF-8 text string, character offsets"
+      },
+      "anchors": [
+        {
+          "start": 35329,
+          "end": 35368,
+          "quote": "every comfort and pleasure of his life.",
+          "startChar": 36235,
+          "endChar": 36274,
+          "regionId": null
+        },
+        {
+          "start": 95647,
+          "end": 95719,
+          "quote": "But when he got in sight of Hopeless Tower a painful thought struck him.",
+          "startChar": 96553,
+          "endChar": 96625,
+          "regionId": null
+        },
+        {
+          "start": 150324,
+          "end": 150363,
+          "quote": "“My people, I am tired: I want to rest.",
+          "startChar": 151230,
+          "endChar": 151269,
+          "regionId": null
+        },
+        {
+          "start": 221494,
+          "end": 221541,
+          "quote": "young girl was no other than his beloved Zelia.",
+          "startChar": 222400,
+          "endChar": 222447,
+          "regionId": null
+        }
+      ],
+      "procedureId": "contradiction-audit",
+      "procedureVersion": "1.0.0",
+      "parameters": {
+        "scopeKeys": [
+          "attribution",
+          "time",
+          "modality",
+          "world"
+        ],
+        "polarityKey": "polarity",
+        "includeRevisionPairs": true,
+        "profile": {
+          "id": "same-world-time",
+          "scopeKeys": [
+            "world",
+            "time"
+          ],
+          "instruction": "Check for opposite claims about the same event in the same represented world and time; preserve separate passage citations."
+        }
+      },
+      "question": "Check for opposite claims about the same event in the same represented world and time; preserve separate passage citations. Analyze the complete work “The Little Lame Prince” and report potential opposition, revision, attributed disagreement, and modality distinctions only with cited passages.",
+      "proposedFinding": {
+        "status": "not-generated",
+        "records": []
+      },
+      "goldJudgment": {
+        "status": "pending-human-review",
+        "findings": null,
+        "criterionScores": null,
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "evidenceRequirement": "Every model-proposed finding must cite exact sourceVersionId/regionId passage evidence with reopened quotation and locator. A correct quote alone does not prove interpretation."
+    },
+    {
+      "id": "pg496-relevance-synthesis-profile-1",
+      "family": "full-book-procedure-relevance-synthesis",
+      "sourceId": "pg496",
+      "sourceVersionId": "pg496-709c354dc6934a3a",
+      "sourceDigest": "709c354dc6934a3a4509cdfae1bba47d4feb2597afe5c9c22c6fdb6013a561e3",
+      "sourcePath": "corpora/books/pg-496.txt",
+      "completeWork": {
+        "startChar": 906,
+        "endChar": 254468,
+        "coordinateBasis": "original decoded UTF-8 text string, character offsets"
+      },
+      "anchors": [
+        {
+          "start": 35329,
+          "end": 35368,
+          "quote": "every comfort and pleasure of his life.",
+          "startChar": 36235,
+          "endChar": 36274,
+          "regionId": null
+        },
+        {
+          "start": 95647,
+          "end": 95719,
+          "quote": "But when he got in sight of Hopeless Tower a painful thought struck him.",
+          "startChar": 96553,
+          "endChar": 96625,
+          "regionId": null
+        },
+        {
+          "start": 150324,
+          "end": 150363,
+          "quote": "“My people, I am tired: I want to rest.",
+          "startChar": 151230,
+          "endChar": 151269,
+          "regionId": null
+        },
+        {
+          "start": 221494,
+          "end": 221541,
+          "quote": "young girl was no other than his beloved Zelia.",
+          "startChar": 222400,
+          "endChar": 222447,
+          "regionId": null
+        }
+      ],
+      "procedureId": "relevance-synthesis",
+      "procedureVersion": "1.0.0",
+      "parameters": {
+        "question": "How does the Little Lame Prince learn about the world beyond the tower?",
+        "topic": "How does the Little Lame Prince learn about the world beyond the tower?",
+        "minimumCoverage": 0.8,
+        "maximumRedundancy": 0.25,
+        "redundancyPolicy": "deduplicate-with-citations"
+      },
+      "question": "How does the Little Lame Prince learn about the world beyond the tower?",
+      "proposedFinding": {
+        "status": "not-generated",
+        "records": []
+      },
+      "goldJudgment": {
+        "status": "pending-human-review",
+        "findings": null,
+        "criterionScores": null,
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "evidenceRequirement": "Every model-proposed finding must cite exact sourceVersionId/regionId passage evidence with reopened quotation and locator. A correct quote alone does not prove interpretation."
+    },
+    {
+      "id": "pg496-document-literary-rubric-profile-1",
+      "family": "full-book-procedure-document-literary-rubric",
+      "sourceId": "pg496",
+      "sourceVersionId": "pg496-709c354dc6934a3a",
+      "sourceDigest": "709c354dc6934a3a4509cdfae1bba47d4feb2597afe5c9c22c6fdb6013a561e3",
+      "sourcePath": "corpora/books/pg-496.txt",
+      "completeWork": {
+        "startChar": 906,
+        "endChar": 254468,
+        "coordinateBasis": "original decoded UTF-8 text string, character offsets"
+      },
+      "anchors": [
+        {
+          "start": 35329,
+          "end": 35368,
+          "quote": "every comfort and pleasure of his life.",
+          "startChar": 36235,
+          "endChar": 36274,
+          "regionId": null
+        },
+        {
+          "start": 95647,
+          "end": 95719,
+          "quote": "But when he got in sight of Hopeless Tower a painful thought struck him.",
+          "startChar": 96553,
+          "endChar": 96625,
+          "regionId": null
+        },
+        {
+          "start": 150324,
+          "end": 150363,
+          "quote": "“My people, I am tired: I want to rest.",
+          "startChar": 151230,
+          "endChar": 151269,
+          "regionId": null
+        },
+        {
+          "start": 221494,
+          "end": 221541,
+          "quote": "young girl was no other than his beloved Zelia.",
+          "startChar": 222400,
+          "endChar": 222447,
+          "regionId": null
+        }
+      ],
+      "procedureId": "document-literary-rubric",
+      "procedureVersion": "1.0.0",
+      "parameters": {
+        "criteria": [
+          {
+            "id": "narrative-coherence",
+            "name": "Narrative coherence",
+            "description": "How events and transitions form an intelligible narrative.",
+            "positiveAnchors": [
+              "explicit setup and payoff",
+              "consistent event sequence"
+            ],
+            "negativeAnchors": [
+              "unresolved discontinuity",
+              "contradictory event order"
+            ]
+          },
+          {
+            "id": "characterization",
+            "name": "Characterization",
+            "description": "How actions, speech and change establish characters.",
+            "positiveAnchors": [
+              "repeated behavior or explicit change",
+              "distinctive speech/action"
+            ],
+            "negativeAnchors": [
+              "unsupported motive attribution",
+              "contradictory characterization"
+            ]
+          }
+        ],
+        "confidenceScale": [
+          0,
+          1
+        ],
+        "requireCounterevidence": true
+      },
+      "question": "Apply the supplied criteria across the complete work “The Little Lame Prince”. Separate observable textual evidence from interpretation, retain counterevidence, and mark every judgment provisional pending expert review.",
+      "proposedFinding": {
+        "status": "not-generated",
+        "records": []
+      },
+      "goldJudgment": {
+        "status": "pending-human-review",
+        "findings": null,
+        "criterionScores": null,
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "evidenceRequirement": "Every model-proposed finding must cite exact sourceVersionId/regionId passage evidence with reopened quotation and locator. A correct quote alone does not prove interpretation."
+    },
+    {
+      "id": "pg496-contradiction-audit-profile-2",
+      "family": "full-book-procedure-contradiction-audit",
+      "sourceId": "pg496",
+      "sourceVersionId": "pg496-709c354dc6934a3a",
+      "sourceDigest": "709c354dc6934a3a4509cdfae1bba47d4feb2597afe5c9c22c6fdb6013a561e3",
+      "sourcePath": "corpora/books/pg-496.txt",
+      "completeWork": {
+        "startChar": 906,
+        "endChar": 254468,
+        "coordinateBasis": "original decoded UTF-8 text string, character offsets"
+      },
+      "anchors": [
+        {
+          "start": 35329,
+          "end": 35368,
+          "quote": "every comfort and pleasure of his life.",
+          "startChar": 36235,
+          "endChar": 36274,
+          "regionId": null
+        },
+        {
+          "start": 95647,
+          "end": 95719,
+          "quote": "But when he got in sight of Hopeless Tower a painful thought struck him.",
+          "startChar": 96553,
+          "endChar": 96625,
+          "regionId": null
+        },
+        {
+          "start": 150324,
+          "end": 150363,
+          "quote": "“My people, I am tired: I want to rest.",
+          "startChar": 151230,
+          "endChar": 151269,
+          "regionId": null
+        },
+        {
+          "start": 221494,
+          "end": 221541,
+          "quote": "young girl was no other than his beloved Zelia.",
+          "startChar": 222400,
+          "endChar": 222447,
+          "regionId": null
+        }
+      ],
+      "procedureId": "contradiction-audit",
+      "procedureVersion": "1.0.0",
+      "parameters": {
+        "scopeKeys": [
+          "attribution",
+          "time",
+          "modality",
+          "world"
+        ],
+        "polarityKey": "polarity",
+        "includeRevisionPairs": true,
+        "profile": {
+          "id": "time-revision",
+          "scopeKeys": [
+            "time"
+          ],
+          "instruction": "Distinguish an earlier statement from a later change or correction; do not collapse temporal revision into a same-time contradiction."
+        }
+      },
+      "question": "Distinguish an earlier statement from a later change or correction; do not collapse temporal revision into a same-time contradiction. Analyze the complete work “The Little Lame Prince” and report potential opposition, revision, attributed disagreement, and modality distinctions only with cited passages.",
+      "proposedFinding": {
+        "status": "not-generated",
+        "records": []
+      },
+      "goldJudgment": {
+        "status": "pending-human-review",
+        "findings": null,
+        "criterionScores": null,
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "evidenceRequirement": "Every model-proposed finding must cite exact sourceVersionId/regionId passage evidence with reopened quotation and locator. A correct quote alone does not prove interpretation."
+    },
+    {
+      "id": "pg496-relevance-synthesis-profile-2",
+      "family": "full-book-procedure-relevance-synthesis",
+      "sourceId": "pg496",
+      "sourceVersionId": "pg496-709c354dc6934a3a",
+      "sourceDigest": "709c354dc6934a3a4509cdfae1bba47d4feb2597afe5c9c22c6fdb6013a561e3",
+      "sourcePath": "corpora/books/pg-496.txt",
+      "completeWork": {
+        "startChar": 906,
+        "endChar": 254468,
+        "coordinateBasis": "original decoded UTF-8 text string, character offsets"
+      },
+      "anchors": [
+        {
+          "start": 35329,
+          "end": 35368,
+          "quote": "every comfort and pleasure of his life.",
+          "startChar": 36235,
+          "endChar": 36274,
+          "regionId": null
+        },
+        {
+          "start": 95647,
+          "end": 95719,
+          "quote": "But when he got in sight of Hopeless Tower a painful thought struck him.",
+          "startChar": 96553,
+          "endChar": 96625,
+          "regionId": null
+        },
+        {
+          "start": 150324,
+          "end": 150363,
+          "quote": "“My people, I am tired: I want to rest.",
+          "startChar": 151230,
+          "endChar": 151269,
+          "regionId": null
+        },
+        {
+          "start": 221494,
+          "end": 221541,
+          "quote": "young girl was no other than his beloved Zelia.",
+          "startChar": 222400,
+          "endChar": 222447,
+          "regionId": null
+        }
+      ],
+      "procedureId": "relevance-synthesis",
+      "procedureVersion": "1.0.0",
+      "parameters": {
+        "question": "Which events show changes in the Prince’s independence?",
+        "topic": "Which events show changes in the Prince’s independence?",
+        "minimumCoverage": 0.8,
+        "maximumRedundancy": 0.25,
+        "redundancyPolicy": "deduplicate-with-citations"
+      },
+      "question": "Which events show changes in the Prince’s independence?",
+      "proposedFinding": {
+        "status": "not-generated",
+        "records": []
+      },
+      "goldJudgment": {
+        "status": "pending-human-review",
+        "findings": null,
+        "criterionScores": null,
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "evidenceRequirement": "Every model-proposed finding must cite exact sourceVersionId/regionId passage evidence with reopened quotation and locator. A correct quote alone does not prove interpretation."
+    },
+    {
+      "id": "pg496-document-literary-rubric-profile-2",
+      "family": "full-book-procedure-document-literary-rubric",
+      "sourceId": "pg496",
+      "sourceVersionId": "pg496-709c354dc6934a3a",
+      "sourceDigest": "709c354dc6934a3a4509cdfae1bba47d4feb2597afe5c9c22c6fdb6013a561e3",
+      "sourcePath": "corpora/books/pg-496.txt",
+      "completeWork": {
+        "startChar": 906,
+        "endChar": 254468,
+        "coordinateBasis": "original decoded UTF-8 text string, character offsets"
+      },
+      "anchors": [
+        {
+          "start": 35329,
+          "end": 35368,
+          "quote": "every comfort and pleasure of his life.",
+          "startChar": 36235,
+          "endChar": 36274,
+          "regionId": null
+        },
+        {
+          "start": 95647,
+          "end": 95719,
+          "quote": "But when he got in sight of Hopeless Tower a painful thought struck him.",
+          "startChar": 96553,
+          "endChar": 96625,
+          "regionId": null
+        },
+        {
+          "start": 150324,
+          "end": 150363,
+          "quote": "“My people, I am tired: I want to rest.",
+          "startChar": 151230,
+          "endChar": 151269,
+          "regionId": null
+        },
+        {
+          "start": 221494,
+          "end": 221541,
+          "quote": "young girl was no other than his beloved Zelia.",
+          "startChar": 222400,
+          "endChar": 222447,
+          "regionId": null
+        }
+      ],
+      "procedureId": "document-literary-rubric",
+      "procedureVersion": "1.0.0",
+      "parameters": {
+        "criteria": [
+          {
+            "id": "style",
+            "name": "Style",
+            "description": "Observable language, imagery, voice and formal choices.",
+            "positiveAnchors": [
+              "recurrent image or diction",
+              "specific sentence-level technique"
+            ],
+            "negativeAnchors": [
+              "claim based only on generic praise",
+              "counterexample to claimed pattern"
+            ]
+          },
+          {
+            "id": "thematic-development",
+            "name": "Thematic development",
+            "description": "How a theme is introduced, varied and developed across the work.",
+            "positiveAnchors": [
+              "multiple separated passages show development",
+              "explicit thematic contrast"
+            ],
+            "negativeAnchors": [
+              "single-passage generalization",
+              "counterexample undermines pattern"
+            ]
+          }
+        ],
+        "confidenceScale": [
+          0,
+          1
+        ],
+        "requireCounterevidence": true
+      },
+      "question": "Apply the supplied criteria across the complete work “The Little Lame Prince”. Separate observable textual evidence from interpretation, retain counterevidence, and mark every judgment provisional pending expert review.",
+      "proposedFinding": {
+        "status": "not-generated",
+        "records": []
+      },
+      "goldJudgment": {
+        "status": "pending-human-review",
+        "findings": null,
+        "criterionScores": null,
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "evidenceRequirement": "Every model-proposed finding must cite exact sourceVersionId/regionId passage evidence with reopened quotation and locator. A correct quote alone does not prove interpretation."
+    },
+    {
+      "id": "pg496-contradiction-audit-profile-3",
+      "family": "full-book-procedure-contradiction-audit",
+      "sourceId": "pg496",
+      "sourceVersionId": "pg496-709c354dc6934a3a",
+      "sourceDigest": "709c354dc6934a3a4509cdfae1bba47d4feb2597afe5c9c22c6fdb6013a561e3",
+      "sourcePath": "corpora/books/pg-496.txt",
+      "completeWork": {
+        "startChar": 906,
+        "endChar": 254468,
+        "coordinateBasis": "original decoded UTF-8 text string, character offsets"
+      },
+      "anchors": [
+        {
+          "start": 35329,
+          "end": 35368,
+          "quote": "every comfort and pleasure of his life.",
+          "startChar": 36235,
+          "endChar": 36274,
+          "regionId": null
+        },
+        {
+          "start": 95647,
+          "end": 95719,
+          "quote": "But when he got in sight of Hopeless Tower a painful thought struck him.",
+          "startChar": 96553,
+          "endChar": 96625,
+          "regionId": null
+        },
+        {
+          "start": 150324,
+          "end": 150363,
+          "quote": "“My people, I am tired: I want to rest.",
+          "startChar": 151230,
+          "endChar": 151269,
+          "regionId": null
+        },
+        {
+          "start": 221494,
+          "end": 221541,
+          "quote": "young girl was no other than his beloved Zelia.",
+          "startChar": 222400,
+          "endChar": 222447,
+          "regionId": null
+        }
+      ],
+      "procedureId": "contradiction-audit",
+      "procedureVersion": "1.0.0",
+      "parameters": {
+        "scopeKeys": [
+          "attribution",
+          "time",
+          "modality",
+          "world"
+        ],
+        "polarityKey": "polarity",
+        "includeRevisionPairs": true,
+        "profile": {
+          "id": "attributed-speech",
+          "scopeKeys": [
+            "attribution"
+          ],
+          "instruction": "Keep narrator statements separate from what a character believes, reports, denies, or imagines."
+        }
+      },
+      "question": "Keep narrator statements separate from what a character believes, reports, denies, or imagines. Analyze the complete work “The Little Lame Prince” and report potential opposition, revision, attributed disagreement, and modality distinctions only with cited passages.",
+      "proposedFinding": {
+        "status": "not-generated",
+        "records": []
+      },
+      "goldJudgment": {
+        "status": "pending-human-review",
+        "findings": null,
+        "criterionScores": null,
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "evidenceRequirement": "Every model-proposed finding must cite exact sourceVersionId/regionId passage evidence with reopened quotation and locator. A correct quote alone does not prove interpretation."
+    },
+    {
+      "id": "pg496-relevance-synthesis-profile-3",
+      "family": "full-book-procedure-relevance-synthesis",
+      "sourceId": "pg496",
+      "sourceVersionId": "pg496-709c354dc6934a3a",
+      "sourceDigest": "709c354dc6934a3a4509cdfae1bba47d4feb2597afe5c9c22c6fdb6013a561e3",
+      "sourcePath": "corpora/books/pg-496.txt",
+      "completeWork": {
+        "startChar": 906,
+        "endChar": 254468,
+        "coordinateBasis": "original decoded UTF-8 text string, character offsets"
+      },
+      "anchors": [
+        {
+          "start": 35329,
+          "end": 35368,
+          "quote": "every comfort and pleasure of his life.",
+          "startChar": 36235,
+          "endChar": 36274,
+          "regionId": null
+        },
+        {
+          "start": 95647,
+          "end": 95719,
+          "quote": "But when he got in sight of Hopeless Tower a painful thought struck him.",
+          "startChar": 96553,
+          "endChar": 96625,
+          "regionId": null
+        },
+        {
+          "start": 150324,
+          "end": 150363,
+          "quote": "“My people, I am tired: I want to rest.",
+          "startChar": 151230,
+          "endChar": 151269,
+          "regionId": null
+        },
+        {
+          "start": 221494,
+          "end": 221541,
+          "quote": "young girl was no other than his beloved Zelia.",
+          "startChar": 222400,
+          "endChar": 222447,
+          "regionId": null
+        }
+      ],
+      "procedureId": "relevance-synthesis",
+      "procedureVersion": "1.0.0",
+      "parameters": {
+        "question": "How do the Prince’s journeys affect his relationships with other characters?",
+        "topic": "How do the Prince’s journeys affect his relationships with other characters?",
+        "minimumCoverage": 0.8,
+        "maximumRedundancy": 0.25,
+        "redundancyPolicy": "deduplicate-with-citations"
+      },
+      "question": "How do the Prince’s journeys affect his relationships with other characters?",
+      "proposedFinding": {
+        "status": "not-generated",
+        "records": []
+      },
+      "goldJudgment": {
+        "status": "pending-human-review",
+        "findings": null,
+        "criterionScores": null,
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "evidenceRequirement": "Every model-proposed finding must cite exact sourceVersionId/regionId passage evidence with reopened quotation and locator. A correct quote alone does not prove interpretation."
+    },
+    {
+      "id": "pg496-document-literary-rubric-profile-3",
+      "family": "full-book-procedure-document-literary-rubric",
+      "sourceId": "pg496",
+      "sourceVersionId": "pg496-709c354dc6934a3a",
+      "sourceDigest": "709c354dc6934a3a4509cdfae1bba47d4feb2597afe5c9c22c6fdb6013a561e3",
+      "sourcePath": "corpora/books/pg-496.txt",
+      "completeWork": {
+        "startChar": 906,
+        "endChar": 254468,
+        "coordinateBasis": "original decoded UTF-8 text string, character offsets"
+      },
+      "anchors": [
+        {
+          "start": 35329,
+          "end": 35368,
+          "quote": "every comfort and pleasure of his life.",
+          "startChar": 36235,
+          "endChar": 36274,
+          "regionId": null
+        },
+        {
+          "start": 95647,
+          "end": 95719,
+          "quote": "But when he got in sight of Hopeless Tower a painful thought struck him.",
+          "startChar": 96553,
+          "endChar": 96625,
+          "regionId": null
+        },
+        {
+          "start": 150324,
+          "end": 150363,
+          "quote": "“My people, I am tired: I want to rest.",
+          "startChar": 151230,
+          "endChar": 151269,
+          "regionId": null
+        },
+        {
+          "start": 221494,
+          "end": 221541,
+          "quote": "young girl was no other than his beloved Zelia.",
+          "startChar": 222400,
+          "endChar": 222447,
+          "regionId": null
+        }
+      ],
+      "procedureId": "document-literary-rubric",
+      "procedureVersion": "1.0.0",
+      "parameters": {
+        "criteria": [
+          {
+            "id": "narrative-coherence",
+            "name": "Narrative coherence",
+            "description": "How events and transitions form an intelligible narrative.",
+            "positiveAnchors": [
+              "explicit setup and payoff",
+              "consistent event sequence"
+            ],
+            "negativeAnchors": [
+              "unresolved discontinuity",
+              "contradictory event order"
+            ]
+          },
+          {
+            "id": "thematic-development",
+            "name": "Thematic development",
+            "description": "How a theme is introduced, varied and developed across the work.",
+            "positiveAnchors": [
+              "multiple separated passages show development",
+              "explicit thematic contrast"
+            ],
+            "negativeAnchors": [
+              "single-passage generalization",
+              "counterexample undermines pattern"
+            ]
+          }
+        ],
+        "confidenceScale": [
+          0,
+          1
+        ],
+        "requireCounterevidence": true
+      },
+      "question": "Apply the supplied criteria across the complete work “The Little Lame Prince”. Separate observable textual evidence from interpretation, retain counterevidence, and mark every judgment provisional pending expert review.",
+      "proposedFinding": {
+        "status": "not-generated",
+        "records": []
+      },
+      "goldJudgment": {
+        "status": "pending-human-review",
+        "findings": null,
+        "criterionScores": null,
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "evidenceRequirement": "Every model-proposed finding must cite exact sourceVersionId/regionId passage evidence with reopened quotation and locator. A correct quote alone does not prove interpretation."
+    },
+    {
+      "id": "pg496-contradiction-audit-profile-4",
+      "family": "full-book-procedure-contradiction-audit",
+      "sourceId": "pg496",
+      "sourceVersionId": "pg496-709c354dc6934a3a",
+      "sourceDigest": "709c354dc6934a3a4509cdfae1bba47d4feb2597afe5c9c22c6fdb6013a561e3",
+      "sourcePath": "corpora/books/pg-496.txt",
+      "completeWork": {
+        "startChar": 906,
+        "endChar": 254468,
+        "coordinateBasis": "original decoded UTF-8 text string, character offsets"
+      },
+      "anchors": [
+        {
+          "start": 35329,
+          "end": 35368,
+          "quote": "every comfort and pleasure of his life.",
+          "startChar": 36235,
+          "endChar": 36274,
+          "regionId": null
+        },
+        {
+          "start": 95647,
+          "end": 95719,
+          "quote": "But when he got in sight of Hopeless Tower a painful thought struck him.",
+          "startChar": 96553,
+          "endChar": 96625,
+          "regionId": null
+        },
+        {
+          "start": 150324,
+          "end": 150363,
+          "quote": "“My people, I am tired: I want to rest.",
+          "startChar": 151230,
+          "endChar": 151269,
+          "regionId": null
+        },
+        {
+          "start": 221494,
+          "end": 221541,
+          "quote": "young girl was no other than his beloved Zelia.",
+          "startChar": 222400,
+          "endChar": 222447,
+          "regionId": null
+        }
+      ],
+      "procedureId": "contradiction-audit",
+      "procedureVersion": "1.0.0",
+      "parameters": {
+        "scopeKeys": [
+          "attribution",
+          "time",
+          "modality",
+          "world"
+        ],
+        "polarityKey": "polarity",
+        "includeRevisionPairs": true,
+        "profile": {
+          "id": "possibility-vs-observation",
+          "scopeKeys": [
+            "modality"
+          ],
+          "instruction": "Do not treat a possibility, plan, wish, fear, or reported belief as an observed event; compare only claims with aligned modality."
+        }
+      },
+      "question": "Do not treat a possibility, plan, wish, fear, or reported belief as an observed event; compare only claims with aligned modality. Analyze the complete work “The Little Lame Prince” and report potential opposition, revision, attributed disagreement, and modality distinctions only with cited passages.",
+      "proposedFinding": {
+        "status": "not-generated",
+        "records": []
+      },
+      "goldJudgment": {
+        "status": "pending-human-review",
+        "findings": null,
+        "criterionScores": null,
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "evidenceRequirement": "Every model-proposed finding must cite exact sourceVersionId/regionId passage evidence with reopened quotation and locator. A correct quote alone does not prove interpretation."
+    },
+    {
+      "id": "pg496-relevance-synthesis-profile-4",
+      "family": "full-book-procedure-relevance-synthesis",
+      "sourceId": "pg496",
+      "sourceVersionId": "pg496-709c354dc6934a3a",
+      "sourceDigest": "709c354dc6934a3a4509cdfae1bba47d4feb2597afe5c9c22c6fdb6013a561e3",
+      "sourcePath": "corpora/books/pg-496.txt",
+      "completeWork": {
+        "startChar": 906,
+        "endChar": 254468,
+        "coordinateBasis": "original decoded UTF-8 text string, character offsets"
+      },
+      "anchors": [
+        {
+          "start": 35329,
+          "end": 35368,
+          "quote": "every comfort and pleasure of his life.",
+          "startChar": 36235,
+          "endChar": 36274,
+          "regionId": null
+        },
+        {
+          "start": 95647,
+          "end": 95719,
+          "quote": "But when he got in sight of Hopeless Tower a painful thought struck him.",
+          "startChar": 96553,
+          "endChar": 96625,
+          "regionId": null
+        },
+        {
+          "start": 150324,
+          "end": 150363,
+          "quote": "“My people, I am tired: I want to rest.",
+          "startChar": 151230,
+          "endChar": 151269,
+          "regionId": null
+        },
+        {
+          "start": 221494,
+          "end": 221541,
+          "quote": "young girl was no other than his beloved Zelia.",
+          "startChar": 222400,
+          "endChar": 222447,
+          "regionId": null
+        }
+      ],
+      "procedureId": "relevance-synthesis",
+      "procedureVersion": "1.0.0",
+      "parameters": {
+        "question": "Which passages connect hardship with later choices?",
+        "topic": "Which passages connect hardship with later choices?",
+        "minimumCoverage": 0.8,
+        "maximumRedundancy": 0.25,
+        "redundancyPolicy": "deduplicate-with-citations"
+      },
+      "question": "Which passages connect hardship with later choices?",
+      "proposedFinding": {
+        "status": "not-generated",
+        "records": []
+      },
+      "goldJudgment": {
+        "status": "pending-human-review",
+        "findings": null,
+        "criterionScores": null,
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "evidenceRequirement": "Every model-proposed finding must cite exact sourceVersionId/regionId passage evidence with reopened quotation and locator. A correct quote alone does not prove interpretation."
+    },
+    {
+      "id": "pg496-document-literary-rubric-profile-4",
+      "family": "full-book-procedure-document-literary-rubric",
+      "sourceId": "pg496",
+      "sourceVersionId": "pg496-709c354dc6934a3a",
+      "sourceDigest": "709c354dc6934a3a4509cdfae1bba47d4feb2597afe5c9c22c6fdb6013a561e3",
+      "sourcePath": "corpora/books/pg-496.txt",
+      "completeWork": {
+        "startChar": 906,
+        "endChar": 254468,
+        "coordinateBasis": "original decoded UTF-8 text string, character offsets"
+      },
+      "anchors": [
+        {
+          "start": 35329,
+          "end": 35368,
+          "quote": "every comfort and pleasure of his life.",
+          "startChar": 36235,
+          "endChar": 36274,
+          "regionId": null
+        },
+        {
+          "start": 95647,
+          "end": 95719,
+          "quote": "But when he got in sight of Hopeless Tower a painful thought struck him.",
+          "startChar": 96553,
+          "endChar": 96625,
+          "regionId": null
+        },
+        {
+          "start": 150324,
+          "end": 150363,
+          "quote": "“My people, I am tired: I want to rest.",
+          "startChar": 151230,
+          "endChar": 151269,
+          "regionId": null
+        },
+        {
+          "start": 221494,
+          "end": 221541,
+          "quote": "young girl was no other than his beloved Zelia.",
+          "startChar": 222400,
+          "endChar": 222447,
+          "regionId": null
+        }
+      ],
+      "procedureId": "document-literary-rubric",
+      "procedureVersion": "1.0.0",
+      "parameters": {
+        "criteria": [
+          {
+            "id": "characterization",
+            "name": "Characterization",
+            "description": "How actions, speech and change establish characters.",
+            "positiveAnchors": [
+              "repeated behavior or explicit change",
+              "distinctive speech/action"
+            ],
+            "negativeAnchors": [
+              "unsupported motive attribution",
+              "contradictory characterization"
+            ]
+          },
+          {
+            "id": "style",
+            "name": "Style",
+            "description": "Observable language, imagery, voice and formal choices.",
+            "positiveAnchors": [
+              "recurrent image or diction",
+              "specific sentence-level technique"
+            ],
+            "negativeAnchors": [
+              "claim based only on generic praise",
+              "counterexample to claimed pattern"
+            ]
+          }
+        ],
+        "confidenceScale": [
+          0,
+          1
+        ],
+        "requireCounterevidence": true
+      },
+      "question": "Apply the supplied criteria across the complete work “The Little Lame Prince”. Separate observable textual evidence from interpretation, retain counterevidence, and mark every judgment provisional pending expert review.",
+      "proposedFinding": {
+        "status": "not-generated",
+        "records": []
+      },
+      "goldJudgment": {
+        "status": "pending-human-review",
+        "findings": null,
+        "criterionScores": null,
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "evidenceRequirement": "Every model-proposed finding must cite exact sourceVersionId/regionId passage evidence with reopened quotation and locator. A correct quote alone does not prove interpretation."
+    },
+    {
+      "id": "pg7256-contradiction-audit-profile-1",
+      "family": "full-book-procedure-contradiction-audit",
+      "sourceId": "pg7256",
+      "sourceVersionId": "pg7256-cdf8ad2aad68e48c",
+      "sourceDigest": "cdf8ad2aad68e48c58d6745a8a1ec418871176a6521fb458a8abc88f9a0649a3",
+      "sourcePath": "corpora/books/pg-7256.txt",
+      "completeWork": {
+        "startChar": 891,
+        "endChar": 12340,
+        "coordinateBasis": "original decoded UTF-8 text string, character offsets"
+      },
+      "anchors": [
+        {
+          "start": 1921,
+          "end": 1972,
+          "quote": "every penny she could for months, with this result.",
+          "startChar": 2812,
+          "endChar": 2863,
+          "regionId": null
+        },
+        {
+          "start": 4614,
+          "end": 4663,
+          "quote": "It surely had been made for Jim and no one else.",
+          "startChar": 5505,
+          "endChar": 5554,
+          "regionId": null
+        },
+        {
+          "start": 7750,
+          "end": 7818,
+          "quote": "arrived at that patent fact yet even after the hardest mental labor.",
+          "startChar": 8641,
+          "endChar": 8709,
+          "regionId": null
+        },
+        {
+          "start": 10196,
+          "end": 10246,
+          "quote": "with a reflection of her bright and ardent spirit.",
+          "startChar": 11087,
+          "endChar": 11137,
+          "regionId": null
+        }
+      ],
+      "procedureId": "contradiction-audit",
+      "procedureVersion": "1.0.0",
+      "parameters": {
+        "scopeKeys": [
+          "attribution",
+          "time",
+          "modality",
+          "world"
+        ],
+        "polarityKey": "polarity",
+        "includeRevisionPairs": true,
+        "profile": {
+          "id": "same-world-time",
+          "scopeKeys": [
+            "world",
+            "time"
+          ],
+          "instruction": "Check for opposite claims about the same event in the same represented world and time; preserve separate passage citations."
+        }
+      },
+      "question": "Check for opposite claims about the same event in the same represented world and time; preserve separate passage citations. Analyze the complete work “The Gift of the Magi” and report potential opposition, revision, attributed disagreement, and modality distinctions only with cited passages.",
+      "proposedFinding": {
+        "status": "not-generated",
+        "records": []
+      },
+      "goldJudgment": {
+        "status": "pending-human-review",
+        "findings": null,
+        "criterionScores": null,
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "evidenceRequirement": "Every model-proposed finding must cite exact sourceVersionId/regionId passage evidence with reopened quotation and locator. A correct quote alone does not prove interpretation."
+    },
+    {
+      "id": "pg7256-relevance-synthesis-profile-1",
+      "family": "full-book-procedure-relevance-synthesis",
+      "sourceId": "pg7256",
+      "sourceVersionId": "pg7256-cdf8ad2aad68e48c",
+      "sourceDigest": "cdf8ad2aad68e48c58d6745a8a1ec418871176a6521fb458a8abc88f9a0649a3",
+      "sourcePath": "corpora/books/pg-7256.txt",
+      "completeWork": {
+        "startChar": 891,
+        "endChar": 12340,
+        "coordinateBasis": "original decoded UTF-8 text string, character offsets"
+      },
+      "anchors": [
+        {
+          "start": 1921,
+          "end": 1972,
+          "quote": "every penny she could for months, with this result.",
+          "startChar": 2812,
+          "endChar": 2863,
+          "regionId": null
+        },
+        {
+          "start": 4614,
+          "end": 4663,
+          "quote": "It surely had been made for Jim and no one else.",
+          "startChar": 5505,
+          "endChar": 5554,
+          "regionId": null
+        },
+        {
+          "start": 7750,
+          "end": 7818,
+          "quote": "arrived at that patent fact yet even after the hardest mental labor.",
+          "startChar": 8641,
+          "endChar": 8709,
+          "regionId": null
+        },
+        {
+          "start": 10196,
+          "end": 10246,
+          "quote": "with a reflection of her bright and ardent spirit.",
+          "startChar": 11087,
+          "endChar": 11137,
+          "regionId": null
+        }
+      ],
+      "procedureId": "relevance-synthesis",
+      "procedureVersion": "1.0.0",
+      "parameters": {
+        "question": "How do Della and Jim each respond to the other’s gift?",
+        "topic": "How do Della and Jim each respond to the other’s gift?",
+        "minimumCoverage": 0.8,
+        "maximumRedundancy": 0.25,
+        "redundancyPolicy": "deduplicate-with-citations"
+      },
+      "question": "How do Della and Jim each respond to the other’s gift?",
+      "proposedFinding": {
+        "status": "not-generated",
+        "records": []
+      },
+      "goldJudgment": {
+        "status": "pending-human-review",
+        "findings": null,
+        "criterionScores": null,
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "evidenceRequirement": "Every model-proposed finding must cite exact sourceVersionId/regionId passage evidence with reopened quotation and locator. A correct quote alone does not prove interpretation."
+    },
+    {
+      "id": "pg7256-document-literary-rubric-profile-1",
+      "family": "full-book-procedure-document-literary-rubric",
+      "sourceId": "pg7256",
+      "sourceVersionId": "pg7256-cdf8ad2aad68e48c",
+      "sourceDigest": "cdf8ad2aad68e48c58d6745a8a1ec418871176a6521fb458a8abc88f9a0649a3",
+      "sourcePath": "corpora/books/pg-7256.txt",
+      "completeWork": {
+        "startChar": 891,
+        "endChar": 12340,
+        "coordinateBasis": "original decoded UTF-8 text string, character offsets"
+      },
+      "anchors": [
+        {
+          "start": 1921,
+          "end": 1972,
+          "quote": "every penny she could for months, with this result.",
+          "startChar": 2812,
+          "endChar": 2863,
+          "regionId": null
+        },
+        {
+          "start": 4614,
+          "end": 4663,
+          "quote": "It surely had been made for Jim and no one else.",
+          "startChar": 5505,
+          "endChar": 5554,
+          "regionId": null
+        },
+        {
+          "start": 7750,
+          "end": 7818,
+          "quote": "arrived at that patent fact yet even after the hardest mental labor.",
+          "startChar": 8641,
+          "endChar": 8709,
+          "regionId": null
+        },
+        {
+          "start": 10196,
+          "end": 10246,
+          "quote": "with a reflection of her bright and ardent spirit.",
+          "startChar": 11087,
+          "endChar": 11137,
+          "regionId": null
+        }
+      ],
+      "procedureId": "document-literary-rubric",
+      "procedureVersion": "1.0.0",
+      "parameters": {
+        "criteria": [
+          {
+            "id": "narrative-coherence",
+            "name": "Narrative coherence",
+            "description": "How events and transitions form an intelligible narrative.",
+            "positiveAnchors": [
+              "explicit setup and payoff",
+              "consistent event sequence"
+            ],
+            "negativeAnchors": [
+              "unresolved discontinuity",
+              "contradictory event order"
+            ]
+          },
+          {
+            "id": "characterization",
+            "name": "Characterization",
+            "description": "How actions, speech and change establish characters.",
+            "positiveAnchors": [
+              "repeated behavior or explicit change",
+              "distinctive speech/action"
+            ],
+            "negativeAnchors": [
+              "unsupported motive attribution",
+              "contradictory characterization"
+            ]
+          }
+        ],
+        "confidenceScale": [
+          0,
+          1
+        ],
+        "requireCounterevidence": true
+      },
+      "question": "Apply the supplied criteria across the complete work “The Gift of the Magi”. Separate observable textual evidence from interpretation, retain counterevidence, and mark every judgment provisional pending expert review.",
+      "proposedFinding": {
+        "status": "not-generated",
+        "records": []
+      },
+      "goldJudgment": {
+        "status": "pending-human-review",
+        "findings": null,
+        "criterionScores": null,
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "evidenceRequirement": "Every model-proposed finding must cite exact sourceVersionId/regionId passage evidence with reopened quotation and locator. A correct quote alone does not prove interpretation."
+    },
+    {
+      "id": "pg7256-contradiction-audit-profile-2",
+      "family": "full-book-procedure-contradiction-audit",
+      "sourceId": "pg7256",
+      "sourceVersionId": "pg7256-cdf8ad2aad68e48c",
+      "sourceDigest": "cdf8ad2aad68e48c58d6745a8a1ec418871176a6521fb458a8abc88f9a0649a3",
+      "sourcePath": "corpora/books/pg-7256.txt",
+      "completeWork": {
+        "startChar": 891,
+        "endChar": 12340,
+        "coordinateBasis": "original decoded UTF-8 text string, character offsets"
+      },
+      "anchors": [
+        {
+          "start": 1921,
+          "end": 1972,
+          "quote": "every penny she could for months, with this result.",
+          "startChar": 2812,
+          "endChar": 2863,
+          "regionId": null
+        },
+        {
+          "start": 4614,
+          "end": 4663,
+          "quote": "It surely had been made for Jim and no one else.",
+          "startChar": 5505,
+          "endChar": 5554,
+          "regionId": null
+        },
+        {
+          "start": 7750,
+          "end": 7818,
+          "quote": "arrived at that patent fact yet even after the hardest mental labor.",
+          "startChar": 8641,
+          "endChar": 8709,
+          "regionId": null
+        },
+        {
+          "start": 10196,
+          "end": 10246,
+          "quote": "with a reflection of her bright and ardent spirit.",
+          "startChar": 11087,
+          "endChar": 11137,
+          "regionId": null
+        }
+      ],
+      "procedureId": "contradiction-audit",
+      "procedureVersion": "1.0.0",
+      "parameters": {
+        "scopeKeys": [
+          "attribution",
+          "time",
+          "modality",
+          "world"
+        ],
+        "polarityKey": "polarity",
+        "includeRevisionPairs": true,
+        "profile": {
+          "id": "time-revision",
+          "scopeKeys": [
+            "time"
+          ],
+          "instruction": "Distinguish an earlier statement from a later change or correction; do not collapse temporal revision into a same-time contradiction."
+        }
+      },
+      "question": "Distinguish an earlier statement from a later change or correction; do not collapse temporal revision into a same-time contradiction. Analyze the complete work “The Gift of the Magi” and report potential opposition, revision, attributed disagreement, and modality distinctions only with cited passages.",
+      "proposedFinding": {
+        "status": "not-generated",
+        "records": []
+      },
+      "goldJudgment": {
+        "status": "pending-human-review",
+        "findings": null,
+        "criterionScores": null,
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "evidenceRequirement": "Every model-proposed finding must cite exact sourceVersionId/regionId passage evidence with reopened quotation and locator. A correct quote alone does not prove interpretation."
+    },
+    {
+      "id": "pg7256-relevance-synthesis-profile-2",
+      "family": "full-book-procedure-relevance-synthesis",
+      "sourceId": "pg7256",
+      "sourceVersionId": "pg7256-cdf8ad2aad68e48c",
+      "sourceDigest": "cdf8ad2aad68e48c58d6745a8a1ec418871176a6521fb458a8abc88f9a0649a3",
+      "sourcePath": "corpora/books/pg-7256.txt",
+      "completeWork": {
+        "startChar": 891,
+        "endChar": 12340,
+        "coordinateBasis": "original decoded UTF-8 text string, character offsets"
+      },
+      "anchors": [
+        {
+          "start": 1921,
+          "end": 1972,
+          "quote": "every penny she could for months, with this result.",
+          "startChar": 2812,
+          "endChar": 2863,
+          "regionId": null
+        },
+        {
+          "start": 4614,
+          "end": 4663,
+          "quote": "It surely had been made for Jim and no one else.",
+          "startChar": 5505,
+          "endChar": 5554,
+          "regionId": null
+        },
+        {
+          "start": 7750,
+          "end": 7818,
+          "quote": "arrived at that patent fact yet even after the hardest mental labor.",
+          "startChar": 8641,
+          "endChar": 8709,
+          "regionId": null
+        },
+        {
+          "start": 10196,
+          "end": 10246,
+          "quote": "with a reflection of her bright and ardent spirit.",
+          "startChar": 11087,
+          "endChar": 11137,
+          "regionId": null
+        }
+      ],
+      "procedureId": "relevance-synthesis",
+      "procedureVersion": "1.0.0",
+      "parameters": {
+        "question": "Which events lead each character to give up a valued possession?",
+        "topic": "Which events lead each character to give up a valued possession?",
+        "minimumCoverage": 0.8,
+        "maximumRedundancy": 0.25,
+        "redundancyPolicy": "deduplicate-with-citations"
+      },
+      "question": "Which events lead each character to give up a valued possession?",
+      "proposedFinding": {
+        "status": "not-generated",
+        "records": []
+      },
+      "goldJudgment": {
+        "status": "pending-human-review",
+        "findings": null,
+        "criterionScores": null,
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "evidenceRequirement": "Every model-proposed finding must cite exact sourceVersionId/regionId passage evidence with reopened quotation and locator. A correct quote alone does not prove interpretation."
+    },
+    {
+      "id": "pg7256-document-literary-rubric-profile-2",
+      "family": "full-book-procedure-document-literary-rubric",
+      "sourceId": "pg7256",
+      "sourceVersionId": "pg7256-cdf8ad2aad68e48c",
+      "sourceDigest": "cdf8ad2aad68e48c58d6745a8a1ec418871176a6521fb458a8abc88f9a0649a3",
+      "sourcePath": "corpora/books/pg-7256.txt",
+      "completeWork": {
+        "startChar": 891,
+        "endChar": 12340,
+        "coordinateBasis": "original decoded UTF-8 text string, character offsets"
+      },
+      "anchors": [
+        {
+          "start": 1921,
+          "end": 1972,
+          "quote": "every penny she could for months, with this result.",
+          "startChar": 2812,
+          "endChar": 2863,
+          "regionId": null
+        },
+        {
+          "start": 4614,
+          "end": 4663,
+          "quote": "It surely had been made for Jim and no one else.",
+          "startChar": 5505,
+          "endChar": 5554,
+          "regionId": null
+        },
+        {
+          "start": 7750,
+          "end": 7818,
+          "quote": "arrived at that patent fact yet even after the hardest mental labor.",
+          "startChar": 8641,
+          "endChar": 8709,
+          "regionId": null
+        },
+        {
+          "start": 10196,
+          "end": 10246,
+          "quote": "with a reflection of her bright and ardent spirit.",
+          "startChar": 11087,
+          "endChar": 11137,
+          "regionId": null
+        }
+      ],
+      "procedureId": "document-literary-rubric",
+      "procedureVersion": "1.0.0",
+      "parameters": {
+        "criteria": [
+          {
+            "id": "style",
+            "name": "Style",
+            "description": "Observable language, imagery, voice and formal choices.",
+            "positiveAnchors": [
+              "recurrent image or diction",
+              "specific sentence-level technique"
+            ],
+            "negativeAnchors": [
+              "claim based only on generic praise",
+              "counterexample to claimed pattern"
+            ]
+          },
+          {
+            "id": "thematic-development",
+            "name": "Thematic development",
+            "description": "How a theme is introduced, varied and developed across the work.",
+            "positiveAnchors": [
+              "multiple separated passages show development",
+              "explicit thematic contrast"
+            ],
+            "negativeAnchors": [
+              "single-passage generalization",
+              "counterexample undermines pattern"
+            ]
+          }
+        ],
+        "confidenceScale": [
+          0,
+          1
+        ],
+        "requireCounterevidence": true
+      },
+      "question": "Apply the supplied criteria across the complete work “The Gift of the Magi”. Separate observable textual evidence from interpretation, retain counterevidence, and mark every judgment provisional pending expert review.",
+      "proposedFinding": {
+        "status": "not-generated",
+        "records": []
+      },
+      "goldJudgment": {
+        "status": "pending-human-review",
+        "findings": null,
+        "criterionScores": null,
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "evidenceRequirement": "Every model-proposed finding must cite exact sourceVersionId/regionId passage evidence with reopened quotation and locator. A correct quote alone does not prove interpretation."
+    },
+    {
+      "id": "pg7256-contradiction-audit-profile-3",
+      "family": "full-book-procedure-contradiction-audit",
+      "sourceId": "pg7256",
+      "sourceVersionId": "pg7256-cdf8ad2aad68e48c",
+      "sourceDigest": "cdf8ad2aad68e48c58d6745a8a1ec418871176a6521fb458a8abc88f9a0649a3",
+      "sourcePath": "corpora/books/pg-7256.txt",
+      "completeWork": {
+        "startChar": 891,
+        "endChar": 12340,
+        "coordinateBasis": "original decoded UTF-8 text string, character offsets"
+      },
+      "anchors": [
+        {
+          "start": 1921,
+          "end": 1972,
+          "quote": "every penny she could for months, with this result.",
+          "startChar": 2812,
+          "endChar": 2863,
+          "regionId": null
+        },
+        {
+          "start": 4614,
+          "end": 4663,
+          "quote": "It surely had been made for Jim and no one else.",
+          "startChar": 5505,
+          "endChar": 5554,
+          "regionId": null
+        },
+        {
+          "start": 7750,
+          "end": 7818,
+          "quote": "arrived at that patent fact yet even after the hardest mental labor.",
+          "startChar": 8641,
+          "endChar": 8709,
+          "regionId": null
+        },
+        {
+          "start": 10196,
+          "end": 10246,
+          "quote": "with a reflection of her bright and ardent spirit.",
+          "startChar": 11087,
+          "endChar": 11137,
+          "regionId": null
+        }
+      ],
+      "procedureId": "contradiction-audit",
+      "procedureVersion": "1.0.0",
+      "parameters": {
+        "scopeKeys": [
+          "attribution",
+          "time",
+          "modality",
+          "world"
+        ],
+        "polarityKey": "polarity",
+        "includeRevisionPairs": true,
+        "profile": {
+          "id": "attributed-speech",
+          "scopeKeys": [
+            "attribution"
+          ],
+          "instruction": "Keep narrator statements separate from what a character believes, reports, denies, or imagines."
+        }
+      },
+      "question": "Keep narrator statements separate from what a character believes, reports, denies, or imagines. Analyze the complete work “The Gift of the Magi” and report potential opposition, revision, attributed disagreement, and modality distinctions only with cited passages.",
+      "proposedFinding": {
+        "status": "not-generated",
+        "records": []
+      },
+      "goldJudgment": {
+        "status": "pending-human-review",
+        "findings": null,
+        "criterionScores": null,
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "evidenceRequirement": "Every model-proposed finding must cite exact sourceVersionId/regionId passage evidence with reopened quotation and locator. A correct quote alone does not prove interpretation."
+    },
+    {
+      "id": "pg7256-relevance-synthesis-profile-3",
+      "family": "full-book-procedure-relevance-synthesis",
+      "sourceId": "pg7256",
+      "sourceVersionId": "pg7256-cdf8ad2aad68e48c",
+      "sourceDigest": "cdf8ad2aad68e48c58d6745a8a1ec418871176a6521fb458a8abc88f9a0649a3",
+      "sourcePath": "corpora/books/pg-7256.txt",
+      "completeWork": {
+        "startChar": 891,
+        "endChar": 12340,
+        "coordinateBasis": "original decoded UTF-8 text string, character offsets"
+      },
+      "anchors": [
+        {
+          "start": 1921,
+          "end": 1972,
+          "quote": "every penny she could for months, with this result.",
+          "startChar": 2812,
+          "endChar": 2863,
+          "regionId": null
+        },
+        {
+          "start": 4614,
+          "end": 4663,
+          "quote": "It surely had been made for Jim and no one else.",
+          "startChar": 5505,
+          "endChar": 5554,
+          "regionId": null
+        },
+        {
+          "start": 7750,
+          "end": 7818,
+          "quote": "arrived at that patent fact yet even after the hardest mental labor.",
+          "startChar": 8641,
+          "endChar": 8709,
+          "regionId": null
+        },
+        {
+          "start": 10196,
+          "end": 10246,
+          "quote": "with a reflection of her bright and ardent spirit.",
+          "startChar": 11087,
+          "endChar": 11137,
+          "regionId": null
+        }
+      ],
+      "procedureId": "relevance-synthesis",
+      "procedureVersion": "1.0.0",
+      "parameters": {
+        "question": "How does the sequence of purchases create the ending’s irony?",
+        "topic": "How does the sequence of purchases create the ending’s irony?",
+        "minimumCoverage": 0.8,
+        "maximumRedundancy": 0.25,
+        "redundancyPolicy": "deduplicate-with-citations"
+      },
+      "question": "How does the sequence of purchases create the ending’s irony?",
+      "proposedFinding": {
+        "status": "not-generated",
+        "records": []
+      },
+      "goldJudgment": {
+        "status": "pending-human-review",
+        "findings": null,
+        "criterionScores": null,
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "evidenceRequirement": "Every model-proposed finding must cite exact sourceVersionId/regionId passage evidence with reopened quotation and locator. A correct quote alone does not prove interpretation."
+    },
+    {
+      "id": "pg7256-document-literary-rubric-profile-3",
+      "family": "full-book-procedure-document-literary-rubric",
+      "sourceId": "pg7256",
+      "sourceVersionId": "pg7256-cdf8ad2aad68e48c",
+      "sourceDigest": "cdf8ad2aad68e48c58d6745a8a1ec418871176a6521fb458a8abc88f9a0649a3",
+      "sourcePath": "corpora/books/pg-7256.txt",
+      "completeWork": {
+        "startChar": 891,
+        "endChar": 12340,
+        "coordinateBasis": "original decoded UTF-8 text string, character offsets"
+      },
+      "anchors": [
+        {
+          "start": 1921,
+          "end": 1972,
+          "quote": "every penny she could for months, with this result.",
+          "startChar": 2812,
+          "endChar": 2863,
+          "regionId": null
+        },
+        {
+          "start": 4614,
+          "end": 4663,
+          "quote": "It surely had been made for Jim and no one else.",
+          "startChar": 5505,
+          "endChar": 5554,
+          "regionId": null
+        },
+        {
+          "start": 7750,
+          "end": 7818,
+          "quote": "arrived at that patent fact yet even after the hardest mental labor.",
+          "startChar": 8641,
+          "endChar": 8709,
+          "regionId": null
+        },
+        {
+          "start": 10196,
+          "end": 10246,
+          "quote": "with a reflection of her bright and ardent spirit.",
+          "startChar": 11087,
+          "endChar": 11137,
+          "regionId": null
+        }
+      ],
+      "procedureId": "document-literary-rubric",
+      "procedureVersion": "1.0.0",
+      "parameters": {
+        "criteria": [
+          {
+            "id": "narrative-coherence",
+            "name": "Narrative coherence",
+            "description": "How events and transitions form an intelligible narrative.",
+            "positiveAnchors": [
+              "explicit setup and payoff",
+              "consistent event sequence"
+            ],
+            "negativeAnchors": [
+              "unresolved discontinuity",
+              "contradictory event order"
+            ]
+          },
+          {
+            "id": "thematic-development",
+            "name": "Thematic development",
+            "description": "How a theme is introduced, varied and developed across the work.",
+            "positiveAnchors": [
+              "multiple separated passages show development",
+              "explicit thematic contrast"
+            ],
+            "negativeAnchors": [
+              "single-passage generalization",
+              "counterexample undermines pattern"
+            ]
+          }
+        ],
+        "confidenceScale": [
+          0,
+          1
+        ],
+        "requireCounterevidence": true
+      },
+      "question": "Apply the supplied criteria across the complete work “The Gift of the Magi”. Separate observable textual evidence from interpretation, retain counterevidence, and mark every judgment provisional pending expert review.",
+      "proposedFinding": {
+        "status": "not-generated",
+        "records": []
+      },
+      "goldJudgment": {
+        "status": "pending-human-review",
+        "findings": null,
+        "criterionScores": null,
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "evidenceRequirement": "Every model-proposed finding must cite exact sourceVersionId/regionId passage evidence with reopened quotation and locator. A correct quote alone does not prove interpretation."
+    },
+    {
+      "id": "pg7256-contradiction-audit-profile-4",
+      "family": "full-book-procedure-contradiction-audit",
+      "sourceId": "pg7256",
+      "sourceVersionId": "pg7256-cdf8ad2aad68e48c",
+      "sourceDigest": "cdf8ad2aad68e48c58d6745a8a1ec418871176a6521fb458a8abc88f9a0649a3",
+      "sourcePath": "corpora/books/pg-7256.txt",
+      "completeWork": {
+        "startChar": 891,
+        "endChar": 12340,
+        "coordinateBasis": "original decoded UTF-8 text string, character offsets"
+      },
+      "anchors": [
+        {
+          "start": 1921,
+          "end": 1972,
+          "quote": "every penny she could for months, with this result.",
+          "startChar": 2812,
+          "endChar": 2863,
+          "regionId": null
+        },
+        {
+          "start": 4614,
+          "end": 4663,
+          "quote": "It surely had been made for Jim and no one else.",
+          "startChar": 5505,
+          "endChar": 5554,
+          "regionId": null
+        },
+        {
+          "start": 7750,
+          "end": 7818,
+          "quote": "arrived at that patent fact yet even after the hardest mental labor.",
+          "startChar": 8641,
+          "endChar": 8709,
+          "regionId": null
+        },
+        {
+          "start": 10196,
+          "end": 10246,
+          "quote": "with a reflection of her bright and ardent spirit.",
+          "startChar": 11087,
+          "endChar": 11137,
+          "regionId": null
+        }
+      ],
+      "procedureId": "contradiction-audit",
+      "procedureVersion": "1.0.0",
+      "parameters": {
+        "scopeKeys": [
+          "attribution",
+          "time",
+          "modality",
+          "world"
+        ],
+        "polarityKey": "polarity",
+        "includeRevisionPairs": true,
+        "profile": {
+          "id": "possibility-vs-observation",
+          "scopeKeys": [
+            "modality"
+          ],
+          "instruction": "Do not treat a possibility, plan, wish, fear, or reported belief as an observed event; compare only claims with aligned modality."
+        }
+      },
+      "question": "Do not treat a possibility, plan, wish, fear, or reported belief as an observed event; compare only claims with aligned modality. Analyze the complete work “The Gift of the Magi” and report potential opposition, revision, attributed disagreement, and modality distinctions only with cited passages.",
+      "proposedFinding": {
+        "status": "not-generated",
+        "records": []
+      },
+      "goldJudgment": {
+        "status": "pending-human-review",
+        "findings": null,
+        "criterionScores": null,
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "evidenceRequirement": "Every model-proposed finding must cite exact sourceVersionId/regionId passage evidence with reopened quotation and locator. A correct quote alone does not prove interpretation."
+    },
+    {
+      "id": "pg7256-relevance-synthesis-profile-4",
+      "family": "full-book-procedure-relevance-synthesis",
+      "sourceId": "pg7256",
+      "sourceVersionId": "pg7256-cdf8ad2aad68e48c",
+      "sourceDigest": "cdf8ad2aad68e48c58d6745a8a1ec418871176a6521fb458a8abc88f9a0649a3",
+      "sourcePath": "corpora/books/pg-7256.txt",
+      "completeWork": {
+        "startChar": 891,
+        "endChar": 12340,
+        "coordinateBasis": "original decoded UTF-8 text string, character offsets"
+      },
+      "anchors": [
+        {
+          "start": 1921,
+          "end": 1972,
+          "quote": "every penny she could for months, with this result.",
+          "startChar": 2812,
+          "endChar": 2863,
+          "regionId": null
+        },
+        {
+          "start": 4614,
+          "end": 4663,
+          "quote": "It surely had been made for Jim and no one else.",
+          "startChar": 5505,
+          "endChar": 5554,
+          "regionId": null
+        },
+        {
+          "start": 7750,
+          "end": 7818,
+          "quote": "arrived at that patent fact yet even after the hardest mental labor.",
+          "startChar": 8641,
+          "endChar": 8709,
+          "regionId": null
+        },
+        {
+          "start": 10196,
+          "end": 10246,
+          "quote": "with a reflection of her bright and ardent spirit.",
+          "startChar": 11087,
+          "endChar": 11137,
+          "regionId": null
+        }
+      ],
+      "procedureId": "relevance-synthesis",
+      "procedureVersion": "1.0.0",
+      "parameters": {
+        "question": "Which passages show the difference between monetary value and affection?",
+        "topic": "Which passages show the difference between monetary value and affection?",
+        "minimumCoverage": 0.8,
+        "maximumRedundancy": 0.25,
+        "redundancyPolicy": "deduplicate-with-citations"
+      },
+      "question": "Which passages show the difference between monetary value and affection?",
+      "proposedFinding": {
+        "status": "not-generated",
+        "records": []
+      },
+      "goldJudgment": {
+        "status": "pending-human-review",
+        "findings": null,
+        "criterionScores": null,
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "evidenceRequirement": "Every model-proposed finding must cite exact sourceVersionId/regionId passage evidence with reopened quotation and locator. A correct quote alone does not prove interpretation."
+    },
+    {
+      "id": "pg7256-document-literary-rubric-profile-4",
+      "family": "full-book-procedure-document-literary-rubric",
+      "sourceId": "pg7256",
+      "sourceVersionId": "pg7256-cdf8ad2aad68e48c",
+      "sourceDigest": "cdf8ad2aad68e48c58d6745a8a1ec418871176a6521fb458a8abc88f9a0649a3",
+      "sourcePath": "corpora/books/pg-7256.txt",
+      "completeWork": {
+        "startChar": 891,
+        "endChar": 12340,
+        "coordinateBasis": "original decoded UTF-8 text string, character offsets"
+      },
+      "anchors": [
+        {
+          "start": 1921,
+          "end": 1972,
+          "quote": "every penny she could for months, with this result.",
+          "startChar": 2812,
+          "endChar": 2863,
+          "regionId": null
+        },
+        {
+          "start": 4614,
+          "end": 4663,
+          "quote": "It surely had been made for Jim and no one else.",
+          "startChar": 5505,
+          "endChar": 5554,
+          "regionId": null
+        },
+        {
+          "start": 7750,
+          "end": 7818,
+          "quote": "arrived at that patent fact yet even after the hardest mental labor.",
+          "startChar": 8641,
+          "endChar": 8709,
+          "regionId": null
+        },
+        {
+          "start": 10196,
+          "end": 10246,
+          "quote": "with a reflection of her bright and ardent spirit.",
+          "startChar": 11087,
+          "endChar": 11137,
+          "regionId": null
+        }
+      ],
+      "procedureId": "document-literary-rubric",
+      "procedureVersion": "1.0.0",
+      "parameters": {
+        "criteria": [
+          {
+            "id": "characterization",
+            "name": "Characterization",
+            "description": "How actions, speech and change establish characters.",
+            "positiveAnchors": [
+              "repeated behavior or explicit change",
+              "distinctive speech/action"
+            ],
+            "negativeAnchors": [
+              "unsupported motive attribution",
+              "contradictory characterization"
+            ]
+          },
+          {
+            "id": "style",
+            "name": "Style",
+            "description": "Observable language, imagery, voice and formal choices.",
+            "positiveAnchors": [
+              "recurrent image or diction",
+              "specific sentence-level technique"
+            ],
+            "negativeAnchors": [
+              "claim based only on generic praise",
+              "counterexample to claimed pattern"
+            ]
+          }
+        ],
+        "confidenceScale": [
+          0,
+          1
+        ],
+        "requireCounterevidence": true
+      },
+      "question": "Apply the supplied criteria across the complete work “The Gift of the Magi”. Separate observable textual evidence from interpretation, retain counterevidence, and mark every judgment provisional pending expert review.",
+      "proposedFinding": {
+        "status": "not-generated",
+        "records": []
+      },
+      "goldJudgment": {
+        "status": "pending-human-review",
+        "findings": null,
+        "criterionScores": null,
+        "reviewer": null,
+        "reviewedAt": null
+      },
+      "evidenceRequirement": "Every model-proposed finding must cite exact sourceVersionId/regionId passage evidence with reopened quotation and locator. A correct quote alone does not prove interpretation."
+    }
+  ]
+}

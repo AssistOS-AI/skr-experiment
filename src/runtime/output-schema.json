@@ -1,0 +1,16 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "type":"object","additionalProperties":false,
+  "required":["answerPackage","evidence","coverage","changeSet","validation"],
+  "properties":{
+    "answerPackage":{"type":"object","additionalProperties":false,"required":["answer","claims","interpretation","supportState","coverage","procedureVersions","snapshotId","residuals"],"properties":{
+      "answer":{"type":"string"},"claims":{"type":"array","items":{"type":"object","additionalProperties":false,"required":["text","goal","bindings","queryScope","evidenceIds","supportState"],"properties":{"text":{"type":"string"},"goal":{"type":"string"},"bindings":{"type":"string"},"queryScope":{"type":"string"},"evidenceIds":{"type":"array","items":{"type":"string"}},"supportState":{"type":"string"}}}},
+      "interpretation":{"type":"string"},"supportState":{"type":"string"},"coverage":{"type":"string"},"procedureVersions":{"type":"array","items":{"type":"object","additionalProperties":false,"required":["id","version"],"properties":{"id":{"type":"string"},"version":{"type":"string"}}}},"snapshotId":{"type":"string"},"residuals":{"type":"array","items":{"type":"string"}}
+    }},
+    "evidence":{"type":"array","items":{"anyOf":[
+      {"type":"object","additionalProperties":false,"required":["id","type","sourceVersionId","regionId","quote","ske","scope"],"properties":{"id":{"type":"string"},"type":{"type":"string","enum":["source"]},"sourceVersionId":{"type":"string"},"regionId":{"type":"string"},"quote":{"type":"string"},"ske":{"type":"string"},"scope":{"type":"string"}}},
+      {"type":"object","additionalProperties":false,"required":["id","type","premiseIds","transformation","procedureId","procedureVersion","ske","scope"],"properties":{"id":{"type":"string"},"type":{"type":"string","enum":["derived"]},"premiseIds":{"type":"array","items":{"type":"string"}},"transformation":{"type":"string"},"procedureId":{"type":"string"},"procedureVersion":{"type":"string"},"ske":{"type":"string"},"scope":{"type":"string"}}}
+    ]}},
+    "coverage":{"type":"string"},"changeSet":{"type":"string"},"validation":{"type":"string"}
+  }
+}

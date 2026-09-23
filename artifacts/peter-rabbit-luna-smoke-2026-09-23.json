@@ -1,0 +1,275 @@
+{
+  "title": "Peter Rabbit whole-source Luna smoke and procedure materialization",
+  "date": "2026-09-23",
+  "model": "gpt-6-luna",
+  "humanReview": false,
+  "source": {
+    "manifestId": "pg14838",
+    "title": "The Tale of Peter Rabbit",
+    "filename": "pg-14838.txt",
+    "sha256": "2bf0e04297038fd97697dfac2b8a2db14f2b80c2012727f7ac0f28cf0b146544",
+    "ebook": 14838,
+    "versionId": "srcv_9081ce2454a84802bb35106a95f58eaa",
+    "readerProfile": {
+      "id": "text-structure-v1",
+      "format": "the tale of peter rabbit"
+    },
+    "regions": 447
+  },
+  "projectId": "proj_c29cda9cc1614f7eae4bbe7588cba834",
+  "finalSnapshotId": "snap_934ff59a0c064c528e8ae505f20b936d",
+  "ingestion": {
+    "status": "partial",
+    "acceptedModelReviewedAssertions": 24,
+    "contextFindings": 3,
+    "rejectedCandidates": 19,
+    "coverageStateCounts": {
+      "unspecified": 1,
+      "processed": 439,
+      "partial": 8
+    },
+    "coverageReviewStateCounts": {
+      "unspecified": 1,
+      "no-assertions": 420,
+      "model-reviewed": 19,
+      "rejected-candidates": 8
+    },
+    "incompleteCoverage": 8,
+    "idempotentRerun": {
+      "modelCalls": 0,
+      "idempotentRecords": 1
+    }
+  },
+  "question": {
+    "text": "How many rabbits were there?",
+    "goal": "(count rabbits 4)",
+    "scope": {
+      "attribution": null,
+      "time": "once upon a time",
+      "modality": "asserted",
+      "polarity": "positive",
+      "world": null
+    },
+    "answer": "(count rabbits 4)",
+    "supportState": "supported",
+    "evidence": [
+      {
+        "id": "assert_0e693b306cb314b1961324f365b7",
+        "type": "source",
+        "sourceVersionId": "srcv_9081ce2454a84802bb35106a95f58eaa",
+        "regionId": "region_0920b8c25fadf7f9c6b9e10b",
+        "locator": {
+          "type": "text-line",
+          "line": 65,
+          "start": 1203,
+          "end": 1267
+        },
+        "quote": "Once upon a time there were four little Rabbits, and their names",
+        "ske": {
+          "type": "call",
+          "predicate": "count",
+          "args": [
+            {
+              "type": "atom",
+              "value": "rabbits"
+            },
+            {
+              "type": "number",
+              "value": 4
+            }
+          ]
+        },
+        "attribution": null,
+        "time": "once upon a time",
+        "modality": "asserted",
+        "polarity": "positive",
+        "world": null
+      }
+    ],
+    "reopenedEvidence": [
+      {
+        "snapshotId": "snap_934ff59a0c064c528e8ae505f20b936d",
+        "sourceVersionId": "srcv_9081ce2454a84802bb35106a95f58eaa",
+        "regionId": "region_0920b8c25fadf7f9c6b9e10b",
+        "quote": "Once upon a time there were four little Rabbits, and their names",
+        "locator": {
+          "type": "text-line",
+          "line": 65,
+          "start": 1203,
+          "end": 1267
+        }
+      }
+    ]
+  },
+  "procedureMaterialization": {
+    "source": {
+      "id": "pg14838",
+      "sourceVersionId": "srcv_9081ce2454a84802bb35106a95f58eaa",
+      "regions": 447
+    },
+    "projectId": "proj_c29cda9cc1614f7eae4bbe7588cba834",
+    "startingSnapshotId": "snap_e47fdb31615346f091ce0b7cedf11605",
+    "committedSnapshotId": "snap_934ff59a0c064c528e8ae505f20b936d",
+    "procedures": [
+      {
+        "id": "contradiction-audit",
+        "version": "1.0.0",
+        "findings": 0,
+        "coverage": 447,
+        "incomplete": 338
+      },
+      {
+        "id": "relevance-synthesis",
+        "version": "1.0.0",
+        "findings": 1,
+        "coverage": 447,
+        "incomplete": 338
+      },
+      {
+        "id": "document-literary-rubric",
+        "version": "1.0.0",
+        "findings": 3,
+        "coverage": 447,
+        "incomplete": 338
+      }
+    ],
+    "findingIds": [
+      "finding_f9e8279534e8932e5106be82e9ad",
+      "finding_a5b4f504b2f0c56a272338d70f8e",
+      "finding_4b2d581cd73c1fa812161817754e",
+      "finding_c700e385d7aef905335536d6ffc5"
+    ],
+    "passageEvidenceIds": [
+      {
+        "id": "passage_1e652aba9acec85aa1c12cff",
+        "sourceVersionId": "srcv_9081ce2454a84802bb35106a95f58eaa",
+        "regionId": "region_2c94a861d735ce061ffd5b51",
+        "quotePrefix": "approach us with offers to donate."
+      },
+      {
+        "id": "passage_55996b49e747eb4118cb474a",
+        "sourceVersionId": "srcv_9081ce2454a84802bb35106a95f58eaa",
+        "regionId": "region_6ecc4c03a38b66e25e9b757b",
+        "quotePrefix": "1.F.5. Some states do not allow disclaimers of certain implied"
+      },
+      {
+        "id": "passage_0166b2bbc564c293094326b3",
+        "sourceVersionId": "srcv_9081ce2454a84802bb35106a95f58eaa",
+        "regionId": "region_d2a19d91393480e8f0fe3c0b",
+        "quotePrefix": "1.F.6. INDEMNITY - You agree to indemnify and hold the Foundation, the"
+      },
+      {
+        "id": "passage_d8335e6fdd6b3a4256ae9c99",
+        "sourceVersionId": "srcv_9081ce2454a84802bb35106a95f58eaa",
+        "regionId": "region_0980aef3ba1c7b9e6569064f",
+        "quotePrefix": "Section 2. Information about the Mission of Project Gutenberg"
+      },
+      {
+        "id": "passage_129c0087d135ee13740f29fd",
+        "sourceVersionId": "srcv_9081ce2454a84802bb35106a95f58eaa",
+        "regionId": "region_5f87c3a4bda9887394d64d26",
+        "quotePrefix": "Section 3. Information about the Project Gutenberg Literary Archive Foundation"
+      },
+      {
+        "id": "passage_142d449f6e49b65e29ff950e",
+        "sourceVersionId": "srcv_9081ce2454a84802bb35106a95f58eaa",
+        "regionId": "region_90b9acd2879b48e25afd6391",
+        "quotePrefix": "Section 4. Information about Donations to the Project Gutenberg"
+      },
+      {
+        "id": "passage_1672c4d3ea8792dabc81371f",
+        "sourceVersionId": "srcv_9081ce2454a84802bb35106a95f58eaa",
+        "regionId": "region_27c9c8f7f4f8c70fa2d14274",
+        "quotePrefix": "Section 5. General Information About Project Gutenberg electronic works"
+      },
+      {
+        "id": "passage_8fcf2aeac8f3740cf73a7d20",
+        "sourceVersionId": "srcv_9081ce2454a84802bb35106a95f58eaa",
+        "regionId": "region_bf72e8a29380c706e92b1704",
+        "quotePrefix": "charities and charitable donations in all 50 states of the United"
+      },
+      {
+        "id": "passage_9838090c88fbf1228e1c19b3",
+        "sourceVersionId": "srcv_9081ce2454a84802bb35106a95f58eaa",
+        "regionId": "region_ea333eb11a6b31c0a7dcd1ce",
+        "quotePrefix": "with these requirements. We do not solicit donations in locations"
+      },
+      {
+        "id": "passage_bbad283f5166e5f7bf943516",
+        "sourceVersionId": "srcv_9081ce2454a84802bb35106a95f58eaa",
+        "regionId": "region_920bd3be3f73ef30ba35ddf6",
+        "quotePrefix": "While we cannot and do not solicit contributions from states where we"
+      }
+    ],
+    "validation": {
+      "status": "partial",
+      "model": "gpt-6-luna",
+      "humanReview": false,
+      "findings": 4,
+      "procedureVersions": [
+        {
+          "id": "contradiction-audit",
+          "version": "1.0.0"
+        },
+        {
+          "id": "relevance-synthesis",
+          "version": "1.0.0"
+        },
+        {
+          "id": "document-literary-rubric",
+          "version": "1.0.0"
+        }
+      ],
+      "regionsConsidered": 447,
+      "incompleteRegions": 1014
+    },
+    "acceptanceStatus": "superseded-diagnostic",
+    "supersededBy": "peter-rabbit-work-only-procedures-2026-09-23.json",
+    "supersessionReason": "The first procedure run included Project Gutenberg legal/front matter and had a model-reported chunk-count mismatch. Keep this report only as a failed diagnostic; use the corrected work-only procedure report for acceptance."
+  },
+  "validation": {
+    "questionAudit": {
+      "status": "valid",
+      "checkedEvidenceIds": [
+        "assert_0e693b306cb314b1961324f365b7"
+      ],
+      "errors": [],
+      "claimCount": 1,
+      "unsupportedClaims": 0
+    },
+    "procedureFindingCount": 4,
+    "procedurePassageEvidenceReopened": 10,
+    "procedureAssessmentAudit": "valid",
+    "procedureAssessmentAuditErrors": []
+  },
+  "measuredUsage": {
+    "ingestionAndQuestionSessionCumulative": {
+      "input_tokens": 356907,
+      "cached_input_tokens": 65024,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 13762,
+      "reasoning_output_tokens": 2381
+    },
+    "procedureSessionCumulative": {
+      "input_tokens": 1446915,
+      "cached_input_tokens": 678400,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 20647,
+      "reasoning_output_tokens": 8112
+    },
+    "procedureDeltaFromPriorCheckpoint": {
+      "input_tokens": 1090008,
+      "cached_input_tokens": 613376,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 6885,
+      "reasoning_output_tokens": 5731
+    }
+  },
+  "limitations": [
+    "Ingestion coverage is partial: 8 source regions require targeted retry or adjudication; 420 regions yielded no candidate assertion.",
+    "The extraction context pass ran in independent batches; cross-batch relationships are not claimed.",
+    "Procedure materialization is partial: for each procedure, 109/447 source regions have complete model-reported coverage and 338 regions remain partial because Luna returned a coverage count inconsistent with the 338-region first chunk.",
+    "The whole-source English Gutenberg file contains front matter and Project Gutenberg legal text as well as the story; the selected source scope deliberately remains the complete registered source.",
+    "Luna model review is not expert or human adjudication."
+  ]
+}
